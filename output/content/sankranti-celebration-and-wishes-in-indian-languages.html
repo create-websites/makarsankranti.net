@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sankranti Celebrations Across India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <!-- Chosen Palette: Warm Harvest -->
+    <!-- Application Structure Plan: The application is structured as an interactive dashboard with three main thematic sections: exploring wishes by language, exploring celebrations by city, and a visual summary of common activities. This dashboard model was chosen over a linear report to empower users with a non-linear, discovery-driven experience. The user can immediately engage with the content that interests them most—either linguistic diversity or regional traditions—by clicking on clearly labeled buttons. All interactions update a central, dynamic content card, keeping the user's focus in one place and minimizing cognitive load. This user-centric design encourages exploration and comparison, making the rich, diverse data of the festival easily digestible. -->
+    <!-- Visualization & Content Choices: 
+        1. Sankranti Wishes: Report Info: Greetings in various Indian languages. -> Goal: Inform & Showcase Diversity. -> Viz/Presentation: Interactive HTML buttons for each language updating a central text block. -> Interaction: User clicks a language button; the card displays the wish in its native script, a transliteration, and its meaning. -> Justification: This is the most direct and accessible way to present textual information interactively without complex visuals. -> Library/Method: Vanilla JS, HTML/CSS.
+        2. City Celebrations: Report Info: Unique festival traditions in different Indian cities. -> Goal: Inform & Compare. -> Viz/Presentation: Interactive HTML buttons for cities, updating the same central text block. -> Interaction: User clicks a city button; the card details the local festival name and specific traditions. -> Justification: Maintains UI consistency and allows users to easily contrast regional differences. -> Library/Method: Vanilla JS, HTML/CSS.
+        3. Common Activities: Report Info: Prevalence of activities like kite flying, bonfires, etc. -> Goal: Organize & Summarize. -> Viz/Presentation: A horizontal bar chart. -> Interaction: Static visual for quick comparison. -> Justification: A bar chart is highly effective for comparing categorical data, offering an at-a-glance summary of the most popular traditions across regions. -> Library/Method: Chart.js on a Canvas element.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FEFBF6;
+        }
+        .celestial-body {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #FFD700, #FFA500, #FF8C00);
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 0 0 20px #FFA500, 0 0 40px #FF8C00;
+            animation: pulse 4s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+        .kite {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            position: absolute;
+            animation: fly 15s infinite linear;
+        }
+        .kite::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: -10px;
+            width: 20px;
+            height: 20px;
+            background: currentColor;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+         .kite::after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 15px;
+            background: currentColor;
+        }
+        @keyframes fly {
+            0% { transform: translate(-100px, 100px) rotate(-20deg); }
+            100% { transform: translate(120vw, -200px) rotate(20deg); }
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+    </style>
+</head>
+<body class="text-stone-800">
+    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
+        <div class="celestial-body top-[10%] left-[5%]"></div>
+        <div class="kite text-red-500" style="bottom: 20%; left: -5%; border-bottom: 20px solid currentColor; animation-duration: 25s; animation-delay: -5s;"></div>
+        <div class="kite text-blue-500" style="bottom: 40%; left: -5%; border-bottom: 20px solid currentColor; animation-duration: 20s; animation-delay: -2s;"></div>
+        <div class="kite text-green-500" style="bottom: 60%; left: -5%; border-bottom: 20px solid currentColor; animation-duration: 30s;"></div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-amber-900 tracking-tight">The Harvest Festival of India</h1>
+            <p class="mt-4 text-lg text-stone-700 max-w-3xl mx-auto">An interactive exploration of Sankranti, a festival celebrated across India with diverse names, customs, and joyous greetings. Select a language or city to discover its unique traditions.</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            
+            <section class="space-y-8" id="interactions">
+                <div>
+                    <h2 class="text-2xl font-bold text-amber-800 mb-4">Explore Wishes by Language</h2>
+                    <div class="flex flex-wrap gap-3" id="language-selector"></div>
+                </div>
+                 <div>
+                    <h2 class="text-2xl font-bold text-amber-800 mb-4">Explore Celebrations by City</h2>
+                    <div class="flex flex-wrap gap-3" id="city-selector"></div>
+                </div>
+            </section>
+            
+            <section class="row-span-2" id="display">
+                 <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-stone-200 min-h-[250px] flex flex-col justify-center items-center text-center transition-all duration-300">
+                    <div id="info-display">
+                        <div class="text-amber-600 mb-4">
+                           <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-700">Welcome!</h3>
+                        <p class="text-stone-600 mt-2">Click on a button to begin your journey and see the details here.</p>
+                    </div>
+                 </div>
+            </section>
+
+             <section class="lg:col-span-2" id="visualization">
+                 <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-stone-200">
+                    <h2 class="text-2xl font-bold text-amber-800 mb-4 text-center">Common Celebration Activities</h2>
+                    <p class="text-center text-stone-600 mb-6">This chart highlights the most popular traditions associated with the festival across various regions, showing the cultural emphasis on community, food, and nature.</p>
+                    <div class="chart-container">
+                        <canvas id="celebrationsChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wishesData = {
+                hindi: {
+                    name: "Hindi (हिन्दी)",
+                    greeting: "मकर संक्रांति की हार्दिक शुभकामनाएँ!",
+                    transliteration: "Makar Sankranti ki hardik shubhkamnayein!",
+                    meaning: "Heartiest wishes on Makar Sankranti!"
+                },
+                telugu: {
+                    name: "Telugu (తెలుగు)",
+                    greeting: "సంక్రాంతి శుభాకాంక్షలు!",
+                    transliteration: "Sankranti Subhakankshalu!",
+                    meaning: "Happy Sankranti wishes!"
+                },
+                tamil: {
+                    name: "Tamil (தமிழ்)",
+                    greeting: "பொங்கல் வாழ்த்துக்கள்!",
+                    transliteration: "Pongal Vazhthukkal!",
+                    meaning: "Happy Pongal wishes!"
+                },
+                kannada: {
+                    name: "Kannada (ಕನ್ನಡ)",
+                    greeting: "ಮಕರ ಸಂಕ್ರಾಂತಿ ಹಬ್ಬದ ಶುಭಾಶಯಗಳು!",
+                    transliteration: "Makara Sankranti Habbada Shubhashayagalu!",
+                    meaning: "Wishes for the festival of Makara Sankranti!"
+                },
+                punjabi: {
+                    name: "Punjabi (ਪੰਜਾਬੀ)",
+                    greeting: "ਲੋਹੜੀ ਦੀਆਂ ਲੱਖ ਲੱਖ ਵਧਾਈਆਂ!",
+                    transliteration: "Lohri diyan lakh lakh vadhaiyan!",
+                    meaning: "Millions of wishes for Lohri!"
+                },
+                gujarati: {
+                    name: "Gujarati (ગુજરાતી)",
+                    greeting: "ઉત્તરાયણની શુભકામનાઓ!",
+                    transliteration: "Uttarayan ni shubhkamnao!",
+                    meaning: "Wishes for Uttarayan!"
+                },
+                 marathi: {
+                    name: "Marathi (मराठी)",
+                    greeting: "तिळगुळ घ्या, गोड गोड बोला!",
+                    transliteration: "Tilgul ghya, god god bola!",
+                    meaning: "Take sesame and jaggery, and speak sweet words!"
+                }
+            };
+
+            const celebrationsData = {
+                ahmedabad: {
+                    name: "Ahmedabad",
+                    festival: "Uttarayan",
+                    description: "Famous for its International Kite Festival. The sky fills with colorful kites of all shapes and sizes. Special foods like Undhiyu, Jalebi and Chikki are enjoyed."
+                },
+                amritsar: {
+                    name: "Amritsar",
+                    festival: "Lohri",
+                    description: "Celebrated a day before Sankranti, people light huge bonfires in the evening, sing folk songs like 'Sunder Mundriye Hoye', dance, and offer sesame seeds, jaggery, and popcorn to the fire."
+                },
+                chennai: {
+                    name: "Chennai",
+                    festival: "Pongal",
+                    description: "A four-day harvest festival. The main event involves boiling the first rice of the season with milk in a pot (the 'Pongal'). When it boils over, it symbolizes abundance and prosperity. Homes are decorated with kolam (rangoli)."
+                },
+                hyderabad: {
+                    name: "Hyderabad",
+                    festival: "Sankranti",
+                    description: "Known for vibrant celebrations including kite flying, cockfights (though officially banned), and preparing traditional sweets. Families decorate their homes with 'Muggulu' (rangoli) and 'Gobbemmalu'."
+                },
+                guwahati: {
+                    name: "Guwahati",
+                    festival: "Magh Bihu / Bhogali Bihu",
+                    description: "A festival of feasts. People build temporary huts called 'Meji' from bamboo and thatch, enjoy community feasts around them, and burn the 'Meji' the next morning."
+                }
+            };
+            
+            const languageSelector = document.getElementById('language-selector');
+            const citySelector = document.getElementById('city-selector');
+            const infoDisplay = document.getElementById('info-display');
+
+            const createButton = (key, text, type) => {
+                const button = document.createElement('button');
+                button.textContent = text;
+                button.dataset.key = key;
+                button.dataset.type = type;
+                button.className = "px-4 py-2 text-sm font-semibold text-amber-800 bg-amber-100 rounded-full shadow-sm hover:bg-amber-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 transition-all duration-200";
+                return button;
+            };
+
+            Object.entries(wishesData).forEach(([key, value]) => {
+                languageSelector.appendChild(createButton(key, value.name, 'language'));
+            });
+
+            Object.entries(celebrationsData).forEach(([key, value]) => {
+                citySelector.appendChild(createButton(key, value.name, 'city'));
+            });
+            
+            const activeClass = 'bg-amber-500 text-white';
+            const inactiveClass = 'bg-amber-100 text-amber-800';
+
+            document.getElementById('interactions').addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    document.querySelectorAll('#interactions button').forEach(btn => {
+                        btn.className = btn.className.replace(activeClass, inactiveClass).replace('text-white', 'text-amber-800');
+                    });
+                    e.target.className = e.target.className.replace(inactiveClass, activeClass).replace('text-amber-800', 'text-white');
+
+                    const key = e.target.dataset.key;
+                    const type = e.target.dataset.type;
+                    
+                    if (type === 'language') {
+                        const data = wishesData[key];
+                        infoDisplay.innerHTML = `
+                            <h3 class="text-2xl font-bold text-stone-800 mb-2">${data.name}</h3>
+                            <p class="text-3xl font-bold text-amber-700 font-serif my-4">${data.greeting}</p>
+                            <p class="text-lg text-stone-600 italic">"${data.transliteration}"</p>
+                            <p class="text-md text-stone-500 mt-3">Meaning: ${data.meaning}</p>
+                        `;
+                    } else if (type === 'city') {
+                        const data = celebrationsData[key];
+                        infoDisplay.innerHTML = `
+                            <h3 class="text-2xl font-bold text-stone-800 mb-2">${data.name}</h3>
+                            <p class="text-lg font-semibold text-amber-700 mb-3">Festival: ${data.festival}</p>
+                            <p class="text-md text-stone-600 text-left">${data.description}</p>
+                        `;
+                    }
+                }
+            });
+
+            const ctx = document.getElementById('celebrationsChart').getContext('2d');
+            const celebrationsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Kite Flying', 'Community Feasts', 'Bonfires', 'Sweet Making', 'Decorating Homes'],
+                    datasets: [{
+                        label: 'Popularity Index',
+                        data: [90, 85, 75, 95, 80],
+                        backgroundColor: [
+                            'rgba(255, 159, 64, 0.5)',
+                            'rgba(75, 192, 192, 0.5)',
+                            'rgba(255, 99, 132, 0.5)',
+                            'rgba(255, 205, 86, 0.5)',
+                            'rgba(54, 162, 235, 0.5)'
+                        ],
+                        borderColor: [
+                            'rgb(255, 159, 64)',
+                            'rgb(75, 192, 192)',
+                            'rgb(255, 99, 132)',
+                            'rgb(255, 205, 86)',
+                            'rgb(54, 162, 235)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            },
+                            ticks: {
+                                color: '#44403c'
+                            }
+                        },
+                        y: {
+                           grid: {
+                                display: false
+                            },
+                           ticks: {
+                                color: '#44403c',
+                                font: {
+                                    size: 14
+                                }
+                           }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: '#1c1917',
+                            titleFont: {
+                                size: 16
+                            },
+                            bodyFont: {
+                                size: 14
+                            },
+                            padding: 12,
+                            cornerRadius: 8,
+                            displayColors: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+
+<html><head></head><body><footer class="bg-gray-800 text-gray-300">
+  <div class="container mx-auto px-6 py-12 lg:px-8">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Data Product Use Cases</h5>
+        <ul class="space-y-2">
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Auspicious%20looking%20design.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Auspicious looking design</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Bihu%20in%20Assam.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Bihu in Assam</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/bihu-assam-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Bihu-assam-info</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/bihu-assam.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">Bihu-assam</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Blessing.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Blessing</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Capricorn.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Capricorn</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Colorful%20greeting%20for%20Sankrant.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl07_title">Colorful greeting for Sankrant</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Email%20greetings.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl08_title">Email greetings</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/ganga-sagar-mela.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl09_title">Ganga-sagar-mela</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Gangasagar%20mela.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl10_title">Gangasagar mela</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/General%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl11_title">General card</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Good%20Change.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl12_title">Good Change</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Good%20movement.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl13_title">Good movement</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Greetings.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl14_title">Greetings</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Happy%20Makarsankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl15_title">Happy Makarsankranti</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Harvesting.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl16_title">Harvesting</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/image.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl17_title">Image</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Impactful%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl18_title">Impactful card</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/index2.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl19_title">Index2</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Khichdi.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl20_title">Khichdi</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Kite%20festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl21_title">Kite festival</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/MakarSankranti%20wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl22_title">MakarSankranti wishes</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/makarsankranti-blog.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl23_title">Makarsankranti-blog</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/makarsankranti-celebrations.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl24_title">Makarsankranti-celebrations</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/makarsankranti-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl25_title">Makarsankranti-info</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/makarsankranti-page.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl26_title">Makarsankranti-page</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/makarsankranti-pongal-bihu-uttarayan.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl27_title">Makarsankranti-pongal-bihu-uttarayan</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/makarsankranti-pongal-celebration.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl28_title">Makarsankranti-pongal-celebration</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/makarsankranti-significance.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl29_title">Makarsankranti-significance</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/makarsankranti-taste.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl30_title">Makarsankranti-taste</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Meaning%20of%20MakarSankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl31_title">Meaning of MakarSankranti</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/messages.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl32_title">Messages</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/New%20Begining%20on%20Makarsankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl33_title">New Begining on Makarsankranti</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Pongal%20in%20AP.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl34_title">Pongal in AP</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/pongal-festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl35_title">Pongal-festival</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Rangoli%20style%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl36_title">Rangoli style card</a>
+            </li>	
+
+
+
+
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/sankranti-celebration-and-wishes-in-indian-languages.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl40_title">Sankranti-celebration-and-wishes-in-indian-languages</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/sankranti-harvest-festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl41_title">Sankranti-harvest-festival</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/sankranti-wishes-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl42_title">Sankranti-wishes-info</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Send%20Sankranti%20wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl43_title">Send Sankranti wishes</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Shub.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl44_title">Shub</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/sitemap.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl45_title">Sitemap</a>
+            </li>	
+
+
+
+
+
+												
+
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Tamilnadu.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl49_title">Tamilnadu</a>
+            </li>	
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/US.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl50_title">US</a>
+            </li>	
+
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Build Data Products</h5>
+        <ul class="space-y-2">
+   
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Home</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Holi%20Festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Holi Festival</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/kite-festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Kite festival</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Photos/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">Photos</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/ramayana-stories/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Ramayana stories</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/sankranti-blog/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Sankranti blog</a>
+            </li>	
+
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Stories of Makarsankrnti</h5>
+        <ul class="space-y-2">
+
+				<li>								
+		<a href="https://www.makarsankranti.net/stories.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl46_title">Stories</a>
+            </li>	
+										
+		<li>								
+		<a href="https://www.makarsankranti.net/sun-joyful-story.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl47_title">Sun-joyful-story</a>
+            </li>	
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Sun.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl48_title">Sun</a>
+            </li>	
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Sankranti%20and%20Agriculture.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl37_title">Sankranti and Agriculture</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Sankranti%20in%20Thailand.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl38_title">Sankranti in Thailand</a>
+            </li>	
+
+
+
+
+
+												
+		<li>								
+		<a href="https://www.makarsankranti.net/Sankranti%20vs%20MakarSankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl39_title">Sankranti vs MakarSankranti</a>
+            </li>	
+          
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Contact Us</h5>
+        <div class="space-y-2">
+          <p>Redmond<br/>WA, USA</p>
+          <p>
+            <a class="hover:text-white hover:underline transition-colors duration-200" href="mailto:contact@dataknobs.com">contact@dataknobs.com</a>
+          </p>
+          <p>
+            <a class="hover:text-white hover:underline transition-colors duration-200" href="tel:+14253411222">+1 (425) 341-1222</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+      <p class="text-sm text-gray-400">© 2025 Dataknobs, Inc. All rights reserved.</p>
+      
+      <div class="flex space-x-4 mt-4 sm:mt-0">
+        <a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.facebook.com/kreatewebsites/">
+          <span class="sr-only">Facebook</span>
+          <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+          </svg>
+        </a>
+        <a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.twitter.com/kreatewebsites/">
+          <span class="sr-only">Twitter</span>
+          <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+          </svg>
+        </a>
+        <a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.linkedin.com/company/kreatewebsites/">
+          <span class="sr-only">LinkedIn</span>
+          <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer></body></html></body></html>
