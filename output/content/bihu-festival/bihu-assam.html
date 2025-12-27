@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>The Bihu Festival: An Interactive Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <!-- Chosen Palette: Assam Earth & Sky -->
+    <!-- Application Structure Plan: The application is designed as a single-page thematic guide. A top navigation bar allows users to jump to specific sections: 'Home' (intro), 'The Three Bihus' (core content), 'Festival Timeline' (visualization), and 'Cultural Fabric' (details). The core section uses an interactive tab system, allowing users to explore each of the three Bihu festivals without overwhelming them with information. This non-linear, user-driven approach is better than a simple top-to-bottom report as it encourages exploration and comparison. The timeline visualization provides a quick, high-level understanding of the annual cycle, reinforcing the information in the tabs. This structure was chosen to make a culturally rich topic digestible, engaging, and easy to navigate for a general audience. -->
+    <!-- Visualization & Content Choices: 
+    1. Report Info: The three types of Bihu and their timing. -> Goal: Organize & Change. -> Viz/Presentation: Interactive Timeline Chart. -> Interaction: Hovering over chart bars reveals tooltips with Bihu names and significance. -> Justification: A visual timeline is more intuitive and memorable than a text list for understanding the annual cycle of the festivals. -> Library/Method: Chart.js (Canvas).
+    2. Report Info: Detailed descriptions of each of the three Bihus. -> Goal: Compare & Inform. -> Viz/Presentation: Tabbed content interface. -> Interaction: Clicking on a Bihu name (button) displays its specific details while hiding the others. -> Justification: Tabs allow for a clean layout, prevent information overload, and facilitate direct comparison between the festivals. -> Library/Method: HTML/CSS/JS.
+    3. Report Info: Key cultural elements like dance, food, attire. -> Goal: Organize & Inform. -> Viz/Presentation: Grid of info cards. -> Interaction: Static display. -> Justification: Grouping these related cultural elements prevents repetition in the main descriptions and provides a quick reference. -> Library/Method: HTML/Tailwind CSS. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FEFBF6;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link:hover {
+            color: #C05621;
+        }
+        .tab-btn {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .tab-btn.active {
+            background-color: #C05621;
+            color: #FFFFFF;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 250px;
+            max-height: 300px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 300px;
+                max-height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-red-800">Explore Bihu</h1>
+            <div class="hidden md:flex space-x-8">
+                <a class="nav-link text-gray-700 font-medium" href="#home">Home</a>
+                <a class="nav-link text-gray-700 font-medium" href="#the-bihus">The Three Bihus</a>
+                <a class="nav-link text-gray-700 font-medium" href="#timeline">Festival Timeline</a>
+                <a class="nav-link text-gray-700 font-medium" href="#culture">Cultural Fabric</a>
+            </div>
+            <div class="md:hidden">
+                <select class="bg-white border border-gray-300 rounded-md px-3 py-1 text-gray-700" id="mobile-nav">
+                    <option value="#home">Home</option>
+                    <option value="#the-bihus">The Three Bihus</option>
+                    <option value="#timeline">Festival Timeline</option>
+                    <option value="#culture">Culture</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container mx-auto px-6 py-16 md:py-24 text-center" id="home">
+            <h2 class="text-4xl md:text-6xl font-bold text-stone-800 mb-4">The Heartbeat of Assam</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-600">
+                Bihu goes beyond a festival—it's the heart of Assam's culture, marked by three lively celebrations tied to nature and agriculture. Dive into this guide to discover its vibrant traditions and joyous essence.
+            </p>
+        </section>
+
+        <section class="py-16 md:py-24 bg-amber-50" id="the-bihus">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-stone-800">The Three Pillars of Bihu</h3>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                        Bihu is observed in three unique forms annually, each holding special meaning and customs. Tap on each tab to explore their charm. This section lets you compare the festivals and grasp their importance in Assam's calendar.
+                    </p>
+                </div>
+
+                <div class="flex justify-center space-x-2 md:space-x-4 mb-8">
+                    <button class="tab-btn active font-medium py-2 px-4 md:px-6 rounded-full text-sm md:text-base bg-white shadow-sm" id="bohag-btn">Rongali (Bohag) Bihu</button>
+                    <button class="tab-btn font-medium py-2 px-4 md:px-6 rounded-full text-sm md:text-base bg-white shadow-sm" id="kati-btn">Kongali (Kati) Bihu</button>
+                    <button class="tab-btn font-medium py-2 px-4 md:px-6 rounded-full text-sm md:text-base bg-white shadow-sm" id="magh-btn">Bhogali (Magh) Bihu</button>
+                </div>
+
+                <div class="max-w-4xl mx-auto" id="bihu-content">
+                    <div class="bihu-pane" id="bohag-content">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <h4 class="text-2xl font-bold text-red-800 mb-4">Rongali Bihu - The Festival of Merriment</h4>
+                            <p class="text-gray-600 mb-6">
+                                Observed in mid-April, Rongali Bihu ushers in the Assamese New Year and heralds spring's arrival. Among the three Bihus, it stands out as the most lively, brimming with dance, music, and shared joy. It signifies fertility and the start of a fresh farming season. The celebrations span several days, fostering unity across diverse communities.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-amber-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🎶 Bihu Dance &amp; Husori</h5>
+                                    <p class="text-sm text-gray-600">Vibrant troupes showcase the lively Bihu dance, while elders guide Husori, singing and dancing to bless households.</p>
+                                </div>
+                                <div class="bg-amber-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🎁 Gamosa Exchange</h5>
+                                    <p class="text-sm text-gray-600">The Gamosa, a traditional red-and-white woven cloth, symbolizes love and respect when exchanged.</p>
+                                </div>
+                                <div class="bg-amber-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🍚 Pitha &amp; Laru</h5>
+                                    <p class="text-sm text-gray-600">Traditional rice cakes (Pitha) and coconut treats (Laru) are made and enjoyed with loved ones.</p>
+                                </div>
+                                <div class="bg-amber-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🐂 Cattle Rites</h5>
+                                    <p class="text-sm text-gray-600">The opening day focuses on honoring cattle, vital for farming, through rituals of feeding and bathing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bihu-pane hidden" id="kati-content">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <h4 class="text-2xl font-bold text-emerald-800 mb-4">Kongali Bihu - The Festival of Scarcity</h4>
+                            <p class="text-gray-600 mb-6">
+                                Observed in mid-October, Kongali Bihu is a solemn and introspective celebration. It marks a time when granaries are bare and the paddy remains in the fields. The festival centers on prayers and wishes for a fruitful harvest, safeguarding crops from pests and misfortune.
+                            </p>
+                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-emerald-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🏮 Earthen Lamps (Saki)</h5>
+                                    <p class="text-sm text-gray-600">Lamps glow in paddy fields, luring insects (shielding crops) and guiding ancestral spirits.</p>
+                                </div>
+                                <div class="bg-emerald-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🌿 Tulsi Plant Worship</h5>
+                                    <p class="text-sm text-gray-600">Devotions are made to the holy Tulsi plant in the family yard, wishing for health and a fruitful harvest.</p>
+                                </div>
+                                 <div class="bg-emerald-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🙏 Prayers for Prosperity</h5>
+                                    <p class="text-sm text-gray-600">It's a moment for peaceful reflection and prayers for the crops' safety and thriving growth.</p>
+                                </div>
+                                <div class="bg-emerald-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🌾 Guarding the Fields</h5>
+                                    <p class="text-sm text-gray-600">Farmers often work in the fields, spinning bamboo sticks and chanting to drive away pests and bad energy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bihu-pane hidden" id="magh-content">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                           <h4 class="text-2xl font-bold text-orange-800 mb-4">Bhogali Bihu - The Festival of Feasting</h4>
+                            <p class="text-gray-600 mb-6">
+                                Observed in mid-January, Bhogali Bihu signifies the close of the harvest season. It's a celebration of togetherness and hearty feasts. With stores replenished, it’s a moment for gratitude, revelry, and savoring the rewards of hard work with family and friends.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-orange-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🔥 Meji &amp; Bhelaghar</h5>
+                                    <p class="text-sm text-gray-600">Men construct makeshift huts (Bhelaghar) and towering structures (Meji) using bamboo and thatch for community feasts.</p>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🍲 Community Feasts</h5>
+                                    <p class="text-sm text-gray-600">The festival's eve, known as Uruka, features lavish feasts. At dawn, the Meji is ritually set ablaze.</p>
+                                </div>
+                                 <div class="bg-orange-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🥮 Abundant Delicacies</h5>
+                                    <p class="text-sm text-gray-600">An array of Pithas, Laru, and other treats crafted from freshly harvested rice are made and enjoyed.</p>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded-md">
+                                    <h5 class="font-bold text-stone-700">🐂 Traditional Games</h5>
+                                    <p class="text-sm text-gray-600">Classic games such as buffalo wrestling and Tekeli Bhonga (pot-smashing) are held in certain regions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24" id="timeline">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-stone-800">The Bihu Annual Cycle</h3>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                        This chart illustrates the timing of Bihu festivals across the year, emphasizing their ties to agricultural cycles. Hovering over the bars reveals the meaning behind each celebration, offering a concise overview of Bihu in Assam's calendar.
+                    </p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="bihuTimelineChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-amber-50" id="culture">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-stone-800">The Cultural Fabric</h3>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                        Bihu transcends individual festival rituals, uniting celebrations through a common thread of music, cuisine, and traditional attire. This part explores these core aspects that embody Assamese heritage and the essence of Bihu.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="text-4xl mb-4">💃</div>
+                        <h4 class="text-xl font-bold text-stone-800 mb-2">Bihu Dance</h4>
+                        <p class="text-gray-600 text-sm">A lively, spirited dance by young men and women, marked by swift footwork and dynamic hand gestures, embodying the vigor and enthusiasm of springtime youth.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                         <div class="text-4xl mb-4">🍚</div>
+                        <h4 class="text-xl font-bold text-stone-800 mb-2">Bihu Cuisine</h4>
+                        <p class="text-gray-600 text-sm">At the heart of Bihu are traditional treats like Pithas (rice cakes), both sweet and savory. Laru, made from coconut or sesame, and dishes featuring fresh ingredients are also key highlights.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                         <div class="text-4xl mb-4">🧣</div>
+                        <h4 class="text-xl font-bold text-stone-800 mb-2">Traditional Attire</h4>
+                        <p class="text-gray-600 text-sm">Women adorn the graceful Mekhela Sador, typically in hues of cream and red silk. Men don Dhoti paired with a Gamosa, a revered emblem of Assamese heritage and honor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300">
+<div class="container mx-auto px-6 py-12 lg:px-8">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/Auspicious%20looking%20design.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Auspicious looking design</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Bihu%20in%20Assam.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Bihu in Assam</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/bihu-assam-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Bihu-assam-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/bihu-assam.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">Bihu-assam</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Blessing.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Blessing</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Capricorn.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Capricorn</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Colorful%20greeting%20for%20Sankrant.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl07_title">Colorful greeting for Sankrant</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Email%20greetings.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl08_title">Email greetings</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/ganga-sagar-mela.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl09_title">Ganga-sagar-mela</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Gangasagar%20mela.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl10_title">Gangasagar mela</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/General%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl11_title">General card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Good%20Change.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl12_title">Good Change</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Good%20movement.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl13_title">Good movement</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Greetings.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl14_title">Greetings</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Happy%20Makarsankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl15_title">Happy Makarsankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Harvesting.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl16_title">Harvesting</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/image.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl17_title">Image</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Impactful%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl18_title">Impactful card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/index2.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl19_title">Index2</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Khichdi.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl20_title">Khichdi</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Kite%20festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl21_title">Kite festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/MakarSankranti%20wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl22_title">MakarSankranti wishes</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-blog.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl23_title">Makarsankranti-blog</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-celebrations.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl24_title">Makarsankranti-celebrations</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl25_title">Makarsankranti-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-page.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl26_title">Makarsankranti-page</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-pongal-bihu-uttarayan.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl27_title">Makarsankranti-pongal-bihu-uttarayan</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-pongal-celebration.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl28_title">Makarsankranti-pongal-celebration</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-significance.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl29_title">Makarsankranti-significance</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-taste.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl30_title">Makarsankranti-taste</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Meaning%20of%20MakarSankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl31_title">Meaning of MakarSankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/messages.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl32_title">Messages</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/New%20Begining%20on%20Makarsankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl33_title">New Begining on Makarsankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Pongal%20in%20AP.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl34_title">Pongal in AP</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pongal-festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl35_title">Pongal-festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Rangoli%20style%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl36_title">Rangoli style card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-celebration-and-wishes-in-indian-languages.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl40_title">Sankranti-celebration-and-wishes-in-indian-languages</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-harvest-festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl41_title">Sankranti-harvest-festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-wishes-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl42_title">Sankranti-wishes-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Send%20Sankranti%20wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl43_title">Send Sankranti wishes</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Shub.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl44_title">Shub</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sitemap.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl45_title">Sitemap</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Tamilnadu.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl49_title">Tamilnadu</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/US.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl50_title">US</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Festivals and Celebration</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Home</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Holi%20Festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Holi Festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/kite-festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Kite festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Photos/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">Photos</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/ramayana-stories/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Ramayana stories</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-blog/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Sankranti blog</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pictures.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">MakarSankranti Pictures</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Stories of Makarsankrnti</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/stories.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl46_title">Stories</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sun-joyful-story.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl47_title">Sun-joyful-story</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sun.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl48_title">Sun</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20and%20Agriculture.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl37_title">Sankranti and Agriculture</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20in%20Thailand.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl38_title">Sankranti in Thailand</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20vs%20MakarSankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl39_title">Sankranti vs MakarSankranti</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Contact Us</h5>
+<div class="space-y-2">
+<p>Redmond<br/>WA, USA</p>
+<p>
+<a class="hover:text-white hover:underline transition-colors duration-200" href="mailto:contact@dataknobs.com">contact@kreatewebsites.com</a>
+</p>
+<p>
+</p>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+<p class="text-sm text-gray-400">© 2025 Dataknobs, Inc. All rights reserved.</p>
+<div class="flex gap-4 mt-4 sm:mt-0">
+<a class="text-stone-400 hover:text-white" href="https://www.makarsankranti.net/privacypolicy,html">Privacy Policy</a> <!-- 13 -->
+<a class="text-stone-400 hover:text-white" href="https://www.makarsankranti.net/sitemap.html">Sitemap</a> <!-- 14 -->
+</div>
+<div class="flex space-x-4 mt-4 sm:mt-0">
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.facebook.com/kreatewebsites/">
+<span class="sr-only">Facebook</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.twitter.com/kreatewebsites/">
+<span class="sr-only">Twitter</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.linkedin.com/company/kreatewebsites/">
+<span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = {
+                bohag: { btn: document.getElementById('bohag-btn'), content: document.getElementById('bohag-content') },
+                kati: { btn: document.getElementById('kati-btn'), content: document.getElementById('kati-content') },
+                magh: { btn: document.getElementById('magh-btn'), content: document.getElementById('magh-content') }
+            };
+
+            const allBtns = Object.values(tabs).map(t => t.btn);
+            const allPanes = Object.values(tabs).map(t => t.content);
+
+            function activateTab(tabKey) {
+                allBtns.forEach(btn => btn.classList.remove('active'));
+                allPanes.forEach(pane => pane.classList.add('hidden'));
+
+                tabs[tabKey].btn.classList.add('active');
+                tabs[tabKey].content.classList.remove('hidden');
+            }
+
+            tabs.bohag.btn.addEventListener('click', () => activateTab('bohag'));
+            tabs.kati.btn.addEventListener('click', () => activateTab('kati'));
+            tabs.magh.btn.addEventListener('click', () => activateTab('magh'));
+
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            const mobileNav = document.getElementById('mobile-nav');
+            mobileNav.addEventListener('change', function() {
+                const targetId = this.value;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+
+            const ctx = document.getElementById('bihuTimelineChart').getContext('2d');
+            const bihuTimelineChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Bhogali (Magh) Bihu',
+                        data: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                        backgroundColor: 'rgba(234, 88, 12, 0.7)',
+                        borderColor: 'rgba(234, 88, 12, 1)',
+                        borderWidth: 1,
+                        barPercentage: 0.8,
+                        categoryPercentage: 1.0
+                    }, {
+                        label: 'Rongali (Bohag) Bihu',
+                        data: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+                        backgroundColor: 'rgba(194, 65, 12, 0.7)',
+                        borderColor: 'rgba(194, 65, 12, 1)',
+                        borderWidth: 1,
+                        barPercentage: 0.8,
+                        categoryPercentage: 1.0
+                    }, {
+                        label: 'Kongali (Kati) Bihu',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+                        backgroundColor: 'rgba(6, 78, 59, 0.7)',
+                        borderColor: 'rgba(6, 78, 59, 1)',
+                        borderWidth: 1,
+                        barPercentage: 0.8,
+                        categoryPercentage: 1.0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            stacked: true,
+                            display: false,
+                        },
+                        y: {
+                            stacked: true,
+                             grid: {
+                                display: false
+                            },
+                            ticks: {
+                                font: {
+                                    size: 14,
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        if(label.includes('Bhogali')) return 'Bhogali Bihu: Festival of Feasting';
+                                        if(label.includes('Rongali')) return 'Rongali Bihu: Festival of Merriment';
+                                        if(label.includes('Kongali')) return 'Kongali Bihu: Festival of Scarcity';
+                                    }
+                                    return label;
+                                },
+                                title: function() {
+                                    return '';
+                                }
+                            },
+                            backgroundColor: '#4A4A4A',
+                            titleFont: { size: 0 },
+                            bodyFont: { size: 14 },
+                            displayColors: false,
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+
+</body></html>

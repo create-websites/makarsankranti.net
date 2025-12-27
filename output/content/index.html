@@ -1,1583 +1,663 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <!-- SEO Meta Tags -->
+    <title>Makar Sankranti 2026 | Pongal, Bihu &amp; Uttarayan Festival Guide</title>
+    <meta content="Celebrate Makar Sankranti 2026. Explore the story of the Sun God Surya, traditions of Pongal, Magh Bihu, and Uttarayan, and find festive wishes. A complete guide to India's harvest festivals." name="description"/>
+    <meta content="Makar Sankranti 2026, Pongal Festival, Magh Bihu, Uttarayan, Kite Festival India, Harvest Festival, Surya God, Hindu Festivals, Winter Solstice, Sankranti Wishes" name="keywords"/>
+    <meta content="Festival Guide" name="author"/>
+    
+    <!-- Open Graph / Facebook -->
+    <meta content="website" property="og:type"/>
+    <meta content="Makar Sankranti 2026 - The Festival of Sun &amp; Harvest" property="og:title"/>
+    <meta content="Discover the traditions of Makar Sankranti, Pongal, Bihu, and Uttarayan. One story, many festivals." property="og:description"/>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Custom Styles for Animations -->
+    <style>
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes drift {
+            0% { transform: translateX(-10vw) translateY(10vh) rotate(-10deg); }
+            100% { transform: translateX(110vw) translateY(-20vh) rotate(10deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+        .kite {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 30px solid currentColor;
+            opacity: 0.8;
+            filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
+        }
+        .kite:after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: -20px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 30px solid currentColor;
+        }
+        .kite-tail {
+            width: 4px;
+            height: 50px;
+            background: rgba(255,255,255,0.6);
+            position: absolute;
+            top: 40px;
+            left: -2px;
+            transform: rotate(15deg);
+            transform-origin: top;
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-orange-50 font-sans text-stone-800">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en">
-	<head id="ctl00_head1"><title>
-	MakarSankranti Cards and messages | Send on Facebook, email
-</title><meta http-equiv="content-type" content="text/html; charset=utf-8" /><link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700" rel="stylesheet" />
-		<noscript><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/5grid/core.css" /><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/5grid/core-desktop.css" /><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/5grid/core-1200px.css" /><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/5grid/core-noscript.css" /><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/style.css" /><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/style-desktop.css" /></noscript>
-		<script src="https://pictures.makarsankranti.net/site1/css/5grid/jquery.js"></script>
-		<script src="https://pictures.makarsankranti.net/site1/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none&amp;mobileUI.titleBarHeight=60&amp;mobileUI.openerWidth=52"></script>
-		<!--[if IE 9]><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/style-ie9.css" /><![endif]-->
-	</head>
-	<body>
+    <!-- Navigation -->
+    <nav class="bg-orange-600 text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2 font-bold text-xl">
+                <i class="h-6 w-6 animate-pulse" data-lucide="sun"></i>
+                <span>Sankranti Festival</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <button class="tab-btn text-yellow-300 font-bold hover:text-yellow-200 transition" id="btn-story" onclick="switchTab('story')">The Story</button>
+                <button class="tab-btn hover:text-yellow-200 transition" id="btn-traditions" onclick="switchTab('traditions')">Traditions</button>
+                <button class="tab-btn hover:text-yellow-200 transition" id="btn-wishes" onclick="switchTab('wishes')">Wishes</button>
+            </div>
+            <!-- Mobile Menu Button (Simple) -->
+            <div class="md:hidden flex space-x-4 text-sm">
+                <button class="hover:text-yellow-200" onclick="switchTab('story')">Story</button>
+                <button class="hover:text-yellow-200" onclick="switchTab('traditions')">Traditions</button>
+                <button class="hover:text-yellow-200" onclick="switchTab('wishes')">Wishes</button>
+            </div>
+        </div>
+    </nav>
 
-	<!-- ********************************************************* -->  
-        <!-- show double header               --#include virtual="header.inc"- -->
+    <!-- Hero Section -->
+    <header class="relative bg-gradient-to-b from-amber-400 to-orange-500 text-white overflow-hidden h-96 flex items-center justify-center">
         
+        <!-- Animated Sun Background -->
+        <div class="absolute top-10 right-10 md:right-20 opacity-30 pointer-events-none">
+           <i class="h-64 w-64 text-yellow-300 animate-spin-slow" data-lucide="sun" style="width: 256px; height: 256px;"></i>
+        </div>
 
-<div id="header-wrapper">
-				<header class="5grid-layout" id="site-header">
-					<div class="row">
-						<div class="12u">
-							<div id="logo">
-								<h1> <a id="ctl00_header2_myTitle" class="mobileUI-site-name" href="https://www.makarsankranti.net/">Makar Sankranti</a></h1>
+        <!-- Kite Container (Populated by JS) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden" id="kite-container"></div>
 
-							</div>
- 
+        <div class="relative z-20 text-center px-4 max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-md">
+                Makar Sankranti
+            </h1>
+            <p classname="text-xl md:text-2xl font-light mb-6 text-yellow-100">
+                The Festival of Sun, Harvest, and Hope
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base mt-6">
+                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🌞 Uttarayan</span>
+                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🪁 Kites</span>
+                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🔥 Bonfires</span>
+                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🌾 Harvest</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 py-12">
         
-          <nav class="mobileUI-site-nav" id="site-nav">  
-<ul>
-    
-
-    
-
-
-    <li>
-			<a id="ctl00_header2_RepLinks_ctl01_Hyperlink2" href="https://www.makarsankranti.net/">Home</a>									
-		
-    </li>
-
-
-    <li>
-			<a id="ctl00_header2_RepLinks_ctl02_Hyperlink2" href="https://www.makarsankranti.net/Holi%20Festival/">Holi Festival</a>									
-		
-    </li>
-
-
-
-
-
-             
- 
- 	</ul>
-							</nav>
-						</div>
-					</div>
-				</header>
-			</div>	
-		
-       
-
-		<div id="main-wrapper" class="subpage">
-				<div class="5grid-layout">
-					<div class="row">
-						<div class="9u">
-					
-							<!-- Content -->
-
-								<article class="first">
-									 
-
-    
-
-															
-																<h3><span id="ctl00_ContentPlaceHolder1_title">MakarSankranti Cards and messages | Send on Facebook, email</span></h3>
-														
-																					 <span> <span id="ctl00_ContentPlaceHolder1_metadesc"></span></span>				
-                        <br />     
-													
-													
-
-
-                                         
-											
-										
-										
-                                           
-
-							<table id="ctl00_ContentPlaceHolder1_RepDetails" cellspacing="0" border="0">
-	<tr>
-		<td colspan="3">
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_imghyperlink" href="Good%20Change.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_Image1" alt="GOOD CHANGE" NavigateUrl="Good Change.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/14.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl01_hyperlink1" href="Good%20Change.html">GOOD CHANGE</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_imghyperlink" href="Good%20movement.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_Image1" alt="GOOD MOVEMENT" NavigateUrl="Good movement.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/15.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl02_hyperlink1" href="Good%20movement.html">GOOD MOVEMENT</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_imghyperlink" href="Sun.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_Image1" alt="SUN" NavigateUrl="Sun.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/16.JPG" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl03_hyperlink1" href="Sun.html">SUN</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_imghyperlink" href="Capricorn.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_Image1" alt="CAPRICORN" NavigateUrl="Capricorn.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/17.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl04_hyperlink1" href="Capricorn.html">CAPRICORN</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_imghyperlink" href="Sankranti%20vs%20MakarSankranti.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_Image1" alt="SANKRANTI VS MAKARSANKRANTI" NavigateUrl="Sankranti vs MakarSankranti.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/18.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl05_hyperlink1" href="Sankranti%20vs%20MakarSankranti.html">SANKRANTI VS MAKARSANKRANTI</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_imghyperlink" href="Pongal%20in%20AP.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_Image1" alt="PONGAL IN AP" NavigateUrl="Pongal in AP.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/19.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl06_hyperlink1" href="Pongal%20in%20AP.html">PONGAL IN AP</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_imghyperlink" href="Rangoli%20style%20card.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_Image1" alt="RANGOLI STYLE CARD" NavigateUrl="Rangoli style card.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/2.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl07_hyperlink1" href="Rangoli%20style%20card.html">RANGOLI STYLE CARD</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_imghyperlink" href="Tamilnadu.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_Image1" alt="TAMILNADU" NavigateUrl="Tamilnadu.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/20.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl08_hyperlink1" href="Tamilnadu.html">TAMILNADU</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_imghyperlink" href="Kite%20festival.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_Image1" alt="KITE FESTIVAL" NavigateUrl="Kite festival.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/21.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl09_hyperlink1" href="Kite%20festival.html">KITE FESTIVAL</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_imghyperlink" href="Khichdi.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_Image1" alt="KHICHDI" NavigateUrl="Khichdi.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/22.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl10_hyperlink1" href="Khichdi.html">KHICHDI</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl11_imghyperlink" href="Gangasagar%20mela.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl11_Image1" alt="GANGASAGAR MELA" NavigateUrl="Gangasagar mela.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/23.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl11_hyperlink1" href="Gangasagar%20mela.html">GANGASAGAR MELA</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl12_imghyperlink" href="Bihu%20in%20Assam.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl12_Image1" alt="BIHU IN ASSAM" NavigateUrl="Bihu in Assam.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/25.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl12_hyperlink1" href="Bihu%20in%20Assam.html">BIHU IN ASSAM</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl13_imghyperlink" href="Sankranti%20in%20Thailand.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl13_Image1" alt="SANKRANTI IN THAILAND" NavigateUrl="Sankranti in Thailand.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/26.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl13_hyperlink1" href="Sankranti%20in%20Thailand.html">SANKRANTI IN THAILAND</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl14_imghyperlink" href="Harvesting.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl14_Image1" alt="HARVESTING" NavigateUrl="Harvesting.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/27.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl14_hyperlink1" href="Harvesting.html">HARVESTING</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl15_imghyperlink" href="US.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl15_Image1" alt="US" NavigateUrl="US.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/24.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl15_hyperlink1" href="US.html">US</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl16_imghyperlink" href="MakarSankranti%20wishes.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl16_Image1" alt="MAKARSANKRANTI WISHES" NavigateUrl="MakarSankranti wishes.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/1.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl16_hyperlink1" href="MakarSankranti%20wishes.html">MAKARSANKRANTI WISHES</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl17_imghyperlink" href="Email%20greetings.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl17_Image1" alt="EMAIL GREETINGS" NavigateUrl="Email greetings.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/10.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl17_hyperlink1" href="Email%20greetings.html">EMAIL GREETINGS</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl18_imghyperlink" href="Happy%20Makarsankranti.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl18_Image1" alt="HAPPY MAKARSANKRANTI" NavigateUrl="Happy Makarsankranti.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/101.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl18_hyperlink1" href="Happy%20Makarsankranti.html">HAPPY MAKARSANKRANTI</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl19_imghyperlink" href="Greetings.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl19_Image1" alt="GREETINGS" NavigateUrl="Greetings.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/102.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl19_hyperlink1" href="Greetings.html">GREETINGS</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl20_imghyperlink" href="Sankranti%20and%20Agriculture.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl20_Image1" alt="SANKRANTI AND AGRICULTURE" NavigateUrl="Sankranti and Agriculture.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/103.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl20_hyperlink1" href="Sankranti%20and%20Agriculture.html">SANKRANTI AND AGRICULTURE</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl21_imghyperlink" href="Harvesting.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl21_Image1" alt="HARVESTING" NavigateUrl="Harvesting.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/104.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl21_hyperlink1" href="Harvesting.html">HARVESTING</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl22_imghyperlink" href="Blessing.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl22_Image1" alt="BLESSING" NavigateUrl="Blessing.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/11.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl22_hyperlink1" href="Blessing.html">BLESSING</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl23_imghyperlink" href="Impactful%20card.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl23_Image1" alt="IMPACTFUL CARD" NavigateUrl="Impactful card.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/12.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl23_hyperlink1" href="Impactful%20card.html">IMPACTFUL CARD</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl24_imghyperlink" href="Meaning%20of%20MakarSankranti.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl24_Image1" alt="MEANING OF MAKARSANKRANTI" NavigateUrl="Meaning of MakarSankranti.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/13.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl24_hyperlink1" href="Meaning%20of%20MakarSankranti.html">MEANING OF MAKARSANKRANTI</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl25_imghyperlink" href="Colorful%20greeting%20for%20Sankrant.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl25_Image1" alt="COLORFUL GREETING FOR SANKRANT" NavigateUrl="Colorful greeting for Sankrant.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/3.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl25_hyperlink1" href="Colorful%20greeting%20for%20Sankrant.html">COLORFUL GREETING FOR SANKRANT</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl26_imghyperlink" href="Auspicious%20looking%20design.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl26_Image1" alt="AUSPICIOUS LOOKING DESIGN" NavigateUrl="Auspicious looking design.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/4.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl26_hyperlink1" href="Auspicious%20looking%20design.html">AUSPICIOUS LOOKING DESIGN</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl27_imghyperlink" href="General%20card.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl27_Image1" alt="GENERAL CARD" NavigateUrl="General card.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/5.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl27_hyperlink1" href="General%20card.html">GENERAL CARD</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl28_imghyperlink" href="Happy%20Makarsankranti.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl28_Image1" alt="HAPPY MAKARSANKRANTI" NavigateUrl="Happy Makarsankranti.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/6.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl28_hyperlink1" href="Happy%20Makarsankranti.html">HAPPY MAKARSANKRANTI</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl29_imghyperlink" href="Send%20Sankranti%20wishes.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl29_Image1" alt="SEND SANKRANTI WISHES" NavigateUrl="Send Sankranti wishes.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/7.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl29_hyperlink1" href="Send%20Sankranti%20wishes.html">SEND SANKRANTI WISHES</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl30_imghyperlink" href="Shub.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl30_Image1" alt="SHUB" NavigateUrl="Shub.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/8.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl30_hyperlink1" href="Shub.html">SHUB</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-<a id="ctl00_ContentPlaceHolder1_RepDetails_ctl31_imghyperlink" href="New%20Begining%20on%20Makarsankranti.html"><img id="ctl00_ContentPlaceHolder1_RepDetails_ctl31_Image1" alt="NEW BEGINING ON MAKARSANKRANTI" NavigateUrl="New Begining on Makarsankranti.html" src="https://kreate.blob.core.windows.net/festival/cards/Sankranti/thumbnails_100/9.jpg" border="0" /></a>
-
-                                                <blockquote>  <a id="ctl00_ContentPlaceHolder1_RepDetails_ctl31_hyperlink1" href="New%20Begining%20on%20Makarsankranti.html">NEW BEGINING ON MAKARSANKRANTI</a></blockquote>
-												 
-				
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                							
-		
-
-  </div>
-
-</td><td></td><td></td>
-	</tr><tr>
-		<td colspan="3">
-
-
-
-</td>
-	</tr>
-</table>
-										
-									<span id="ctl00_ContentPlaceHolder1_labeltext"></span>	
-
-                                                           														
-                            <br />
-                             <table id="ctl00_ContentPlaceHolder1_RepComments" cellspacing="0" border="0">
-	<tr>
-		<td>
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-
-												 
-               							
-		
-
-      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl01_labeltext"><font color="Black" size="4"><br/>
-Lets embrace simplicity and sincerity on Makarsankranti and you shall have a wonderful year ahead
-<br/></font></span>
-    <br />
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-
-												 
-               							
-		
-
-      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl02_labeltext"><font color="Black" size="4"><br/>
-Meethe gur mein mil gaye til,Udi patang aur khil gaye dil,Har pal <br/>
- sukh aur har din shaanti,Aap sab ke liye laaye Happy Makar Sankranti 
-<br/>
-
-</font></span>
-    <br />
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-
-												 
-               							
-		
-
-      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl03_labeltext"><font color="Black" size="4"><br/>
-May you discover all your hidden potentials this MakarSankranti and turn them into delightful ventures bringing you fame and finances to rejoice.<br/>
-<br/></font></span>
-    <br />
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-
-												 
-               							
-		
-
-      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl04_labeltext"><font color="Black" size="4"><br/>
-A bird sitting on a tree is never afraid - that branch of tree will break. because bird trust is not on the branch but on its own wings.  Always believe in yourself. May Makarsankranti bring new perspective, capabilities, confidence and success.<br/>
-<br/>
-</font></span>
-    <br />
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-
-												 
-               							
-		
-
-      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl05_labeltext"><font color="Black" size="4">I wish you Happy MakarSankranti from the bottom of my heart. <br/>
-May God give you the happiness and strength to overcome your past  failures.<br/>
-<br/></font></span>
-    <br />
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-					
-                   
-
-												 
-               							
-		
-
-      <span id="ctl00_ContentPlaceHolder1_RepComments_ctl06_labeltext"><font color="Black" size="4"><br/>
-Wishing a very happy and prosperous MakarSankranti to a person who brings sunshine to the family always.<br/>
-I wish that the MakarSankranti bring - upcoming year fill with peak of health, abundance of happiness and sunshine, bountiful luxury and prosperity and Zen like serenity.<br/>
-<br/>
-</font></span>
-    <br />
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-
-</td>
-	</tr>
-</table>    
-                            <br />
-                             <div class="fb-activity" data-site="https://www.makarsankranti.net/" data-action="likes, recommends" data-colorscheme="light" data-header="true"></div>
-	
-								
-                                <div class="fb-comments" data-href="https://www.makarsankranti.net/" data-numposts="5" data-colorscheme="light" data-order-by="reverse_time"></div>
-			
-<!--
-                            <div class="fb-post" data-href="https://www.facebook.com/DiwaliCelebrations" data-width="500"></div>		
-                              <div class="fb-recommendations" data-site="https://www.makarsankranti.net/" data-action="likes, recommends" data-colorscheme="light" data-header="true"></div>
-		
-                            -->
-								
-
-
-
-								</article>							
-
-						</div>
-
-					<div class="3u">
-						
-							<!-- Sidebar -->
-							
-								<section>
-
-									<h3>Topics</h3>
-									<ul class="link-list">
-																				
-
-    
-
-
-
-												
-						
-			<a id="ctl00_articlessub_RepLinks_ctl01_title" class="nav-item nav-link active" href="https://www.makarsankranti.net/"><em><b>Home</b></em></a>
+        <!-- Intro -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-orange-800 mb-6">Celebrating the Sun's Journey</h2>
+            <p class="text-lg text-stone-600 max-w-3xl mx-auto leading-relaxed">
+                Makar Sankranti marks the sun's transition into Capricorn (Makara), signaling the end of winter and the beginning of longer days. 
+                It is a unique festival celebrated across India under different names—Pongal, Bihu, Lohri, and Uttarayan—united by the spirit of gratitude to nature.
+            </p>
+        </div>
+
+        <!-- Tab 1: The Story -->
+        <div class="tab-content active" id="story">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 border-orange-500">
+                <div class="p-8 md:p-12">
+                    <h3 class="text-2xl font-bold text-orange-700 mb-8 flex items-center">
+                        <i class="mr-3" data-lucide="book-open"></i> The Journey of the Sun: One Story, Many Festivals
+                    </h3>
+                    
+                    <div class="prose prose-orange max-w-none text-stone-700 space-y-6 text-lg leading-relaxed">
+                        <p>
+                            Long ago, when the world moved in rhythm with nature, the <strong>Sun God, Surya</strong>, was not just a celestial body but a living force. For many months, Surya traveled southward, and the Earth felt the chill of winter. Farmers waited patiently, trusting that the Sun would return with warmth.
+                        </p>
+
+                        <div class="my-8 p-6 bg-yellow-50 rounded-xl border-l-4 border-yellow-400">
+                            <h4 class="font-bold text-yellow-800 mb-2 flex items-center"><i class="w-5 h-5 mr-2" data-lucide="sun"></i> Makar Sankranti: The Sacred Turning</h4>
+                            <p>
+                                One auspicious morning, Surya reached the boundary of Capricorn. At that moment, the world felt a shift. The Sun changed direction, beginning his northward journey (Uttarayan). Sages declared this the victory of light over darkness. On this day, Surya visited his son Shani (Saturn), healing their relationship and teaching humanity the power of forgiveness.
+                            </p>
+                        </div>
+
+                        <p>
+                            As Surya continued north, hope filled the air. In <strong>Gujarat</strong>, the skies filled with colorful kites, each carrying a prayer for the new year. High above, Surya smiled, seeing humans look up in celebration.
+                        </p>
+                        
+                        <p>
+                            The Sun then traveled east to <strong>Assam</strong>. Barns overflowed with grain. Villagers built <em>Meji</em> bonfires and offered the first harvest to the flames. The fire crackled, burning away hardship and signaling the start of <strong>Magh Bihu</strong>—a festival of fire, food, and fellowship.
+                        </p>
+
+                        <p>
+                            Finally, Surya bathed <strong>Tamil Nadu</strong> in golden light. Farmers boiled rice and milk in earthen pots until they overflowed, shouting <em>"Pongalo Pongal!"</em> to welcome abundance. They honored their cattle and thanked the land, celebrating <strong>Pongal</strong> with humility and gratitude.
+                        </p>
+
+                        <div class="mt-8 text-center italic text-orange-800 font-medium text-xl">
+                            "Though the rituals differ—kites, bonfires, or boiling pots—they tell one story: Nature provides, and humanity learns to live in balance."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 2: Traditions -->
+        <div class="tab-content" id="traditions">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pongal -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-32 bg-gradient-to-r from-yellow-400 to-orange-400 flex items-center justify-center">
+                        <i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="wheat" style="width: 64px; height: 64px;"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pongal</h3>
+                        <p class="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-4">Tamil Nadu</p>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            A four-day harvest festival. The main ritual involves boiling fresh rice with milk and jaggery in a new clay pot until it overflows, symbolizing prosperity.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Bhogi: Burning old items</li>
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Thai Pongal: Solar worship</li>
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Mattu Pongal: Cattle worship</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Magh Bihu -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-32 bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center">
+                        <i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="flame" style="width: 64px; height: 64px;"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Magh Bihu</h3>
+                        <p class="text-xs font-semibold text-red-600 uppercase tracking-wide mb-4">Assam</p>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            Also known as Bhogali Bihu (festival of eating). It marks the end of the harvest season with community feasts and bonfires.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Uruka: Community feast night</li>
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Meji: Lighting tall bonfires</li>
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Pitha: Rice cakes &amp; sesame sweets</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Gangasagar -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-32 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+                        <i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="droplets" style="width: 64px; height: 64px;"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Gangasagar Mela</h3>
+                        <p class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-4">West Bengal</p>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            The second largest human congregation after Kumbh Mela. Devotees gather at Sagar Island where the Ganga meets the Bay of Bengal.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Holy Dip: Washing away sins</li>
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Kapil Muni Temple: Worship</li>
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Ancestral Rites: Tarpan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Uttarayan -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-32 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                        <i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="wind" style="width: 64px; height: 64px;"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Uttarayan</h3>
+                        <p class="text-xs font-semibold text-purple-600 uppercase tracking-wide mb-4">Gujarat &amp; Rajasthan</p>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            Famous for the International Kite Festival. The sky becomes a mosaic of colorful kites, symbolizing high aspirations.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Patang: Kite flying battles</li>
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Undhiyu: Mixed vegetable curry</li>
+                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Chikki: Peanut brittle sweets</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 3: Wishes -->
+        <div class="tab-content" id="wishes">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-center text-2xl font-bold text-orange-800 mb-8">Share the Joy</h3>
+                <div class="space-y-4" id="wishes-container">
+                    <!-- Wishes injected via JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Life Lessons (Always Visible) -->
+        <div class="mt-20 bg-stone-900 text-stone-300 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 via-yellow-500 to-red-500"></div>
+            <h3 class="text-2xl font-bold text-white mb-6">Life Lessons from Sankranti</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
+                <div class="p-4 bg-stone-800 rounded-xl">
+                    <i class="w-8 h-8 mx-auto text-pink-500 mb-3" data-lucide="heart"></i>
+                    <h4 class="font-bold text-white mb-2">Sweetness Heals</h4>
+                    <p>Just like Til-Gul (sesame &amp; jaggery), speak sweetly to heal old relationships.</p>
+                </div>
+                <div class="p-4 bg-stone-800 rounded-xl">
+                    <i class="w-8 h-8 mx-auto text-yellow-500 mb-3" data-lucide="sun"></i>
+                    <h4 class="font-bold text-white mb-2">Change is Good</h4>
+                    <p>Like the sun changing course, embrace change as a sign of new beginnings.</p>
+                </div>
+                <div class="p-4 bg-stone-800 rounded-xl">
+                    <i class="w-8 h-8 mx-auto text-green-500 mb-3" data-lucide="wheat"></i>
+                    <h4 class="font-bold text-white mb-2">Gratitude</h4>
+                    <p>Always thank nature, the land, and the invisible hands that feed us.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Festive Gallery Section -->
+        <div class="mt-20">
+            <h3 class="text-center text-2xl font-bold text-orange-800 mb-8">Festive Moments &amp; Greetings</h3>
+            <p class="text-center text-stone-600 mb-8 max-w-2xl mx-auto">
+                Capture the spirit of the season with these beautiful glimpses of Sankranti celebrations. Share these greetings with your loved ones to spread warmth and joy.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Happy Pongal and Sankranti" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy Pongal and Sankranti.jpg"/>
+                </div>
+                <!-- Image 2 -->
+                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Happy Sankranti" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy Sankranti.jpg"/>
+                </div>
+                <!-- Image 3 -->
+                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Happy and Prosperous" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy and Prosperous.jpg"/>
+                </div>
+                <!-- Image 4 -->
+                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Love and Affection" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Love and Affection.jpg"/>
+                </div>
+                <!-- Image 5 -->
+                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Sankranti Prasad" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti Prasad.jpg"/>
+                </div>
+                <!-- Image 6 -->
+                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Sankranti Wishes" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti Wishes.jpg"/>
+                </div>
+                <!-- Image 7 -->
+                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Sankranti Prosperity" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti prosperity.jpg"/>
+                </div>
+                <!-- Image 8 -->
+                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img alt="Sankranti Celebration" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti.jpg"/>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+<div class="container mx-auto px-6 py-12 lg:px-8">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/Auspicious%20looking%20design.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Auspicious looking design</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Bihu%20in%20Assam.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Bihu in Assam</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/bihu-assam-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Bihu-assam-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/bihu-assam.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">Bihu-assam</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Blessing.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Blessing</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Capricorn.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Capricorn</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Colorful%20greeting%20for%20Sankrant.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl07_title">Colorful greeting for Sankrant</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Email%20greetings.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl08_title">Email greetings</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/ganga-sagar-mela.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl09_title">Ganga-sagar-mela</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Gangasagar%20mela.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl10_title">Gangasagar mela</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/General%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl11_title">General card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Good%20Change.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl12_title">Good Change</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Good%20movement.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl13_title">Good movement</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Greetings.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl14_title">Greetings</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Happy%20Makarsankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl15_title">Happy Makarsankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Harvesting.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl16_title">Harvesting</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/image.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl17_title">Image</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Impactful%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl18_title">Impactful card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/index2.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl19_title">Index2</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Khichdi.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl20_title">Khichdi</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Kite%20festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl21_title">Kite festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/MakarSankranti%20wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl22_title">MakarSankranti wishes</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-blog.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl23_title">Makarsankranti-blog</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-celebrations.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl24_title">Makarsankranti-celebrations</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl25_title">Makarsankranti-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-page.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl26_title">Makarsankranti-page</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-pongal-bihu-uttarayan.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl27_title">Makarsankranti-pongal-bihu-uttarayan</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-pongal-celebration.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl28_title">Makarsankranti-pongal-celebration</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-significance.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl29_title">Makarsankranti-significance</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-taste.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl30_title">Makarsankranti-taste</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Meaning%20of%20MakarSankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl31_title">Meaning of MakarSankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/messages.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl32_title">Messages</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/New%20Begining%20on%20Makarsankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl33_title">New Begining on Makarsankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Pongal%20in%20AP.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl34_title">Pongal in AP</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pongal-festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl35_title">Pongal-festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Rangoli%20style%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl36_title">Rangoli style card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-celebration-and-wishes-in-indian-languages.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl40_title">Sankranti-celebration-and-wishes-in-indian-languages</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-harvest-festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl41_title">Sankranti-harvest-festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-wishes-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl42_title">Sankranti-wishes-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Send%20Sankranti%20wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl43_title">Send Sankranti wishes</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Shub.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl44_title">Shub</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sitemap.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl45_title">Sitemap</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Tamilnadu.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl49_title">Tamilnadu</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/US.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl50_title">US</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Festivals and Celebration</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Home</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Holi%20Festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Holi Festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/kite-festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Kite festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Photos/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">Photos</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/ramayana-stories/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Ramayana stories</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-blog/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Sankranti blog</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pictures.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">MakarSankranti Pictures</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Stories of Makarsankrnti</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/stories.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl46_title">Stories</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sun-joyful-story.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl47_title">Sun-joyful-story</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sun.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl48_title">Sun</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20and%20Agriculture.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl37_title">Sankranti and Agriculture</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20in%20Thailand.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl38_title">Sankranti in Thailand</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20vs%20MakarSankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl39_title">Sankranti vs MakarSankranti</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Contact Us</h5>
+<div class="space-y-2">
+<p>Redmond<br/>WA, USA</p>
+<p>
+<a class="hover:text-white hover:underline transition-colors duration-200" href="mailto:contact@dataknobs.com">contact@kreatewebsites.com</a>
+</p>
+<p>
+</p>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+<p class="text-sm text-gray-400">© 2025 Dataknobs, Inc. All rights reserved.</p>
+<div class="flex gap-4 mt-4 sm:mt-0">
+<a class="text-stone-400 hover:text-white" href="https://www.makarsankranti.net/privacypolicy,html">Privacy Policy</a> <!-- 13 -->
+<a class="text-stone-400 hover:text-white" href="https://www.makarsankranti.net/sitemap.html">Sitemap</a> <!-- 14 -->
+</div>
+<div class="flex space-x-4 mt-4 sm:mt-0">
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.facebook.com/kreatewebsites/">
+<span class="sr-only">Facebook</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.twitter.com/kreatewebsites/">
+<span class="sr-only">Twitter</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.linkedin.com/company/kreatewebsites/">
+<span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Data
+        const wishesData = [
+            { title: "Makar Sankranti", text: "May the Sun bless your life with new energy, good health, and success. Happy Makar Sankranti!" },
+            { title: "Uttarayan", text: "May your dreams soar as high as colorful kites in the sky. Wishing you health, warmth, and endless optimism." },
+            { title: "Pongal", text: "May your life overflow with happiness and prosperity, just like the Pongal pot. Pongalo Pongal!" },
+            { title: "Magh Bihu", text: "May the sacred fire burn away worries and light your path forward. Wishing you abundance and contentment." },
+        ];
+
+        // Render Wishes
+        const wishesContainer = document.getElementById('wishes-container');
+        wishesData.forEach((wish, index) => {
+            const div = document.createElement('div');
+            div.className = "bg-white p-6 rounded-lg shadow border-l-4 border-orange-400 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4";
+            div.innerHTML = `
+                <div class="flex-1">
+                    <h4 class="font-bold text-orange-900 mb-1">${wish.title}</h4>
+                    <p class="text-stone-600 italic">"${wish.text}"</p>
+                </div>
+                <button onclick="copyToClipboard('${wish.text}', this)" 
+                    class="flex items-center px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 transition text-sm font-medium whitespace-nowrap">
+                    <i data-lucide="copy" class="w-4 h-4 mr-2"></i> Copy
+                </button>
+            `;
+            wishesContainer.appendChild(div);
+        });
+        lucide.createIcons(); // Re-run for dynamic content
+
+        // Tabs Logic
+        function switchTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
             
-           
-       
+            // Update buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('text-yellow-300', 'font-bold');
+            });
+            document.getElementById(`btn-${tabId}`).classList.add('text-yellow-300', 'font-bold');
+        }
 
+        // Copy Function
+        function copyToClipboard(text, btnElement) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
 
-
-
-
-												
-						
-			<a id="ctl00_articlessub_RepLinks_ctl02_title" class="nav-item nav-link active" href="https://www.makarsankranti.net/Holi%20Festival/"><em><b>Holi Festival</b></em></a>
+            const originalHTML = btnElement.innerHTML;
+            btnElement.innerHTML = `<i data-lucide="check" class="w-4 h-4 mr-2"></i> Copied`;
+            lucide.createIcons();
             
-           
-       
+            setTimeout(() => {
+                btnElement.innerHTML = originalHTML;
+                lucide.createIcons();
+            }, 2000);
+        }
 
+        // Kite Animation Generator
+        const kiteContainer = document.getElementById('kite-container');
+        const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33F3'];
 
-
-
-
-												
-						
-			<a id="ctl00_articlessub_RepLinks_ctl03_title" class="nav-item nav-link active" href="https://www.makarsankranti.net/kite-festival/"><em><b>Kite festival</b></em></a>
+        for (let i = 0; i < 8; i++) {
+            const kite = document.createElement('div');
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const left = Math.random() * 100;
+            const delay = Math.random() * 5;
+            const duration = 15 + Math.random() * 10;
             
-           
-       
+            kite.className = 'kite';
+            kite.style.color = color;
+            kite.style.left = `${left}%`;
+            kite.style.top = '100%';
+            kite.style.animation = `drift ${duration}s linear infinite`;
+            kite.style.animationDelay = `-${delay}s`;
 
-
-
-
-
-												
-						
-			<a id="ctl00_articlessub_RepLinks_ctl04_title" class="nav-item nav-link active" href="https://www.makarsankranti.net/Photos/"><em><b>Photos</b></em></a>
+            const tail = document.createElement('div');
+            tail.className = 'kite-tail';
             
-           
-       
-
-
-
-
-
-												
-						
-			<a id="ctl00_articlessub_RepLinks_ctl05_title" class="nav-item nav-link active" href="https://www.makarsankranti.net/ramayana-stories/"><em><b>Ramayana stories</b></em></a>
-            
-           
-       
-
-
-
-
-
-												
-						
-			<a id="ctl00_articlessub_RepLinks_ctl06_title" class="nav-item nav-link active" href="https://www.makarsankranti.net/sankranti-blog/"><em><b>Sankranti blog</b></em></a>
-            
-           
-       
-
-
-
-
-
-
-
-             
- 
- 
- 
-	
-									</ul>
-								</section>
-
-								<section class="last">
-									<h3>Related Links</h3>
-									<p>
-																
-									</p>
-									<ul class="link-list">
-										
-
-    
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl01_title" href="https://www.makarsankranti.net/">Home</a>
-            </li>	
-
-
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl02_title" href="https://www.makarsankranti.net/Holi%20Festival/">Holi Festival</a>
-            </li>	
-
-
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl03_title" href="https://www.makarsankranti.net/kite-festival/">Kite festival</a>
-            </li>	
-
-
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl04_title" href="https://www.makarsankranti.net/Photos/">Photos</a>
-            </li>	
-
-
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl05_title" href="https://www.makarsankranti.net/ramayana-stories/">Ramayana stories</a>
-            </li>	
-
-
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl06_title" href="https://www.makarsankranti.net/sankranti-blog/">Sankranti blog</a>
-            </li>	
-
-
-
-
-
-
-
-             
- 
- 
- 
-
-										
-
-    
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl01_title" class="btn btn-link" href="https://www.makarsankranti.net/Auspicious%20looking%20design.html">Auspicious looking design</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl02_title" class="btn btn-link" href="https://www.makarsankranti.net/Bihu%20in%20Assam.html">Bihu in Assam</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl03_title" class="btn btn-link" href="https://www.makarsankranti.net/bihu-assam-info.html">Bihu-assam-info</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl04_title" class="btn btn-link" href="https://www.makarsankranti.net/bihu-assam.html">Bihu-assam</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl05_title" class="btn btn-link" href="https://www.makarsankranti.net/Blessing.html">Blessing</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl06_title" class="btn btn-link" href="https://www.makarsankranti.net/Capricorn.html">Capricorn</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl07_title" class="btn btn-link" href="https://www.makarsankranti.net/Colorful%20greeting%20for%20Sankrant.html">Colorful greeting for Sankrant</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl08_title" class="btn btn-link" href="https://www.makarsankranti.net/Email%20greetings.html">Email greetings</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl09_title" class="btn btn-link" href="https://www.makarsankranti.net/ganga-sagar-mela.html">Ganga-sagar-mela</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl10_title" class="btn btn-link" href="https://www.makarsankranti.net/Gangasagar%20mela.html">Gangasagar mela</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl11_title" class="btn btn-link" href="https://www.makarsankranti.net/General%20card.html">General card</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl12_title" class="btn btn-link" href="https://www.makarsankranti.net/Good%20Change.html">Good Change</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl13_title" class="btn btn-link" href="https://www.makarsankranti.net/Good%20movement.html">Good movement</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl14_title" class="btn btn-link" href="https://www.makarsankranti.net/Greetings.html">Greetings</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl15_title" class="btn btn-link" href="https://www.makarsankranti.net/Happy%20Makarsankranti.html">Happy Makarsankranti</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl16_title" class="btn btn-link" href="https://www.makarsankranti.net/Harvesting.html">Harvesting</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl17_title" class="btn btn-link" href="https://www.makarsankranti.net/image.html">Image</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl18_title" class="btn btn-link" href="https://www.makarsankranti.net/Impactful%20card.html">Impactful card</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl19_title" class="btn btn-link" href="https://www.makarsankranti.net/index2.html">Index2</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl20_title" class="btn btn-link" href="https://www.makarsankranti.net/Khichdi.html">Khichdi</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl21_title" class="btn btn-link" href="https://www.makarsankranti.net/Kite%20festival.html">Kite festival</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl22_title" class="btn btn-link" href="https://www.makarsankranti.net/MakarSankranti%20wishes.html">MakarSankranti wishes</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl23_title" class="btn btn-link" href="https://www.makarsankranti.net/makarsankranti-blog.html">Makarsankranti-blog</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl24_title" class="btn btn-link" href="https://www.makarsankranti.net/makarsankranti-celebrations.html">Makarsankranti-celebrations</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl25_title" class="btn btn-link" href="https://www.makarsankranti.net/makarsankranti-info.html">Makarsankranti-info</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl26_title" class="btn btn-link" href="https://www.makarsankranti.net/makarsankranti-page.html">Makarsankranti-page</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl27_title" class="btn btn-link" href="https://www.makarsankranti.net/makarsankranti-pongal-bihu-uttarayan.html">Makarsankranti-pongal-bihu-uttarayan</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl28_title" class="btn btn-link" href="https://www.makarsankranti.net/makarsankranti-pongal-celebration.html">Makarsankranti-pongal-celebration</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl29_title" class="btn btn-link" href="https://www.makarsankranti.net/makarsankranti-significance.html">Makarsankranti-significance</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl30_title" class="btn btn-link" href="https://www.makarsankranti.net/makarsankranti-taste.html">Makarsankranti-taste</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl31_title" class="btn btn-link" href="https://www.makarsankranti.net/Meaning%20of%20MakarSankranti.html">Meaning of MakarSankranti</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl32_title" class="btn btn-link" href="https://www.makarsankranti.net/messages.html">Messages</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl33_title" class="btn btn-link" href="https://www.makarsankranti.net/New%20Begining%20on%20Makarsankranti.html">New Begining on Makarsankranti</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl34_title" class="btn btn-link" href="https://www.makarsankranti.net/Pongal%20in%20AP.html">Pongal in AP</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl35_title" class="btn btn-link" href="https://www.makarsankranti.net/pongal-festival.html">Pongal-festival</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl36_title" class="btn btn-link" href="https://www.makarsankranti.net/Rangoli%20style%20card.html">Rangoli style card</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl37_title" class="btn btn-link" href="https://www.makarsankranti.net/Sankranti%20and%20Agriculture.html">Sankranti and Agriculture</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl38_title" class="btn btn-link" href="https://www.makarsankranti.net/Sankranti%20in%20Thailand.html">Sankranti in Thailand</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl39_title" class="btn btn-link" href="https://www.makarsankranti.net/Sankranti%20vs%20MakarSankranti.html">Sankranti vs MakarSankranti</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl40_title" class="btn btn-link" href="https://www.makarsankranti.net/sankranti-celebration-and-wishes-in-indian-languages.html">Sankranti-celebration-and-wishes-in-indian-languages</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl41_title" class="btn btn-link" href="https://www.makarsankranti.net/sankranti-harvest-festival.html">Sankranti-harvest-festival</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl42_title" class="btn btn-link" href="https://www.makarsankranti.net/sankranti-wishes-info.html">Sankranti-wishes-info</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl43_title" class="btn btn-link" href="https://www.makarsankranti.net/Send%20Sankranti%20wishes.html">Send Sankranti wishes</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl44_title" class="btn btn-link" href="https://www.makarsankranti.net/Shub.html">Shub</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl45_title" class="btn btn-link" href="https://www.makarsankranti.net/sitemap.html">Sitemap</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl46_title" class="btn btn-link" href="https://www.makarsankranti.net/stories.html">Stories</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl47_title" class="btn btn-link" href="https://www.makarsankranti.net/sun-joyful-story.html">Sun-joyful-story</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl48_title" class="btn btn-link" href="https://www.makarsankranti.net/Sun.html">Sun</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl49_title" class="btn btn-link" href="https://www.makarsankranti.net/Tamilnadu.html">Tamilnadu</a>
-        
-    <br />
-
-
-
-
-
-												
-								
-		<a id="ctl00_Articlesub1_RepLinks_ctl50_title" class="btn btn-link" href="https://www.makarsankranti.net/US.html">US</a>
-        
-    <br />
-
-
-
-
-
-
-
-             
- 
- 
- 
- 
-									</ul>
-								</section>
-						
-						</div>
-					</div>
-				</div>
-		</div>
-			
-        
-
-<div id="footer-wrapper">
-				<footer class="5grid-layout" id="site-footer">
-					<div class="row">
-						<div class="3u">
-							<section class="first">
-								<h2><a id="ctl00_footer_footerhead" title="Makar Sankranti" href="https://www.makarsankranti.net/">Makar Sankranti</a></h2>
-								<ul class="link-list">
-										
-									
-									
-                                    <table id="ctl00_footer_RepLinks" cellspacing="0" border="0">
-	<tr>
-		<td>
-
-    
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl01_title" href="https://www.makarsankranti.net/">Home</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl02_title" href="https://www.makarsankranti.net/Holi%20Festival/">Holi Festival</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl03_title" href="https://www.makarsankranti.net/kite-festival/">Kite festival</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl04_title" href="https://www.makarsankranti.net/Photos/">Photos</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl05_title" href="https://www.makarsankranti.net/ramayana-stories/">Ramayana stories</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl06_title" href="https://www.makarsankranti.net/sankranti-blog/">Sankranti blog</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-
-</td>
-	</tr>
-</table>
-                                    
-
-                   </ul>
-							</section>
-						</div>
-
-                        <div class="3u">
-							<section >
-								<h2>Set 2</h2>
-								<ul class="link-list">
-										
-									
-									
-                                    
-                                    
-
-                   </ul>
-							</section>
-						</div>
-                        <div class="3u">
-							<section >
-								<h2>Set 3</h2>
-								<ul class="link-list">
-										
-									
-									
-                                    
-                                    
-
-                   </ul>
-							</section>
-						</div>
-
-                        <div class="3u">
-							<section class="last" >
-								<h2>Set 4</h2>
-								<ul class="link-list">
-										
-									
-									
-                                    
-                                    
-
-                   </ul>
-							</section>
-						</div>
-                        	</div>
-					<div class="row">
-						<div class="12u">
-							<div class="divider"></div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="12u">
-							<div id="copyright">
-								&copy; Copyright.  Design: <a id="ctl00_footer_cright">Makar Sankranti</a> | <a id="ctl00_footer_sitemap"></a>  | <a id="ctl00_footer_privacypolicy" href="Makar%20Sankrantiprivacypolicy.html">Privacy Policy</a> 
-							</div>
-						</div>
-					</div>
-				</footer>
-		<!-- Footer -->
-
-
-
-	</body>
-</html>
+            kite.appendChild(tail);
+            kiteContainer.appendChild(kite);
+        }
+    </script>
+
+</body></html>
