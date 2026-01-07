@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Lohri: Traditions, Music &amp; Dance</title>
+    
+    <!-- Meta Description & Keywords -->
+    <meta content="Experience the vibrant traditions of Lohri. Discover the energy of Bhangra, the grace of Giddha, and the beat of the Dhol. Explore how music and dance bring communities together." name="description"/>
+    <meta content="Lohri Dance, Bhangra, Giddha, Dhol, Punjabi Folk Songs, Sundar Mundriye, Lohri Traditions, Indian Festivals" name="keywords"/>
+    <meta content="Lohri Festival Interactive" name="author"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, .serif-font {
+            font-family: 'Crimson Text', serif;
+        }
+        
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        /* Dhol Beat Animation */
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .animate-beat {
+            animation: beat 0.4s infinite;
+        }
+
+        @keyframes float-music {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-40px) rotate(20deg); opacity: 0; }
+        }
+        .music-note {
+            animation: float-music 1.5s linear infinite;
+        }
+
+        /* Tab Transitions */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Image Overlay Gradient */
+        .hero-overlay {
+            background: linear-gradient(to top, rgba(88, 28, 135, 0.9), rgba(88, 28, 135, 0.4));
+        }
+    </style>
+</head>
+<body class="bg-purple-50 text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="bg-purple-900 text-white sticky top-0 z-50 shadow-lg border-b-4 border-pink-500">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2 font-bold text-xl cursor-pointer hover:opacity-90 transition" onclick="switchTab('home')">
+                    <i class="text-pink-400" data-lucide="music-2"></i>
+                    <span class="serif-font tracking-wide">Lohri Rhythms</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <button class="nav-btn text-pink-400 font-semibold border-b-2 border-pink-400 hover:text-pink-300 transition-colors py-1" data-target="home" onclick="switchTab('home')">Traditions</button>
+                    <button class="nav-btn hover:text-pink-300 transition-colors py-1" data-target="dance" onclick="switchTab('dance')">Bhangra &amp; Giddha</button>
+                    <button class="nav-btn hover:text-pink-300 transition-colors py-1" data-target="music" onclick="switchTab('music')">Folk Songs</button>
+                    <button class="nav-btn hover:text-pink-300 transition-colors py-1" data-target="modern" onclick="switchTab('modern')">Village vs City</button>
+                </div>
+
+                <!-- Mobile Menu Icon -->
+                <div class="md:hidden flex space-x-4 text-sm">
+                    <button class="hover:text-pink-200 flex items-center gap-1" onclick="switchTab('dance')"><i class="w-4 h-4" data-lucide="activity"></i> Dance</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow pb-12">
+        
+        <!-- HOME SECTION -->
+        <div class="tab-content active animate-fade-in" id="home">
+            <!-- Hero with Image -->
+            <div class="relative bg-purple-900 text-white py-24 px-4 overflow-hidden">
+                <!-- Background Image with Overlay -->
+                <div class="absolute inset-0 z-0">
+                    <img alt="Lohri Celebration" class="w-full h-full object-cover opacity-60 mix-blend-overlay" src="https://storage.googleapis.com/kreatewebsite/photos800/lohri-1.jpg"/>
+                    <div class="absolute inset-0 hero-overlay"></div>
+                </div>
+
+                <div class="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 z-10">
+                    <div class="md:w-1/2 text-left">
+                        <div class="inline-block bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">The Beat of Punjab</div>
+                        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-pink-100 drop-shadow-lg leading-tight">Joy in Motion</h1>
+                        <p class="text-xl mb-8 text-purple-100 leading-relaxed font-light">
+                            Lohri is a festival that resonates with the sounds of music, dance, and drums. Feel the energy of the Dhol and the warmth of the bonfire as you join in the celebration of shared happiness.
+                        </p>
+                        <button class="bg-pink-600 text-white px-8 py-3 rounded-full font-bold hover:bg-pink-500 transition transform hover:scale-105 shadow-lg flex items-center gap-2" onclick="switchTab('dance')">
+                            Explore Dances <i class="w-5 h-5" data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Interactive Element: The Dhol Beat -->
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="bg-white/10 backdrop-blur-md p-8 rounded-full border border-white/20 text-center relative w-72 h-72 flex flex-col items-center justify-center group hover:bg-white/20 transition-all duration-500">
+                            
+                            <!-- Dancing Notes Container -->
+                            <div class="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-300" id="notes-container">
+                                <i class="absolute top-10 left-10 text-pink-300 w-6 h-6 music-note" data-lucide="music" style="animation-delay: 0s;"></i>
+                                <i class="absolute top-6 right-16 text-yellow-300 w-8 h-8 music-note" data-lucide="music" style="animation-delay: 0.5s;"></i>
+                                <i class="absolute bottom-12 left-12 text-purple-300 w-6 h-6 music-note" data-lucide="music-2" style="animation-delay: 1s;"></i>
+                            </div>
+
+                            <div class="transition-transform duration-200" id="dhol-icon">
+                                <i class="w-24 h-24 text-pink-400 mb-2" data-lucide="drum"></i>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-white mb-2" id="dhol-text">Silent Night</h3>
+                            <button class="mt-2 bg-white text-purple-900 px-6 py-2 rounded-full text-sm font-bold hover:bg-pink-100 transition-colors" id="dhol-btn" onclick="toggleDhol()">
+                                Play Dhol
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intro Content -->
+            <div class="max-w-4xl mx-auto px-4 py-16 text-center">
+                <h2 class="text-3xl font-bold text-purple-900 mb-6">A Festival of Expression</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Lohri's traditions and folk music bring life beyond its agricultural origins, turning village courtyards and city rooftops into hubs of communal celebration.
+                </p>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-md border-l-8 border-pink-500 text-left">
+                    <h3 class="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-2">
+                        <i class="w-6 h-6 text-orange-500" data-lucide="flame"></i> The Bonfire Ritual
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        As the sun sets on the eve of Makar Sankranti, the bonfire becomes the focal point of the festivities. Participants engage in the tradition of walking around the fire (Parikrama) while making offerings.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Peanuts</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Rewri</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Gajak</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Til (Sesame)</span>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500 italic">
+                        These offerings symbolize gratitude to nature and prayers for prosperity.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- DANCE SECTION -->
+        <div class="tab-content animate-fade-in" id="dance">
+            <div class="max-w-5xl mx-auto px-4 py-12">
+                <div class="text-center mb-12">
+                    <span class="text-pink-600 font-bold tracking-widest uppercase text-sm">Bhangra &amp; Giddha</span>
+                    <h2 class="text-4xl font-bold text-gray-900 mt-2">The Soul of Celebration</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Bhangra Card -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all">
+                        <div class="h-48 bg-gradient-to-r from-orange-400 to-red-500 flex items-center justify-center">
+                            <i class="w-20 h-20 text-white opacity-80 group-hover:scale-110 transition-transform" data-lucide="move"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-red-600 mb-2">Bhangra</h3>
+                            <p class="text-sm font-semibold text-gray-500 mb-4 uppercase">Dance of Strength</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                Historically a male-dominated art form, Bhangra evolved from a celebratory harvest dance. The lively steps, including spirited jumps and vigorous shoulder movements, symbolize the vigor of farmers and the happiness of a bountiful harvest.
+                            </p>
+                            <div class="flex items-center gap-2 text-red-500 font-medium">
+                                <i class="w-4 h-4" data-lucide="zap"></i> High Energy &amp; Power
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Giddha Card -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all">
+                        <div class="h-48 bg-gradient-to-r from-pink-400 to-purple-500 flex items-center justify-center">
+                            <i class="w-20 h-20 text-white opacity-80 group-hover:scale-110 transition-transform" data-lucide="users"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-pink-600 mb-2">Giddha</h3>
+                            <p class="text-sm font-semibold text-gray-500 mb-4 uppercase">Grace &amp; Wit</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                Women perform Giddha with grace, complementing Bhangra. They form circles, clap in rhythm, and sing along. <strong>Boliyan</strong>—witty verses about daily life and relationships.
+                            </p>
+                            <div class="flex items-center gap-2 text-pink-500 font-medium">
+                                <i class="w-4 h-4" data-lucide="mic-2"></i> Storytelling &amp; Expression
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MUSIC SECTION -->
+        <div class="tab-content animate-fade-in" id="music">
+            <div class="max-w-4xl mx-auto px-4 py-16 bg-white rounded-3xl shadow-sm my-8">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/3 text-center">
+                        <div class="w-40 h-40 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="w-20 h-20 text-purple-600" data-lucide="music"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-900">The Dhol</h3>
+                        <p class="text-sm text-gray-500 mt-2">The heartbeat of Lohri. Its deep bass energizes the crowd.</p>
+                    </div>
+                    
+                    <div class="md:w-2/3 border-l-2 border-purple-100 pl-8">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Folk Songs &amp; Legends</h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-bold text-pink-600 flex items-center gap-2">
+                                    <i class="w-5 h-5" data-lucide="star"></i> Sundar Mundriye
+                                </h4>
+                                <p class="text-gray-700 mt-1">
+                                    The most famous Lohri song tells the story of <strong>Dulla Bhatti</strong>, a legendary figure known for saving young women and facilitating their unions. It symbolizes courage, fairness, and safeguarding.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-bold text-orange-600 flex items-center gap-2">
+                                    <i class="w-5 h-5" data-lucide="wheat"></i> Seasonal Songs
+                                </h4>
+                                <p class="text-gray-700 mt-1">
+                                    Numerous songs allude to the chill of winter, flourishing wheat fields, and the Sun's revival. These lyrics embody optimism, resilience, and faith in the rhythms of nature.
+                                </p>
+                            </div>
+
+                            <div class="bg-yellow-50 p-4 rounded-lg">
+                                <p class="text-sm text-gray-600 italic">
+                                    Kids frequently visit houses, gathering candies and singing Lohri songs, fostering community connections at an early age.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODERN VS TRADITIONAL SECTION -->
+        <div class="tab-content animate-fade-in" id="modern">
+            <div class="max-w-5xl mx-auto px-4 py-12">
+                <h2 class="text-3xl font-bold text-center text-purple-900 mb-12">Villages vs. Cities</h2>
+                
+                <div class="grid md:grid-cols-2 gap-0 shadow-lg rounded-2xl overflow-hidden">
+                    <!-- Village -->
+                    <div class="bg-orange-50 p-8 md:p-12">
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="w-8 h-8 text-orange-600" data-lucide="tent"></i>
+                            <h3 class="text-2xl font-bold text-orange-800">Lohri in Villages</h3>
+                        </div>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start gap-2"><i class="w-5 h-5 text-orange-500 mt-1" data-lucide="check"></i> Celebrated in open fields or squares.</li>
+                            <li class="flex items-start gap-2"><i class="w-5 h-5 text-orange-500 mt-1" data-lucide="check"></i> Strong connection to crop cycles.</li>
+                            <li class="flex items-start gap-2"><i class="w-5 h-5 text-orange-500 mt-1" data-lucide="check"></i> Live Dhol performances.</li>
+                            <li class="flex items-start gap-2"><i class="w-5 h-5 text-orange-500 mt-1" data-lucide="check"></i> Raw, authentic, deeply communal.</li>
+                        </ul>
+                    </div>
+
+                    <!-- City -->
+                    <div class="bg-purple-100 p-8 md:p-12">
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="w-8 h-8 text-purple-600" data-lucide="building-2"></i>
+                            <h3 class="text-2xl font-bold text-purple-800">Lohri in Cities</h3>
+                        </div>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start gap-2"><i class="w-5 h-5 text-purple-500 mt-1" data-lucide="check"></i> Rooftops, housing societies, banquet halls.</li>
+                            <li class="flex items-start gap-2"><i class="w-5 h-5 text-purple-500 mt-1" data-lucide="check"></i> DJ music mixed with traditional Dhol.</li>
+                            <li class="flex items-start gap-2"><i class="w-5 h-5 text-purple-500 mt-1" data-lucide="check"></i> Fusion of tradition and modern fun.</li>
+                            <li class="flex items-start gap-2"><i class="w-5 h-5 text-purple-500 mt-1" data-lucide="check"></i> Organized cultural programs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+<div class="container mx-auto px-6 py-12 lg:px-8">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/Auspicious%20looking%20design.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Auspicious looking design</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Bihu%20in%20Assam.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Bihu in Assam</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/bihu-assam-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Bihu-assam-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/bihu-assam.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">Bihu-assam</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Blessing.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Blessing</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Capricorn.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Capricorn</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Colorful%20greeting%20for%20Sankrant.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl07_title">Colorful greeting for Sankrant</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Email%20greetings.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl08_title">Email greetings</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/ganga-sagar-mela.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl09_title">Ganga-sagar-mela</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Gangasagar%20mela.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl10_title">Gangasagar mela</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/General%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl11_title">General card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Good%20Change.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl12_title">Good Change</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Good%20movement.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl13_title">Good movement</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Greetings.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl14_title">Greetings</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Happy%20Makarsankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl15_title">Happy Makarsankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Harvesting.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl16_title">Harvesting</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/image.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl17_title">Image</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Impactful%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl18_title">Impactful card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/index2.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl19_title">Index2</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Khichdi.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl20_title">Khichdi</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Kite%20festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl21_title">Kite festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/MakarSankranti%20wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl22_title">MakarSankranti wishes</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-blog.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl23_title">Makarsankranti-blog</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-celebrations.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl24_title">Makarsankranti-celebrations</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl25_title">Makarsankranti-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-page.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl26_title">Makarsankranti-page</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-pongal-bihu-uttarayan.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl27_title">Makarsankranti-pongal-bihu-uttarayan</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-pongal-celebration.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl28_title">Makarsankranti-pongal-celebration</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-significance.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl29_title">Makarsankranti-significance</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-taste.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl30_title">Makarsankranti-taste</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Meaning%20of%20MakarSankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl31_title">Meaning of MakarSankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/messages.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl32_title">Messages</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/New%20Begining%20on%20Makarsankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl33_title">New Begining on Makarsankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Pongal%20in%20AP.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl34_title">Pongal in AP</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pongal-festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl35_title">Pongal-festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Rangoli%20style%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl36_title">Rangoli style card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-celebration-and-wishes-in-indian-languages.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl40_title">Sankranti-celebration-and-wishes-in-indian-languages</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-harvest-festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl41_title">Sankranti-harvest-festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-wishes-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl42_title">Sankranti-wishes-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Send%20Sankranti%20wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl43_title">Send Sankranti wishes</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Shub.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl44_title">Shub</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sitemap.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl45_title">Sitemap</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Tamilnadu.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl49_title">Tamilnadu</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/US.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl50_title">US</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Festivals and Celebration</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-wallpapers.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Wallpapers</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pongal/pongal-cards.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Pongal Cards</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Holi%20Festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Holi Festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/kite-festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Kite festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Photos/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">Photos</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/ramayana-stories/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Ramayana stories</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-blog/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Sankranti blog</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pictures.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">MakarSankranti Pictures</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Stories of Makarsankrnti</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/stories.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl46_title">Stories</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sun-joyful-story.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl47_title">Sun-joyful-story</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sun.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl48_title">Sun</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20and%20Agriculture.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl37_title">Sankranti and Agriculture</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20in%20Thailand.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl38_title">Sankranti in Thailand</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20vs%20MakarSankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl39_title">Sankranti vs MakarSankranti</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Contact Us</h5>
+<div class="space-y-2">
+<p>Redmond<br/>WA, USA</p>
+<p>
+<a class="hover:text-white hover:underline transition-colors duration-200" href="mailto:contact@dataknobs.com">contact@kreatewebsites.com</a>
+</p>
+<p>
+</p>
+<h5 class="text-lg font-semibold text-white mb-4">Celebrate Lohri</h5>
+<ul>
+<li><a href="https://www.makarsankranti.net/lohri-festival/26-unique-lohri-wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">26-unique-lohri-wishes</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/agriculture.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Agriculture</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/dulla-bhatti-story.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Dulla-bhatti-story</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/first-lohri-special.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">First-lohri-special</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/food-ideas-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Food-ideas-lohri</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/ideas-to-celebrate-lohri-in-office.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Ideas-to-celebrate-lohri-in-office</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/kids-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl07_title">Kids-lohri</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/list-of-food-items.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl08_title">List-of-food-items</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-bonefire.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl09_title">Lohri-bonefire</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-cards.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl10_title">Lohri-cards</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-essay.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl11_title">Lohri-essay</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-importnce-with-each-generation.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl12_title">Lohri-importnce-with-each-generation</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-recipes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl13_title">Lohri-recipes</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/music-and-dance.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl14_title">Music-and-dance</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/popular-lohri-songs.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl15_title">Popular-lohri-songs</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/rituals-with-song.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl16_title">Rituals-with-song</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/songs-meaning.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl17_title">Songs-meaning</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/special-lohri-foods.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl18_title">Special-lohri-foods</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/tradition.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl19_title">Tradition</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/what-to-eat-on-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl20_title">What-to-eat-on-lohri</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+<p class="text-sm text-gray-400">© 2025 Dataknobs, Inc. All rights reserved.</p>
+<div class="flex gap-4 mt-4 sm:mt-0">
+<a class="text-stone-400 hover:text-white" href="https://www.makarsankranti.net/privacypolicy,html">Privacy Policy</a> <!-- 13 -->
+<a class="text-stone-400 hover:text-white" href="https://www.makarsankranti.net/sitemap.html">Sitemap</a> <!-- 14 -->
+</div>
+<div class="flex space-x-4 mt-4 sm:mt-0">
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.facebook.com/kreatewebsites/">
+<span class="sr-only">Facebook</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.twitter.com/kreatewebsites/">
+<span class="sr-only">Twitter</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.linkedin.com/company/kreatewebsites/">
+<span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+
+        // --- Navigation ---
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                if(btn.dataset.target === tabId) {
+                    btn.classList.add('text-pink-400', 'font-semibold', 'border-b-2', 'border-pink-400');
+                    btn.classList.remove('text-white', 'hover:text-pink-300');
+                } else {
+                    btn.classList.remove('text-pink-400', 'font-semibold', 'border-b-2', 'border-pink-400');
+                    btn.classList.add('text-white', 'hover:text-pink-300');
+                }
+            });
+            window.scrollTo(0,0);
+        }
+
+        // --- Dhol Interaction ---
+        let isPlaying = false;
+        
+        function toggleDhol() {
+            const btn = document.getElementById('dhol-btn');
+            const dholIcon = document.getElementById('dhol-icon');
+            const notes = document.getElementById('notes-container');
+            const statusText = document.getElementById('dhol-text');
+
+            isPlaying = !isPlaying;
+
+            if (isPlaying) {
+                btn.innerHTML = 'Stop Music';
+                statusText.innerText = "Beats are Pumping!";
+                dholIcon.classList.add('animate-beat');
+                notes.classList.remove('opacity-0');
+            } else {
+                btn.innerHTML = 'Play Dhol';
+                statusText.innerText = "Silent Night";
+                dholIcon.classList.remove('animate-beat');
+                notes.classList.add('opacity-0');
+            }
+        }
+    </script>
+
+</body></html>

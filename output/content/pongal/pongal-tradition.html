@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta content="Explore the traditions, history, and significance of Thai Pongal, the Tamil Harvest Festival, through an immersive interactive web experience featuring timelines, data visualizations, and cultural insights." name="description"/>
-    <meta content="Pongal, Thai Pongal, Harvest Festival, Tamil Culture, Jallikattu, Pongalo Pongal, Festival History, Interactive Learning, Indian Traditions, Makar Sankranti" name="keywords"/>
-    <title>Thai Pongal: The Harvest Festival Interactive Experience</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!-- Tailwind Config for Custom Palette -->
-    <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Explore the traditions, history, and significance of Thai Pongal, the Tamil Harvest Festival, through an immersive interactive web experience featuring timelines, data visualizations, and cultural insights." name="description"/>
+<meta content="Pongal, Thai Pongal, Harvest Festival, Tamil Culture, Jallikattu, Pongalo Pongal, Festival History, Interactive Learning, Indian Traditions, Makar Sankranti" name="keywords"/>
+<title>Thai Pongal: The Harvest Festival Interactive Experience</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Tailwind Config for Custom Palette -->
+<script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -47,8 +44,7 @@
             }
         }
     </script>
-
-    <style>
+<style>
         /* Custom Styles for Specific Interactive Elements */
         body {
             background-color: #FFF8E1; /* pongal-50 */
@@ -113,11 +109,9 @@
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-pongal-200 selection:text-pongal-900">
-
-    <!-- REQUIRED PLACEHOLDERS -->
-    <!-- Chosen Palette: Warm Neutrals & Harvest Tones (Cream #FFF8E1 background, Deep Amber #FF8F00 accents, Earthy Brown #3E2723 text, Sugarcane Green #43A047 highlights). Represents the sun, earth, and crops. -->
-    
-    <!-- Application Structure Plan: 
+<!-- REQUIRED PLACEHOLDERS -->
+<!-- Chosen Palette: Warm Neutrals & Harvest Tones (Cream #FFF8E1 background, Deep Amber #FF8F00 accents, Earthy Brown #3E2723 text, Sugarcane Green #43A047 highlights). Represents the sun, earth, and crops. -->
+<!-- Application Structure Plan: 
          1. Hero Section: Emotional connection, "Happy Pongal", immediate cultural context.
          2. Significance Dashboard (Cards): Quick overview of the "Why" (Sun, Rain, Cattle).
          3. The 4 Days (Interactive Timeline): A tabbed interface allowing users to toggle between the four specific days of the festival to see unique traditions for each. This avoids wall-of-text.
@@ -125,245 +119,222 @@
          5. Culture & Jallikattu (Data Viz): Bar chart showing simulated participation/popularity of Jallikattu to highlight the "Valour" aspect.
          6. Interactive Ritual ("Cook the Pongal"): A gamified button to simulate the "Pongalo Pongal" overflowing pot moment, creating a "Wow" factor.
     -->
-
-    <!-- Visualization & Content Choices:
+<!-- Visualization & Content Choices:
          1. Timeline Tabs: Goal -> Distinguish the 4 distinct days. Method -> JS-powered Tab switching. Justification -> Cleanest way to show temporal data without scrolling too much.
          2. Doughnut Chart (Chart.js): Goal -> Show recipe composition. Method -> Chart.js. Justification -> Visually appetizing way to understand the dish's components.
          3. Bar Chart (Chart.js): Goal -> Show scale of Jallikattu. Method -> Chart.js. Justification -> Comparing bulls vs tamers visualizes the intensity/scale.
          4. Unicode Icons: Goal -> Visual cues. Method -> HTML/CSS. Justification -> No SVG allowed, simulated imagery.
     -->
-
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-pongal-50/95 backdrop-blur-sm border-b border-pongal-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl mr-2">🌾</span>
-                    <span class="font-serif text-xl font-bold text-pongal-900 tracking-tight">Thai Pongal</span>
-                </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a class="nav-link text-pongal-900 hover:text-pongal-700 px-3 py-2 text-sm font-medium transition-colors" href="#home">Home</a>
-                    <a class="nav-link text-pongal-900 hover:text-pongal-700 px-3 py-2 text-sm font-medium transition-colors" href="#significance">Significance</a>
-                    <a class="nav-link text-pongal-900 hover:text-pongal-700 px-3 py-2 text-sm font-medium transition-colors" href="#timeline">The 4 Days</a>
-                    <a class="nav-link text-pongal-900 hover:text-pongal-700 px-3 py-2 text-sm font-medium transition-colors" href="#culture">Culture &amp; Data</a>
-                </div>
-                <!-- Mobile menu button (Simplified for this view) -->
-                <div class="flex items-center md:hidden">
-                    <button class="text-pongal-900 focus:outline-none" id="mobile-menu-btn">
-                        <span class="text-2xl">☰</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu Panel -->
-        <div class="hidden md:hidden bg-pongal-100 border-t border-pongal-200" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a class="block px-3 py-2 text-base font-medium text-pongal-900 hover:bg-pongal-200 rounded-md" href="#home">Home</a>
-                <a class="block px-3 py-2 text-base font-medium text-pongal-900 hover:bg-pongal-200 rounded-md" href="#significance">Significance</a>
-                <a class="block px-3 py-2 text-base font-medium text-pongal-900 hover:bg-pongal-200 rounded-md" href="#timeline">The 4 Days</a>
-                <a class="block px-3 py-2 text-base font-medium text-pongal-900 hover:bg-pongal-200 rounded-md" href="#culture">Culture &amp; Data</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-20">
-
-        <!-- Hero Section -->
-        <section class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-pongal-300 via-pongal-400 to-pongal-600 shadow-xl text-pongal-900" id="home">
-            <div class="absolute inset-0 opacity-10 pattern-dots"></div>
-            <div class="relative z-10 px-6 py-16 md:py-24 text-center">
-                <h1 class="font-serif text-4xl md:text-6xl font-bold mb-4 tracking-tight drop-shadow-sm">
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-pongal-50/95 backdrop-blur-sm border-b border-pongal-200 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<span class="text-2xl mr-2">🌾</span>
+<span class="font-serif text-xl font-bold text-pongal-900 tracking-tight">Thai Pongal</span>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="nav-link text-pongal-900 hover:text-pongal-700 px-3 py-2 text-sm font-medium transition-colors" href="#home">Home</a>
+<a class="nav-link text-pongal-900 hover:text-pongal-700 px-3 py-2 text-sm font-medium transition-colors" href="#significance">Significance</a>
+<a class="nav-link text-pongal-900 hover:text-pongal-700 px-3 py-2 text-sm font-medium transition-colors" href="#timeline">The 4 Days</a>
+<a class="nav-link text-pongal-900 hover:text-pongal-700 px-3 py-2 text-sm font-medium transition-colors" href="#culture">Culture &amp; Data</a>
+</div>
+<!-- Mobile menu button (Simplified for this view) -->
+<div class="flex items-center md:hidden">
+<button class="text-pongal-900 focus:outline-none" id="mobile-menu-btn">
+<span class="text-2xl">☰</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile Menu Panel -->
+<div class="hidden md:hidden bg-pongal-100 border-t border-pongal-200" id="mobile-menu">
+<div class="px-2 pt-2 pb-3 space-y-1">
+<a class="block px-3 py-2 text-base font-medium text-pongal-900 hover:bg-pongal-200 rounded-md" href="#home">Home</a>
+<a class="block px-3 py-2 text-base font-medium text-pongal-900 hover:bg-pongal-200 rounded-md" href="#significance">Significance</a>
+<a class="block px-3 py-2 text-base font-medium text-pongal-900 hover:bg-pongal-200 rounded-md" href="#timeline">The 4 Days</a>
+<a class="block px-3 py-2 text-base font-medium text-pongal-900 hover:bg-pongal-200 rounded-md" href="#culture">Culture &amp; Data</a>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-20">
+<!-- Hero Section -->
+<section class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-pongal-300 via-pongal-400 to-pongal-600 shadow-xl text-pongal-900" id="home">
+<div class="absolute inset-0 opacity-10 pattern-dots"></div>
+<div class="relative z-10 px-6 py-16 md:py-24 text-center">
+<h1 class="font-serif text-4xl md:text-6xl font-bold mb-4 tracking-tight drop-shadow-sm">
                     Pongalo Pongal!
                 </h1>
-                <p class="text-lg md:text-2xl font-light max-w-2xl mx-auto mb-8 text-pongal-900/90">
-                    Discover the warmth of the Great Tamil Harvest Festival. A celebration of nature, gratitude, and renewal.
+<p class="text-lg md:text-2xl font-light max-w-2xl mx-auto mb-8 text-pongal-900/90">
+                    Discover the warmth of the Great Tamil <a href="https://www.makarsankranti.net/sankranti-harvest-festival.html">Harvest Festival</a>. A celebration of nature, gratitude, and renewal.
                 </p>
-                <div class="flex justify-center space-x-4">
-                    <button class="bg-pongal-900 text-pongal-50 hover:bg-pongal-800 transition-colors px-8 py-3 rounded-full font-semibold shadow-lg transform hover:scale-105 active:scale-95 duration-200" onclick="document.getElementById('timeline').scrollIntoView()">
+<div class="flex justify-center space-x-4">
+<button class="bg-pongal-900 text-pongal-50 hover:bg-pongal-800 transition-colors px-8 py-3 rounded-full font-semibold shadow-lg transform hover:scale-105 active:scale-95 duration-200" onclick="document.getElementById('timeline').scrollIntoView()">
                         Explore Traditions
                     </button>
-                    <button class="bg-white/80 text-pongal-900 hover:bg-white transition-colors px-8 py-3 rounded-full font-semibold shadow-lg backdrop-blur-sm" onclick="scrollToInteractive()">
+<button class="bg-white/80 text-pongal-900 hover:bg-white transition-colors px-8 py-3 rounded-full font-semibold shadow-lg backdrop-blur-sm" onclick="scrollToInteractive()">
                         Cook the Pot 🍚
                     </button>
-                </div>
-                <div class="mt-12 text-6xl animate-bounce cursor-default select-none" title="The Overflowing Pot">
+</div>
+<div class="mt-12 text-6xl animate-bounce cursor-default select-none" title="The Overflowing Pot">
                     🍯
                 </div>
-            </div>
-        </section>
-
-        <!-- Intro Context -->
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-pongal-900 mb-4">About the Festival</h2>
-            <p class="text-lg text-pongal-900/80 leading-relaxed">
+</div>
+</section>
+<!-- Intro Context -->
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl font-bold text-pongal-900 mb-4">About the Festival</h2>
+<p class="text-lg text-pongal-900/80 leading-relaxed">
                 Pongal (Thai Pongal) is a multi-day harvest festival celebrated by Tamils across the world. Dedicated to the Sun God, Surya, it marks the beginning of the sun's six-month long journey northwards (the Uttarayana). It corresponds to Makar Sankranti celebrated throughout India. The festival is named after the traditional dish "Pongal", which means "to boil, overflow" or "bubbling up".
             </p>
-        </div>
-
-        <!-- Section 1: Significance (Grid Layout) -->
-        <section class="space-y-8" id="significance">
-            <div class="border-l-4 border-pongal-600 pl-4">
-                <h3 class="text-2xl font-bold text-pongal-900">The Pillars of Pongal</h3>
-                <p class="text-pongal-900/70 mt-1">Understanding the core elements of gratitude.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="info-card bg-white rounded-2xl p-6 shadow-md border border-pongal-100">
-                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-2xl mb-4">☀️</div>
-                    <h4 class="text-xl font-bold mb-2">The Sun (Surya)</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+</div>
+<!-- Section 1: Significance (Grid Layout) -->
+<section class="space-y-8" id="significance">
+<div class="border-l-4 border-pongal-600 pl-4">
+<h3 class="text-2xl font-bold text-pongal-900">The Pillars of Pongal</h3>
+<p class="text-pongal-900/70 mt-1">Understanding the core elements of gratitude.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="info-card bg-white rounded-2xl p-6 shadow-md border border-pongal-100">
+<div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-2xl mb-4">☀️</div>
+<h4 class="text-xl font-bold mb-2">The Sun (Surya)</h4>
+<p class="text-gray-600 text-sm leading-relaxed">
                         The primary deity of the festival. Sunlight is essential for photosynthesis and crop growth. Farmers offer the first harvest to the Sun as a gesture of thanksgiving for the energy that sustains life on Earth.
                     </p>
-                </div>
-                <!-- Card 2 -->
-                <div class="info-card bg-white rounded-2xl p-6 shadow-md border border-pongal-100">
-                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-2xl mb-4">🌧️</div>
-                    <h4 class="text-xl font-bold mb-2">Nature (Rain/Indra)</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+</div>
+<!-- Card 2 -->
+<div class="info-card bg-white rounded-2xl p-6 shadow-md border border-pongal-100">
+<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-2xl mb-4">🌧️</div>
+<h4 class="text-xl font-bold mb-2">Nature (Rain/Indra)</h4>
+<p class="text-gray-600 text-sm leading-relaxed">
                         Historically linked to Indra Vizha, celebrating the rain clouds that nourish the soil. It is a time to thank the elements—earth, wind, and rain—for a bountiful yield.
                     </p>
-                </div>
-                <!-- Card 3 -->
-                <div class="info-card bg-white rounded-2xl p-6 shadow-md border border-pongal-100">
-                    <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-2xl mb-4">🐮</div>
-                    <h4 class="text-xl font-bold mb-2">Cattle (Maattu)</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+</div>
+<!-- Card 3 -->
+<div class="info-card bg-white rounded-2xl p-6 shadow-md border border-pongal-100">
+<div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-2xl mb-4">🐮</div>
+<h4 class="text-xl font-bold mb-2">Cattle (Maattu)</h4>
+<p class="text-gray-600 text-sm leading-relaxed">
                         Bulls and cows are revered as partners in farming. They plough the fields and provide dairy. On Maattu Pongal, they are bathed, decorated, and worshipped, acknowledging their hard labor.
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2: The 4 Days (Interactive Tabs) -->
-        <section class="bg-white rounded-3xl shadow-lg p-6 md:p-10 border border-pongal-200" id="timeline">
-            <div class="mb-8">
-                <h3 class="text-2xl font-bold text-pongal-900">The 4 Days of Celebration</h3>
-                <p class="text-gray-600">Explore the unique traditions of each day by clicking the tabs below.</p>
-            </div>
-
-            <!-- Tab Navigation -->
-            <div class="flex flex-wrap gap-2 mb-6" id="day-tabs">
-                <button class="flex-1 min-w-[120px] py-3 px-4 rounded-xl font-semibold text-sm transition-all bg-pongal-500 text-white shadow-md hover:bg-pongal-600 focus:outline-none focus:ring-2 focus:ring-pongal-400 focus:ring-offset-2" id="tab-bhogi" onclick="switchTab('bhogi')">
+</div>
+</div>
+</section>
+<!-- Section 2: The 4 Days (Interactive Tabs) -->
+<section class="bg-white rounded-3xl shadow-lg p-6 md:p-10 border border-pongal-200" id="timeline">
+<div class="mb-8">
+<h3 class="text-2xl font-bold text-pongal-900">The 4 Days of Celebration</h3>
+<p class="text-gray-600">Explore the unique traditions of each day by clicking the tabs below.</p>
+</div>
+<!-- Tab Navigation -->
+<div class="flex flex-wrap gap-2 mb-6" id="day-tabs">
+<button class="flex-1 min-w-[120px] py-3 px-4 rounded-xl font-semibold text-sm transition-all bg-pongal-500 text-white shadow-md hover:bg-pongal-600 focus:outline-none focus:ring-2 focus:ring-pongal-400 focus:ring-offset-2" id="tab-bhogi" onclick="switchTab('bhogi')">
                     Day 1: Bhogi
                 </button>
-                <button class="flex-1 min-w-[120px] py-3 px-4 rounded-xl font-semibold text-sm transition-all bg-pongal-100 text-pongal-900 hover:bg-pongal-200 focus:outline-none" id="tab-surya" onclick="switchTab('surya')">
+<button class="flex-1 min-w-[120px] py-3 px-4 rounded-xl font-semibold text-sm transition-all bg-pongal-100 text-pongal-900 hover:bg-pongal-200 focus:outline-none" id="tab-surya" onclick="switchTab('surya')">
                     Day 2: Thai Pongal
                 </button>
-                <button class="flex-1 min-w-[120px] py-3 px-4 rounded-xl font-semibold text-sm transition-all bg-pongal-100 text-pongal-900 hover:bg-pongal-200 focus:outline-none" id="tab-maattu" onclick="switchTab('maattu')">
+<button class="flex-1 min-w-[120px] py-3 px-4 rounded-xl font-semibold text-sm transition-all bg-pongal-100 text-pongal-900 hover:bg-pongal-200 focus:outline-none" id="tab-maattu" onclick="switchTab('maattu')">
                     Day 3: Maattu
                 </button>
-                <button class="flex-1 min-w-[120px] py-3 px-4 rounded-xl font-semibold text-sm transition-all bg-pongal-100 text-pongal-900 hover:bg-pongal-200 focus:outline-none" id="tab-kaanum" onclick="switchTab('kaanum')">
+<button class="flex-1 min-w-[120px] py-3 px-4 rounded-xl font-semibold text-sm transition-all bg-pongal-100 text-pongal-900 hover:bg-pongal-200 focus:outline-none" id="tab-kaanum" onclick="switchTab('kaanum')">
                     Day 4: Kaanum
                 </button>
-            </div>
-
-            <!-- Tab Content Area -->
-            <div class="bg-pongal-50 rounded-2xl p-6 md:p-8 min-h-[300px] flex flex-col md:flex-row gap-8 transition-all duration-300" id="tab-content">
-                <!-- Dynamic Content Injected via JS -->
-            </div>
-        </section>
-
-        <!-- Section 3: Gastronomy (Ingredients Chart) -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" id="gastronomy">
-            <div class="order-2 lg:order-1">
-                <div class="border-l-4 border-pongal-600 pl-4 mb-6">
-                    <h3 class="text-2xl font-bold text-pongal-900">The Dish: Sakkarai Pongal</h3>
-                    <p class="text-pongal-900/70">A sweet delicacy offered to the gods.</p>
-                </div>
-                <p class="text-gray-700 mb-6 leading-relaxed">
+</div>
+<!-- Tab Content Area -->
+<div class="bg-pongal-50 rounded-2xl p-6 md:p-8 min-h-[300px] flex flex-col md:flex-row gap-8 transition-all duration-300" id="tab-content">
+<!-- Dynamic Content Injected via JS -->
+</div>
+</section>
+<!-- Section 3: Gastronomy (Ingredients Chart) -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" id="gastronomy">
+<div class="order-2 lg:order-1">
+<div class="border-l-4 border-pongal-600 pl-4 mb-6">
+<h3 class="text-2xl font-bold text-pongal-900">The Dish: Sakkarai Pongal</h3>
+<p class="text-pongal-900/70">A sweet delicacy offered to the gods.</p>
+</div>
+<p class="text-gray-700 mb-6 leading-relaxed">
                     The dish 'Pongal' comes in two varieties: <strong>Sweet (Sakkarai)</strong> and <strong>Savoury (Venn)</strong>. The sweet version is the ceremonial offering. It is cooked in a new clay pot, adorned with turmeric leaves. As the milk boils over, people shout "Pongalo Pongal!" symbolizing the overflow of joy and prosperity in their lives.
                 </p>
-                <div class="bg-white p-4 rounded-xl shadow-sm border border-pongal-200">
-                    <h5 class="font-bold text-pongal-800 mb-2">Quick Recipe:</h5>
-                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-                        <li>Roast Moong Dal in ghee until aromatic.</li>
-                        <li>Cook Rice and Dal together until soft.</li>
-                        <li>Melt Jaggery in water and add to the rice.</li>
-                        <li>Fry cashews &amp; raisins in generous ghee and mix.</li>
-                        <li>Add cardamom powder for aroma.</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="order-1 lg:order-2 bg-white rounded-3xl shadow-md p-6 border border-pongal-100">
-                <h4 class="text-center font-bold text-gray-800 mb-4">Composition of Sweet Pongal</h4>
-                <!-- Chart Container -->
-                <div class="chart-container">
-                    <canvas id="ingredientsChart"></canvas>
-                </div>
-                <p class="text-center text-xs text-gray-400 mt-2">Based on traditional preparation ratios</p>
-            </div>
-        </section>
-
-        <!-- Section 4: Culture & Jallikattu (Bar Chart) -->
-        <section class="bg-white rounded-3xl shadow-xl overflow-hidden border border-pongal-200" id="culture">
-            <div class="bg-pongal-800 p-6 text-white">
-                <h3 class="text-2xl font-bold">Tradition &amp; Valour: Jallikattu</h3>
-                <p class="opacity-90">Embracing the Bull</p>
-            </div>
-            
-            <div class="p-6 md:p-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Text Content -->
-                <div class="lg:col-span-1 space-y-4">
-                    <p class="text-gray-700 text-sm leading-relaxed">
-                        <strong>Jallikattu</strong> is a traditional event held on Maattu Pongal. It involves releasing a bull into a crowd of people, where participants attempt to grab the large hump on the bull's back and hold on to it.
+<div class="bg-white p-4 rounded-xl shadow-sm border border-pongal-200">
+<h5 class="font-bold text-pongal-800 mb-2">Quick Recipe:</h5>
+<ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+<li>Roast Moong Dal in ghee until aromatic.</li>
+<li>Cook Rice and Dal together until soft.</li>
+<li>Melt Jaggery in water and add to the rice.</li>
+<li>Fry cashews &amp; raisins in generous ghee and mix.</li>
+<li>Add cardamom powder for aroma.</li>
+</ul>
+</div>
+</div>
+<div class="order-1 lg:order-2 bg-white rounded-3xl shadow-md p-6 border border-pongal-100">
+<h4 class="text-center font-bold text-gray-800 mb-4">Composition of Sweet Pongal</h4>
+<!-- Chart Container -->
+<div class="chart-container">
+<canvas id="ingredientsChart"></canvas>
+</div>
+<p class="text-center text-xs text-gray-400 mt-2">Based on traditional preparation ratios</p>
+</div>
+</section>
+<!-- Section 4: Culture & Jallikattu (Bar Chart) -->
+<section class="bg-white rounded-3xl shadow-xl overflow-hidden border border-pongal-200" id="culture">
+<div class="bg-pongal-800 p-6 text-white">
+<h3 class="text-2xl font-bold">Tradition &amp; Valour: Jallikattu</h3>
+<p class="opacity-90">Embracing the Bull</p>
+</div>
+<div class="p-6 md:p-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Text Content -->
+<div class="lg:col-span-1 space-y-4">
+<p class="text-gray-700 text-sm leading-relaxed">
+<strong>Jallikattu</strong> is a traditional event held on Maattu Pongal. It involves releasing a bull into a crowd of people, where participants attempt to grab the large hump on the bull's back and hold on to it.
                     </p>
-                    <p class="text-gray-700 text-sm leading-relaxed">
+<p class="text-gray-700 text-sm leading-relaxed">
                         Unlike Spanish bullfighting, the goal is not to kill the bull, but to "embrace" it. It is a display of bravery and a way to preserve native cattle breeds like the Kangayam bull.
                     </p>
-                    <div class="mt-4 p-4 bg-red-50 rounded-lg border border-red-100">
-                        <span class="block text-2xl mb-1">🐂</span>
-                        <span class="font-bold text-red-800 text-sm">Cultural Fact:</span>
-                        <p class="text-xs text-red-700 mt-1">Winning bulls are highly priced and used for breeding, helping preserve indigenous livestock diversity.</p>
-                    </div>
-                </div>
-
-                <!-- Chart Content -->
-                <div class="lg:col-span-2">
-                    <h4 class="text-gray-800 font-bold mb-4 text-center md:text-left">Participation Dynamics (Simulated)</h4>
-                    <div class="chart-container">
-                        <canvas id="jallikattuChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive "Cook the Pongal" Section -->
-        <section class="text-center py-12 space-y-6" id="interactive-ritual">
-            <h2 class="text-3xl font-bold text-pongal-900">Experience the Joy</h2>
-            <p class="text-gray-600 max-w-lg mx-auto">Click the button below to heat the pot. Watch it boil until it overflows with abundance!</p>
-            
-            <div class="relative w-64 h-64 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner border-4 border-pongal-200">
-                <!-- Pot Emoji / Visual -->
-                <div class="text-8xl transition-transform duration-300 transform scale-100" id="pot-display">
+<div class="mt-4 p-4 bg-red-50 rounded-lg border border-red-100">
+<span class="block text-2xl mb-1">🐂</span>
+<span class="font-bold text-red-800 text-sm">Cultural Fact:</span>
+<p class="text-xs text-red-700 mt-1">Winning bulls are highly priced and used for breeding, helping preserve indigenous livestock diversity.</p>
+</div>
+</div>
+<!-- Chart Content -->
+<div class="lg:col-span-2">
+<h4 class="text-gray-800 font-bold mb-4 text-center md:text-left">Participation Dynamics (Simulated)</h4>
+<div class="chart-container">
+<canvas id="jallikattuChart"></canvas>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive "Cook the Pongal" Section -->
+<section class="text-center py-12 space-y-6" id="interactive-ritual">
+<h2 class="text-3xl font-bold text-pongal-900">Experience the Joy</h2>
+<p class="text-gray-600 max-w-lg mx-auto">Click the button below to heat the pot. Watch it boil until it overflows with abundance!</p>
+<div class="relative w-64 h-64 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner border-4 border-pongal-200">
+<!-- Pot Emoji / Visual -->
+<div class="text-8xl transition-transform duration-300 transform scale-100" id="pot-display">
                     🥣
                 </div>
-                
-                <!-- Bubbles Container -->
-                <div class="absolute inset-0 pointer-events-none overflow-hidden rounded-full" id="bubbles"></div>
-            </div>
-
-            <div class="space-y-4">
-                <div class="w-64 mx-auto bg-gray-200 rounded-full h-4 overflow-hidden">
-                    <div class="bg-orange-500 h-4 rounded-full transition-all duration-300" id="cook-progress" style="width: 0%"></div>
-                </div>
-                
-                <button class="bg-pongal-600 hover:bg-pongal-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform active:scale-95" id="cook-btn" onclick="cookPongal()">
+<!-- Bubbles Container -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden rounded-full" id="bubbles"></div>
+</div>
+<div class="space-y-4">
+<div class="w-64 mx-auto bg-gray-200 rounded-full h-4 overflow-hidden">
+<div class="bg-orange-500 h-4 rounded-full transition-all duration-300" id="cook-progress" style="width: 0%"></div>
+</div>
+<button class="bg-pongal-600 hover:bg-pongal-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform active:scale-95" id="cook-btn" onclick="cookPongal()">
                     Stir the Pot 🔥
                 </button>
-
-                <div class="text-2xl font-bold text-pongal-800 opacity-0 transition-opacity duration-500 min-h-[40px]" id="success-msg">
-                    <!-- Pongalo Pongal! message will appear here -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-gray-800 text-gray-300">
+<div class="text-2xl font-bold text-pongal-800 opacity-0 transition-opacity duration-500 min-h-[40px]" id="success-msg">
+<!-- Pongalo Pongal! message will appear here -->
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-300">
 <div class="container mx-auto px-6 py-12 lg:px-8">
 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
 <div>
@@ -507,7 +478,10 @@
 <h5 class="text-lg font-semibold text-white mb-4">Festivals and Celebration</h5>
 <ul class="space-y-2">
 <li>
-<a href="https://www.makarsankranti.net/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Home</a>
+<a href="https://www.makarsankranti.net/makarsankranti-wallpapers.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Wallpapers</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pongal/pongal-cards.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Pongal Cards</a>
 </li>
 <li>
 <a href="https://www.makarsankranti.net/Holi%20Festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Holi Festival</a>
@@ -561,6 +535,29 @@
 </p>
 <p>
 </p>
+<h5 class="text-lg font-semibold text-white mb-4">Celebrate Lohri</h5>
+<ul>
+<li><a href="https://www.makarsankranti.net/lohri-festival/26-unique-lohri-wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">26-unique-lohri-wishes</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/agriculture.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Agriculture</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/dulla-bhatti-story.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Dulla-bhatti-story</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/first-lohri-special.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">First-lohri-special</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/food-ideas-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Food-ideas-lohri</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/ideas-to-celebrate-lohri-in-office.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Ideas-to-celebrate-lohri-in-office</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/kids-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl07_title">Kids-lohri</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/list-of-food-items.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl08_title">List-of-food-items</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-bonefire.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl09_title">Lohri-bonefire</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-cards.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl10_title">Lohri-cards</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-essay.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl11_title">Lohri-essay</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-importnce-with-each-generation.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl12_title">Lohri-importnce-with-each-generation</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-recipes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl13_title">Lohri-recipes</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/music-and-dance.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl14_title">Music-and-dance</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/popular-lohri-songs.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl15_title">Popular-lohri-songs</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/rituals-with-song.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl16_title">Rituals-with-song</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/songs-meaning.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl17_title">Songs-meaning</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/special-lohri-foods.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl18_title">Special-lohri-foods</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/tradition.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl19_title">Tradition</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/what-to-eat-on-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl20_title">What-to-eat-on-lohri</a></li>
+</ul>
 </div>
 </div>
 </div>
@@ -593,11 +590,9 @@
 </div>
 </div>
 </footer>
-
-    </main>
-
-    <!-- JavaScript Logic -->
-    <script>
+</main>
+<!-- JavaScript Logic -->
+<script>
         // --- DATA & STATE MANAGEMENT ---
         const timelineData = {
             bhogi: {
@@ -874,5 +869,4 @@
         }
 
     </script>
-
 </body></html>

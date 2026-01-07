@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    
-    <!-- SEO Meta Tags -->
-    <title>Makar Sankranti 2026 | Pongal, Bihu &amp; Uttarayan Festival Guide</title>
-    <meta content="Celebrate Makar Sankranti 2026. Explore the story of the Sun God Surya, traditions of Pongal, Magh Bihu, and Uttarayan, and find festive wishes. A complete guide to India's harvest festivals." name="description"/>
-    <meta content="Makar Sankranti 2026, Pongal Festival, Magh Bihu, Uttarayan, Kite Festival India, Harvest Festival, Surya God, Hindu Festivals, Winter Solstice, Sankranti Wishes" name="keywords"/>
-    <meta content="Festival Guide" name="author"/>
-    
-    <!-- Open Graph / Facebook -->
-    <meta content="website" property="og:type"/>
-    <meta content="Makar Sankranti 2026 - The Festival of Sun &amp; Harvest" property="og:title"/>
-    <meta content="Discover the traditions of Makar Sankranti, Pongal, Bihu, and Uttarayan. One story, many festivals." property="og:description"/>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Custom Styles for Animations -->
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO Meta Tags -->
+<title>Makar Sankranti 2026 | Pongal, Bihu &amp; Uttarayan Festival Guide</title>
+<meta content="Celebrate Makar Sankranti 2026. Explore the story of the Sun God Surya, traditions of Pongal, Magh Bihu, and Uttarayan, and find festive wishes. A complete guide to India's harvest festivals." name="description"/>
+<meta content="Makar Sankranti 2026, Pongal Festival, Magh Bihu, Uttarayan, Kite Festival India, Harvest Festival, Surya God, Hindu Festivals, Winter Solstice, Sankranti Wishes" name="keywords"/>
+<meta content="Festival Guide" name="author"/>
+<!-- Open Graph / Facebook -->
+<meta content="website" property="og:type"/>
+<meta content="Makar Sankranti 2026 - The Festival of Sun &amp; Harvest" property="og:title"/>
+<meta content="Discover the traditions of Makar Sankranti, Pongal, Bihu, and Uttarayan. One story, many festivals." property="og:description"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Custom Styles for Animations -->
+<style>
         @keyframes spin-slow {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
@@ -78,267 +73,244 @@
     </style>
 </head>
 <body class="min-h-screen bg-orange-50 font-sans text-stone-800">
-
-    <!-- Navigation -->
-    <nav class="bg-orange-600 text-white sticky top-0 z-50 shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2 font-bold text-xl">
-                <i class="h-6 w-6 animate-pulse" data-lucide="sun"></i>
-                <span>Sankranti Festival</span>
-            </div>
-            <div class="hidden md:flex space-x-6">
-                <button class="tab-btn text-yellow-300 font-bold hover:text-yellow-200 transition" id="btn-story" onclick="switchTab('story')">The Story</button>
-                <button class="tab-btn hover:text-yellow-200 transition" id="btn-traditions" onclick="switchTab('traditions')">Traditions</button>
-                <button class="tab-btn hover:text-yellow-200 transition" id="btn-wishes" onclick="switchTab('wishes')">Wishes</button>
-            </div>
-            <!-- Mobile Menu Button (Simple) -->
-            <div class="md:hidden flex space-x-4 text-sm">
-                <button class="hover:text-yellow-200" onclick="switchTab('story')">Story</button>
-                <button class="hover:text-yellow-200" onclick="switchTab('traditions')">Traditions</button>
-                <button class="hover:text-yellow-200" onclick="switchTab('wishes')">Wishes</button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="relative bg-gradient-to-b from-amber-400 to-orange-500 text-white overflow-hidden h-96 flex items-center justify-center">
-        
-        <!-- Animated Sun Background -->
-        <div class="absolute top-10 right-10 md:right-20 opacity-30 pointer-events-none">
-           <i class="h-64 w-64 text-yellow-300 animate-spin-slow" data-lucide="sun" style="width: 256px; height: 256px;"></i>
-        </div>
-
-        <!-- Kite Container (Populated by JS) -->
-        <div class="absolute inset-0 pointer-events-none overflow-hidden" id="kite-container"></div>
-
-        <div class="relative z-20 text-center px-4 max-w-4xl">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-md">
+<!-- Navigation -->
+<nav class="bg-orange-600 text-white sticky top-0 z-50 shadow-lg">
+<div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center space-x-2 font-bold text-xl">
+<i class="h-6 w-6 animate-pulse" data-lucide="sun"></i>
+<span>Sankranti Festival</span>
+</div>
+<div class="hidden md:flex space-x-6">
+<button class="tab-btn text-yellow-300 font-bold hover:text-yellow-200 transition" id="btn-story" onclick="switchTab('story')">The Story</button>
+<button class="tab-btn hover:text-yellow-200 transition" id="btn-traditions" onclick="switchTab('traditions')">Traditions</button>
+<button class="tab-btn hover:text-yellow-200 transition" id="btn-wishes" onclick="switchTab('wishes')">Wishes</button>
+</div>
+<!-- Mobile Menu Button (Simple) -->
+<div class="md:hidden flex space-x-4 text-sm">
+<button class="hover:text-yellow-200" onclick="switchTab('story')">Story</button>
+<button class="hover:text-yellow-200" onclick="switchTab('traditions')">Traditions</button>
+<button class="hover:text-yellow-200" onclick="switchTab('wishes')">Wishes</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative bg-gradient-to-b from-amber-400 to-orange-500 text-white overflow-hidden h-96 flex items-center justify-center">
+<!-- Animated Sun Background -->
+<div class="absolute top-10 right-10 md:right-20 opacity-30 pointer-events-none">
+<i class="h-64 w-64 text-yellow-300 animate-spin-slow" data-lucide="sun" style="width: 256px; height: 256px;"></i>
+</div>
+<!-- Kite Container (Populated by JS) -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden" id="kite-container"></div>
+<div class="relative z-20 text-center px-4 max-w-4xl">
+<h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-md">
                 Makar Sankranti
             </h1>
-            <p classname="text-xl md:text-2xl font-light mb-6 text-yellow-100">
+<p classname="text-xl md:text-2xl font-light mb-6 text-yellow-100">
                 The Festival of Sun, Harvest, and Hope
             </p>
-            <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base mt-6">
-                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🌞 Uttarayan</span>
-                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🪁 Kites</span>
-                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🔥 Bonfires</span>
-                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🌾 Harvest</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="max-w-5xl mx-auto px-4 py-12">
-        
-        <!-- Intro -->
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-orange-800 mb-6">Celebrating the Sun's Journey</h2>
-            <p class="text-lg text-stone-600 max-w-3xl mx-auto leading-relaxed">
+<div class="flex flex-wrap justify-center gap-4 text-sm md:text-base mt-6">
+<span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🌞 Uttarayan</span>
+<span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🪁 Kites</span>
+<span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🔥 Bonfires</span>
+<span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🌾 Harvest</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-5xl mx-auto px-4 py-12">
+<!-- Intro -->
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-orange-800 mb-6">Celebrating the Sun's Journey</h2>
+<p class="text-lg text-stone-600 max-w-3xl mx-auto leading-relaxed">
                 Makar Sankranti marks the sun's transition into Capricorn (Makara), signaling the end of winter and the beginning of longer days. 
                 It is a unique festival celebrated across India under different names—Pongal, Bihu, Lohri, and Uttarayan—united by the spirit of gratitude to nature.
             </p>
-        </div>
-
-        <!-- Tab 1: The Story -->
-        <div class="tab-content active" id="story">
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 border-orange-500">
-                <div class="p-8 md:p-12">
-                    <h3 class="text-2xl font-bold text-orange-700 mb-8 flex items-center">
-                        <i class="mr-3" data-lucide="book-open"></i> The Journey of the Sun: One Story, Many Festivals
+</div>
+<!-- Tab 1: The Story -->
+<div class="tab-content active" id="story">
+<div class="bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 border-orange-500">
+<div class="p-8 md:p-12">
+<h3 class="text-2xl font-bold text-orange-700 mb-8 flex items-center">
+<i class="mr-3" data-lucide="book-open"></i> The Journey of the Sun: One Story, Many Festivals
                     </h3>
-                    
-                    <div class="prose prose-orange max-w-none text-stone-700 space-y-6 text-lg leading-relaxed">
-                        <p>
+<div class="prose prose-orange max-w-none text-stone-700 space-y-6 text-lg leading-relaxed">
+<p>
                             Long ago, when the world moved in rhythm with nature, the <strong>Sun God, Surya</strong>, was not just a celestial body but a living force. For many months, Surya traveled southward, and the Earth felt the chill of winter. Farmers waited patiently, trusting that the Sun would return with warmth.
                         </p>
-
-                        <div class="my-8 p-6 bg-yellow-50 rounded-xl border-l-4 border-yellow-400">
-                            <h4 class="font-bold text-yellow-800 mb-2 flex items-center"><i class="w-5 h-5 mr-2" data-lucide="sun"></i> Makar Sankranti: The Sacred Turning</h4>
-                            <p>
+<div class="my-8 p-6 bg-yellow-50 rounded-xl border-l-4 border-yellow-400">
+<h4 class="font-bold text-yellow-800 mb-2 flex items-center"><i class="w-5 h-5 mr-2" data-lucide="sun"></i> Makar Sankranti: The Sacred Turning</h4>
+<p>
                                 One auspicious morning, Surya reached the boundary of Capricorn. At that moment, the world felt a shift. The Sun changed direction, beginning his northward journey (Uttarayan). Sages declared this the victory of light over darkness. On this day, Surya visited his son Shani (Saturn), healing their relationship and teaching humanity the power of forgiveness.
                             </p>
-                        </div>
-
-                        <p>
+</div>
+<p>
                             As Surya continued north, hope filled the air. In <strong>Gujarat</strong>, the skies filled with colorful kites, each carrying a prayer for the new year. High above, Surya smiled, seeing humans look up in celebration.
                         </p>
-                        
-                        <p>
+<p>
                             The Sun then traveled east to <strong>Assam</strong>. Barns overflowed with grain. Villagers built <em>Meji</em> bonfires and offered the first harvest to the flames. The fire crackled, burning away hardship and signaling the start of <strong>Magh Bihu</strong>—a festival of fire, food, and fellowship.
                         </p>
-
-                        <p>
+<p>
                             Finally, Surya bathed <strong>Tamil Nadu</strong> in golden light. Farmers boiled rice and milk in earthen pots until they overflowed, shouting <em>"Pongalo Pongal!"</em> to welcome abundance. They honored their cattle and thanked the land, celebrating <strong>Pongal</strong> with humility and gratitude.
                         </p>
-
-                        <div class="mt-8 text-center italic text-orange-800 font-medium text-xl">
+<div class="mt-8 text-center italic text-orange-800 font-medium text-xl">
                             "Though the rituals differ—kites, bonfires, or boiling pots—they tell one story: Nature provides, and humanity learns to live in balance."
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tab 2: Traditions -->
-        <div class="tab-content" id="traditions">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Pongal -->
-                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
-                    <div class="h-32 bg-gradient-to-r from-yellow-400 to-orange-400 flex items-center justify-center">
-                        <i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="wheat" style="width: 64px; height: 64px;"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pongal</h3>
-                        <p class="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-4">Tamil Nadu</p>
-                        <p class="text-gray-600 mb-4 text-sm">
-                            A four-day harvest festival. The main ritual involves boiling fresh rice with milk and jaggery in a new clay pot until it overflows, symbolizing prosperity.
+</div>
+</div>
+</div>
+</div>
+<!-- Tab 2: Traditions -->
+<div class="tab-content" id="traditions">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Pongal -->
+<div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+<div class="h-32 bg-gradient-to-r from-yellow-400 to-orange-400 flex items-center justify-center">
+<i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="wheat" style="width: 64px; height: 64px;"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Pongal</h3>
+<p class="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-4">Tamil Nadu</p>
+<p class="text-gray-600 mb-4 text-sm">
+                            A four-day <a href="https://www.makarsankranti.net/sankranti-harvest-festival.html">harvest festival</a>. The main ritual involves boiling fresh rice with milk and jaggery in a new clay pot until it overflows, symbolizing prosperity.
                         </p>
-                        <ul class="text-sm text-gray-500 space-y-2">
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Bhogi: Burning old items</li>
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Thai Pongal: Solar worship</li>
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Mattu Pongal: Cattle worship</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Magh Bihu -->
-                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
-                    <div class="h-32 bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center">
-                        <i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="flame" style="width: 64px; height: 64px;"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Magh Bihu</h3>
-                        <p class="text-xs font-semibold text-red-600 uppercase tracking-wide mb-4">Assam</p>
-                        <p class="text-gray-600 mb-4 text-sm">
+<ul class="text-sm text-gray-500 space-y-2">
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Bhogi: Burning old items</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Thai Pongal: Solar worship</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Mattu Pongal: Cattle worship</li>
+</ul>
+</div>
+</div>
+<!-- Magh Bihu -->
+<div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+<div class="h-32 bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center">
+<i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="flame" style="width: 64px; height: 64px;"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Magh Bihu</h3>
+<p class="text-xs font-semibold text-red-600 uppercase tracking-wide mb-4">Assam</p>
+<p class="text-gray-600 mb-4 text-sm">
                             Also known as Bhogali Bihu (festival of eating). It marks the end of the harvest season with community feasts and bonfires.
                         </p>
-                        <ul class="text-sm text-gray-500 space-y-2">
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Uruka: Community feast night</li>
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Meji: Lighting tall bonfires</li>
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Pitha: Rice cakes &amp; sesame sweets</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Gangasagar -->
-                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
-                    <div class="h-32 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
-                        <i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="droplets" style="width: 64px; height: 64px;"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Gangasagar Mela</h3>
-                        <p class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-4">West Bengal</p>
-                        <p class="text-gray-600 mb-4 text-sm">
+<ul class="text-sm text-gray-500 space-y-2">
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Uruka: Community feast night</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Meji: Lighting tall bonfires</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Pitha: Rice cakes &amp; sesame sweets</li>
+</ul>
+</div>
+</div>
+<!-- Gangasagar -->
+<div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+<div class="h-32 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+<i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="droplets" style="width: 64px; height: 64px;"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Gangasagar Mela</h3>
+<p class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-4">West Bengal</p>
+<p class="text-gray-600 mb-4 text-sm">
                             The second largest human congregation after Kumbh Mela. Devotees gather at Sagar Island where the Ganga meets the Bay of Bengal.
                         </p>
-                        <ul class="text-sm text-gray-500 space-y-2">
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Holy Dip: Washing away sins</li>
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Kapil Muni Temple: Worship</li>
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Ancestral Rites: Tarpan</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Uttarayan -->
-                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
-                    <div class="h-32 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-                        <i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="wind" style="width: 64px; height: 64px;"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Uttarayan</h3>
-                        <p class="text-xs font-semibold text-purple-600 uppercase tracking-wide mb-4">Gujarat &amp; Rajasthan</p>
-                        <p class="text-gray-600 mb-4 text-sm">
+<ul class="text-sm text-gray-500 space-y-2">
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Holy Dip: Washing away sins</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Kapil Muni Temple: Worship</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Ancestral Rites: Tarpan</li>
+</ul>
+</div>
+</div>
+<!-- Uttarayan -->
+<div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+<div class="h-32 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+<i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="wind" style="width: 64px; height: 64px;"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Uttarayan</h3>
+<p class="text-xs font-semibold text-purple-600 uppercase tracking-wide mb-4">Gujarat &amp; Rajasthan</p>
+<p class="text-gray-600 mb-4 text-sm">
                             Famous for the International Kite Festival. The sky becomes a mosaic of colorful kites, symbolizing high aspirations.
                         </p>
-                        <ul class="text-sm text-gray-500 space-y-2">
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Patang: Kite flying battles</li>
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Undhiyu: Mixed vegetable curry</li>
-                            <li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Chikki: Peanut brittle sweets</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tab 3: Wishes -->
-        <div class="tab-content" id="wishes">
-            <div class="max-w-3xl mx-auto">
-                <h3 class="text-center text-2xl font-bold text-orange-800 mb-8">Share the Joy</h3>
-                <div class="space-y-4" id="wishes-container">
-                    <!-- Wishes injected via JS -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Life Lessons (Always Visible) -->
-        <div class="mt-20 bg-stone-900 text-stone-300 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 via-yellow-500 to-red-500"></div>
-            <h3 class="text-2xl font-bold text-white mb-6">Life Lessons from Sankranti</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
-                <div class="p-4 bg-stone-800 rounded-xl">
-                    <i class="w-8 h-8 mx-auto text-pink-500 mb-3" data-lucide="heart"></i>
-                    <h4 class="font-bold text-white mb-2">Sweetness Heals</h4>
-                    <p>Just like Til-Gul (sesame &amp; jaggery), speak sweetly to heal old relationships.</p>
-                </div>
-                <div class="p-4 bg-stone-800 rounded-xl">
-                    <i class="w-8 h-8 mx-auto text-yellow-500 mb-3" data-lucide="sun"></i>
-                    <h4 class="font-bold text-white mb-2">Change is Good</h4>
-                    <p>Like the sun changing course, embrace change as a sign of new beginnings.</p>
-                </div>
-                <div class="p-4 bg-stone-800 rounded-xl">
-                    <i class="w-8 h-8 mx-auto text-green-500 mb-3" data-lucide="wheat"></i>
-                    <h4 class="font-bold text-white mb-2">Gratitude</h4>
-                    <p>Always thank nature, the land, and the invisible hands that feed us.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Festive Gallery Section -->
-        <div class="mt-20">
-            <h3 class="text-center text-2xl font-bold text-orange-800 mb-8">Festive Moments &amp; Greetings</h3>
-            <p class="text-center text-stone-600 mb-8 max-w-2xl mx-auto">
+<ul class="text-sm text-gray-500 space-y-2">
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Patang: Kite flying battles</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Undhiyu: Mixed vegetable curry</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Chikki: Peanut brittle sweets</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Tab 3: Wishes -->
+<div class="tab-content" id="wishes">
+<div class="max-w-3xl mx-auto">
+<h3 class="text-center text-2xl font-bold text-orange-800 mb-8">Share the Joy</h3>
+<div class="space-y-4" id="wishes-container">
+<!-- Wishes injected via JS -->
+</div>
+</div>
+</div>
+<!-- Life Lessons (Always Visible) -->
+<div class="mt-20 bg-stone-900 text-stone-300 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 via-yellow-500 to-red-500"></div>
+<h3 class="text-2xl font-bold text-white mb-6">Life Lessons from Sankranti</h3>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
+<div class="p-4 bg-stone-800 rounded-xl">
+<i class="w-8 h-8 mx-auto text-pink-500 mb-3" data-lucide="heart"></i>
+<h4 class="font-bold text-white mb-2">Sweetness Heals</h4>
+<p>Just like Til-Gul (sesame &amp; jaggery), speak sweetly to heal old relationships.</p>
+</div>
+<div class="p-4 bg-stone-800 rounded-xl">
+<i class="w-8 h-8 mx-auto text-yellow-500 mb-3" data-lucide="sun"></i>
+<h4 class="font-bold text-white mb-2">Change is Good</h4>
+<p>Like the sun changing course, embrace change as a sign of new beginnings.</p>
+</div>
+<div class="p-4 bg-stone-800 rounded-xl">
+<i class="w-8 h-8 mx-auto text-green-500 mb-3" data-lucide="wheat"></i>
+<h4 class="font-bold text-white mb-2">Gratitude</h4>
+<p>Always thank nature, the land, and the invisible hands that feed us.</p>
+</div>
+</div>
+</div>
+<!-- Festive Gallery Section -->
+<div class="mt-20">
+<h3 class="text-center text-2xl font-bold text-orange-800 mb-8">Festive Moments &amp; Greetings</h3>
+<p class="text-center text-stone-600 mb-8 max-w-2xl mx-auto">
                 Capture the spirit of the season with these beautiful glimpses of Sankranti celebrations. Share these greetings with your loved ones to spread warmth and joy.
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <!-- Image 1 -->
-                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Happy Pongal and Sankranti" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy Pongal and Sankranti.jpg"/>
-                </div>
-                <!-- Image 2 -->
-                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Happy Sankranti" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy Sankranti.jpg"/>
-                </div>
-                <!-- Image 3 -->
-                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Happy and Prosperous" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy and Prosperous.jpg"/>
-                </div>
-                <!-- Image 4 -->
-                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Love and Affection" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Love and Affection.jpg"/>
-                </div>
-                <!-- Image 5 -->
-                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Sankranti Prasad" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti Prasad.jpg"/>
-                </div>
-                <!-- Image 6 -->
-                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Sankranti Wishes" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti Wishes.jpg"/>
-                </div>
-                <!-- Image 7 -->
-                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Sankranti Prosperity" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti prosperity.jpg"/>
-                </div>
-                <!-- Image 8 -->
-                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Sankranti Celebration" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti.jpg"/>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<!-- Image 1 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Happy Pongal and Sankranti" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy Pongal and Sankranti.jpg"/>
+</div>
+<!-- Image 2 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Happy Sankranti" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy Sankranti.jpg"/>
+</div>
+<!-- Image 3 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Happy and Prosperous" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy and Prosperous.jpg"/>
+</div>
+<!-- Image 4 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Love and Affection" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Love and Affection.jpg"/>
+</div>
+<!-- Image 5 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Sankranti Prasad" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti Prasad.jpg"/>
+</div>
+<!-- Image 6 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Sankranti Wishes" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti Wishes.jpg"/>
+</div>
+<!-- Image 7 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Sankranti Prosperity" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti prosperity.jpg"/>
+</div>
+<!-- Image 8 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Sankranti Celebration" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti.jpg"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-300">
 <div class="container mx-auto px-6 py-12 lg:px-8">
 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
 <div>
@@ -482,7 +454,10 @@
 <h5 class="text-lg font-semibold text-white mb-4">Festivals and Celebration</h5>
 <ul class="space-y-2">
 <li>
-<a href="https://www.makarsankranti.net/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Home</a>
+<a href="https://www.makarsankranti.net/makarsankranti-wallpapers.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Wallpapers</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pongal/pongal-cards.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Pongal Cards</a>
 </li>
 <li>
 <a href="https://www.makarsankranti.net/Holi%20Festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Holi Festival</a>
@@ -536,6 +511,29 @@
 </p>
 <p>
 </p>
+<h5 class="text-lg font-semibold text-white mb-4">Celebrate Lohri</h5>
+<ul>
+<li><a href="https://www.makarsankranti.net/lohri-festival/26-unique-lohri-wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">26-unique-lohri-wishes</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/agriculture.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Agriculture</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/dulla-bhatti-story.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Dulla-bhatti-story</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/first-lohri-special.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">First-lohri-special</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/food-ideas-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Food-ideas-lohri</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/ideas-to-celebrate-lohri-in-office.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Ideas-to-celebrate-lohri-in-office</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/kids-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl07_title">Kids-lohri</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/list-of-food-items.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl08_title">List-of-food-items</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-bonefire.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl09_title">Lohri-bonefire</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-cards.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl10_title">Lohri-cards</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-essay.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl11_title">Lohri-essay</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-importnce-with-each-generation.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl12_title">Lohri-importnce-with-each-generation</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-recipes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl13_title">Lohri-recipes</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/music-and-dance.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl14_title">Music-and-dance</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/popular-lohri-songs.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl15_title">Popular-lohri-songs</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/rituals-with-song.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl16_title">Rituals-with-song</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/songs-meaning.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl17_title">Songs-meaning</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/special-lohri-foods.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl18_title">Special-lohri-foods</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/tradition.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl19_title">Tradition</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/what-to-eat-on-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl20_title">What-to-eat-on-lohri</a></li>
+</ul>
 </div>
 </div>
 </div>
@@ -568,9 +566,8 @@
 </div>
 </div>
 </footer>
-
-    <!-- Scripts -->
-    <script>
+<!-- Scripts -->
+<script>
         // Initialize Icons
         lucide.createIcons();
 
@@ -659,5 +656,4 @@
             kiteContainer.appendChild(kite);
         }
     </script>
-
 </body></html>
