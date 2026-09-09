@@ -53,14 +53,91 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HQVLPEFHL9');
-</script></head>
-<body class="bg-orange-50 text-gray-800 min-h-screen flex flex-col">
+</script><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Tiro+Devanagari+Sanskrit:ital@0;1&amp;display=swap" rel="stylesheet"/><meta content="index, follow" name="robots"/><style id="makar-sankranti-theme-overrides">
+:root {
+  --bg:#FDFBF8; --surface:#FFFFFF; --amber-50:#FFFBEB; --amber-100:#FEF3C7;
+  --amber-200:#FDE68A; --amber-500:#F59E0B; --amber-600:#D97706;
+  --amber-700:#B45309; --amber-800:#92400E; --amber-900:#78350F;
+  --stone-100:#F5F5F4; --stone-200:#E7E5E4; --stone-500:#78716C;
+  --stone-600:#57534E; --stone-700:#44403C; --stone-800:#292524;
+  --shadow:0 10px 30px rgba(120,53,15,.08);
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:86px; }
+body.theme-page {
+  margin:0; min-height:100vh; display:flex; flex-direction:column;
+  font-family:'Inter',sans-serif !important; color:var(--stone-700) !important;
+  background:radial-gradient(circle at 15% 10%,rgba(253,230,138,.28),transparent 28%),radial-gradient(circle at 85% 18%,rgba(254,243,199,.45),transparent 28%),var(--bg) !important;
+  line-height:1.7;
+}
+h1,h2,h3,.serif-font { font-family:'Tiro Devanagari Sanskrit',serif !important; }
+button,a { -webkit-tap-highlight-color:transparent; }
+button:focus-visible,a:focus-visible { outline:3px solid var(--amber-500); outline-offset:3px; border-radius:.25rem; }
+.theme-nav {
+  position:sticky; top:0; z-index:50; color:var(--stone-700) !important;
+  background:rgba(254,243,199,.72) !important; backdrop-filter:blur(10px);
+  border:0 !important; border-bottom:1px solid rgba(217,119,6,.16) !important;
+  box-shadow:0 4px 18px rgba(120,53,15,.05) !important;
+}
+.theme-nav > div { width:min(1180px,calc(100% - 32px)); max-width:none !important; }
+.theme-nav .theme-brand { color:var(--amber-800) !important; }
+.theme-nav .theme-brand svg { color:var(--amber-600) !important; }
+.theme-nav button { color:var(--stone-600) !important; border-color:transparent !important; }
+.theme-nav button:hover { color:var(--amber-700) !important; }
+.theme-nav .nav-btn.text-yellow-400 { color:var(--amber-800) !important; border-color:var(--amber-600) !important; }
+.theme-main { flex:1; padding-bottom:3rem !important; }
+.tab-content { display:none; }
+.tab-content.active { display:block; }
+.theme-hero {
+  width:min(1180px,calc(100% - 32px)); margin:2.5rem auto 0; border-radius:1.5rem;
+  overflow:hidden; color:var(--stone-700) !important; padding-top:5rem !important; padding-bottom:5rem !important;
+  background:linear-gradient(135deg,rgba(255,251,235,.96),rgba(254,243,199,.86)) !important;
+  border:1px solid rgba(217,119,6,.18); box-shadow:var(--shadow);
+}
+.theme-hero > .absolute img { opacity:.14 !important; mix-blend-mode:multiply !important; }
+.theme-hero .hero-overlay { background:linear-gradient(135deg,rgba(255,251,235,.88),rgba(254,243,199,.74)) !important; }
+.theme-hero h1 { color:var(--amber-900) !important; text-shadow:none !important; }
+.theme-hero .theme-lead { color:var(--stone-600) !important; }
+.theme-hero .theme-date { background:var(--amber-50) !important; color:var(--amber-800) !important; border:1px solid var(--amber-200); }
+.theme-hero .theme-bonfire {
+  color:white !important; background:rgba(120,53,15,.90) !important;
+  border-color:rgba(253,230,138,.35) !important; box-shadow:0 14px 36px rgba(120,53,15,.18);
+}
+.theme-hero .theme-bonfire p { color:var(--amber-100) !important; }
+.theme-section { width:min(900px,calc(100% - 32px)); max-width:none !important; }
+.theme-panel { width:min(1040px,calc(100% - 32px)); max-width:none !important; margin:3rem auto 0; padding:2.5rem !important; background:rgba(255,255,255,.96) !important; border:1px solid var(--stone-200); border-radius:1rem; box-shadow:var(--shadow); }
+#comparison .theme-panel { background:linear-gradient(135deg,rgba(255,251,235,.7),rgba(255,255,255,.96)) !important; }
+main h2 { color:var(--amber-800) !important; }
+main h3, main h4 { color:var(--amber-700) !important; }
+main p, main li { color:var(--stone-600); }
+main [class*="border-red-"], main [class*="border-orange-"], main [class*="border-yellow-"] { border-color:var(--amber-600) !important; }
+main [class*="bg-red-50"], main [class*="bg-orange-50"], main [class*="bg-yellow-50"], main [class*="bg-red-100"], main [class*="bg-orange-100"], main [class*="bg-yellow-100"] { background:var(--amber-50) !important; }
+main [class*="text-red-"], main [class*="text-orange-"], main [class*="text-yellow-"] { color:var(--amber-700) !important; }
+main .bg-white { background:rgba(255,255,255,.97) !important; border-color:var(--stone-200); box-shadow:var(--shadow); }
+#roots img { border-color:white !important; box-shadow:0 16px 38px rgba(120,53,15,.14) !important; }
+#symbolism .bg-gray-900 { background:var(--amber-900) !important; }
+#symbolism .bg-gray-900 p { color:var(--amber-50) !important; }
+.theme-footer { margin-top:auto; color:var(--stone-600) !important; text-align:center; background:var(--stone-100) !important; border:0 !important; border-top:1px solid var(--stone-200) !important; }
+.theme-footer > div { width:min(900px,calc(100% - 32px)); max-width:none !important; }
+.theme-footer h3 { color:var(--amber-800) !important; font-size:1.8rem !important; }
+.theme-footer p { color:var(--stone-600) !important; }
+.theme-footer span { color:var(--stone-500) !important; }
+.theme-footer span:not(.text-gray-700):hover { color:var(--amber-700) !important; }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }
+@media (max-width:760px) {
+  .theme-nav > div,.theme-hero,.theme-section,.theme-panel,.theme-footer > div { width:min(100% - 24px,1180px); }
+  .theme-nav .theme-brand span { font-size:1.05rem; }
+  .theme-hero { margin-top:1.25rem; padding:3.5rem 1rem !important; }
+  .theme-panel { padding:1.35rem !important; }
+}
+</style></head>
+<body class="theme-page">
 <!-- Navigation -->
-<nav class="bg-red-800 text-white sticky top-0 z-50 shadow-lg border-b-4 border-yellow-500">
+<nav aria-label="Lohri sections" class="theme-nav">
 <div class="max-w-6xl mx-auto px-4">
 <div class="flex justify-between items-center h-16">
 <!-- Logo -->
-<div class="flex items-center space-x-2 font-bold text-xl cursor-pointer hover:opacity-90 transition" onclick="switchTab('home')">
+<div class="flex items-center space-x-2 font-bold text-xl cursor-pointer hover:opacity-90 transition theme-brand" onclick="switchTab('home')">
 <i class="text-yellow-400" data-lucide="flame"></i>
 <span class="serif-font tracking-wide">Lohri Explained</span>
 </div>
@@ -79,24 +156,24 @@ gtag('config', 'G-HQVLPEFHL9');
 </div>
 </nav>
 <!-- Main Content Area -->
-<main class="flex-grow pb-12">
+<main class="theme-main">
 <!-- HOME SECTION -->
 <div class="tab-content active animate-fade-in" id="home">
 <!-- Hero with Image -->
-<div class="relative bg-red-900 text-white py-24 px-4 overflow-hidden">
+<div class="theme-hero relative text-white py-24 px-4 overflow-hidden">
 <!-- Background Image with Overlay -->
 <div class="absolute inset-0 z-0">
 <img alt="Lohri Celebration" class="w-full h-full object-cover opacity-40 mix-blend-overlay" src="https://storage.googleapis.com/kreatewebsite/photos600/lohri-2.jpg"/>
 <div class="absolute inset-0 hero-overlay"></div>
 </div>
 <div class="relative max-w-4xl mx-auto text-center z-10">
-<div class="inline-block bg-yellow-500 text-red-900 px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">January 13</div>
+<div class="inline-block bg-yellow-500 text-red-900 px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider theme-date">January 13</div>
 <h1 class="text-5xl md:text-7xl font-bold mb-6 text-yellow-100 drop-shadow-lg">The Bonfire Festival</h1>
-<p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-red-100 leading-relaxed font-light">
+<p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-red-100 leading-relaxed font-light theme-lead">
                         Celebrating the end of a brutal winter and the beginning of longer days. A time to express gratitude, come together as a community, and look forward to the new season of spring.
                     </p>
 <!-- Interactive Bonfire -->
-<div class="mt-8 flex flex-col items-center bg-black/20 p-8 rounded-3xl backdrop-blur-sm border border-red-700/50 inline-block">
+<div class="mt-8 flex flex-col items-center bg-black/20 p-8 rounded-3xl backdrop-blur-sm border border-red-700/50 inline-block theme-bonfire">
 <div class="relative w-48 h-48 flex items-center justify-center mb-4">
 <!-- Lit State -->
 <div class="hidden relative w-full h-full flex justify-center items-center" id="bonfire-lit-view">
@@ -119,7 +196,7 @@ gtag('config', 'G-HQVLPEFHL9');
 </div>
 </div>
 <!-- Intro Content -->
-<div class="max-w-4xl mx-auto px-4 py-16 text-center">
+<div class="max-w-4xl mx-auto px-4 py-16 text-center theme-section">
 <h2 class="text-3xl font-bold text-red-800 mb-6">Why We Celebrate</h2>
 <p class="text-lg text-gray-600 leading-relaxed mb-8">
                     Lohri is one of the most vibrant festivals of North India, especially in Punjab, Haryana, and Himachal Pradesh. 
@@ -140,7 +217,7 @@ gtag('config', 'G-HQVLPEFHL9');
 </div>
 <!-- ORIGINS & LEGENDS SECTION -->
 <div class="tab-content animate-fade-in" id="roots">
-<div class="max-w-5xl mx-auto px-4 py-12">
+<div class="max-w-5xl mx-auto px-4 py-12 theme-panel">
 <div class="flex flex-col md:flex-row gap-12 items-center mb-16">
 <div class="md:w-1/2">
 <img alt="Lohri Rituals" class="rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white" src="https://storage.googleapis.com/kreatewebsite/photos600/lohri-2.jpg"/>
@@ -180,7 +257,7 @@ gtag('config', 'G-HQVLPEFHL9');
 </div>
 <!-- COMPARISON SECTION -->
 <div class="tab-content animate-fade-in" id="comparison">
-<div class="max-w-5xl mx-auto px-4 py-16 bg-gradient-to-br from-orange-50 to-red-50">
+<div class="max-w-5xl mx-auto px-4 py-16 bg-gradient-to-br from-orange-50 to-red-50 theme-panel">
 <h2 class="text-3xl md:text-4xl font-bold text-center text-red-900 mb-4">Lohri &amp; Makar Sankranti</h2>
 <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Lohri and Makar Sankranti are both important in astronomy and agriculture, but their regional customs vary. Many view Lohri as the beginning of Makar Sankranti festivities</p>
 <div class="grid md:grid-cols-2 gap-8 items-start">
@@ -228,7 +305,7 @@ gtag('config', 'G-HQVLPEFHL9');
 </div>
 <!-- SYMBOLISM SECTION -->
 <div class="tab-content animate-fade-in" id="symbolism">
-<div class="max-w-4xl mx-auto px-4 py-16">
+<div class="max-w-4xl mx-auto px-4 py-16 theme-panel">
 <div class="text-center mb-12">
 <span class="text-orange-600 font-bold tracking-widest uppercase text-sm">Spiritual Meaning</span>
 <h2 class="text-4xl font-bold text-gray-900 mt-2">Agni: The Sacred Fire</h2>
@@ -367,10 +444,10 @@ gtag('config', 'G-HQVLPEFHL9');
 </div>
 </div>
 <div class="mt-8 text-center text-sm text-gray-400">
-<p class="text-sm text-gray-400">Happy MakarSankranti - Images, Stories, Cards</p>
+<p class="text-sm text-gray-400">New Beginning with Sankranti and Pongal</p>
 </div>
 <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
-<p class="text-sm text-gray-400">© 2026 Makar Sankranti and Pongal . All rights reserved.</p>
+<p class="text-sm text-gray-400">© 2026 Makar Sankranti . All rights reserved.</p>
 </div>
 </div>
 </footer>

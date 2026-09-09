@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Lohri Festival Celebration | History, Wishes &amp; Bonfire</title>
-    
-    <!-- Meta Description & Keywords -->
-    <meta content="Celebrate the warmth of the Lohri festival. Explore the history of Dulla Bhatti, significance of the harvest, view festive images, and share heartwarming Lohri wishes. Light our interactive virtual bonfire!" name="description"/>
-    <meta content="Lohri, Lohri Festival, Dulla Bhatti, Bonfire, Punjab, Harvest Festival, Lohri Wishes, Happy Lohri, Lohri 2025, Lohri Traditions, Rewri, Gajak" name="keywords"/>
-    <meta content="Lohri Festival Interactive" name="author"/>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
-
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lohri Festival Celebration | History, Wishes &amp; Bonfire</title>
+<!-- Meta Description & Keywords -->
+<meta content="Celebrate the warmth of the Lohri festival. Explore the history of Dulla Bhatti, significance of the harvest, view festive images, and share heartwarming Lohri wishes. Light our interactive virtual bonfire!" name="description"/>
+<meta content="Lohri, Lohri Festival, Dulla Bhatti, Bonfire, Punjab, Harvest Festival, Lohri Wishes, Happy Lohri, Lohri 2025, Lohri Traditions, Rewri, Gajak" name="keywords"/>
+<meta content="Lohri Festival Interactive" name="author"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Tiro+Devanagari+Sanskrit:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<style>
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -53,202 +48,285 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HQVLPEFHL9');
-</script></head>
+</script><style>
+/* Visual system adapted from the supplied Makar Sankranti theme. */
+:root {
+  --bg:#FDFBF8; --surface:#FFFFFF; --amber-50:#FFFBEB; --amber-100:#FEF3C7;
+  --amber-200:#FDE68A; --amber-500:#F59E0B; --amber-600:#D97706;
+  --amber-700:#B45309; --amber-800:#92400E; --amber-900:#78350F;
+  --stone-100:#F5F5F4; --stone-200:#E7E5E4; --stone-500:#78716C;
+  --stone-600:#57534E; --stone-700:#44403C; --stone-800:#292524;
+  --shadow:0 10px 30px rgba(120,53,15,.08);
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0; font-family:'Inter',sans-serif !important; color:var(--stone-700) !important;
+  background:radial-gradient(circle at 15% 10%,rgba(253,230,138,.28),transparent 28%),
+             radial-gradient(circle at 85% 18%,rgba(254,243,199,.45),transparent 28%),var(--bg) !important;
+  line-height:1.7;
+}
+h1,h2,h3,.serif-font { font-family:'Tiro Devanagari Sanskrit',serif !important; }
+button:focus-visible { outline:3px solid var(--amber-500); outline-offset:3px; border-radius:.35rem; }
+
+/* Glass navigation from the theme, retaining source tab behavior. */
+body > nav {
+  background:rgba(254,243,199,.78) !important; color:var(--stone-700) !important;
+  border-bottom:1px solid rgba(217,119,6,.16); box-shadow:0 5px 22px rgba(120,53,15,.08) !important;
+  backdrop-filter:blur(10px);
+}
+body > nav > div { width:min(1180px,calc(100% - 32px)); max-width:none !important; }
+body > nav button { color:var(--stone-600); }
+body > nav button:hover { color:var(--amber-700) !important; }
+body > nav button[onclick="switchTab('home')"] { color:var(--amber-800); background:transparent; }
+body > nav .nav-btn.text-yellow-400 {
+  color:var(--amber-800) !important; border-color:var(--amber-600) !important;
+}
+body > nav [data-lucide="flame"] { color:var(--amber-600) !important; }
+
+main { padding-bottom:3rem !important; }
+/* Theme hero shell. */
+#home > div:first-child {
+  width:min(1180px,calc(100% - 32px)); margin:2.5rem auto 0; border-radius:1.5rem;
+  color:var(--stone-700) !important;
+  background:linear-gradient(135deg,rgba(255,251,235,.97),rgba(254,243,199,.78)) !important;
+  border:1px solid rgba(217,119,6,.18); box-shadow:var(--shadow); padding-top:4rem !important;
+  padding-bottom:4rem !important;
+}
+#home > div:first-child .opacity-20 { opacity:.28; }
+#home > div:first-child h1 { color:var(--amber-900) !important; text-shadow:none !important; }
+#home > div:first-child p { color:var(--stone-600) !important; }
+#bonfire-unlit-view { color:var(--amber-800) !important; }
+#bonfire-btn { background:var(--amber-700) !important; color:white !important; }
+#bonfire-btn:hover { background:var(--amber-800) !important; }
+
+/* Cards and sections. */
+#home .max-w-6xl, #gallery .max-w-6xl { max-width:1180px !important; }
+#home .grid > div, #history .space-y-8 > div, #wishes-container > div {
+  background:rgba(255,255,255,.96) !important; border:1px solid var(--stone-200) !important;
+  border-top-color:var(--amber-200) !important; border-radius:1rem !important; box-shadow:var(--shadow) !important;
+}
+#home .grid > div:hover, #history .space-y-8 > div:hover, #wishes-container > div:hover {
+  border-color:var(--amber-200) !important; box-shadow:0 16px 38px rgba(120,53,15,.14) !important;
+}
+#home h3, #history h3, #wishes p { color:var(--stone-800) !important; }
+#home .grid p, #history .space-y-8 p { color:var(--stone-600) !important; }
+#home .grid i { color:var(--amber-600) !important; }
+#history h2, #gallery h2, #wishes h2 { color:var(--amber-800) !important; font-size:clamp(1.9rem,4vw,2.9rem); }
+#history .bg-orange-100 { background:var(--amber-50) !important; }
+#history .text-orange-600 { color:var(--amber-700) !important; }
+#history .mt-16 {
+  background:var(--amber-50) !important; border-color:var(--amber-200) !important;
+  box-shadow:var(--shadow);
+}
+#history .mt-16 h3 { color:var(--amber-800) !important; }
+
+/* Gallery component from the theme. */
+#gallery-grid > div {
+  background:white !important; border:1px solid var(--stone-200); border-radius:1rem !important;
+  box-shadow:var(--shadow) !important; transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+#gallery-grid > div:hover { transform:translateY(-4px); border-color:var(--amber-200); box-shadow:0 16px 38px rgba(120,53,15,.14) !important; }
+
+/* Wishes controls keep their source interactions with theme colors. */
+.wish-lang-btn { border:1px solid var(--stone-200); }
+.wish-lang-btn.bg-red-600 { background:var(--amber-700) !important; color:white !important; }
+.wish-lang-btn.bg-white { background:white !important; color:var(--stone-600) !important; }
+#wishes-container button { color:var(--amber-700) !important; background:var(--amber-50) !important; }
+#wishes-container > div { border-color:var(--stone-200) !important; }
+#toast { background:var(--stone-800) !important; }
+
+/* Theme footer treatment, preserving source footer copy. */
+body > footer {
+  background:var(--stone-100) !important; color:var(--stone-600) !important;
+  border-top:1px solid var(--stone-200); margin-top:5rem !important;
+}
+body > footer p:first-child { color:var(--amber-800); font-family:'Tiro Devanagari Sanskrit',serif; font-size:1.35rem; }
+body > footer p:last-child { color:var(--stone-500) !important; }
+
+@media (max-width:760px) {
+  body > nav > div, #home > div:first-child { width:min(100% - 24px,1180px); }
+  #home > div:first-child { margin-top:1.25rem; padding:3rem 1rem !important; }
+  #home > div:first-child h1 { font-size:3rem !important; }
+  .wish-lang-btn { padding-left:1rem !important; padding-right:1rem !important; }
+}
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; }
+}
+</style></head>
 <body class="bg-orange-50 text-gray-800 min-h-screen flex flex-col">
-
-    <!-- Navigation -->
-    <nav class="bg-red-700 text-white sticky top-0 z-50 shadow-lg">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2 font-bold text-xl cursor-pointer hover:opacity-90 transition" onclick="switchTab('home')">
-                    <i class="text-yellow-400" data-lucide="flame"></i>
-                    <span>Lohri Festival</span>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <button class="nav-btn text-yellow-400 font-semibold border-b-2 border-yellow-400 hover:text-yellow-300 transition-colors" data-target="home" onclick="switchTab('home')">Home</button>
-                    <button class="nav-btn hover:text-yellow-300 transition-colors" data-target="history" onclick="switchTab('history')">History &amp; Rituals</button>
-                    <button class="nav-btn hover:text-yellow-300 transition-colors" data-target="gallery" onclick="switchTab('gallery')">Gallery</button>
-                    <button class="nav-btn hover:text-yellow-300 transition-colors" data-target="wishes" onclick="switchTab('wishes')">Wishes</button>
-                </div>
-
-                <!-- Mobile Menu Icon -->
-                <div class="md:hidden flex space-x-4 text-sm">
-                    <button class="hover:text-yellow-200 flex items-center gap-1" onclick="switchTab('wishes')"><i class="w-4 h-4" data-lucide="message-circle"></i> Wishes</button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content Area -->
-    <main class="flex-grow pb-12">
-        
-        <!-- HOME SECTION -->
-        <div class="tab-content active animate-fade-in" id="home">
-            <!-- Hero -->
-            <div class="relative bg-red-800 text-white py-20 px-4 overflow-hidden">
-                <!-- Abstract Background Shapes -->
-                <div class="absolute inset-0 opacity-20 pointer-events-none">
-                    <div class="absolute top-0 left-0 w-32 h-32 bg-yellow-400 rounded-full blur-3xl transform -translate-x-10 -translate-y-10"></div>
-                    <div class="absolute bottom-0 right-0 w-64 h-64 bg-orange-500 rounded-full blur-3xl transform translate-x-20 translate-y-20"></div>
-                </div>
-
-                <div class="relative max-w-4xl mx-auto text-center z-10">
-                    <h1 class="text-5xl md:text-7xl font-bold mb-6 text-yellow-300 drop-shadow-lg">Happy Lohri</h1>
-                    <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-red-100">
+<!-- Navigation -->
+<nav aria-label="Festival sections" class="bg-red-700 text-white sticky top-0 z-50 shadow-lg">
+<div class="max-w-6xl mx-auto px-4">
+<div class="flex justify-between items-center h-16">
+<!-- Logo -->
+<button aria-label="Show Lohri Festival home" class="flex items-center space-x-2 font-bold text-xl cursor-pointer hover:opacity-90 transition" onclick="switchTab('home')" type="button">
+<i class="text-yellow-400" data-lucide="flame"></i>
+<span>Lohri Festival</span>
+</button>
+<!-- Desktop Menu -->
+<div class="hidden md:flex space-x-8">
+<button class="nav-btn text-yellow-400 font-semibold border-b-2 border-yellow-400 hover:text-yellow-300 transition-colors" data-target="home" onclick="switchTab('home')" type="button">Home</button>
+<button class="nav-btn hover:text-yellow-300 transition-colors" data-target="history" onclick="switchTab('history')" type="button">History &amp; Rituals</button>
+<button class="nav-btn hover:text-yellow-300 transition-colors" data-target="gallery" onclick="switchTab('gallery')" type="button">Gallery</button>
+<button class="nav-btn hover:text-yellow-300 transition-colors" data-target="wishes" onclick="switchTab('wishes')" type="button">Wishes</button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden flex space-x-4 text-sm">
+<button class="hover:text-yellow-200 flex items-center gap-1" onclick="switchTab('wishes')" type="button"><i class="w-4 h-4" data-lucide="message-circle"></i> Wishes</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main aria-label="Lohri Festival content" class="flex-grow pb-12">
+<!-- HOME SECTION -->
+<div class="tab-content active animate-fade-in" id="home">
+<!-- Hero -->
+<div class="relative bg-red-800 text-white py-20 px-4 overflow-hidden">
+<!-- Abstract Background Shapes -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-0 left-0 w-32 h-32 bg-yellow-400 rounded-full blur-3xl transform -translate-x-10 -translate-y-10"></div>
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-orange-500 rounded-full blur-3xl transform translate-x-20 translate-y-20"></div>
+</div>
+<div class="relative max-w-4xl mx-auto text-center z-10">
+<h1 class="text-5xl md:text-7xl font-bold mb-6 text-yellow-300 drop-shadow-lg">Happy Lohri</h1>
+<p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-red-100">
                         Embracing the cozy bonfire glow, the sugary gur treats, and the excitement of fresh starts.
                     </p>
-
-                    <!-- Interactive Bonfire -->
-                    <div class="mt-12 flex flex-col items-center">
-                        <div class="relative w-64 h-64 flex items-center justify-center mb-6">
-                            <!-- Lit State (Hidden by default) -->
-                            <div class="hidden relative w-full h-full flex justify-center items-center" id="bonfire-lit-view">
-                                <i class="w-48 h-48 text-orange-500 animate-pulse bonfire-glow absolute" data-lucide="flame"></i>
-                                <i class="w-32 h-32 text-yellow-400 absolute bottom-4 animate-bounce" data-lucide="flame" style="animation-duration: 1.5s;"></i>
-                                <div class="absolute -bottom-4 w-40 h-8 bg-black opacity-20 blur-xl rounded-full"></div>
-                                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                    <span class="animate-ping absolute inline-flex h-32 w-32 rounded-full bg-orange-400 opacity-20"></span>
-                                </div>
-                            </div>
-                            
-                            <!-- Unlit State (Visible by default) -->
-                            <div class="text-red-200 flex flex-col items-center opacity-70" id="bonfire-unlit-view">
-                                <div class="w-32 h-10 bg-amber-900 rounded-lg transform rotate-12 mb-[-10px] shadow-lg"></div>
-                                <div class="w-32 h-10 bg-amber-900 rounded-lg transform -rotate-12 shadow-lg"></div>
-                                <div class="w-40 h-10 bg-amber-900 rounded-lg mt-[-15px] shadow-lg"></div>
-                                <p class="mt-4 text-sm font-medium">The wood is ready...</p>
-                            </div>
-                        </div>
-
-                        <button class="mt-4 px-8 py-3 rounded-full text-lg font-bold shadow-lg transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2 bg-orange-600 text-white hover:bg-orange-500" id="bonfire-btn" onclick="toggleBonfire()">
-                            <i class="w-5 h-5" data-lucide="flame"></i> Light the Bonfire
+<!-- Interactive Bonfire -->
+<div class="mt-12 flex flex-col items-center">
+<div class="relative w-64 h-64 flex items-center justify-center mb-6">
+<!-- Lit State (Hidden by default) -->
+<div class="hidden relative w-full h-full flex justify-center items-center" id="bonfire-lit-view">
+<i class="w-48 h-48 text-orange-500 animate-pulse bonfire-glow absolute" data-lucide="flame"></i>
+<i class="w-32 h-32 text-yellow-400 absolute bottom-4 animate-bounce" data-lucide="flame" style="animation-duration: 1.5s;"></i>
+<div class="absolute -bottom-4 w-40 h-8 bg-black opacity-20 blur-xl rounded-full"></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="animate-ping absolute inline-flex h-32 w-32 rounded-full bg-orange-400 opacity-20"></span>
+</div>
+</div>
+<!-- Unlit State (Visible by default) -->
+<div class="text-red-200 flex flex-col items-center opacity-70" id="bonfire-unlit-view">
+<div class="w-32 h-10 bg-amber-900 rounded-lg transform rotate-12 mb-[-10px] shadow-lg"></div>
+<div class="w-32 h-10 bg-amber-900 rounded-lg transform -rotate-12 shadow-lg"></div>
+<div class="w-40 h-10 bg-amber-900 rounded-lg mt-[-15px] shadow-lg"></div>
+<p class="mt-4 text-sm font-medium">The wood is ready...</p>
+</div>
+</div>
+<button class="mt-4 px-8 py-3 rounded-full text-lg font-bold shadow-lg transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2 bg-orange-600 text-white hover:bg-orange-500" id="bonfire-btn" onclick="toggleBonfire()" type="button">
+<i class="w-5 h-5" data-lucide="flame"></i> Light the Bonfire
                         </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Features Grid -->
-            <div class="max-w-6xl mx-auto px-4 py-16">
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Card 1 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-orange-400 text-center">
-                        <div class="mb-4 flex justify-center"><i class="text-red-500 w-8 h-8" data-lucide="music"></i></div>
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Folk Songs &amp; Dance</h3>
-                        <p class="text-gray-600">Bhangra, Gidda, and songs honoring Dulla Bhatti resonate with lively energy and pulsating rhythm.</p>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-orange-400 text-center">
-                        <div class="mb-4 flex justify-center"><i class="text-orange-500 w-8 h-8" data-lucide="utensils"></i></div>
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Feast &amp; Offerings</h3>
-                        <p class="text-gray-600">Savor Sarson da saag, Makki di roti, and present peanuts, rewri, and til to the holy flame.</p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-orange-400 text-center">
-                        <div class="mb-4 flex justify-center"><i class="text-pink-500 w-8 h-8" data-lucide="heart"></i></div>
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Togetherness</h3>
-                        <p class="text-gray-600">A significant occasion for families, particularly for newlyweds and newborns, to receive blessings.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- HISTORY SECTION -->
-        <div class="tab-content animate-fade-in" id="history">
-            <div class="max-w-4xl mx-auto px-4 py-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-red-800 mb-12 flex items-center justify-center gap-3">
-                    <i class="w-8 h-8" data-lucide="book-open"></i> History &amp; Significance
+</div>
+</div>
+</div>
+<!-- Features Grid -->
+<div class="max-w-6xl mx-auto px-4 py-16">
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-orange-400 text-center">
+<div class="mb-4 flex justify-center"><i class="text-red-500 w-8 h-8" data-lucide="music"></i></div>
+<h3 class="text-xl font-bold mb-2 text-gray-800">Folk Songs &amp; Dance</h3>
+<p class="text-gray-600">Bhangra, Gidda, and songs honoring Dulla Bhatti resonate with lively energy and pulsating rhythm.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-orange-400 text-center">
+<div class="mb-4 flex justify-center"><i class="text-orange-500 w-8 h-8" data-lucide="utensils"></i></div>
+<h3 class="text-xl font-bold mb-2 text-gray-800">Feast &amp; Offerings</h3>
+<p class="text-gray-600">Savor Sarson da saag, Makki di roti, and present peanuts, rewri, and til to the holy flame.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border-t-4 border-orange-400 text-center">
+<div class="mb-4 flex justify-center"><i class="text-pink-500 w-8 h-8" data-lucide="heart"></i></div>
+<h3 class="text-xl font-bold mb-2 text-gray-800">Togetherness</h3>
+<p class="text-gray-600">A significant occasion for families, particularly for newlyweds and newborns, to receive blessings.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- HISTORY SECTION -->
+<div class="tab-content animate-fade-in" id="history">
+<div class="max-w-4xl mx-auto px-4 py-12">
+<h2 class="text-3xl md:text-4xl font-bold text-center text-red-800 mb-12 flex items-center justify-center gap-3">
+<i class="w-8 h-8" data-lucide="book-open"></i> History &amp; Significance
                 </h2>
-
-                <div class="space-y-8">
-                    <!-- Fact 1 -->
-                    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
-                        <div class="md:w-1/4 flex items-center justify-center bg-orange-100 rounded-xl p-4">
-                            <span class="text-4xl serif-font text-orange-600 font-bold">1</span>
-                        </div>
-                        <div class="md:w-3/4">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">The Legend of Dulla Bhatti</h3>
-                            <p class="text-gray-600 leading-relaxed">Lohri is well-known for the story of Dulla Bhatti, also known as the 'Robin Hood of Punjab', who saved girls from being sold into slavery and ensured they had dignified marriages with dowries.</p>
-                        </div>
-                    </div>
-
-                    <!-- Fact 2 -->
-                    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
-                        <div class="md:w-1/4 flex items-center justify-center bg-orange-100 rounded-xl p-4">
-                            <span class="text-4xl serif-font text-orange-600 font-bold">2</span>
-                        </div>
-                        <div class="md:w-3/4">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Harvest Connection</h3>
-                            <p class="text-gray-600 leading-relaxed">This festival signals the conclusion of peak winter and aligns with the Rabi crop cycle of wheat and mustard, honoring the dedication of farmers and the anticipation of a bountiful harvest.</p>
-                        </div>
-                    </div>
-
-                    <!-- Fact 3 -->
-                    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
-                        <div class="md:w-1/4 flex items-center justify-center bg-orange-100 rounded-xl p-4">
-                            <span class="text-4xl serif-font text-orange-600 font-bold">3</span>
-                        </div>
-                        <div class="md:w-3/4">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">The Holy Bonfire</h3>
-                            <p class="text-gray-600 leading-relaxed">During Lohri, the bonfire represents Agni and the sun's revival, as people gather around to offer sesame, jaggery, and peanuts in hopes of prosperity.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-16 bg-yellow-50 border border-yellow-200 p-8 rounded-2xl text-center">
-                    <h3 class="text-2xl font-bold text-yellow-800 mb-4">A Song of Dulla Bhatti</h3>
-                    <p class="text-gray-700 italic text-lg mb-2">"Sundri-Mundri hoye! Tera kaun vicharaa! Dulla Bhatti wala!"</p>
-                    <p class="text-sm text-gray-600">During Lohri, the hero's memory is kept alive as this well-loved folk song resonates in every neighborhood.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- GALLERY SECTION -->
-        <div class="tab-content animate-fade-in" id="gallery">
-            <div class="max-w-6xl mx-auto px-4 py-12">
-                <h2 class="text-3xl font-bold text-center text-red-800 mb-8 flex items-center justify-center gap-3">
-                    <i class="w-8 h-8" data-lucide="image"></i> Festival Glimpses
+<div class="space-y-8">
+<!-- Fact 1 -->
+<div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+<div class="md:w-1/4 flex items-center justify-center bg-orange-100 rounded-xl p-4">
+<span class="text-4xl serif-font text-orange-600 font-bold">1</span>
+</div>
+<div class="md:w-3/4">
+<h3 class="text-xl font-bold text-gray-800 mb-2">The Legend of Dulla Bhatti</h3>
+<p class="text-gray-600 leading-relaxed">Lohri is well-known for the story of Dulla Bhatti, also known as the 'Robin Hood of Punjab', who saved girls from being sold into slavery and ensured they had dignified marriages with dowries.</p>
+</div>
+</div>
+<!-- Fact 2 -->
+<div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+<div class="md:w-1/4 flex items-center justify-center bg-orange-100 rounded-xl p-4">
+<span class="text-4xl serif-font text-orange-600 font-bold">2</span>
+</div>
+<div class="md:w-3/4">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Harvest Connection</h3>
+<p class="text-gray-600 leading-relaxed">This festival signals the conclusion of peak winter and aligns with the Rabi crop cycle of wheat and mustard, honoring the dedication of farmers and the anticipation of a bountiful harvest.</p>
+</div>
+</div>
+<!-- Fact 3 -->
+<div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+<div class="md:w-1/4 flex items-center justify-center bg-orange-100 rounded-xl p-4">
+<span class="text-4xl serif-font text-orange-600 font-bold">3</span>
+</div>
+<div class="md:w-3/4">
+<h3 class="text-xl font-bold text-gray-800 mb-2">The Holy Bonfire</h3>
+<p class="text-gray-600 leading-relaxed">During Lohri, the bonfire represents Agni and the sun's revival, as people gather around to offer sesame, jaggery, and peanuts in hopes of prosperity.</p>
+</div>
+</div>
+</div>
+<div class="mt-16 bg-yellow-50 border border-yellow-200 p-8 rounded-2xl text-center">
+<h3 class="text-2xl font-bold text-yellow-800 mb-4">A Song of Dulla Bhatti</h3>
+<p class="text-gray-700 italic text-lg mb-2">"Sundri-Mundri hoye! Tera kaun vicharaa! Dulla Bhatti wala!"</p>
+<p class="text-sm text-gray-600">During Lohri, the hero's memory is kept alive as this well-loved folk song resonates in every neighborhood.</p>
+</div>
+</div>
+</div>
+<!-- GALLERY SECTION -->
+<div class="tab-content animate-fade-in" id="gallery">
+<div class="max-w-6xl mx-auto px-4 py-12">
+<h2 class="text-3xl font-bold text-center text-red-800 mb-8 flex items-center justify-center gap-3">
+<i class="w-8 h-8" data-lucide="image"></i> Festival Glimpses
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
-                    <!-- Images inserted via JS -->
-                </div>
-            </div>
-        </div>
-
-        <!-- WISHES SECTION -->
-        <div class="tab-content animate-fade-in" id="wishes">
-            <div class="max-w-4xl mx-auto px-4 py-12">
-                <h2 class="text-3xl font-bold text-center text-red-800 mb-4 flex items-center justify-center gap-3">
-                    <i class="w-8 h-8" data-lucide="send"></i> Send Warm Wishes
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+<!-- Images inserted via JS -->
+</div>
+</div>
+</div>
+<!-- WISHES SECTION -->
+<div class="tab-content animate-fade-in" id="wishes">
+<div class="max-w-4xl mx-auto px-4 py-12">
+<h2 class="text-3xl font-bold text-center text-red-800 mb-4 flex items-center justify-center gap-3">
+<i class="w-8 h-8" data-lucide="send"></i> Send Warm Wishes
                 </h2>
-                <p class="text-center text-gray-600 mb-10">Select a language and paste your preferred wish to spread to loved ones.</p>
-
-                <!-- Language Tabs -->
-                <div class="flex justify-center space-x-4 mb-8">
-                    <button class="wish-lang-btn px-6 py-2 rounded-full capitalize font-medium transition-all bg-red-600 text-white shadow-lg transform scale-105" data-lang="punjabi" onclick="switchWishLang('punjabi')">Punjabi</button>
-                    <button class="wish-lang-btn px-6 py-2 rounded-full capitalize font-medium transition-all bg-white text-gray-600 hover:bg-red-50" data-lang="hindi" onclick="switchWishLang('hindi')">Hindi</button>
-                    <button class="wish-lang-btn px-6 py-2 rounded-full capitalize font-medium transition-all bg-white text-gray-600 hover:bg-red-50" data-lang="english" onclick="switchWishLang('english')">English</button>
-                </div>
-
-                <!-- Wishes Grid -->
-                <div class="grid md:grid-cols-2 gap-6" id="wishes-container">
-                    <!-- Wishes injected via JS -->
-                </div>
-                
-                <!-- Toast Notification -->
-                <div class="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-xl transition-opacity duration-300 opacity-0 pointer-events-none z-50 flex items-center gap-2" id="toast">
-                    <i class="w-5 h-5 text-green-400" data-lucide="check-circle"></i>
-                    <span>Copied to clipboard!</span>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300">
+<p class="text-center text-gray-600 mb-10">Select a language and paste your preferred wish to spread to loved ones.</p>
+<!-- Language Tabs -->
+<div class="flex justify-center space-x-4 mb-8">
+<button class="wish-lang-btn px-6 py-2 rounded-full capitalize font-medium transition-all bg-red-600 text-white shadow-lg transform scale-105" data-lang="punjabi" onclick="switchWishLang('punjabi')" type="button">Punjabi</button>
+<button class="wish-lang-btn px-6 py-2 rounded-full capitalize font-medium transition-all bg-white text-gray-600 hover:bg-red-50" data-lang="hindi" onclick="switchWishLang('hindi')" type="button">Hindi</button>
+<button class="wish-lang-btn px-6 py-2 rounded-full capitalize font-medium transition-all bg-white text-gray-600 hover:bg-red-50" data-lang="english" onclick="switchWishLang('english')" type="button">English</button>
+</div>
+<!-- Wishes Grid -->
+<div class="grid md:grid-cols-2 gap-6" id="wishes-container">
+<!-- Wishes injected via JS -->
+</div>
+<!-- Toast Notification -->
+<div class="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-xl transition-opacity duration-300 opacity-0 pointer-events-none z-50 flex items-center gap-2" id="toast">
+<i class="w-5 h-5 text-green-400" data-lucide="check-circle"></i>
+<span>Copied to clipboard!</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-300">
 <div class="container mx-auto px-6 py-12 lg:px-8">
 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
 <div>
@@ -334,16 +412,15 @@ gtag('config', 'G-HQVLPEFHL9');
 </div>
 </div>
 <div class="mt-8 text-center text-sm text-gray-400">
-<p class="text-sm text-gray-400">Happy MakarSankranti - Images, Stories, Cards</p>
+<p class="text-sm text-gray-400">New Beginning with Sankranti and Pongal</p>
 </div>
 <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
-<p class="text-sm text-gray-400">© 2026 Makar Sankranti and Pongal . All rights reserved.</p>
+<p class="text-sm text-gray-400">© 2026 Makar Sankranti . All rights reserved.</p>
 </div>
 </div>
 </footer>
-
-    <!-- JavaScript Logic -->
-    <script>
+<!-- JavaScript Logic -->
+<script>
         // --- Data ---
         const images = [
             "https://storage.googleapis.com/kreatewebsite/photos500/lohri-1.jpg",
@@ -435,7 +512,7 @@ gtag('config', 'G-HQVLPEFHL9');
             const container = document.getElementById('gallery-grid');
             container.innerHTML = images.map((url, idx) => `
                 <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-video bg-gray-200">
-                    <img src="${url}" alt="Lohri celebration ${idx + 1}" 
+                    <img src="${url}" alt="Lohri celebration ${idx + 1}" loading="lazy" 
                          class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                          onerror="this.src='https://placehold.co/600x400/orange/white?text=Lohri+Festival'">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
@@ -499,5 +576,4 @@ gtag('config', 'G-HQVLPEFHL9');
             });
         }
     </script>
-
 </body></html>

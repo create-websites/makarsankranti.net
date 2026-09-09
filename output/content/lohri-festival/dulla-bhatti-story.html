@@ -1,279 +1,314 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>The Legend of Dulla Bhatti: Hero of Lohri</title>
-    
-    <!-- Meta Description & Keywords -->
-    <meta content="Discover the legend of Dulla Bhatti, the 'Robin Hood of Punjab', and his central role in Lohri celebrations. Learn about the story of Sundri and Mundri and the symbolism of resistance and justice." name="description"/>
-    <meta content="Dulla Bhatti Legend, Lohri Folk Hero, Sundri Mundariye Story, Robin Hood of Punjab, Lohri History, Punjabi Folklore, Mughal Era Rebels, Lohri 2025" name="keywords"/>
-    <meta content="Lohri Festival Interactive" name="author"/>
+<html class="scroll-smooth" lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>The Legend of Dulla Bhatti: Hero of Lohri</title>
+  <meta content="Discover the legend of Dulla Bhatti, the 'Robin Hood of Punjab', and his central role in Lohri celebrations. Learn about the story of Sundri and Mundri and the symbolism of resistance and justice." name="description"/>
+  <meta content="Dulla Bhatti Legend, Lohri Folk Hero, Sundri Mundariye Story, Robin Hood of Punjab, Lohri History, Punjabi Folklore, Mughal Era Rebels, Lohri 2025" name="keywords"/>
+  <meta content="Lohri Festival Interactive" name="author"/>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Tiro+Devanagari+Sanskrit:ital@0;1&amp;display=swap" rel="stylesheet"/>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3, .serif-font {
-            font-family: 'Crimson Text', serif;
-        }
-        
-        /* Custom Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-
-        /* Tab Transitions */
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Hero Overlay */
-        .hero-overlay {
-            background: linear-gradient(to right, rgba(124, 45, 18, 0.95), rgba(124, 45, 18, 0.7));
-        }
-
-        /* Card Hover Effects */
-        .info-card:hover {
-            transform: translateY(-5px);
-        }
-    </style>
-<link href="https://storage.googleapis.com/css-designs/purple/kreatewebsites.production.css" rel="stylesheet"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HQVLPEFHL9"></script><script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-HQVLPEFHL9');
-</script></head>
-<body class="bg-amber-50 text-gray-800 min-h-screen flex flex-col">
-
-    <!-- Navigation -->
-    <nav class="bg-amber-900 text-white sticky top-0 z-50 shadow-lg border-b-4 border-orange-500">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2 font-bold text-xl cursor-pointer hover:opacity-90 transition" onclick="switchTab('home')">
-                    <i class="text-orange-400" data-lucide="shield"></i>
-                    <span class="serif-font tracking-wide">Dulla Bhatti</span>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-6">
-                    <button class="nav-btn text-orange-400 font-semibold border-b-2 border-orange-400 hover:text-orange-300 transition-colors py-1" data-target="home" onclick="switchTab('home')">Overview</button>
-                    <button class="nav-btn hover:text-orange-300 transition-colors py-1" data-target="legend" onclick="switchTab('legend')">The Legend</button>
-                    <button class="nav-btn hover:text-orange-300 transition-colors py-1" data-target="sundri" onclick="switchTab('sundri')">Sundri &amp; Mundri</button>
-                    <button class="nav-btn hover:text-orange-300 transition-colors py-1" data-target="legacy" onclick="switchTab('legacy')">Legacy</button>
-                </div>
-
-                <!-- Mobile Menu Icon -->
-                <div class="md:hidden flex space-x-4 text-sm">
-                    <button class="hover:text-orange-200 flex items-center gap-1" onclick="switchTab('legend')"><i class="w-4 h-4" data-lucide="book-open"></i> Story</button>
-                </div>
-            </div>
+  <style>
+    :root {
+      --bg:#FDFBF8;
+      --surface:#FFFFFF;
+      --amber-50:#FFFBEB;
+      --amber-100:#FEF3C7;
+      --amber-200:#FDE68A;
+      --amber-600:#D97706;
+      --amber-700:#B45309;
+      --amber-800:#92400E;
+      --amber-900:#78350F;
+      --stone-100:#F5F5F4;
+      --stone-200:#E7E5E4;
+      --stone-500:#78716C;
+      --stone-600:#57534E;
+      --stone-700:#44403C;
+      --stone-800:#292524;
+      --shadow:0 10px 30px rgba(120,53,15,.08);
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:86px; }
+    body {
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      font-family:'Inter',sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(253,230,138,.28), transparent 28%),
+        radial-gradient(circle at 85% 18%, rgba(254,243,199,.45), transparent 28%),
+        var(--bg);
+      color:var(--stone-700);
+      line-height:1.7;
+    }
+    h1,h2,h3,.font-sanskrit { font-family:'Tiro Devanagari Sanskrit',serif; }
+    button,a { -webkit-tap-highlight-color:transparent; }
+    button:focus-visible,a:focus-visible { outline:3px solid var(--amber-600); outline-offset:3px; border-radius:.35rem; }
+    .container-shell { width:min(1180px,calc(100% - 32px)); margin-inline:auto; }
+    .glass-nav {
+      background:rgba(254,243,199,.76);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(217,119,6,.12);
+    }
+    .brand-button { color:var(--amber-800); }
+    .nav-btn {
+      color:var(--stone-600);
+      background:transparent;
+      border:0;
+      border-bottom:2px solid transparent;
+      padding:.45rem .1rem;
+      font-weight:500;
+      cursor:pointer;
+      transition:color .2s ease,border-color .2s ease;
+    }
+    .nav-btn:hover,.nav-btn.active { color:var(--amber-700); }
+    .nav-btn.active { border-color:var(--amber-600); font-weight:700; }
+    .hero-shell {
+      background:linear-gradient(135deg,rgba(255,251,235,.97),rgba(254,243,199,.75));
+      border:1px solid rgba(217,119,6,.18);
+      border-radius:1.5rem;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .eyebrow {
+      display:inline-block;
+      padding:.45rem .8rem;
+      border-radius:999px;
+      background:var(--amber-50);
+      border:1px solid var(--amber-200);
+      color:var(--amber-800);
+      font-size:.75rem;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .hero-image-wrap {
+      background:var(--amber-100);
+      border:1px solid var(--amber-200);
+      border-radius:1.25rem;
+      box-shadow:0 16px 38px rgba(120,53,15,.14);
+      overflow:hidden;
+    }
+    .hero-image { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; }
+    .primary-action {
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      margin-top:1.5rem;
+      padding:.75rem 1.15rem;
+      border:1px solid var(--amber-700);
+      border-radius:999px;
+      background:var(--amber-700);
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+      box-shadow:0 8px 20px rgba(180,83,9,.18);
+      transition:transform .2s ease,background .2s ease;
+    }
+    .primary-action:hover { background:var(--amber-800); transform:translateY(-2px); }
+    .section-title { color:var(--amber-800); font-size:clamp(1.9rem,4vw,2.9rem); line-height:1.2; }
+    .article-card,.feature-card {
+      background:rgba(255,255,255,.96);
+      border:1px solid var(--stone-200);
+      border-radius:1rem;
+      box-shadow:var(--shadow);
+    }
+    .feature-card { padding:1.5rem; transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease; }
+    .feature-card:hover { transform:translateY(-4px); border-color:var(--amber-200); box-shadow:0 16px 38px rgba(120,53,15,.14); }
+    .icon-box {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:2.5rem;
+      height:2.5rem;
+      border-radius:.75rem;
+      background:var(--amber-50);
+      color:var(--amber-700);
+      border:1px solid var(--amber-200);
+    }
+    .tab-content { display:none; }
+    .tab-content.active { display:block; animation:fadeIn .4s ease-out both; }
+    .story-panel {
+      background:linear-gradient(135deg,var(--amber-50),var(--amber-100));
+      border:1px solid var(--amber-200);
+      border-radius:1rem;
+      color:var(--amber-900);
+    }
+    .dark-panel {
+      background:linear-gradient(145deg,var(--amber-900),#5b290d);
+      border-radius:1rem;
+      color:#fff;
+    }
+    .quote-card {
+      border-left:4px solid var(--amber-600);
+      background:var(--amber-50);
+      padding:1.2rem 1.4rem;
+      border-radius:.75rem;
+      color:var(--amber-900);
+    }
+    .footer-link { color:var(--stone-600); transition:color .2s ease; }
+    .footer-link:hover { color:var(--amber-700); }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+    @media(max-width:760px) {
+      .desktop-links { display:none; }
+      .container-shell { width:min(100% - 24px,1180px); }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
+    }
+  </style>
+  <link href="https://storage.googleapis.com/css-designs/purple/kreatewebsites.production.css" rel="stylesheet"/>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HQVLPEFHL9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HQVLPEFHL9');
+  </script>
+</head>
+<body>
+  <header class="glass-nav sticky top-0 z-50">
+    <nav aria-label="Dulla Bhatti sections" class="container-shell py-4">
+      <div class="flex items-center justify-between gap-4">
+        <button class="brand-button flex items-center gap-2 bg-transparent border-0 p-0 cursor-pointer font-sanskrit text-2xl font-bold" onclick="switchTab('home')" type="button">
+          <i aria-hidden="true" class="w-6 h-6" data-lucide="shield"></i>
+          <span>Dulla Bhatti</span>
+        </button>
+        <div aria-label="Story sections" class="desktop-links hidden md:flex space-x-8" role="tablist">
+          <button aria-controls="home" aria-selected="true" class="nav-btn active" data-target="home" onclick="switchTab('home')" role="tab" type="button">Overview</button>
+          <button aria-controls="legend" aria-selected="false" class="nav-btn" data-target="legend" onclick="switchTab('legend')" role="tab" type="button">The Legend</button>
+          <button aria-controls="sundri" aria-selected="false" class="nav-btn" data-target="sundri" onclick="switchTab('sundri')" role="tab" type="button">Sundri &amp; Mundri</button>
+          <button aria-controls="legacy" aria-selected="false" class="nav-btn" data-target="legacy" onclick="switchTab('legacy')" role="tab" type="button">Legacy</button>
         </div>
+        <button class="md:hidden nav-btn flex items-center gap-2" onclick="switchTab('legend')" type="button"><i aria-hidden="true" class="w-4 h-4" data-lucide="book-open"></i> Story</button>
+      </div>
     </nav>
+  </header>
 
-    <!-- Main Content Area -->
-    <main class="flex-grow pb-12">
-        
-        <!-- HOME / OVERVIEW SECTION -->
-        <div class="tab-content active animate-fade-in" id="home">
-            <!-- Hero with Image -->
-            <div class="relative bg-amber-900 text-white py-24 px-4 overflow-hidden">
-                <!-- Background Image with Overlay -->
-                <div class="absolute inset-0 z-0">
-                    <img alt="Historical Folk Hero Background" class="w-full h-full object-cover opacity-60 mix-blend-overlay" src="https://storage.googleapis.com/imagesg/festivals/karwa-chauth/500w/seviya-kheer.png"/>
-                    <div class="absolute inset-0 hero-overlay"></div>
-                </div>
-
-                <div class="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 z-10">
-                    <div class="md:w-1/2 text-left">
-                        <div class="inline-block bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">Robin Hood of Punjab</div>
-                        <h1 class="text-5xl md:text-6xl font-bold mb-6 text-orange-100 drop-shadow-lg leading-tight serif-font">The Hero of Lohri</h1>
-                        <p class="text-xl mb-8 text-amber-100 leading-relaxed font-light">
-                            Lohri's rich cultural heritage is closely connected to the tale of Dulla Bhatti, a beloved folk hero from the 16th century whose legacy of righteousness and empathy resonates in the melodies of the festival.
-                        </p>
-                        <button class="bg-orange-600 text-white px-8 py-3 rounded-full font-bold hover:bg-orange-500 transition transform hover:scale-105 shadow-lg flex items-center gap-2" onclick="switchTab('legend')">
-                            Read His Story <i class="w-5 h-5" data-lucide="arrow-right"></i>
-                        </button>
-                    </div>
-
-                    <!-- Visual Element -->
-                    <div class="md:w-1/2 flex justify-center">
-                        <div class="bg-white/10 backdrop-blur-md p-8 rounded-full border-4 border-orange-300 shadow-2xl relative">
-                             <i class="w-40 h-40 text-orange-100" data-lucide="sword"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Intro Content -->
-            <div class="max-w-4xl mx-auto px-4 py-16 text-center">
-                <h2 class="text-3xl font-bold text-amber-900 mb-6">More Than a Myth</h2>
-                <p class="text-lg text-gray-700 leading-relaxed mb-10">
-                    Dulla Bhatti, a historical figure from the time of Emperor Akbar, defied unfair taxes and emerged as a hero for the oppressed, solidifying his legacy in Punjabi folklore.
-                </p>
-                
-                <div class="grid md:grid-cols-3 gap-8 text-left">
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-amber-600 hover:shadow-lg transition">
-                        <h3 class="text-xl font-bold text-amber-800 mb-3 flex items-center gap-2"><i class="w-5 h-5" data-lucide="shield"></i> Protector</h3>
-                        <p class="text-gray-600">Renowned for rescuing young girls from slavery and facilitating their marriages with grace.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-orange-500 hover:shadow-lg transition">
-                        <h3 class="text-xl font-bold text-orange-800 mb-3 flex items-center gap-2"><i class="w-5 h-5" data-lucide="fist"></i> Rebel</h3>
-                        <p class="text-gray-600">Led a rebellion against the oppressive land revenue system enforced on farmers.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-600 hover:shadow-lg transition">
-                        <h3 class="text-xl font-bold text-yellow-800 mb-3 flex items-center gap-2"><i class="w-5 h-5" data-lucide="music"></i> Icon</h3>
-                        <p class="text-gray-600">The songs sung by children door-to-door on Lohri keep his memory alive.</p>
-                    </div>
-                </div>
-            </div>
+  <main class="container-shell flex-grow py-10 md:py-14">
+    <section aria-labelledby="home-title" class="tab-content active" id="home" role="tabpanel">
+      <div class="hero-shell px-6 py-10 md:px-10 md:py-12">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <span class="eyebrow">Robin Hood of Punjab</span>
+            <h1 class="font-sanskrit text-4xl md:text-6xl font-bold text-amber-900 leading-tight mt-5" id="home-title">The Hero of Lohri</h1>
+            <p class="mt-6 text-lg md:text-xl text-stone-600">Lohri's rich cultural heritage is closely connected to the tale of Dulla Bhatti, a beloved folk hero from the 16th century whose legacy of righteousness and empathy resonates in the melodies of the festival.</p>
+            <button class="primary-action" onclick="switchTab('legend')" type="button">Read His Story <i aria-hidden="true" class="w-5 h-5" data-lucide="arrow-right"></i></button>
+          </div>
+          <div class="hero-image-wrap">
+            <img alt="Historical Folk Hero Background" class="hero-image" src="https://storage.googleapis.com/imagesg/festivals/karwa-chauth/500w/seviya-kheer.png"/>
+          </div>
         </div>
+      </div>
 
-        <!-- THE LEGEND SECTION -->
-        <div class="tab-content animate-fade-in" id="legend">
-            <div class="max-w-6xl mx-auto px-4 py-12">
-                <div class="text-center mb-12">
-                    <span class="text-orange-600 font-bold tracking-widest uppercase text-sm">Historical Context</span>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-2 serif-font">Who Was Dulla Bhatti?</h2>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6">
-                        <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-orange-500 info-card transition-all">
-                            <h3 class="text-xl font-bold text-orange-900 mb-2">The Rebel</h3>
-                            <p class="text-gray-700">During Akbar's rule, Dulla Bhatti defied the imperial authority by refusing to pay unfair taxes and redistributing wealth from oppressive officials to the impoverished villagers.</p>
-                        </div>
-                         <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-orange-500 info-card transition-all">
-                            <h3 class="text-xl font-bold text-orange-900 mb-2">The Outlaw</h3>
-                            <p class="text-gray-700">Labeled a criminal by the government yet hailed a hero by the public, he chose to live outside the law in order to defend his community's freedoms, ultimately embodying the fight against oppression.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-amber-100 p-8 rounded-3xl relative overflow-hidden">
-                        <i class="absolute top-4 right-4 text-amber-200 w-32 h-32 opacity-50" data-lucide="scroll"></i>
-                        <h3 class="text-2xl font-bold text-amber-900 mb-4 relative z-10">A Moral Icon</h3>
-                        <p class="text-amber-800 relative z-10 leading-relaxed">
-                            His rebellious nature elevated him to a hero in the eyes of the people, serving as a protector for the vulnerable.
-                        </p>
-                        <div class="mt-6 border-t border-amber-200 pt-4 relative z-10">
-                            <p class="text-sm text-amber-700 font-semibold">16th Century Punjab</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <section aria-labelledby="myth-title" class="my-16 md:my-24 text-center">
+        <h2 class="section-title" id="myth-title">More Than a Myth</h2>
+        <p class="mt-4 text-lg text-stone-600 max-w-3xl mx-auto">Dulla Bhatti, a historical figure from the time of Emperor Akbar, defied unfair taxes and emerged as a hero for the oppressed, solidifying his legacy in Punjabi folklore.</p>
+        <div class="grid md:grid-cols-3 gap-6 mt-10 text-left">
+          <article class="feature-card">
+            <span class="icon-box"><i aria-hidden="true" class="w-5 h-5" data-lucide="shield"></i></span>
+            <h3 class="text-xl font-bold text-amber-800 mt-4">Protector</h3>
+            <p class="mt-2 text-stone-600">Renowned for rescuing young girls from slavery and facilitating their marriages with grace.</p>
+          </article>
+          <article class="feature-card">
+            <span class="icon-box"><i aria-hidden="true" class="w-5 h-5" data-lucide="fist"></i></span>
+            <h3 class="text-xl font-bold text-amber-800 mt-4">Rebel</h3>
+            <p class="mt-2 text-stone-600">Led a rebellion against the oppressive land revenue system enforced on farmers.</p>
+          </article>
+          <article class="feature-card">
+            <span class="icon-box"><i aria-hidden="true" class="w-5 h-5" data-lucide="music"></i></span>
+            <h3 class="text-xl font-bold text-amber-800 mt-4">Icon</h3>
+            <p class="mt-2 text-stone-600">The songs sung by children door-to-door on Lohri keep his memory alive.</p>
+          </article>
         </div>
+      </section>
+    </section>
 
-        <!-- SUNDRI & MUNDRI SECTION -->
-        <div class="tab-content animate-fade-in" id="sundri">
-            <div class="max-w-5xl mx-auto px-4 py-12">
-                <div class="text-center mb-12">
-                    <span class="text-orange-600 font-bold tracking-widest uppercase text-sm">The Famous Tale</span>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-2 serif-font">Daughters of Punjab</h2>
-                </div>
-
-                <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-                    <div class="md:w-1/2 bg-orange-50 p-10 flex flex-col justify-center">
-                        <div class="mb-6">
-                            <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-xs font-bold uppercase">The Rescue</span>
-                        </div>
-                        <h3 class="text-3xl font-bold text-orange-900 mb-4 serif-font">Sundri and Mundri</h3>
-                        <p class="text-gray-700 mb-6 leading-relaxed">
-                            Dulla Bhatti stepped in just in time to save two orphaned girls from being sold into slavery by a ruthless landlord, taking them under his wing and treating them as his own daughters.
-                        </p>
-                        <div class="flex items-center gap-3 text-orange-700 font-semibold">
-                            <i class="w-5 h-5" data-lucide="music-2"></i>
-                            <span>Immortalized in "Sundar Mundariye Ho"</span>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2 p-10 bg-amber-900 text-white flex flex-col justify-center relative">
-                        <!-- Decorative Pattern -->
-                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-                        
-                        <h3 class="text-2xl font-bold mb-4 relative z-10">The Wedding</h3>
-                        <p class="text-orange-100 mb-6 relative z-10">
-                            He organized their weddings during the Lohri celebration and, being aware of their financial constraints, personally provided a modest dowry.
-                        </p>
-                        <ul class="space-y-4 relative z-10">
-                            <li class="flex items-center gap-3">
-                                <div class="bg-orange-500/20 p-2 rounded-full"><i class="w-5 h-5 text-orange-300" data-lucide="check"></i></div>
-                                <span>A Ser (measure) of Sugar</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="bg-orange-500/20 p-2 rounded-full"><i class="w-5 h-5 text-orange-300" data-lucide="check"></i></div>
-                                <span>Sesame Seeds (Til)</span>
-                            </li>
-                        </ul>
-                        <p class="mt-8 text-sm italic text-orange-300 relative z-10">
-                            This display of kindness transformed him from a troublemaker to a moral leader.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <section aria-labelledby="legend-title" class="tab-content" id="legend" role="tabpanel">
+      <div class="text-center mb-10">
+        <span class="eyebrow">Historical Context</span>
+        <h2 class="section-title mt-5" id="legend-title">Who Was Dulla Bhatti?</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 items-stretch">
+        <div class="space-y-6">
+          <article class="feature-card">
+            <span class="icon-box"><i aria-hidden="true" class="w-5 h-5" data-lucide="landmark"></i></span>
+            <h3 class="text-xl font-bold text-amber-800 mt-4">The Rebel</h3>
+            <p class="mt-2 text-stone-600">During Akbar's rule, Dulla Bhatti defied the imperial authority by refusing to pay unfair taxes and redistributing wealth from oppressive officials to the impoverished villagers.</p>
+          </article>
+          <article class="feature-card">
+            <span class="icon-box"><i aria-hidden="true" class="w-5 h-5" data-lucide="shield"></i></span>
+            <h3 class="text-xl font-bold text-amber-800 mt-4">The Outlaw</h3>
+            <p class="mt-2 text-stone-600">Labeled a criminal by the government yet hailed a hero by the public, he chose to live outside the law in order to defend his community's freedoms, ultimately embodying the fight against oppression.</p>
+          </article>
         </div>
+        <aside class="story-panel p-8 md:p-10 flex flex-col justify-center relative overflow-hidden">
+          <i aria-hidden="true" class="absolute top-4 right-4 w-32 h-32 opacity-10" data-lucide="scroll"></i>
+          <h3 class="text-2xl font-bold relative z-10">A Moral Icon</h3>
+          <p class="mt-4 relative z-10">His rebellious nature elevated him to a hero in the eyes of the people, serving as a protector for the vulnerable.</p>
+          <p class="mt-6 pt-4 border-t border-amber-200 font-bold text-sm relative z-10">16th Century Punjab</p>
+        </aside>
+      </div>
+    </section>
 
-        <!-- LEGACY SECTION -->
-        <div class="tab-content animate-fade-in" id="legacy">
-            <div class="max-w-6xl mx-auto px-4 py-12">
-                <div class="text-center mb-12">
-                    <span class="text-orange-600 font-bold tracking-widest uppercase text-sm">Enduring Spirit</span>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-2 serif-font">A Living Legend</h2>
-                </div>
+    <section aria-labelledby="sundri-title" class="tab-content" id="sundri" role="tabpanel">
+      <div class="text-center mb-10">
+        <span class="eyebrow">The Famous Tale</span>
+        <h2 class="section-title mt-5" id="sundri-title">Daughters of Punjab</h2>
+      </div>
+      <div class="article-card overflow-hidden grid md:grid-cols-2">
+        <article class="p-8 md:p-10">
+          <span class="eyebrow">The Rescue</span>
+          <h3 class="text-3xl font-bold text-amber-800 mt-5">Sundri and Mundri</h3>
+          <p class="mt-4 text-stone-600">Dulla Bhatti stepped in just in time to save two orphaned girls from being sold into slavery by a ruthless landlord, taking them under his wing and treating them as his own daughters.</p>
+          <p class="mt-6 flex items-center gap-3 text-amber-700 font-bold"><i aria-hidden="true" class="w-5 h-5" data-lucide="music-2"></i><span>Immortalized in "Sundar Mundariye Ho"</span></p>
+        </article>
+        <article class="dark-panel p-8 md:p-10 md:rounded-l-none flex flex-col justify-center">
+          <h3 class="text-2xl font-bold">The Wedding</h3>
+          <p class="mt-4 text-amber-100">He organized their weddings during the Lohri celebration and, being aware of their financial constraints, personally provided a modest dowry.</p>
+          <ul class="mt-6 space-y-4">
+            <li class="flex items-center gap-3"><i aria-hidden="true" class="w-5 h-5 text-amber-200" data-lucide="check-circle"></i><span>A Ser (measure) of Sugar</span></li>
+            <li class="flex items-center gap-3"><i aria-hidden="true" class="w-5 h-5 text-amber-200" data-lucide="check-circle"></i><span>Sesame Seeds (Til)</span></li>
+          </ul>
+          <p class="mt-8 text-sm italic text-amber-200">This display of kindness transformed him from a troublemaker to a moral leader.</p>
+        </article>
+      </div>
+    </section>
 
-                <div class="grid md:grid-cols-3 gap-8 mb-12">
-                    <!-- Legacy 1 -->
-                    <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-red-500 info-card transition-all">
-                        <i class="w-10 h-10 text-red-600 mb-4" data-lucide="mic-2"></i>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Oral History</h3>
-                        <p class="text-gray-600 text-sm">
-                            Songs that have been handed down from generation to generation help keep his story alive in the hearts of people, preserving it as a collective memory rather than confining it to books.
-                        </p>
-                    </div>
-                    <!-- Legacy 2 -->
-                    <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-amber-500 info-card transition-all">
-                        <i class="w-10 h-10 text-amber-600 mb-4" data-lucide="flame"></i>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">The Bonfire</h3>
-                        <p class="text-gray-600 text-sm">
-                            The communal fire reflects his essence by uniting people, offering warmth, and representing hope in the face of adversity.
-                        </p>
-                    </div>
-                    <!-- Legacy 3 -->
-                    <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-orange-500 info-card transition-all">
-                        <i class="w-10 h-10 text-orange-600 mb-4" data-lucide="heart-handshake"></i>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Values</h3>
-                        <p class="text-gray-600 text-sm">
-                            Communities honor his memory by upholding enduring principles: opposing injustice and safeguarding the defenseless.
-                        </p>
-                    </div>
-                </div>
+    <section aria-labelledby="legacy-title" class="tab-content" id="legacy" role="tabpanel">
+      <div class="text-center mb-10">
+        <span class="eyebrow">Enduring Spirit</span>
+        <h2 class="section-title mt-5" id="legacy-title">A Living Legend</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="feature-card">
+          <span class="icon-box"><i aria-hidden="true" class="w-5 h-5" data-lucide="mic-2"></i></span>
+          <h3 class="text-xl font-bold text-amber-800 mt-4">Oral History</h3>
+          <p class="mt-2 text-stone-600">Songs that have been handed down from generation to generation help keep his story alive in the hearts of people, preserving it as a collective memory rather than confining it to books.</p>
+        </article>
+        <article class="feature-card">
+          <span class="icon-box"><i aria-hidden="true" class="w-5 h-5" data-lucide="flame"></i></span>
+          <h3 class="text-xl font-bold text-amber-800 mt-4">The Bonfire</h3>
+          <p class="mt-2 text-stone-600">The communal fire reflects his essence by uniting people, offering warmth, and representing hope in the face of adversity.</p>
+        </article>
+        <article class="feature-card">
+          <span class="icon-box"><i aria-hidden="true" class="w-5 h-5" data-lucide="heart-handshake"></i></span>
+          <h3 class="text-xl font-bold text-amber-800 mt-4">Values</h3>
+          <p class="mt-2 text-stone-600">Communities honor his memory by upholding enduring principles: opposing injustice and safeguarding the defenseless.</p>
+        </article>
+      </div>
+      <blockquote class="quote-card mt-10 text-center text-xl italic max-w-4xl mx-auto">The mixture of folklore and festivities in Lohri transforms it into more than just a yearly event, but a lasting cultural tradition.</blockquote>
+    </section>
+  </main>
 
-                <div class="bg-orange-50 rounded-3xl p-8 text-center border border-orange-200">
-                    <p class="text-xl font-serif text-amber-900 italic max-w-3xl mx-auto">
-                        The mixture of folklore and festivities in Lohri transforms it into more than just a yearly event, but a lasting cultural tradition.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300">
+  <footer class="bg-gray-800 text-gray-300">
 <div class="container mx-auto px-6 py-12 lg:px-8">
 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
 <div>
@@ -359,38 +394,38 @@ gtag('config', 'G-HQVLPEFHL9');
 </div>
 </div>
 <div class="mt-8 text-center text-sm text-gray-400">
-<p class="text-sm text-gray-400">Happy MakarSankranti - Images, Stories, Cards</p>
+<p class="text-sm text-gray-400">New Beginning with Sankranti and Pongal</p>
 </div>
 <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
-<p class="text-sm text-gray-400">© 2026 Makar Sankranti and Pongal . All rights reserved.</p>
+<p class="text-sm text-gray-400">© 2026 Makar Sankranti . All rights reserved.</p>
 </div>
 </div>
 </footer>
 
-    <!-- JavaScript Logic -->
-    <script>
-        // --- Initialization ---
-        document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-        });
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
 
-        // --- Navigation ---
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-            
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                if(btn.dataset.target === tabId) {
-                    btn.classList.add('text-orange-400', 'font-semibold', 'border-b-2', 'border-orange-400');
-                    btn.classList.remove('text-orange-400', 'hover:text-orange-300');
-                } else {
-                    btn.classList.remove('text-orange-400', 'font-semibold', 'border-b-2', 'border-orange-400');
-                    btn.classList.add('hover:text-orange-300');
-                }
-            });
-            window.scrollTo(0,0);
-        }
-    </script>
+    function switchTab(tabId) {
+      const target = document.getElementById(tabId);
+      if (!target) return;
+
+      document.querySelectorAll('.tab-content').forEach((el) => {
+        const isActive = el.id === tabId;
+        el.classList.toggle('active', isActive);
+        el.setAttribute('aria-hidden', String(!isActive));
+      });
+
+      document.querySelectorAll('.nav-btn[data-target]').forEach((btn) => {
+        const isActive = btn.dataset.target === tabId;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', String(isActive));
+      });
+
+      window.scrollTo({top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+    }
+  </script>
 
 
 </body></html>

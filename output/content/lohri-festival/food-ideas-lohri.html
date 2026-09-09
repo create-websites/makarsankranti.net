@@ -1,280 +1,110 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Lohri Foods: A Celebration of Flavor</title>
-    
-    <!-- Meta Description & Keywords -->
-    <meta content="Explore the traditional foods of Lohri. From Til and Gur to Sarson da Saag and Makki di Roti, discover the nutritional and cultural significance of Punjabi winter cuisine." name="description"/>
-    <meta content="Lohri Food, Sarson da Saag, Makki di Roti, Til Gur, Rewri, Gajak, Punjabi Cuisine, Winter Festival Food, Lohri Prasad" name="keywords"/>
-    <meta content="Lohri Festival Interactive" name="author"/>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3, .serif-font {
-            font-family: 'Crimson Text', serif;
-        }
-        
-        /* Custom Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-
-        /* Tab Transitions */
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Hero Overlay */
-        .hero-overlay {
-            background: linear-gradient(to right, rgba(124, 45, 18, 0.95), rgba(124, 45, 18, 0.6));
-        }
-    </style>
-<link href="https://storage.googleapis.com/css-designs/purple/kreatewebsites.production.css" rel="stylesheet"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HQVLPEFHL9"></script><script>
+<html class="scroll-smooth" lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Lohri Foods: A Celebration of Flavor</title>
+  <meta content="Explore the traditional foods of Lohri. From Til and Gur to Sarson da Saag and Makki di Roti, discover the nutritional and cultural significance of Punjabi winter cuisine." name="description"/>
+  <meta content="Lohri Food, Sarson da Saag, Makki di Roti, Til Gur, Rewri, Gajak, Punjabi Cuisine, Winter Festival Food, Lohri Prasad" name="keywords"/>
+  <meta content="Lohri Festival Interactive" name="author"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Tiro+Devanagari+Sanskrit:ital@0;1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://storage.googleapis.com/css-designs/purple/kreatewebsites.production.css" rel="stylesheet"/>
+  <style>
+    :root{--bg:#FDFBF8;--surface:#FFFFFF;--amber-50:#FFFBEB;--amber-100:#FEF3C7;--amber-200:#FDE68A;--amber-600:#D97706;--amber-700:#B45309;--amber-800:#92400E;--amber-900:#78350F;--stone-100:#F5F5F4;--stone-200:#E7E5E4;--stone-500:#78716C;--stone-600:#57534E;--stone-700:#44403C;--shadow:0 10px 30px rgba(120,53,15,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;font-family:'Inter',sans-serif;background:radial-gradient(circle at 15% 10%,rgba(253,230,138,.28),transparent 28%),radial-gradient(circle at 85% 18%,rgba(254,243,199,.45),transparent 28%),var(--bg);color:var(--stone-700);line-height:1.7}h1,h2,h3,.font-sanskrit{font-family:'Tiro Devanagari Sanskrit',serif}.container-shell{width:min(1180px,calc(100% - 32px));margin-inline:auto}.glass-nav{background:rgba(254,243,199,.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(217,119,6,.12)}.nav-btn{color:var(--stone-600);border-bottom:2px solid transparent;transition:color .2s,border-color .2s}.nav-btn:hover,.nav-btn.active{color:var(--amber-700);border-color:var(--amber-600)}.hero-shell{background:linear-gradient(135deg,rgba(255,251,235,.96),rgba(254,243,199,.76));border:1px solid rgba(217,119,6,.18);border-radius:1.5rem;box-shadow:var(--shadow)}.eyebrow{display:inline-block;padding:.45rem .8rem;border-radius:999px;background:var(--amber-50);border:1px solid var(--amber-200);color:var(--amber-800);font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.section-title{color:var(--amber-800);font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.2}.article-card{background:rgba(255,255,255,.96);border:1px solid var(--stone-200);border-radius:1rem;box-shadow:var(--shadow)}.food-card{overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}.food-card:hover{transform:translateY(-4px);border-color:var(--amber-200);box-shadow:0 16px 38px rgba(120,53,15,.14)}.icon-disc{background:var(--amber-50);border:1px solid var(--amber-200);color:var(--amber-800)}.tab-content{display:none}.tab-content.active{display:block;animation:fadeIn .45s ease-out forwards}@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}button:focus-visible{outline:3px solid var(--amber-600);outline-offset:3px}.footer-link{color:var(--stone-600);transition:color .2s}.footer-link:hover{color:var(--amber-700)}@media(max-width:760px){.desktop-links{display:none}.container-shell{width:min(100% - 24px,1180px)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HQVLPEFHL9"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-HQVLPEFHL9');</script>
+<script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HQVLPEFHL9');
 </script></head>
-<body class="bg-amber-50 text-gray-800 min-h-screen flex flex-col">
-
-    <!-- Navigation -->
-    <nav class="bg-amber-900 text-white sticky top-0 z-50 shadow-lg border-b-4 border-orange-500">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2 font-bold text-xl cursor-pointer hover:opacity-90 transition" onclick="switchTab('home')">
-                    <i class="text-orange-400" data-lucide="utensils-crossed"></i>
-                    <span class="serif-font tracking-wide">Lohri Flavors</span>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-6">
-                    <button class="nav-btn text-orange-400 font-semibold border-b-2 border-orange-400 hover:text-orange-300 transition-colors py-1" data-target="home" onclick="switchTab('home')">Overview</button>
-                    <button class="nav-btn hover:text-orange-300 transition-colors py-1" data-target="prasad" onclick="switchTab('prasad')">Lohri Prasad</button>
-                    <button class="nav-btn hover:text-orange-300 transition-colors py-1" data-target="feast" onclick="switchTab('feast')">The Grand Feast</button>
-                    <button class="nav-btn hover:text-orange-300 transition-colors py-1" data-target="recipes" onclick="switchTab('recipes')">Recipes</button>
-                </div>
-
-                <!-- Mobile Menu Icon -->
-                <div class="md:hidden flex space-x-4 text-sm">
-                    <button class="hover:text-orange-200 flex items-center gap-1" onclick="switchTab('feast')"><i class="w-4 h-4" data-lucide="chef-hat"></i> Feast</button>
-                </div>
-            </div>
+<body class="min-h-screen flex flex-col">
+  <header class="glass-nav sticky top-0 z-50">
+    <nav aria-label="Lohri food sections" class="container-shell py-4">
+      <div class="flex items-center justify-between gap-4">
+        <button class="font-sanskrit text-2xl font-bold text-amber-800 flex items-center gap-2" onclick="switchTab('home')" type="button"><i class="w-6 h-6" data-lucide="utensils-crossed"></i><span>Lohri Flavors</span></button>
+        <div class="desktop-links hidden md:flex space-x-8">
+          <button class="nav-btn active font-medium py-1" data-target="home" onclick="switchTab('home')" type="button">Overview</button>
+          <button class="nav-btn font-medium py-1" data-target="prasad" onclick="switchTab('prasad')" type="button">Lohri Prasad</button>
+          <button class="nav-btn font-medium py-1" data-target="feast" onclick="switchTab('feast')" type="button">The Grand Feast</button>
+          <button class="nav-btn font-medium py-1" data-target="recipes" onclick="switchTab('recipes')" type="button">Recipes</button>
         </div>
+        <button class="md:hidden nav-btn flex items-center gap-1" onclick="switchTab('feast')" type="button"><i class="w-4 h-4" data-lucide="chef-hat"></i> Feast</button>
+      </div>
     </nav>
+  </header>
 
-    <!-- Main Content Area -->
-    <main class="flex-grow pb-12">
-        
-        <!-- HOME SECTION -->
-        <div class="tab-content active animate-fade-in" id="home">
-            <!-- Hero with Image -->
-            <div class="relative bg-amber-900 text-white py-24 px-4 overflow-hidden">
-                <!-- Background Image with Overlay -->
-                <div class="absolute inset-0 z-0">
-                    <img alt="Lohri Food Spread" class="w-full h-full object-cover opacity-60 mix-blend-overlay" src="https://storage.googleapis.com/imagesg/festivals/makarsankranti/500w/makarsankranti-food.png"/>
-                    <div class="absolute inset-0 hero-overlay"></div>
-                </div>
-
-                <div class="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 z-10">
-                    <div class="md:w-1/2 text-left">
-                        <div class="inline-block bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">Taste of Punjab</div>
-                        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-orange-100 drop-shadow-lg leading-tight serif-font">Warmth on a Plate</h1>
-                        <p class="text-xl mb-8 text-amber-100 leading-relaxed font-light">
-                            From crispy Rewri to comforting Sarson da Saag, Lohri dishes embody the essence of winter nourishment, bountiful harvests, and thankfulness, each bite a tale of resilience and happiness.
-                        </p>
-                        <button class="bg-orange-600 text-white px-8 py-3 rounded-full font-bold hover:bg-orange-500 transition transform hover:scale-105 shadow-lg flex items-center gap-2" onclick="switchTab('prasad')">
-                            See Traditional Prasad <i class="w-5 h-5" data-lucide="arrow-right"></i>
-                        </button>
-                    </div>
-
-                    <!-- Visual Element -->
-                    <div class="md:w-1/2 flex justify-center">
-                        <img alt="Traditional Thali" class="rounded-full shadow-2xl border-4 border-orange-300 w-80 h-80 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/imagesg/festivals/karwa-chauth/500w/puri-platter.png"/>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Intro Content -->
-            <div class="max-w-4xl mx-auto px-4 py-16 text-center">
-                <h2 class="text-3xl font-bold text-amber-900 mb-6">Seasonal &amp; Spiritual</h2>
-                <p class="text-lg text-gray-700 leading-relaxed mb-10">
-                    Lohri revolves around food, representing warmth, energy, and sharing. Each ingredient, like sesame, jaggery, maize, and mustard greens, holds cultural significance and health benefits based on Ayurvedic principles.
-                </p>
-                
-                <div class="grid md:grid-cols-2 gap-8 text-left">
-                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-amber-600">
-                        <h3 class="text-xl font-bold text-amber-800 mb-3 flex items-center gap-2"><i class="w-5 h-5" data-lucide="thermometer-sun"></i> Winter Nutrition</h3>
-                        <p class="text-gray-600">Sesame seeds produce warmth internally, while Jaggery enhances immunity and digestion in cold conditions.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-orange-500">
-                        <h3 class="text-xl font-bold text-orange-800 mb-3 flex items-center gap-2"><i class="w-5 h-5" data-lucide="sprout"></i> Agrarian Roots</h3>
-                        <p class="text-gray-600">Sarson da Saag is a dish that showcases the fresh winter greens picked straight from the fields.</p>
-                    </div>
-                </div>
-            </div>
+  <main class="flex-grow">
+    <section class="tab-content active" id="home">
+      <div class="container-shell py-10 md:py-14">
+        <div class="hero-shell overflow-hidden grid md:grid-cols-2 items-center gap-8 md:gap-12 p-6 md:p-10">
+          <div class="py-4">
+            <span class="eyebrow">Taste of Punjab</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-amber-900 leading-tight mt-5">Warmth on a Plate</h1>
+            <p class="mt-6 text-lg md:text-xl text-stone-600">From crispy Rewri to comforting Sarson da Saag, Lohri dishes embody the essence of winter nourishment, bountiful harvests, and thankfulness, each bite a tale of resilience and happiness.</p>
+            <button class="mt-8 inline-flex items-center gap-2 rounded-full bg-amber-700 px-6 py-3 font-bold text-white hover:bg-amber-800 transition" onclick="switchTab('prasad')" type="button">See Traditional Prasad <i class="w-5 h-5" data-lucide="arrow-right"></i></button>
+          </div>
+          <div class="relative min-h-80 md:min-h-[430px] rounded-2xl overflow-hidden">
+            <img alt="Lohri Food Spread" class="absolute inset-0 w-full h-full object-cover" src="https://storage.googleapis.com/imagesg/festivals/makarsankranti/500w/makarsankranti-food.png"/>
+            <div class="absolute inset-x-5 bottom-5 flex justify-end"><img alt="Traditional Thali" class="w-36 h-36 md:w-48 md:h-48 object-cover rounded-full border-4 border-amber-200 shadow-2xl" src="https://storage.googleapis.com/imagesg/festivals/karwa-chauth/500w/puri-platter.png"/></div>
+          </div>
         </div>
-
-        <!-- PRASAD SECTION -->
-        <div class="tab-content animate-fade-in" id="prasad">
-            <div class="max-w-5xl mx-auto px-4 py-12">
-                <div class="text-center mb-12">
-                    <span class="text-orange-600 font-bold tracking-widest uppercase text-sm">Offerings to Agni</span>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-2 serif-font">The Lohri Prasad</h2>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-                    <div class="order-2 md:order-1">
-                        <div class="space-y-6">
-                            <div class="flex gap-4">
-                                <div class="bg-amber-100 p-3 rounded-full h-min"><i class="w-6 h-6 text-amber-700" data-lucide="wheat"></i></div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-900">Til (Sesame)</h3>
-                                    <p class="text-gray-600 text-sm">Represents the concepts of warmth, fertility, and the cycle of life. Commonly found in laddoos and</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div class="bg-amber-100 p-3 rounded-full h-min"><i class="w-6 h-6 text-amber-700" data-lucide="candy"></i></div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-900">Gur (Jaggery)</h3>
-                                    <p class="text-gray-600 text-sm">Symbolizes abundance and happiness. A gentle nudge to appreciate life's blessings.</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div class="bg-amber-100 p-3 rounded-full h-min"><i class="w-6 h-6 text-amber-700" data-lucide="gift"></i></div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-900">Rewri &amp; Gajak</h3>
-                                    <p class="text-gray-600 text-sm">Crunchy treats crafted from sesame and jaggery. Shared abundantly to bring happiness.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-1 md:order-2">
-                        <img alt="Sweets Bowl" class="rounded-2xl shadow-xl w-full h-64 object-cover" src="https://storage.googleapis.com/imagesg/festivals/karwa-chauth/500w/seviya-kheer.png"/>
-                    </div>
-                </div>
-            </div>
+        <div class="max-w-4xl mx-auto py-16 text-center">
+          <h2 class="section-title">Seasonal &amp; Spiritual</h2>
+          <p class="text-lg text-stone-600 leading-relaxed mt-5 mb-10">Lohri revolves around food, representing warmth, energy, and sharing. Each ingredient, like sesame, jaggery, maize, and mustard greens, holds cultural significance and health benefits based on Ayurvedic principles.</p>
+          <div class="grid md:grid-cols-2 gap-6 text-left">
+            <article class="article-card p-6"><div class="flex items-center gap-3 mb-3"><span class="icon-disc p-3 rounded-full"><i class="w-5 h-5" data-lucide="thermometer-sun"></i></span><h3 class="text-xl font-bold text-amber-800">Winter Nutrition</h3></div><p class="text-stone-600">Sesame seeds produce warmth internally, while Jaggery enhances immunity and digestion in cold conditions.</p></article>
+            <article class="article-card p-6"><div class="flex items-center gap-3 mb-3"><span class="icon-disc p-3 rounded-full"><i class="w-5 h-5" data-lucide="sprout"></i></span><h3 class="text-xl font-bold text-amber-800">Agrarian Roots</h3></div><p class="text-stone-600">Sarson da Saag is a dish that showcases the fresh winter greens picked straight from the fields.</p></article>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- FEAST SECTION -->
-        <div class="tab-content animate-fade-in" id="feast">
-            <div class="max-w-5xl mx-auto px-4 py-16 bg-white my-8 rounded-3xl shadow-sm">
-                <h2 class="text-4xl font-bold text-center text-amber-900 mb-10 serif-font">The Signature Meal</h2>
-                
-                <div class="grid md:grid-cols-2 gap-10">
-                    <!-- Makki di Roti -->
-                    <div class="group cursor-pointer">
-                        <div class="relative overflow-hidden rounded-2xl mb-4 h-64">
-                            <img alt="Makki di Roti" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://storage.googleapis.com/imagesu/photos500/indian-restaurant-1.png"/>
-                            <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-4 w-full">
-                                <h3 class="text-white text-xl font-bold">Makki di Roti</h3>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed">
-                            Hearty cornmeal flatbread, perfect with a dollop of homemade white butter, showcasing the importance of seasonal eating.
-                        </p>
-                    </div>
-
-                    <!-- Sarson da Saag -->
-                    <div class="group cursor-pointer">
-                        <div class="relative overflow-hidden rounded-2xl mb-4 h-64">
-                            <img alt="Sarson da Saag" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://storage.googleapis.com/imagesg/festivals/karwa-chauth/500w/shahi-paneer.png"/>
-                             <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-4 w-full">
-                                <h3 class="text-white text-xl font-bold">Sarson da Saag</h3>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed">
-                            Slow-cooked curry crafted with mustard greens, spinach, and bathua, seasoned modestly to maintain its natural earthiness and abundant antioxidants.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="mt-12 text-center">
-                    <p class="text-lg text-amber-800 font-serif italic">These dishes represent Punjab's farming heritage and Lohri's traditional essence.</p>
-                </div>
-            </div>
+    <section class="tab-content" id="prasad">
+      <div class="container-shell py-12 md:py-16">
+        <div class="text-center mb-12"><span class="eyebrow">Offerings to Agni</span><h2 class="section-title mt-5">The Lohri Prasad</h2></div>
+        <div class="article-card p-6 md:p-10 grid md:grid-cols-2 gap-10 items-center">
+          <div class="space-y-7">
+            <div class="flex gap-4"><span class="icon-disc p-3 rounded-full h-min"><i class="w-6 h-6" data-lucide="wheat"></i></span><div><h3 class="text-xl font-bold text-amber-800">Til (Sesame)</h3><p class="text-stone-600 text-sm mt-1">Represents the concepts of warmth, fertility, and the cycle of life. Commonly found in laddoos and</p></div></div>
+            <div class="flex gap-4"><span class="icon-disc p-3 rounded-full h-min"><i class="w-6 h-6" data-lucide="candy"></i></span><div><h3 class="text-xl font-bold text-amber-800">Gur (Jaggery)</h3><p class="text-stone-600 text-sm mt-1">Symbolizes abundance and happiness. A gentle nudge to appreciate life's blessings.</p></div></div>
+            <div class="flex gap-4"><span class="icon-disc p-3 rounded-full h-min"><i class="w-6 h-6" data-lucide="gift"></i></span><div><h3 class="text-xl font-bold text-amber-800">Rewri &amp; Gajak</h3><p class="text-stone-600 text-sm mt-1">Crunchy treats crafted from sesame and jaggery. Shared abundantly to bring happiness.</p></div></div>
+          </div>
+          <img alt="Sweets Bowl" class="rounded-2xl shadow-xl w-full h-80 object-cover" src="https://storage.googleapis.com/imagesg/festivals/karwa-chauth/500w/seviya-kheer.png"/>
         </div>
+      </div>
+    </section>
 
-        <!-- RECIPES SECTION -->
-        <div class="tab-content animate-fade-in" id="recipes">
-            <div class="max-w-6xl mx-auto px-4 py-12">
-                <h2 class="text-3xl font-bold text-center text-amber-900 mb-10 serif-font">Try Authentic Recipes</h2>
-                
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- Recipe 1 -->
-                    <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-yellow-500 hover:shadow-xl transition-shadow">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-gray-800">Til-Gur Laddoos</h3>
-                            <i class="text-yellow-500" data-lucide="cookie"></i>
-                        </div>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
-                            <li>• Roasted sesame seeds</li>
-                            <li>• Melted jaggery</li>
-                            <li>• A little ghee</li>
-                        </ul>
-                        <div class="bg-yellow-50 p-3 rounded-lg text-xs text-yellow-800 font-semibold">
-                            High in calcium &amp; iron. Great energy booster!
-                        </div>
-                    </div>
-
-                    <!-- Recipe 2 -->
-                    <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-orange-500 hover:shadow-xl transition-shadow">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-gray-800">Homemade Gajak</h3>
-                            <i class="text-orange-500" data-lucide="layers"></i>
-                        </div>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
-                            <li>• Sesame seeds</li>
-                            <li>• Jaggery</li>
-                            <li>• Peanuts (optional)</li>
-                        </ul>
-                        <div class="bg-orange-50 p-3 rounded-lg text-xs text-orange-800 font-semibold">
-                            No preservatives. Better control over sweetness.
-                        </div>
-                    </div>
-
-                    <!-- Recipe 3 -->
-                    <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-green-600 hover:shadow-xl transition-shadow">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-gray-800">Sarson da Saag</h3>
-                            <i class="text-green-600" data-lucide="leaf"></i>
-                        </div>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
-                            <li>• Mustard greens, spinach</li>
-                            <li>• Garlic, ginger, chilies</li>
-                            <li>• Maize flour</li>
-                        </ul>
-                        <div class="bg-green-50 p-3 rounded-lg text-xs text-green-800 font-semibold">
-                            Rich in antioxidants. Excellent for immunity.
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="tab-content" id="feast">
+      <div class="container-shell py-12 md:py-16">
+        <h2 class="section-title text-center mb-10">The Signature Meal</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <article class="article-card food-card"><img alt="Makki di Roti" class="w-full h-72 object-cover" src="https://storage.googleapis.com/imagesu/photos500/indian-restaurant-1.png"/><div class="p-6"><h3 class="text-2xl font-bold text-amber-800">Makki di Roti</h3><p class="text-stone-600 mt-3">Hearty cornmeal flatbread, perfect with a dollop of homemade white butter, showcasing the importance of seasonal eating.</p></div></article>
+          <article class="article-card food-card"><img alt="Sarson da Saag" class="w-full h-72 object-cover" src="https://storage.googleapis.com/imagesg/festivals/karwa-chauth/500w/shahi-paneer.png"/><div class="p-6"><h3 class="text-2xl font-bold text-amber-800">Sarson da Saag</h3><p class="text-stone-600 mt-3">Slow-cooked curry crafted with mustard greens, spinach, and bathua, seasoned modestly to maintain its natural earthiness and abundant antioxidants.</p></div></article>
         </div>
+        <p class="mt-12 text-center text-lg text-amber-800 font-sanskrit italic">These dishes represent Punjab's farming heritage and Lohri's traditional essence.</p>
+      </div>
+    </section>
 
-    </main>
+    <section class="tab-content" id="recipes">
+      <div class="container-shell py-12 md:py-16">
+        <h2 class="section-title text-center mb-10">Try Authentic Recipes</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="article-card food-card p-6"><div class="flex justify-between items-start mb-4"><h3 class="text-xl font-bold text-amber-800">Til-Gur Laddoos</h3><i class="text-amber-600" data-lucide="cookie"></i></div><ul class="text-sm text-stone-600 space-y-2 mb-4"><li>• Roasted sesame seeds</li><li>• Melted jaggery</li><li>• A little ghee</li></ul><div class="bg-amber-50 border border-amber-200 p-3 rounded-lg text-xs text-amber-800 font-semibold">High in calcium &amp; iron. Great energy booster!</div></article>
+          <article class="article-card food-card p-6"><div class="flex justify-between items-start mb-4"><h3 class="text-xl font-bold text-amber-800">Homemade Gajak</h3><i class="text-amber-600" data-lucide="layers"></i></div><ul class="text-sm text-stone-600 space-y-2 mb-4"><li>• Sesame seeds</li><li>• Jaggery</li><li>• Peanuts (optional)</li></ul><div class="bg-amber-50 border border-amber-200 p-3 rounded-lg text-xs text-amber-800 font-semibold">No preservatives. Better control over sweetness.</div></article>
+          <article class="article-card food-card p-6"><div class="flex justify-between items-start mb-4"><h3 class="text-xl font-bold text-amber-800">Sarson da Saag</h3><i class="text-amber-600" data-lucide="leaf"></i></div><ul class="text-sm text-stone-600 space-y-2 mb-4"><li>• Mustard greens, spinach</li><li>• Garlic, ginger, chilies</li><li>• Maize flour</li></ul><div class="bg-amber-50 border border-amber-200 p-3 rounded-lg text-xs text-amber-800 font-semibold">Rich in antioxidants. Excellent for immunity.</div></article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300">
+  <footer class="bg-gray-800 text-gray-300">
 <div class="container mx-auto px-6 py-12 lg:px-8">
 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
 <div>
@@ -360,37 +190,23 @@ gtag('config', 'G-HQVLPEFHL9');
 </div>
 </div>
 <div class="mt-8 text-center text-sm text-gray-400">
-<p class="text-sm text-gray-400">Happy MakarSankranti - Images, Stories, Cards</p>
+<p class="text-sm text-gray-400">New Beginning with Sankranti and Pongal</p>
 </div>
 <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
-<p class="text-sm text-gray-400">© 2026 Makar Sankranti and Pongal . All rights reserved.</p>
+<p class="text-sm text-gray-400">© 2026 Makar Sankranti . All rights reserved.</p>
 </div>
 </div>
 </footer>
 
-    <!-- JavaScript Logic -->
-    <script>
-        // --- Initialization ---
-        document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-        });
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{lucide.createIcons()});
+    function switchTab(tabId){
+      document.querySelectorAll('.tab-content').forEach(el=>el.classList.remove('active'));
+      const target=document.getElementById(tabId);if(!target)return;target.classList.add('active');
+      document.querySelectorAll('.nav-btn[data-target]').forEach(btn=>btn.classList.toggle('active',btn.dataset.target===tabId));
+      window.scrollTo(0,0);
+    }
+  </script>
 
-        // --- Navigation ---
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-            
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                if(btn.dataset.target === tabId) {
-                    btn.classList.add('text-orange-400', 'font-semibold', 'border-b-2', 'border-orange-400');
-                    btn.classList.remove('text-orange-400', 'hover:text-orange-300'); // Fixed color logic
-                } else {
-                    btn.classList.remove('text-orange-400', 'font-semibold', 'border-b-2', 'border-orange-400');
-                    btn.classList.add('hover:text-orange-300');
-                }
-            });
-            window.scrollTo(0,0);
-        }
-    </script>
 
 </body></html>

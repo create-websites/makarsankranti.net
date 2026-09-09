@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Lohri: Celebrating Agriculture &amp; Nature's Rhythm</title>
-    
-    <!-- Meta Description & Keywords -->
-    <meta content="Explore the deep agrarian roots of Lohri. Understand its connection to the Rabi crop cycle, the significance of the bonfire for farmers, and how it celebrates nature's rhythm." name="description"/>
-    <meta content="Lohri Agriculture, Rabi Crops, Wheat Harvest, Punjabi Farmers, Seasonal Festivals, Nature Gratitude, Bonfire Significance, Agrarian Heritage" name="keywords"/>
-    <meta content="Lohri Festival Interactive" name="author"/>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
-
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lohri: Celebrating Agriculture &amp; Nature's Rhythm</title>
+<!-- Meta Description & Keywords -->
+<meta content="Explore the deep agrarian roots of Lohri. Understand its connection to the Rabi crop cycle, the significance of the bonfire for farmers, and how it celebrates nature's rhythm." name="description"/>
+<meta content="Lohri Agriculture, Rabi Crops, Wheat Harvest, Punjabi Farmers, Seasonal Festivals, Nature Gratitude, Bonfire Significance, Agrarian Heritage" name="keywords"/>
+<meta content="Lohri Festival Interactive" name="author"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Tiro+Devanagari+Sanskrit:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<style>
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -66,231 +61,224 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HQVLPEFHL9');
-</script></head>
-<body class="bg-green-50 text-gray-800 min-h-screen flex flex-col">
-
-    <!-- Navigation -->
-    <nav class="bg-green-900 text-white sticky top-0 z-50 shadow-lg border-b-4 border-yellow-500">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2 font-bold text-xl cursor-pointer hover:opacity-90 transition" onclick="switchTab('home')">
-                    <i class="text-yellow-400" data-lucide="sprout"></i>
-                    <span class="serif-font tracking-wide">Lohri &amp; Nature</span>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-6">
-                    <button class="nav-btn text-yellow-400 font-semibold border-b-2 border-yellow-400 hover:text-yellow-300 transition-colors py-1" data-target="home" onclick="switchTab('home')">Overview</button>
-                    <button class="nav-btn hover:text-yellow-300 transition-colors py-1" data-target="crops" onclick="switchTab('crops')">The Crop Cycle</button>
-                    <button class="nav-btn hover:text-yellow-300 transition-colors py-1" data-target="seasons" onclick="switchTab('seasons')">Seasonal Context</button>
-                    <button class="nav-btn hover:text-yellow-300 transition-colors py-1" data-target="gratitude" onclick="switchTab('gratitude')">Gratitude</button>
-                </div>
-
-                <!-- Mobile Menu Icon -->
-                <div class="md:hidden flex space-x-4 text-sm">
-                    <button class="hover:text-yellow-200 flex items-center gap-1" onclick="switchTab('crops')"><i class="w-4 h-4" data-lucide="wheat"></i> Crops</button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content Area -->
-    <main class="flex-grow pb-12">
-        
-        <!-- HOME SECTION -->
-        <div class="tab-content active animate-fade-in" id="home">
-            <!-- Hero with Image -->
-            <div class="relative bg-green-900 text-white py-24 px-4 overflow-hidden">
-                <!-- Background Image with Overlay -->
-                <div class="absolute inset-0 z-0">
-                    <img alt="Lohri Greetings" class="w-full h-full object-cover opacity-50 mix-blend-overlay" src="https://storage.googleapis.com/kreatewebsite/photos700/lohri-greetings.jpg"/>
-                    <div class="absolute inset-0 hero-overlay"></div>
-                </div>
-
-                <div class="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 z-10">
-                    <div class="md:w-1/2 text-left">
-                        <div class="inline-block bg-yellow-500 text-green-900 px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">Agrarian Rhythm</div>
-                        <h1 class="text-5xl md:text-6xl font-bold mb-6 text-yellow-100 drop-shadow-lg leading-tight">Gratitude to the Land</h1>
-                        <p class="text-xl mb-8 text-green-100 leading-relaxed font-light">
+</script><style>
+/* Supplied Makar Sankranti theme, adapted to the source page's interactive sections. */
+:root{--bg:#FDFBF8;--surface:#fff;--amber-50:#FFFBEB;--amber-100:#FEF3C7;--amber-200:#FDE68A;--amber-500:#F59E0B;--amber-600:#D97706;--amber-700:#B45309;--amber-800:#92400E;--amber-900:#78350F;--stone-100:#F5F5F4;--stone-200:#E7E5E4;--stone-500:#78716C;--stone-600:#57534E;--stone-700:#44403C;--stone-800:#292524;--shadow:0 10px 30px rgba(120,53,15,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}.theme-body{margin:0;font-family:'Inter',sans-serif;background:radial-gradient(circle at 15% 10%,rgba(253,230,138,.28),transparent 28%),radial-gradient(circle at 85% 18%,rgba(254,243,199,.45),transparent 28%),var(--bg);color:var(--stone-700);line-height:1.7}h1,h2,h3,.serif-font{font-family:'Tiro Devanagari Sanskrit',serif}.container-shell{width:min(1180px,calc(100% - 32px));margin-inline:auto}
+.site-nav{background:rgba(254,243,199,.78);backdrop-filter:blur(10px);border-bottom:1px solid rgba(217,119,6,.18);box-shadow:0 4px 20px rgba(120,53,15,.06);color:var(--stone-700)}.site-nav>div>div{height:4.5rem}.site-nav .serif-font{color:var(--amber-800);font-size:1.5rem}.site-nav [data-lucide="sprout"]{color:var(--amber-600)}.site-nav button{color:var(--stone-600);border-color:transparent}.site-nav button:hover{color:var(--amber-700)}.site-nav .nav-btn.text-yellow-400{color:var(--amber-800)!important;border-color:var(--amber-600)!important}
+main{width:100%}.tab-content{display:none}.tab-content.active{display:block}.animate-fade-in{animation:fadeIn .5s ease-out forwards}@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+#home>.relative:first-child{width:min(1180px,calc(100% - 32px));margin:2.5rem auto 0;padding:4rem 2.5rem;border:1px solid rgba(217,119,6,.18);border-radius:1.5rem;box-shadow:var(--shadow);background:linear-gradient(135deg,rgba(255,251,235,.95),rgba(254,243,199,.72));color:var(--stone-700)}#home>.relative:first-child .hero-overlay{background:linear-gradient(100deg,rgba(255,251,235,.96),rgba(254,243,199,.84))}#home>.relative:first-child img{opacity:.16;mix-blend-mode:multiply}#home h1{color:var(--amber-900)!important;text-shadow:none}#home>.relative:first-child p{color:var(--stone-600)!important}#home>.relative:first-child .inline-block{background:var(--amber-50)!important;border:1px solid var(--amber-200);color:var(--amber-800)!important}#home>.relative:first-child button{background:var(--amber-600)!important;color:#fff!important;box-shadow:var(--shadow)}#home>.relative:first-child button:hover{background:var(--amber-700)!important}#home>.relative:first-child .md\:w-1\/2:last-child>div{background:rgba(255,255,255,.8)!important;border:1px solid var(--amber-200)!important;color:var(--stone-700);box-shadow:var(--shadow)}#home>.relative:first-child .md\:w-1\/2:last-child h3{color:var(--amber-800)!important}#home>.relative:first-child .md\:w-1\/2:last-child p,#home>.relative:first-child .md\:w-1\/2:last-child span{color:var(--stone-600)!important}
+#home>.max-w-4xl{max-width:1000px}#home>.max-w-4xl h2,#crops h2,#seasons h2,#gratitude h2{color:var(--amber-800)!important}.bg-white,.article-card{background:rgba(255,255,255,.96)!important;border-color:var(--stone-200)!important;box-shadow:var(--shadow)!important}.border-green-600,.border-yellow-500,.border-red-500,.border-orange-500{border-color:var(--amber-600)!important}.text-green-800,.text-yellow-800,.text-red-800,.text-orange-900,.text-green-900{color:var(--amber-800)!important}
+#crops>div,#seasons>div,#gratitude>div{width:min(1050px,calc(100% - 32px));max-width:none;margin:2.5rem auto;background:transparent!important}#crops .rounded-2xl,#gratitude .rounded-2xl{border:1px solid var(--stone-200);box-shadow:var(--shadow)}#crops .bg-green-100,#gratitude .bg-green-100{background:var(--amber-50)!important;border-color:var(--amber-200)!important}#crops .bg-green-600{background:var(--amber-600)!important}.text-green-600,.text-green-500,.text-yellow-500,.text-orange-500,.text-orange-300{color:var(--amber-600)!important}.text-green-700,.text-green-800{color:var(--amber-800)!important}.bg-yellow-100,.bg-orange-100{background:var(--amber-100)!important}.border-orange-200,.border-green-200{border-color:var(--amber-200)!important}.from-yellow-50{--tw-gradient-from:transparent!important}.to-orange-50{--tw-gradient-to:transparent!important}
+#seasons .grid>div{border-top-color:var(--amber-600)!important}#seasons .grid>div p:nth-of-type(1){color:var(--amber-700)!important}.bonfire-glow{filter:drop-shadow(0 0 25px rgba(217,119,6,.45))}
+.festival-footer{background:var(--stone-100);border-top:1px solid var(--stone-200);color:var(--stone-600);padding:3rem 1rem;text-align:center}.festival-footer h3{color:var(--amber-800)!important}.festival-footer p{color:var(--stone-600)!important}.festival-footer span:not(.text-green-600){color:var(--amber-700)}.festival-footer .text-green-600{color:var(--amber-300)!important}
+button:focus-visible{outline:3px solid var(--amber-500);outline-offset:3px;border-radius:.35rem}@media(max-width:760px){.container-shell{width:min(100% - 24px,1180px)}#home>.relative:first-child{width:min(100% - 24px,1180px);padding:3rem 1.25rem}.site-nav>div>div{height:4rem}#crops>div,#seasons>div,#gratitude>div{width:min(100% - 24px,1050px)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style></head>
+<body class="theme-body min-h-screen flex flex-col">
+<!-- Navigation -->
+<nav class="site-nav sticky top-0 z-50">
+<div class="container-shell">
+<div class="flex justify-between items-center h-16">
+<!-- Logo -->
+<div class="flex items-center space-x-2 font-bold text-xl cursor-pointer hover:opacity-90 transition" onclick="switchTab('home')">
+<i class="text-yellow-400" data-lucide="sprout"></i>
+<span class="serif-font tracking-wide">Lohri &amp; Nature</span>
+</div>
+<!-- Desktop Menu -->
+<div class="hidden md:flex space-x-6">
+<button aria-controls="home" aria-selected="true" class="nav-btn text-yellow-400 font-semibold border-b-2 border-yellow-400 hover:text-yellow-300 transition-colors py-1" data-target="home" onclick="switchTab('home')" type="button">Overview</button>
+<button aria-controls="crops" aria-selected="false" class="nav-btn hover:text-yellow-300 transition-colors py-1" data-target="crops" onclick="switchTab('crops')" type="button">The Crop Cycle</button>
+<button aria-controls="seasons" aria-selected="false" class="nav-btn hover:text-yellow-300 transition-colors py-1" data-target="seasons" onclick="switchTab('seasons')" type="button">Seasonal Context</button>
+<button aria-controls="gratitude" aria-selected="false" class="nav-btn hover:text-yellow-300 transition-colors py-1" data-target="gratitude" onclick="switchTab('gratitude')" type="button">Gratitude</button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden flex space-x-4 text-sm">
+<button class="hover:text-yellow-200 flex items-center gap-1" onclick="switchTab('crops')"><i class="w-4 h-4" data-lucide="wheat"></i> Crops</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-grow pb-12">
+<!-- HOME SECTION -->
+<div class="tab-content active animate-fade-in" id="home">
+<!-- Hero with Image -->
+<div class="relative bg-green-900 text-white py-24 px-4 overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Lohri Greetings" class="w-full h-full object-cover opacity-50 mix-blend-overlay" src="https://storage.googleapis.com/kreatewebsite/photos700/lohri-greetings.jpg"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 z-10">
+<div class="md:w-1/2 text-left">
+<div class="inline-block bg-yellow-500 text-green-900 px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">Agrarian Rhythm</div>
+<h1 class="text-5xl md:text-6xl font-bold mb-6 text-yellow-100 drop-shadow-lg leading-tight">Gratitude to the Land</h1>
+<p class="text-xl mb-8 text-green-100 leading-relaxed font-light">
                             Lohri is more than just a festival - it is a prayer for survival and hope, symbolizing the transition from winter to spring and honoring the strength of farmers and the potential of the upcoming harvest.
                         </p>
-                        <button class="bg-yellow-500 text-green-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-400 transition transform hover:scale-105 shadow-lg flex items-center gap-2" onclick="switchTab('crops')">
+<button class="bg-yellow-500 text-green-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-400 transition transform hover:scale-105 shadow-lg flex items-center gap-2" onclick="switchTab('crops')">
                             Explore the Harvest <i class="w-5 h-5" data-lucide="arrow-right"></i>
-                        </button>
-                    </div>
-
-                    <!-- Interactive Element: The Sun & Field -->
-                    <div class="md:w-1/2 flex justify-center">
-                        <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 text-center relative overflow-hidden group hover:bg-white/20 transition-all duration-500">
-                            <div class="absolute top-[-20px] right-[-20px] w-32 h-32 bg-yellow-400 rounded-full blur-3xl opacity-50 group-hover:opacity-80 transition-opacity"></div>
-                            
-                            <i class="w-20 h-20 text-yellow-400 mx-auto mb-4 animate-spin-slow" data-lucide="sun"></i>
-                            <h3 class="text-2xl font-bold text-white mb-2">Winter Solstice Passing</h3>
-                            <p class="text-green-100 text-sm mb-6">As the sun begins its ascent northward, the lengthening daylight boosts the growth of crops.</p>
-                            
-                            <div class="flex justify-center gap-4">
-                                <div class="flex flex-col items-center">
-                                    <i class="w-6 h-6 text-orange-300 mb-1" data-lucide="thermometer-sun"></i>
-                                    <span class="text-xs uppercase tracking-wide">Warmth</span>
-                                </div>
-                                <div class="w-px bg-white/30 h-10"></div>
-                                <div class="flex flex-col items-center">
-                                    <i class="w-6 h-6 text-green-300 mb-1" data-lucide="sprout"></i>
-                                    <span class="text-xs uppercase tracking-wide">Growth</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Intro Content -->
-            <div class="max-w-4xl mx-auto px-4 py-16 text-center">
-                <h2 class="text-3xl font-bold text-green-900 mb-6">Deep Roots in Agriculture</h2>
-                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+</button>
+</div>
+<!-- Interactive Element: The Sun & Field -->
+<div class="md:w-1/2 flex justify-center">
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 text-center relative overflow-hidden group hover:bg-white/20 transition-all duration-500">
+<div class="absolute top-[-20px] right-[-20px] w-32 h-32 bg-yellow-400 rounded-full blur-3xl opacity-50 group-hover:opacity-80 transition-opacity"></div>
+<i class="w-20 h-20 text-yellow-400 mx-auto mb-4 animate-spin-slow" data-lucide="sun"></i>
+<h3 class="text-2xl font-bold text-white mb-2">Winter Solstice Passing</h3>
+<p class="text-green-100 text-sm mb-6">As the sun begins its ascent northward, the lengthening daylight boosts the growth of crops.</p>
+<div class="flex justify-center gap-4">
+<div class="flex flex-col items-center">
+<i class="w-6 h-6 text-orange-300 mb-1" data-lucide="thermometer-sun"></i>
+<span class="text-xs uppercase tracking-wide">Warmth</span>
+</div>
+<div class="w-px bg-white/30 h-10"></div>
+<div class="flex flex-col items-center">
+<i class="w-6 h-6 text-green-300 mb-1" data-lucide="sprout"></i>
+<span class="text-xs uppercase tracking-wide">Growth</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Intro Content -->
+<div class="max-w-4xl mx-auto px-4 py-16 text-center">
+<h2 class="text-3xl font-bold text-green-900 mb-6">Deep Roots in Agriculture</h2>
+<p class="text-lg text-gray-700 leading-relaxed mb-8">
                     In the rural areas of Punjab, agriculture isn't just a job - it's a way of life. Lohri comes during the coldest part of winter, when the wheat crops are flourishing. It's a time to give thanks to nature for sustaining us.
                 </p>
-                <div class="grid md:grid-cols-3 gap-6 text-left">
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-600">
-                        <h3 class="text-lg font-bold text-green-800 mb-2">Rabi Cycle</h3>
-                        <p class="text-gray-600 text-sm">Related to winter crops such as wheat and mustard planted during October and November.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-500">
-                        <h3 class="text-lg font-bold text-yellow-800 mb-2">Turning Point</h3>
-                        <p class="text-gray-600 text-sm">Signaling the conclusion of peak winter and the diminishing risk of early frost.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-500">
-                        <h3 class="text-lg font-bold text-red-800 mb-2">Community</h3>
-                        <p class="text-gray-600 text-sm">Farmers come together to celebrate their strength following a season of late nights protecting their crops from the harsh winter.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CROP CYCLE SECTION -->
-        <div class="tab-content animate-fade-in" id="crops">
-            <div class="max-w-5xl mx-auto px-4 py-12">
-                <div class="text-center mb-12">
-                    <span class="text-green-600 font-bold tracking-widest uppercase text-sm">The Farmer's Calendar</span>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-2">Celebrating the Rabi Cycle</h2>
-                </div>
-
-                <div class="flex flex-col md:flex-row gap-8 items-center bg-white rounded-2xl shadow-xl overflow-hidden">
-                    <div class="md:w-1/2 bg-green-100 p-10 h-full flex flex-col justify-center">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="bg-green-600 text-white p-3 rounded-full"><i class="w-8 h-8" data-lucide="wheat"></i></div>
-                            <h3 class="text-2xl font-bold text-green-900">Wheat (Kanak)</h3>
-                        </div>
-                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+<div class="grid md:grid-cols-3 gap-6 text-left">
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-600">
+<h3 class="text-lg font-bold text-green-800 mb-2">Rabi Cycle</h3>
+<p class="text-gray-600 text-sm">Related to winter crops such as wheat and mustard planted during October and November.</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-500">
+<h3 class="text-lg font-bold text-yellow-800 mb-2">Turning Point</h3>
+<p class="text-gray-600 text-sm">Signaling the conclusion of peak winter and the diminishing risk of early frost.</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-500">
+<h3 class="text-lg font-bold text-red-800 mb-2">Community</h3>
+<p class="text-gray-600 text-sm">Farmers come together to celebrate their strength following a season of late nights protecting their crops from the harsh winter.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CROP CYCLE SECTION -->
+<div class="tab-content animate-fade-in" id="crops">
+<div class="max-w-5xl mx-auto px-4 py-12">
+<div class="text-center mb-12">
+<span class="text-green-600 font-bold tracking-widest uppercase text-sm">The Farmer's Calendar</span>
+<h2 class="text-4xl font-bold text-gray-900 mt-2">Celebrating the Rabi Cycle</h2>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center bg-white rounded-2xl shadow-xl overflow-hidden">
+<div class="md:w-1/2 bg-green-100 p-10 h-full flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-6">
+<div class="bg-green-600 text-white p-3 rounded-full"><i class="w-8 h-8" data-lucide="wheat"></i></div>
+<h3 class="text-2xl font-bold text-green-900">Wheat (Kanak)</h3>
+</div>
+<p class="text-gray-700 text-lg leading-relaxed mb-6">
                             By the middle of January, the wheat plants are flourishing with strong roots. The festival mirrors a <strong>"cautious optimism"</strong> expressing gratitude to nature for completing the most delicate stage of growth, despite knowing that the harvest is still several months away (April).
                         </p>
-                        <div class="flex gap-4">
-                            <span class="px-4 py-2 bg-white rounded-lg text-sm font-semibold text-green-800 shadow-sm">Sown: Oct-Nov</span>
-                            <span class="px-4 py-2 bg-yellow-100 rounded-lg text-sm font-semibold text-yellow-800 shadow-sm">Harvest: April</span>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2 p-10">
-                        <h4 class="font-bold text-gray-900 mb-4 text-lg">Why Jan 13th Matters</h4>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3">
-                                <i class="w-6 h-6 text-green-500 shrink-0" data-lucide="check-circle"></i>
-                                <span class="text-gray-600"><strong>Frost Danger Passed:</strong> The risk of early frost harming young crops has greatly diminished.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="w-6 h-6 text-yellow-500 shrink-0" data-lucide="sun"></i>
-                                <span class="text-gray-600"><strong>More Sunlight:</strong> Longer days mean stronger photosynthesis for crop development.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="w-6 h-6 text-blue-400 shrink-0" data-lucide="cloud-rain"></i>
-                                <span class="text-gray-600"><strong>Winter Rains:</strong> Hoping for favorable weather and protection from untimely storms.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SEASONAL CONTEXT SECTION -->
-        <div class="tab-content animate-fade-in" id="seasons">
-            <div class="max-w-5xl mx-auto px-4 py-16 bg-gradient-to-b from-yellow-50 to-orange-50">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-orange-900 mb-6">A Pan-Indian Celebration</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+<div class="flex gap-4">
+<span class="px-4 py-2 bg-white rounded-lg text-sm font-semibold text-green-800 shadow-sm">Sown: Oct-Nov</span>
+<span class="px-4 py-2 bg-yellow-100 rounded-lg text-sm font-semibold text-yellow-800 shadow-sm">Harvest: April</span>
+</div>
+</div>
+<div class="md:w-1/2 p-10">
+<h4 class="font-bold text-gray-900 mb-4 text-lg">Why Jan 13th Matters</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<i class="w-6 h-6 text-green-500 shrink-0" data-lucide="check-circle"></i>
+<span class="text-gray-600"><strong>Frost Danger Passed:</strong> The risk of early frost harming young crops has greatly diminished.</span>
+</li>
+<li class="flex items-start gap-3">
+<i class="w-6 h-6 text-yellow-500 shrink-0" data-lucide="sun"></i>
+<span class="text-gray-600"><strong>More Sunlight:</strong> Longer days mean stronger photosynthesis for crop development.</span>
+</li>
+<li class="flex items-start gap-3">
+<i class="w-6 h-6 text-blue-400 shrink-0" data-lucide="cloud-rain"></i>
+<span class="text-gray-600"><strong>Winter Rains:</strong> Hoping for favorable weather and protection from untimely storms.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- SEASONAL CONTEXT SECTION -->
+<div class="tab-content animate-fade-in" id="seasons">
+<div class="max-w-5xl mx-auto px-4 py-16 bg-gradient-to-b from-yellow-50 to-orange-50">
+<h2 class="text-3xl md:text-4xl font-bold text-center text-orange-900 mb-6">A Pan-Indian Celebration</h2>
+<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
                     significant festival that marks the end of winter and the beginning of longer days. <strong>crop-cycle celebration</strong> honoring growth.
                 </p>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Card 1 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-500 hover:-translate-y-1 transition-transform">
-                        <h3 class="font-bold text-lg text-gray-800 mb-1">Lohri</h3>
-                        <p class="text-xs font-semibold text-red-500 mb-3 uppercase">North India</p>
-                        <p class="text-gray-600 text-sm">Honors the growth phase of crops and the sun's transition.</p>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-500 hover:-translate-y-1 transition-transform">
-                        <h3 class="font-bold text-lg text-gray-800 mb-1">Makar Sankranti</h3>
-                        <p class="text-xs font-semibold text-yellow-600 mb-3 uppercase">Pan-India</p>
-                        <p class="text-gray-600 text-sm">Solar movement into Capricorn. A shift from darkness to light.</p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500 hover:-translate-y-1 transition-transform">
-                        <h3 class="font-bold text-lg text-gray-800 mb-1">Pongal</h3>
-                        <p class="text-xs font-semibold text-green-600 mb-3 uppercase">Tamil Nadu</p>
-                        <p class="text-gray-600 text-sm">A four-day thanksgiving festival honoring the Sun and cattle.</p>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-orange-500 hover:-translate-y-1 transition-transform">
-                        <h3 class="font-bold text-lg text-gray-800 mb-1">Magh Bihu</h3>
-                        <p class="text-xs font-semibold text-orange-600 mb-3 uppercase">Assam</p>
-                        <p class="text-gray-600 text-sm">Marks the end of the harvesting season with community feasts.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- GRATITUDE SECTION -->
-        <div class="tab-content animate-fade-in" id="gratitude">
-            <div class="max-w-4xl mx-auto px-4 py-16">
-                <div class="text-center mb-12">
-                    <span class="text-green-600 font-bold tracking-widest uppercase text-sm">Nature &amp; Spirituality</span>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-2">From Fields to Fire</h2>
-                </div>
-
-                <div class="space-y-10">
-                    <div class="flex flex-col md:flex-row gap-8 items-center">
-                        <div class="md:w-1/3 flex justify-center">
-                            <div class="relative w-48 h-48 bg-orange-100 rounded-full flex items-center justify-center">
-                                <i class="w-24 h-24 text-orange-500 animate-pulse" data-lucide="flame"></i>
-                                <div class="absolute inset-0 border-4 border-orange-200 rounded-full animate-ping opacity-20"></div>
-                            </div>
-                        </div>
-                        <div class="md:w-2/3">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Fire as a Bridge</h3>
-                            <p class="text-gray-700 leading-relaxed">
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-500 hover:-translate-y-1 transition-transform">
+<h3 class="font-bold text-lg text-gray-800 mb-1">Lohri</h3>
+<p class="text-xs font-semibold text-red-500 mb-3 uppercase">North India</p>
+<p class="text-gray-600 text-sm">Honors the growth phase of crops and the sun's transition.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-500 hover:-translate-y-1 transition-transform">
+<h3 class="font-bold text-lg text-gray-800 mb-1">Makar Sankranti</h3>
+<p class="text-xs font-semibold text-yellow-600 mb-3 uppercase">Pan-India</p>
+<p class="text-gray-600 text-sm">Solar movement into Capricorn. A shift from darkness to light.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500 hover:-translate-y-1 transition-transform">
+<h3 class="font-bold text-lg text-gray-800 mb-1">Pongal</h3>
+<p class="text-xs font-semibold text-green-600 mb-3 uppercase">Tamil Nadu</p>
+<p class="text-gray-600 text-sm">A four-day thanksgiving festival honoring the Sun and cattle.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-orange-500 hover:-translate-y-1 transition-transform">
+<h3 class="font-bold text-lg text-gray-800 mb-1">Magh Bihu</h3>
+<p class="text-xs font-semibold text-orange-600 mb-3 uppercase">Assam</p>
+<p class="text-gray-600 text-sm">Marks the end of the harvesting season with community feasts.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- GRATITUDE SECTION -->
+<div class="tab-content animate-fade-in" id="gratitude">
+<div class="max-w-4xl mx-auto px-4 py-16">
+<div class="text-center mb-12">
+<span class="text-green-600 font-bold tracking-widest uppercase text-sm">Nature &amp; Spirituality</span>
+<h2 class="text-4xl font-bold text-gray-900 mt-2">From Fields to Fire</h2>
+</div>
+<div class="space-y-10">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="md:w-1/3 flex justify-center">
+<div class="relative w-48 h-48 bg-orange-100 rounded-full flex items-center justify-center">
+<i class="w-24 h-24 text-orange-500 animate-pulse" data-lucide="flame"></i>
+<div class="absolute inset-0 border-4 border-orange-200 rounded-full animate-ping opacity-20"></div>
+</div>
+</div>
+<div class="md:w-2/3">
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Fire as a Bridge</h3>
+<p class="text-gray-700 leading-relaxed">
                                 The bonfire acts as a bridge between <strong>field and family</strong>The heat from the fire reflects the growing power of the Sun, critical for the growth of crops. Farmers show their respect for nature by offering peanuts, sesame, and jaggery to the flames.
                             </p>
-                        </div>
-                    </div>
-
-                    <div class="bg-green-100 rounded-2xl p-8 border border-green-200">
-                        <h3 class="text-xl font-bold text-green-900 mb-4 flex items-center gap-2">
-                            <i class="w-5 h-5" data-lucide="leaf"></i> Intergenerational Wisdom
+</div>
+</div>
+<div class="bg-green-100 rounded-2xl p-8 border border-green-200">
+<h3 class="text-xl font-bold text-green-900 mb-4 flex items-center gap-2">
+<i class="w-5 h-5" data-lucide="leaf"></i> Intergenerational Wisdom
                         </h3>
-                        <p class="text-green-800 italic text-lg mb-4">
+<p class="text-green-800 italic text-lg mb-4">
                             Lohri enhances connections between generations. The older generation imparts agricultural wisdom, while the younger generation grasps the significance of soil, hard work, and perseverance.
                         </p>
-                        <p class="text-green-700 text-sm">
+<p class="text-green-700 text-sm">
                             During a time of increasing urban development, Lohri celebrates the deep connection between people and the land, valuing agriculture as more than just a means of income, but as a vital part of everyday life.
                         </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300">
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-300">
 <div class="container mx-auto px-6 py-12 lg:px-8">
 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
 <div>
@@ -376,16 +364,15 @@ gtag('config', 'G-HQVLPEFHL9');
 </div>
 </div>
 <div class="mt-8 text-center text-sm text-gray-400">
-<p class="text-sm text-gray-400">Happy MakarSankranti - Images, Stories, Cards</p>
+<p class="text-sm text-gray-400">New Beginning with Sankranti and Pongal</p>
 </div>
 <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
-<p class="text-sm text-gray-400">© 2026 Makar Sankranti and Pongal . All rights reserved.</p>
+<p class="text-sm text-gray-400">© 2026 Makar Sankranti . All rights reserved.</p>
 </div>
 </div>
 </footer>
-
-    <!-- JavaScript Logic -->
-    <script>
+<!-- JavaScript Logic -->
+<script>
         // --- Initialization ---
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
@@ -400,6 +387,7 @@ gtag('config', 'G-HQVLPEFHL9');
             
             // Update Nav Buttons
             document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.setAttribute('aria-selected', btn.dataset.target === tabId ? 'true' : 'false');
                 if(btn.dataset.target === tabId) {
                     btn.classList.add('text-yellow-400', 'font-semibold', 'border-b-2', 'border-yellow-400');
                     btn.classList.remove('text-white', 'hover:text-yellow-300');
@@ -411,5 +399,4 @@ gtag('config', 'G-HQVLPEFHL9');
             window.scrollTo(0,0);
         }
     </script>
-
 </body></html>
