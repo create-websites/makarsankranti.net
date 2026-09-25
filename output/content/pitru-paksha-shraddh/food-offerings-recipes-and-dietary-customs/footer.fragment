@@ -1,0 +1,101 @@
+<footer class="bg-gray-800 text-gray-300">
+  <div class="container mx-auto px-6 py-12 lg:px-8">
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/3-days-of-sankranti-and-pongal-celebration.html" class="hover:text-white hover:underline transition-colors duration-200">3-days-of-sankranti-and-pongal-celebration</a></li>
+          <li><a href="https://www.makarsankranti.net/different-names-of-sankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Different-names-of-sankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/image.html" class="hover:text-white hover:underline transition-colors duration-200">Image</a></li>
+          <li><a href="https://www.makarsankranti.net/important-sankrantis.html" class="hover:text-white hover:underline transition-colors duration-200">Important-sankrantis</a></li>
+          <li><a href="https://www.makarsankranti.net/index2.html" class="hover:text-white hover:underline transition-colors duration-200">Index2</a></li>
+          <li><a href="https://www.makarsankranti.net/information.html" class="hover:text-white hover:underline transition-colors duration-200">Information</a></li>
+          <li><a href="https://www.makarsankranti.net/khichdi-purv.html" class="hover:text-white hover:underline transition-colors duration-200">Khichdi-purv</a></li>
+          <li><a href="https://www.makarsankranti.net/lohri.html" class="hover:text-white hover:underline transition-colors duration-200">Lohri</a></li>
+          <li><a href="https://www.makarsankranti.net/magh-bihu.html" class="hover:text-white hover:underline transition-colors duration-200">Magh-bihu</a></li>
+          <li><a href="https://www.makarsankranti.net/makarsankranti-information.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-information</a></li>
+          <li><a href="https://www.makarsankranti.net/pongal.html" class="hover:text-white hover:underline transition-colors duration-200">Pongal</a></li>
+          <li><a href="https://www.makarsankranti.net/sankranti-vs-makarsankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Sankranti-vs-makarsankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/sitemap.html" class="hover:text-white hover:underline transition-colors duration-200">Sitemap</a></li>
+          <li><a href="https://www.makarsankranti.net/start-of-spring.html" class="hover:text-white hover:underline transition-colors duration-200">Start-of-spring</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-pedda-festival.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-pedda-festival</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-uttarayaana.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-uttarayaana</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Wishes of Makarsankrnti</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/wishes/assamese.html" class="hover:text-white hover:underline transition-colors duration-200">Assamese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bhojpuri.html" class="hover:text-white hover:underline transition-colors duration-200">Bhojpuri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bihari.html" class="hover:text-white hover:underline transition-colors duration-200">Bihari</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/english.html" class="hover:text-white hover:underline transition-colors duration-200">English</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/gujarati.html" class="hover:text-white hover:underline transition-colors duration-200">Gujarati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kannada.html" class="hover:text-white hover:underline transition-colors duration-200">Kannada</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kashmiri.html" class="hover:text-white hover:underline transition-colors duration-200">Kashmiri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-play-script.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-play-script</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-garhwali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-garhwali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-gujrati.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-gujrati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-marwari-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-marwari-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-rajasthani.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-rajasthani</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-sanskrit-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-sanskrit-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-marathai.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-marathai</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/malyalam.html" class="hover:text-white hover:underline transition-colors duration-200">Malyalam</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/marathi.html" class="hover:text-white hover:underline transition-colors duration-200">Marathi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/nepalese.html" class="hover:text-white hover:underline transition-colors duration-200">Nepalese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/punjabi.html" class="hover:text-white hover:underline transition-colors duration-200">Punjabi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sanskrit.html" class="hover:text-white hover:underline transition-colors duration-200">Sanskrit</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sindhi.html" class="hover:text-white hover:underline transition-colors duration-200">Sindhi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/tamil.html" class="hover:text-white hover:underline transition-colors duration-200">Tamil</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/telugu.html" class="hover:text-white hover:underline transition-colors duration-200">Telugu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/wishes-new-beginning.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-new-beginning</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-prosperity</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Pages</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/can-packaged-or-restaurant-food-be-used-for-shraddha.html" class="hover:text-white hover:underline transition-colors duration-200">Can Packaged Or Restaurant Food Be Used For Shraddha</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/dal-and-rice-ideas-for-a-simple-shraddha-meal.html" class="hover:text-white hover:underline transition-colors duration-200">Dal And Rice Ideas For A Simple Shraddha Meal</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/feeding-cows-during-shraddha-traditional-meaning-and-modern-practice.html" class="hover:text-white hover:underline transition-colors duration-200">Feeding Cows During Shraddha Traditional Meaning And Modern Practice</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/feeding-the-needy-during-pitru-paksha-charity-and-remembrance.html" class="hover:text-white hover:underline transition-colors duration-200">Feeding The Needy During Pitru Paksha Charity And Remembrance</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/food-hygiene-and-safe-serving-during-family-shraddha-gatherings.html" class="hover:text-white hover:underline transition-colors duration-200">Food Hygiene And Safe Serving During Family Shraddha Gatherings</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/foods-commonly-avoided-during-pitru-paksha-in-some-traditions.html" class="hover:text-white hover:underline transition-colors duration-200">Foods Commonly Avoided During Pitru Paksha In Some Traditions</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/how-to-prepare-food-respectfully-for-a-shraddha-ritual.html" class="hover:text-white hover:underline transition-colors duration-200">How To Prepare Food Respectfully For A Shraddha Ritual</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/kheer-for-shraddha-traditional-context-and-simple-recipe.html" class="hover:text-white hover:underline transition-colors duration-200">Kheer For Shraddha Traditional Context And Simple Recipe</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/pitru-paksha-food-guide-common-offerings-and-family-customs.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha Food Guide Common Offerings And Family Customs</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/pitru-paksha-meal-ideas-for-families-living-abroad.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha Meal Ideas For Families Living Abroad</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/puri-and-seasonal-sabzi-for-shraddha-meal-general-guide.html" class="hover:text-white hover:underline transition-colors duration-200">Puri And Seasonal Sabzi For Shraddha Meal General Guide</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/shraddha-food-faq-offerings-ingredients-customs-and-variations.html" class="hover:text-white hover:underline transition-colors duration-200">Shraddha Food Faq Offerings Ingredients Customs And Variations</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/shraddha-food-traditions-what-is-commonly-prepared-and-why.html" class="hover:text-white hover:underline transition-colors duration-200">Shraddha Food Traditions What Is Commonly Prepared And Why</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/shraddha-meal-for-a-small-family-at-home.html" class="hover:text-white hover:underline transition-colors duration-200">Shraddha Meal For A Small Family At Home</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/shraddha-meal-planning-for-a-larger-family-gathering.html" class="hover:text-white hover:underline transition-colors duration-200">Shraddha Meal Planning For A Larger Family Gathering</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/simple-satvik-meal-ideas-for-shraddha.html" class="hover:text-white hover:underline transition-colors duration-200">Simple Satvik Meal Ideas For Shraddha</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/vegetarian-shraddha-food-ideas-using-easily-available-ingredients.html" class="hover:text-white hover:underline transition-colors duration-200">Vegetarian Shraddha Food Ideas Using Easily Available Ingredients</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/what-is-offered-to-crows-during-shraddha.html" class="hover:text-white hover:underline transition-colors duration-200">What Is Offered To Crows During Shraddha</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/why-sesame-is-used-in-shraddha-food-and-ritual-offerings.html" class="hover:text-white hover:underline transition-colors duration-200">Why Sesame Is Used In Shraddha Food And Ritual Offerings</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/food-offerings-recipes-and-dietary-customs/why-some-families-avoid-onion-and-garlic-during-shraddha.html" class="hover:text-white hover:underline transition-colors duration-200">Why Some Families Avoid Onion And Garlic During Shraddha</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center text-sm text-gray-400">
+      <p class="text-sm text-gray-400">Pitru Paksha starts from Sep 26 </p>
+    </div>
+
+    <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+      <p class="text-sm text-gray-400">&copy; 2026 Makar Sankranti. All rights reserved.</p>
+      
+    </div>
+
+  </div>
+</footer>

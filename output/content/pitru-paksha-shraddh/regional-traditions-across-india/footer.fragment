@@ -1,0 +1,101 @@
+<footer class="bg-gray-800 text-gray-300">
+  <div class="container mx-auto px-6 py-12 lg:px-8">
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/3-days-of-sankranti-and-pongal-celebration.html" class="hover:text-white hover:underline transition-colors duration-200">3-days-of-sankranti-and-pongal-celebration</a></li>
+          <li><a href="https://www.makarsankranti.net/different-names-of-sankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Different-names-of-sankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/image.html" class="hover:text-white hover:underline transition-colors duration-200">Image</a></li>
+          <li><a href="https://www.makarsankranti.net/important-sankrantis.html" class="hover:text-white hover:underline transition-colors duration-200">Important-sankrantis</a></li>
+          <li><a href="https://www.makarsankranti.net/index2.html" class="hover:text-white hover:underline transition-colors duration-200">Index2</a></li>
+          <li><a href="https://www.makarsankranti.net/information.html" class="hover:text-white hover:underline transition-colors duration-200">Information</a></li>
+          <li><a href="https://www.makarsankranti.net/khichdi-purv.html" class="hover:text-white hover:underline transition-colors duration-200">Khichdi-purv</a></li>
+          <li><a href="https://www.makarsankranti.net/lohri.html" class="hover:text-white hover:underline transition-colors duration-200">Lohri</a></li>
+          <li><a href="https://www.makarsankranti.net/magh-bihu.html" class="hover:text-white hover:underline transition-colors duration-200">Magh-bihu</a></li>
+          <li><a href="https://www.makarsankranti.net/makarsankranti-information.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-information</a></li>
+          <li><a href="https://www.makarsankranti.net/pongal.html" class="hover:text-white hover:underline transition-colors duration-200">Pongal</a></li>
+          <li><a href="https://www.makarsankranti.net/sankranti-vs-makarsankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Sankranti-vs-makarsankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/sitemap.html" class="hover:text-white hover:underline transition-colors duration-200">Sitemap</a></li>
+          <li><a href="https://www.makarsankranti.net/start-of-spring.html" class="hover:text-white hover:underline transition-colors duration-200">Start-of-spring</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-pedda-festival.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-pedda-festival</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-uttarayaana.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-uttarayaana</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Wishes of Makarsankrnti</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/wishes/assamese.html" class="hover:text-white hover:underline transition-colors duration-200">Assamese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bhojpuri.html" class="hover:text-white hover:underline transition-colors duration-200">Bhojpuri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bihari.html" class="hover:text-white hover:underline transition-colors duration-200">Bihari</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/english.html" class="hover:text-white hover:underline transition-colors duration-200">English</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/gujarati.html" class="hover:text-white hover:underline transition-colors duration-200">Gujarati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kannada.html" class="hover:text-white hover:underline transition-colors duration-200">Kannada</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kashmiri.html" class="hover:text-white hover:underline transition-colors duration-200">Kashmiri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-play-script.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-play-script</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-garhwali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-garhwali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-gujrati.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-gujrati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-marwari-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-marwari-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-rajasthani.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-rajasthani</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-sanskrit-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-sanskrit-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-marathai.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-marathai</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/malyalam.html" class="hover:text-white hover:underline transition-colors duration-200">Malyalam</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/marathi.html" class="hover:text-white hover:underline transition-colors duration-200">Marathi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/nepalese.html" class="hover:text-white hover:underline transition-colors duration-200">Nepalese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/punjabi.html" class="hover:text-white hover:underline transition-colors duration-200">Punjabi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sanskrit.html" class="hover:text-white hover:underline transition-colors duration-200">Sanskrit</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sindhi.html" class="hover:text-white hover:underline transition-colors duration-200">Sindhi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/tamil.html" class="hover:text-white hover:underline transition-colors duration-200">Tamil</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/telugu.html" class="hover:text-white hover:underline transition-colors duration-200">Telugu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/wishes-new-beginning.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-new-beginning</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-prosperity</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Pages</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/ancestor-remembrance-traditions-in-kerala.html" class="hover:text-white hover:underline transition-colors duration-200">Ancestor Remembrance Traditions In Kerala</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/ancestor-remembrance-traditions-in-tamil-nadu.html" class="hover:text-white hover:underline transition-colors duration-200">Ancestor Remembrance Traditions In Tamil Nadu</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/ancestor-ritual-traditions-in-andhra-pradesh-and-telangana.html" class="hover:text-white hover:underline transition-colors duration-200">Ancestor Ritual Traditions In Andhra Pradesh And Telangana</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/ancestor-ritual-traditions-in-karnataka.html" class="hover:text-white hover:underline transition-colors duration-200">Ancestor Ritual Traditions In Karnataka</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/how-family-sampradaya-shapes-shraddha-practice.html" class="hover:text-white hover:underline transition-colors duration-200">How Family Sampradaya Shapes Shraddha Practice</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/how-pitru-paksha-traditions-differ-across-indian-regions.html" class="hover:text-white hover:underline transition-colors duration-200">How Pitru Paksha Traditions Differ Across Indian Regions</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/mahalaya-and-ancestor-remembrance-traditions-in-west-bengal.html" class="hover:text-white hover:underline transition-colors duration-200">Mahalaya And Ancestor Remembrance Traditions In West Bengal</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/mahalaya-in-bengal-vs-sarva-pitru-amavasya-in-other-regions.html" class="hover:text-white hover:underline transition-colors duration-200">Mahalaya In Bengal Vs Sarva Pitru Amavasya In Other Regions</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/north-indian-vs-south-indian-ancestor-ritual-traditions-general-differences.html" class="hover:text-white hover:underline transition-colors duration-200">North Indian Vs South Indian Ancestor Ritual Traditions General Differences</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/pitru-paksha-and-pind-daan-traditions-in-bihar.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha And Pind Daan Traditions In Bihar</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/pitru-paksha-practices-in-nepal-and-himalayan-hindu-communities.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha Practices In Nepal And Himalayan Hindu Communities</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/pitru-paksha-traditions-in-maharashtra.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha Traditions In Maharashtra</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/pitru-paksha-traditions-in-north-india.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha Traditions In North India</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/pitru-paksha-traditions-in-odisha.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha Traditions In Odisha</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/pitru-paksha-traditions-in-rajasthan.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha Traditions In Rajasthan</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/regional-shraddha-traditions-faq-why-customs-differ-from-family-to-family.html" class="hover:text-white hover:underline transition-colors duration-200">Regional Shraddha Traditions Faq Why Customs Differ From Family To Family</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/shraddha-traditions-in-gujarat.html" class="hover:text-white hover:underline transition-colors duration-200">Shraddha Traditions In Gujarat</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/shraddha-traditions-in-madhya-pradesh.html" class="hover:text-white hover:underline transition-colors duration-200">Shraddha Traditions In Madhya Pradesh</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/shraddha-traditions-in-uttar-pradesh.html" class="hover:text-white hover:underline transition-colors duration-200">Shraddha Traditions In Uttar Pradesh</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/regional-traditions-across-india/shraddha-traditions-in-uttarakhand-and-haridwar.html" class="hover:text-white hover:underline transition-colors duration-200">Shraddha Traditions In Uttarakhand And Haridwar</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center text-sm text-gray-400">
+      <p class="text-sm text-gray-400">Pitru Paksha starts from Sep 26 </p>
+    </div>
+
+    <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+      <p class="text-sm text-gray-400">&copy; 2026 Makar Sankranti. All rights reserved.</p>
+      
+    </div>
+
+  </div>
+</footer>

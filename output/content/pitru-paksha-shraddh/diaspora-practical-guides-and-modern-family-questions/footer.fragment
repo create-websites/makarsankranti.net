@@ -1,0 +1,101 @@
+<footer class="bg-gray-800 text-gray-300">
+  <div class="container mx-auto px-6 py-12 lg:px-8">
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/3-days-of-sankranti-and-pongal-celebration.html" class="hover:text-white hover:underline transition-colors duration-200">3-days-of-sankranti-and-pongal-celebration</a></li>
+          <li><a href="https://www.makarsankranti.net/different-names-of-sankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Different-names-of-sankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/image.html" class="hover:text-white hover:underline transition-colors duration-200">Image</a></li>
+          <li><a href="https://www.makarsankranti.net/important-sankrantis.html" class="hover:text-white hover:underline transition-colors duration-200">Important-sankrantis</a></li>
+          <li><a href="https://www.makarsankranti.net/index2.html" class="hover:text-white hover:underline transition-colors duration-200">Index2</a></li>
+          <li><a href="https://www.makarsankranti.net/information.html" class="hover:text-white hover:underline transition-colors duration-200">Information</a></li>
+          <li><a href="https://www.makarsankranti.net/khichdi-purv.html" class="hover:text-white hover:underline transition-colors duration-200">Khichdi-purv</a></li>
+          <li><a href="https://www.makarsankranti.net/lohri.html" class="hover:text-white hover:underline transition-colors duration-200">Lohri</a></li>
+          <li><a href="https://www.makarsankranti.net/magh-bihu.html" class="hover:text-white hover:underline transition-colors duration-200">Magh-bihu</a></li>
+          <li><a href="https://www.makarsankranti.net/makarsankranti-information.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-information</a></li>
+          <li><a href="https://www.makarsankranti.net/pongal.html" class="hover:text-white hover:underline transition-colors duration-200">Pongal</a></li>
+          <li><a href="https://www.makarsankranti.net/sankranti-vs-makarsankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Sankranti-vs-makarsankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/sitemap.html" class="hover:text-white hover:underline transition-colors duration-200">Sitemap</a></li>
+          <li><a href="https://www.makarsankranti.net/start-of-spring.html" class="hover:text-white hover:underline transition-colors duration-200">Start-of-spring</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-pedda-festival.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-pedda-festival</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-uttarayaana.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-uttarayaana</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Wishes of Makarsankrnti</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/wishes/assamese.html" class="hover:text-white hover:underline transition-colors duration-200">Assamese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bhojpuri.html" class="hover:text-white hover:underline transition-colors duration-200">Bhojpuri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bihari.html" class="hover:text-white hover:underline transition-colors duration-200">Bihari</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/english.html" class="hover:text-white hover:underline transition-colors duration-200">English</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/gujarati.html" class="hover:text-white hover:underline transition-colors duration-200">Gujarati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kannada.html" class="hover:text-white hover:underline transition-colors duration-200">Kannada</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kashmiri.html" class="hover:text-white hover:underline transition-colors duration-200">Kashmiri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-play-script.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-play-script</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-garhwali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-garhwali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-gujrati.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-gujrati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-marwari-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-marwari-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-rajasthani.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-rajasthani</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-sanskrit-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-sanskrit-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-marathai.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-marathai</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/malyalam.html" class="hover:text-white hover:underline transition-colors duration-200">Malyalam</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/marathi.html" class="hover:text-white hover:underline transition-colors duration-200">Marathi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/nepalese.html" class="hover:text-white hover:underline transition-colors duration-200">Nepalese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/punjabi.html" class="hover:text-white hover:underline transition-colors duration-200">Punjabi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sanskrit.html" class="hover:text-white hover:underline transition-colors duration-200">Sanskrit</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sindhi.html" class="hover:text-white hover:underline transition-colors duration-200">Sindhi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/tamil.html" class="hover:text-white hover:underline transition-colors duration-200">Tamil</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/telugu.html" class="hover:text-white hover:underline transition-colors duration-200">Telugu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/wishes-new-beginning.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-new-beginning</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-prosperity</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Pages</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/can-a-family-perform-shraddha-without-a-priest.html" class="hover:text-white hover:underline transition-colors duration-200">Can A Family Perform Shraddha Without A Priest</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/can-daughters-perform-shraddha-family-regional-and-contemporary-practices.html" class="hover:text-white hover:underline transition-colors duration-200">Can Daughters Perform Shraddha Family Regional And Contemporary Practices</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/can-shraddha-be-performed-online-or-with-remote-priest-guidance.html" class="hover:text-white hover:underline transition-colors duration-200">Can Shraddha Be Performed Online Or With Remote Priest Guidance</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/can-women-perform-shraddha-or-tarpan-understanding-different-traditions.html" class="hover:text-white hover:underline transition-colors duration-200">Can Women Perform Shraddha Or Tarpan Understanding Different Traditions</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/how-to-balance-work-schedules-with-shraddha-observance.html" class="hover:text-white hover:underline transition-colors duration-200">How To Balance Work Schedules With Shraddha Observance</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/how-to-explain-shraddha-traditions-to-children-raised-abroad.html" class="hover:text-white hover:underline transition-colors duration-200">How To Explain Shraddha Traditions To Children Raised Abroad</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/how-to-find-a-hindu-priest-for-shraddha-outside-india.html" class="hover:text-white hover:underline transition-colors duration-200">How To Find A Hindu Priest For Shraddha Outside India</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/how-to-find-a-temple-offering-pitru-paksha-services-near-you.html" class="hover:text-white hover:underline transition-colors duration-200">How To Find A Temple Offering Pitru Paksha Services Near You</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/how-to-handle-shraddha-when-the-family-gotra-is-unknown.html" class="hover:text-white hover:underline transition-colors duration-200">How To Handle Shraddha When The Family Gotra Is Unknown</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/how-to-observe-pitru-paksha-in-a-small-apartment.html" class="hover:text-white hover:underline transition-colors duration-200">How To Observe Pitru Paksha In A Small Apartment</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/how-to-observe-pitru-paksha-in-the-united-states.html" class="hover:text-white hover:underline transition-colors duration-200">How To Observe Pitru Paksha In The United States</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/how-to-observe-shraddha-when-you-cannot-visit-a-river-or-sacred-place.html" class="hover:text-white hover:underline transition-colors duration-200">How To Observe Shraddha When You Cannot Visit A River Or Sacred Place</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/how-to-perform-shraddha-when-family-members-live-in-different-countries.html" class="hover:text-white hover:underline transition-colors duration-200">How To Perform Shraddha When Family Members Live In Different Countries</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/how-to-perform-simple-tarpan-in-the-united-states.html" class="hover:text-white hover:underline transition-colors duration-200">How To Perform Simple Tarpan In The United States</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/modern-shraddha-faq-diaspora-family-roles-remote-rituals-and-practical-constraints.html" class="hover:text-white hover:underline transition-colors duration-200">Modern Shraddha Faq Diaspora Family Roles Remote Rituals And Practical Constraints</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/pitru-paksha-for-interfaith-and-multicultural-families.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha For Interfaith And Multicultural Families</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/pitru-paksha-in-australia-practical-family-guide.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha In Australia Practical Family Guide</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/pitru-paksha-in-canada-home-observance-and-timing-considerations.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha In Canada Home Observance And Timing Considerations</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/pitru-paksha-in-dubai-and-the-uae-practical-observance-guide.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha In Dubai And The Uae Practical Observance Guide</a></li>
+          <li><a href="https://www.makarsankranti.net/pitru-paksha-shraddh/diaspora-practical-guides-and-modern-family-questions/pitru-paksha-in-the-united-kingdom-home-observance-guide.html" class="hover:text-white hover:underline transition-colors duration-200">Pitru Paksha In The United Kingdom Home Observance Guide</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center text-sm text-gray-400">
+      <p class="text-sm text-gray-400">Pitru Paksha starts from Sep 26 </p>
+    </div>
+
+    <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+      <p class="text-sm text-gray-400">&copy; 2026 Makar Sankranti. All rights reserved.</p>
+      
+    </div>
+
+  </div>
+</footer>
