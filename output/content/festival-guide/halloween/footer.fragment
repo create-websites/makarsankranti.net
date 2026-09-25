@@ -1,0 +1,102 @@
+<footer class="bg-gray-800 text-gray-300">
+  <div class="container mx-auto px-6 py-12 lg:px-8">
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/3-days-of-sankranti-and-pongal-celebration.html" class="hover:text-white hover:underline transition-colors duration-200">3-days-of-sankranti-and-pongal-celebration</a></li>
+          <li><a href="https://www.makarsankranti.net/different-names-of-sankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Different-names-of-sankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/image.html" class="hover:text-white hover:underline transition-colors duration-200">Image</a></li>
+          <li><a href="https://www.makarsankranti.net/important-sankrantis.html" class="hover:text-white hover:underline transition-colors duration-200">Important-sankrantis</a></li>
+          <li><a href="https://www.makarsankranti.net/index2.html" class="hover:text-white hover:underline transition-colors duration-200">Index2</a></li>
+          <li><a href="https://www.makarsankranti.net/information.html" class="hover:text-white hover:underline transition-colors duration-200">Information</a></li>
+          <li><a href="https://www.makarsankranti.net/khichdi-purv.html" class="hover:text-white hover:underline transition-colors duration-200">Khichdi-purv</a></li>
+          <li><a href="https://www.makarsankranti.net/lohri.html" class="hover:text-white hover:underline transition-colors duration-200">Lohri</a></li>
+          <li><a href="https://www.makarsankranti.net/magh-bihu.html" class="hover:text-white hover:underline transition-colors duration-200">Magh-bihu</a></li>
+          <li><a href="https://www.makarsankranti.net/makarsankranti-information.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-information</a></li>
+          <li><a href="https://www.makarsankranti.net/pongal.html" class="hover:text-white hover:underline transition-colors duration-200">Pongal</a></li>
+          <li><a href="https://www.makarsankranti.net/sankranti-vs-makarsankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Sankranti-vs-makarsankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/sitemap.html" class="hover:text-white hover:underline transition-colors duration-200">Sitemap</a></li>
+          <li><a href="https://www.makarsankranti.net/start-of-spring.html" class="hover:text-white hover:underline transition-colors duration-200">Start-of-spring</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-pedda-festival.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-pedda-festival</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-uttarayaana.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-uttarayaana</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Wishes of Makarsankrnti</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/wishes/assamese.html" class="hover:text-white hover:underline transition-colors duration-200">Assamese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bhojpuri.html" class="hover:text-white hover:underline transition-colors duration-200">Bhojpuri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bihari.html" class="hover:text-white hover:underline transition-colors duration-200">Bihari</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/english.html" class="hover:text-white hover:underline transition-colors duration-200">English</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/gujarati.html" class="hover:text-white hover:underline transition-colors duration-200">Gujarati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kannada.html" class="hover:text-white hover:underline transition-colors duration-200">Kannada</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kashmiri.html" class="hover:text-white hover:underline transition-colors duration-200">Kashmiri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-play-script.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-play-script</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-garhwali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-garhwali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-gujrati.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-gujrati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-marwari-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-marwari-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-rajasthani.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-rajasthani</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-sanskrit-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-sanskrit-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-marathai.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-marathai</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/malyalam.html" class="hover:text-white hover:underline transition-colors duration-200">Malyalam</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/marathi.html" class="hover:text-white hover:underline transition-colors duration-200">Marathi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/nepalese.html" class="hover:text-white hover:underline transition-colors duration-200">Nepalese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/punjabi.html" class="hover:text-white hover:underline transition-colors duration-200">Punjabi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sanskrit.html" class="hover:text-white hover:underline transition-colors duration-200">Sanskrit</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sindhi.html" class="hover:text-white hover:underline transition-colors duration-200">Sindhi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/tamil.html" class="hover:text-white hover:underline transition-colors duration-200">Tamil</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/telugu.html" class="hover:text-white hover:underline transition-colors duration-200">Telugu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/wishes-new-beginning.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-new-beginning</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-prosperity</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Pages</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/adult-halloween-murder-mystery-party.html" class="hover:text-white hover:underline transition-colors duration-200">Adult Halloween Murder Mystery Party</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/economics-of-halloween-retail.html" class="hover:text-white hover:underline transition-colors duration-200">Economics Of Halloween Retail</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/evolution-of-slasher-cinema.html" class="hover:text-white hover:underline transition-colors duration-200">Evolution Of Slasher Cinema</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/family-friendly-halloween-watchlist.html" class="hover:text-white hover:underline transition-colors duration-200">Family Friendly Halloween Watchlist</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/halloween-candy-wine-pairing-guide.html" class="hover:text-white hover:underline transition-colors duration-200">Halloween Candy Wine Pairing Guide</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/halloween-cocktails-mocktails-safe-dry-ice.html" class="hover:text-white hover:underline transition-colors duration-200">Halloween Cocktails Mocktails Safe Dry Ice</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/halloween-sfx-makeup-beginners.html" class="hover:text-white hover:underline transition-colors duration-200">Halloween Sfx Makeup Beginners</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/haunted-porch-budget-decor-ideas.html" class="hover:text-white hover:underline transition-colors duration-200">Haunted Porch Budget Decor Ideas</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/last-minute-halloween-costumes-closet.html" class="hover:text-white hover:underline transition-colors duration-200">Last Minute Halloween Costumes Closet</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/leftover-halloween-candy-dessert-hacks.html" class="hover:text-white hover:underline transition-colors duration-200">Leftover Halloween Candy Dessert Hacks</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/overview.html" class="hover:text-white hover:underline transition-colors duration-200">Overview</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/real-life-haunted-landmarks-history-legends.html" class="hover:text-white hover:underline transition-colors duration-200">Real Life Haunted Landmarks History Legends</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/safe-stress-free-pet-halloween-costumes.html" class="hover:text-white hover:underline transition-colors duration-200">Safe Stress Free Pet Halloween Costumes</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/samhain-connection-halloween-origins.html" class="hover:text-white hover:underline transition-colors duration-200">Samhain Connection Halloween Origins</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/savory-spooky-halloween-snacks.html" class="hover:text-white hover:underline transition-colors duration-200">Savory Spooky Halloween Snacks</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/science-of-scared-fear-horror.html" class="hover:text-white hover:underline transition-colors duration-200">Science Of Scared Fear Horror</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/spooky-holidays-around-the-world.html" class="hover:text-white hover:underline transition-colors duration-200">Spooky Holidays Around The World</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/stingy-jack-jack-o-lantern-legend.html" class="hover:text-white hover:underline transition-colors duration-200">Stingy Jack Jack O Lantern Legend</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/sustainable-eco-friendly-halloween.html" class="hover:text-white hover:underline transition-colors duration-200">Sustainable Eco Friendly Halloween</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/trick-or-treating-history-souling-guising.html" class="hover:text-white hover:underline transition-colors duration-200">Trick Or Treating History Souling Guising</a></li>
+          <li><a href="https://www.makarsankranti.net/festival-guide/halloween/witches-crows-black-cats-halloween-superstitions.html" class="hover:text-white hover:underline transition-colors duration-200">Witches Crows Black Cats Halloween Superstitions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center text-sm text-gray-400">
+      <p class="text-sm text-gray-400">Pitru Paksha starts from Sep 26 </p>
+    </div>
+
+    <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+      <p class="text-sm text-gray-400">&copy; 2026 Makar Sankranti. All rights reserved.</p>
+      
+    </div>
+
+  </div>
+</footer>

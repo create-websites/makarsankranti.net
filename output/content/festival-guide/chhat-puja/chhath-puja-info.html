@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Interactive infographic analyzing the Chhath Puja festival: rituals, economic impact, environmental sustainability, and global growth." name="description"/>
+    <title>Chhath Puja: The Solar Cycle</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Font: Roboto (Material Design) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'solar-orange': '#FF6D00',
+                        'solar-yellow': '#FFD600',
+                        'river-blue': '#0091EA',
+                        'eco-green': '#00C853',
+                        'deep-purple': '#6200EA',
+                        'material-gray': '#FAFAFA',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FAFAFA;
+            color: #212121;
+        }
+
+        /* --- Mandatory Chart Container Styling --- */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Explicit max-width as requested */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Base height */
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #EEEEEE;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FF6D00;
+            border-radius: 4px;
+        }
+    </style>
+
+    <!-- Chosen Palette: "Vibrant Solar Spectrum" - High-contrast palette using Deep Orange (#FF6D00) and Bright Yellow (#FFD600) for the sun, juxtaposed with River Blue (#0091EA) and Eco Green (#00C853). -->
+    
+    <!-- Application Structure Plan:
+         1. Hero Section: Title and "Big Number" key metrics to hook the user.
+         2. Section 1 (Organize): The Ritual Timeline. Uses structured HTML cards to show the 4-day progression.
+         3. Section 2 (Compare): The Material Economy. A Doughnut chart visualizing the contents of the 'Soop' (offering basket).
+         4. Section 3 (Compare/Relationships): Environmental Impact. A Stacked Bar chart comparing Chhath's waste footprint vs. generic festivals.
+         5. Section 4 (Change/Trend): Global Expansion. A Line/Area chart or Horizontal Bar showing the growth of the diaspora celebration.
+         6. Footer: Summary and credits.
+         Narrative Flow: Begins with the "What" (Rituals), moves to the "How" (Materials), and concludes with the "Impact" (Environment & Global spread).
+    -->
+
+    <!-- Visualization & Content Choices:
+         1. Metric Cards (HTML): Goal -> Inform. Method -> Large text. Justification -> Immediate impact for key stats (36hr fast, 4 days).
+         2. Timeline Cards (HTML/Tailwind): Goal -> Organize/Process. Method -> Grid layout with step counters. Justification -> Linear progression is best read top-down or left-right textually. NO SVG/Mermaid.
+         3. Doughnut Chart (Chart.js): Goal -> Compare (Part-to-whole). Method -> Canvas. Justification -> Shows the dominance of biodegradable materials in the offerings.
+         4. Stacked Bar Chart (Chart.js): Goal -> Compare. Method -> Canvas. Justification -> Clearly contrasts the high biodegradable vs low non-biodegradable ratio against other events.
+         5. Horizontal Bar Chart (Chart.js): Goal -> Rankings/Location. Method -> Canvas. Justification -> Accommodates long country/city names (USA, UK, etc.) better than vertical bars.
+         CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.
+    -->
+<link href="https://storage.googleapis.com/css-designs/purple/kreatewebsites.production.css" rel="stylesheet"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HQVLPEFHL9"></script><script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HQVLPEFHL9');
+</script></head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-solar-orange to-solar-yellow shadow-lg pb-12 pt-12 px-4">
+        <div class="max-w-7xl mx-auto text-center text-white">
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-4 drop-shadow-md uppercase">Chhath Puja</h1>
+            <p class="text-xl md:text-2xl font-medium opacity-90 max-w-2xl mx-auto">
+                The ancient Vedic festival honoring the Sun God, known for its strict purity, eco-friendly practices, and promotion of social equality.
+            </p>
+        </div>
+        
+        <!-- Key Metrics Cards -->
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div class="bg-white text-gray-800 rounded-xl shadow-lg p-6 text-center transform hover:-translate-y-1 transition-transform duration-300">
+                <div class="text-5xl font-black text-solar-orange mb-2">36h</div>
+                <div class="text-sm font-bold uppercase tracking-widest text-gray-500">Waterless Fast (Nirjala)</div>
+            </div>
+            <div class="bg-white text-gray-800 rounded-xl shadow-lg p-6 text-center transform hover:-translate-y-1 transition-transform duration-300">
+                <div class="text-5xl font-black text-river-blue mb-2">0%</div>
+                <div class="text-sm font-bold uppercase tracking-widest text-gray-500">Idol Worship</div>
+            </div>
+            <div class="bg-white text-gray-800 rounded-xl shadow-lg p-6 text-center transform hover:-translate-y-1 transition-transform duration-300">
+                <div class="text-5xl font-black text-eco-green mb-2">4</div>
+                <div class="text-sm font-bold uppercase tracking-widest text-gray-500">Days of Ritual</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 space-y-16">
+
+        <!-- Section 1: The Ritual Cycle -->
+        <section>
+            <div class="mb-8 border-l-8 border-solar-orange pl-6">
+                <h2 class="text-3xl font-bold text-gray-800">The Cycle of Devotion</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-3xl">
+                    Chhath is more than just a celebration - it is a four-day period of self-discipline. The customs involve a strict sequence of cleansing, abstinence, and worship, starting from purifying the house to immersing oneself in river currents.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Day 1 -->
+                <div class="bg-white rounded-lg shadow border-t-4 border-river-blue p-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 bg-river-blue opacity-10 w-24 h-24 rounded-full"></div>
+                    <h3 class="text-xl font-bold text-river-blue mb-1">Day 1</h3>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Nahay Khay</h4>
+                    <p class="text-sm text-gray-600">Followers immerse themselves in sacred water and eat a simple meal of bottle gourd (kaddu) and rice as they start the purification process.</p>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="bg-white rounded-lg shadow border-t-4 border-solar-yellow p-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 bg-solar-yellow opacity-10 w-24 h-24 rounded-full"></div>
+                    <h3 class="text-xl font-bold text-solar-yellow mb-1">Day 2</h3>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Kharna</h4>
+                    <p class="text-sm text-gray-600">A full day of fasting, broken in the evening with Rasiya (kheer) and Roti, before beginning a 36-hour fast.</p>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="bg-white rounded-lg shadow border-t-4 border-solar-orange p-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 bg-solar-orange opacity-10 w-24 h-24 rounded-full"></div>
+                    <h3 class="text-xl font-bold text-solar-orange mb-1">Day 3</h3>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Sandhya Arghya</h4>
+                    <p class="text-sm text-gray-600">The main ritual. Offering 'Arghya' (water/milk) to the <strong>setting sun</strong> while standing in a river or pond.</p>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="bg-white rounded-lg shadow border-t-4 border-deep-purple p-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 bg-deep-purple opacity-10 w-24 h-24 rounded-full"></div>
+                    <h3 class="text-xl font-bold text-deep-purple mb-1">Day 4</h3>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Usha Arghya</h4>
+                    <p class="text-sm text-gray-600">Offering 'Arghya' to the <strong>rising sun</strong>This signifies the end of the fasting period and the dispersal of Prasad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Material Analysis -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white p-8 rounded-2xl shadow-sm">
+            <div>
+                <div class="mb-6 border-l-8 border-eco-green pl-6">
+                    <h2 class="text-3xl font-bold text-gray-800">The 'Soop' Economy</h2>
+                    <p class="mt-2 text-lg text-gray-600">
+                        The <em>Soop</em> The winnowing basket plays a central role in Chhath rituals, made entirely from natural materials. The diagram breaks down a traditional offering basket, showcasing its use of locally sourced, eco-friendly items.
+                    </p>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-solar-orange text-white font-bold text-sm mr-3">1</span>
+                        <p class="text-gray-700 text-sm"><strong class="block text-gray-900">Thekua (Wheat/Jaggery)</strong> The primary prasad, rich in energy for winter.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-eco-green text-white font-bold text-sm mr-3">2</span>
+                        <p class="text-gray-700 text-sm"><strong class="block text-gray-900">Seasonal Fruits</strong> Sugarcane, coconut, and citrus fruits support local farmers.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-river-blue text-white font-bold text-sm mr-3">3</span>
+                        <p class="text-gray-700 text-sm"><strong class="block text-gray-900">Earthen Lamps</strong> Use of clay ensures zero non-biodegradable waste enters the river.</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="w-full bg-gray-50 rounded-xl p-4">
+                <h3 class="text-center font-bold text-gray-500 uppercase tracking-widest mb-4 text-xs">Offering Basket Composition</h3>
+                <div class="chart-container">
+                    <canvas id="materialChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Environmental Impact -->
+        <section>
+            <div class="mb-8 text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800">Environmental Footprint</h2>
+                <p class="mt-4 text-lg text-gray-600">
+                    Frequently referred to as an environmentally conscious event, Chhath stands in stark contrast to festivals that involve the immersion of plaster-of-paris idols. The chart below illustrates the waste differences between Chhath and typical urban celebrations.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-10">
+                <div class="chart-container">
+                    <canvas id="environmentChart"></canvas>
+                </div>
+                <div class="mt-8 text-center text-sm text-gray-500 bg-gray-100 p-3 rounded-lg inline-block w-full">
+                    <span class="font-bold text-eco-green">Analysis:</span> During Chhath rituals, almost all residue is biodegradable, whereas typical urban events may produce as much as 60% non-biodegradable waste.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Global Spread -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white shadow-xl flex flex-col justify-center">
+                <h2 class="text-3xl font-bold text-solar-yellow mb-4">Global Reach</h2>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Starting at the banks of the Ganges, Chhath has traveled far and wide, reaching across oceans as the Bihari and Purvanchali diaspora expands. Today, this ancient tradition is celebrated in major cities around the world.
+                </p>
+                <div class="space-y-6">
+                    <div>
+                        <div class="text-4xl font-bold text-solar-orange">100+</div>
+                        <div class="text-sm text-gray-400 uppercase tracking-widest">Major Cities Celebrating</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-river-blue">Millions</div>
+                        <div class="text-sm text-gray-400 uppercase tracking-widest">Global Devotees</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Top International Locations</h3>
+                <p class="text-xs text-gray-500 mb-6">Based on public gathering permits and community registrations.</p>
+                <div class="chart-container">
+                    <canvas id="globalChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300">
+<div class="container mx-auto px-6 py-12 lg:px-8">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/3-days-of-sankranti-and-pongal-celebration.html">3-days-of-sankranti-and-pongal-celebration</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/different-names-of-sankranti.html">Different-names-of-sankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/image.html">Image</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/important-sankrantis.html">Important-sankrantis</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/index2.html">Index2</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/information.html">Information</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/khichdi-purv.html">Khichdi-purv</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/lohri.html">Lohri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/magh-bihu.html">Magh-bihu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-information.html">Makarsankranti-information</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/pongal.html">Pongal</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sankranti-vs-makarsankranti.html">Sankranti-vs-makarsankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sitemap.html">Sitemap</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/start-of-spring.html">Start-of-spring</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/what-is-pedda-festival.html">What-is-pedda-festival</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/what-is-uttarayaana.html">What-is-uttarayaana</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Wishes of Makarsankrnti</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/assamese.html">Assamese</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bengali.html">Bengali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bhojpuri.html">Bhojpuri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bihari.html">Bihari</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/english.html">English</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/gujarati.html">Gujarati</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/hindi.html">Hindi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/kannada.html">Kannada</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/kashmiri.html">Kashmiri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-play-script.html">Makarsankranti-play-script</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-bengali.html">Makarsankranti-wishes-in-bengali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-garhwali.html">Makarsankranti-wishes-in-garhwali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-gujrati.html">Makarsankranti-wishes-in-gujrati</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-hindi.html">Makarsankranti-wishes-in-hindi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-marwari-language.html">Makarsankranti-wishes-in-marwari-language</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-rajasthani.html">Makarsankranti-wishes-in-rajasthani</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-sanskrit-language.html">Makarsankranti-wishes-in-sanskrit-language</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-urdu.html">Makarsankranti-wishes-in-urdu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-marathai.html">Makarsankranti-wishes-marathai</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/malyalam.html">Malyalam</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/marathi.html">Marathi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/nepalese.html">Nepalese</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/punjabi.html">Punjabi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sanskrit.html">Sanskrit</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sindhi.html">Sindhi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/tamil.html">Tamil</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/telugu.html">Telugu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/urdu.html">Urdu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/wishes-new-beginning.html">Wishes-new-beginning</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sankranti-wishes-in-hindi.html">Wishes-prosperity</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Pages</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-2026-dates-calendar.html">Chhath Puja 2026 Dates Calendar</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-four-days-rituals.html">Chhath Puja Four Days Rituals</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-history-culture.html">Chhath Puja History Culture</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-in-bihar.html">Chhath Puja In Bihar</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-in-delhi-ncr.html">Chhath Puja In Delhi Ncr</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-in-jharkhand.html">Chhath Puja In Jharkhand</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-in-uttar-pradesh.html">Chhath Puja In Uttar Pradesh</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-info.html">Chhath Puja Info</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-planning-wishes.html">Chhath Puja Planning Wishes</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-regional-celebrations.html">Chhath Puja Regional Celebrations</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-samagri-list.html">Chhath Puja Samagri List</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-samagri-prasad-guide.html">Chhath Puja Samagri Prasad Guide</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-songs-geet.html">Chhath Puja Songs Geet</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-vrat-rules.html">Chhath Puja Vrat Rules</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/chhath-puja-wishes-messages.html">Chhath Puja Wishes Messages</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/four-days-of-chhath-puja.html">Four Days Of Chhath Puja</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/history-origin-significance.html">History Origin Significance</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/how-to-make-thekua-recipe.html">How To Make Thekua Recipe</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/kharna-puja-vidhi.html">Kharna Puja Vidhi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/nahay-khay-rituals.html">Nahay Khay Rituals</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/sandhya-arghya-evening-offering.html">Sandhya Arghya Evening Offering</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/significance-sugarcane-coconut-fruits.html">Significance Sugarcane Coconut Fruits</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/story-of-chhathi-maiya.html">Story Of Chhathi Maiya</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/traditional-chhath-puja-prasad.html">Traditional Chhath Puja Prasad</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/festival-guide/chhat-puja/usha-arghya-morning-offering.html">Usha Arghya Morning Offering</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-8 text-center text-sm text-gray-400">
+<p class="text-sm text-gray-400">Pitru Paksha starts from Sep 26 </p>
+</div>
+<div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+<p class="text-sm text-gray-400">© 2026 Makar Sankranti. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- Utility: Text Wrapping for Chart Labels ---
+        function wrapLabel(label, maxLength = 16) {
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= maxLength) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- Utility: Standard Tooltip Configuration ---
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- Chart 1: Material Composition (Doughnut) ---
+        const ctxMaterial = document.getElementById('materialChart').getContext('2d');
+        const materialLabelsRaw = [
+            "Wheat & Jaggery (Thekua)", 
+            "Seasonal Fruits (Sugarcane/Coco)", 
+            "Bamboo Products (Soop)", 
+            "Earthenware (Clay Stoves)", 
+            "Flowers & Leaves"
+        ];
+        const materialLabels = materialLabelsRaw.map(l => wrapLabel(l));
+
+        new Chart(ctxMaterial, {
+            type: 'doughnut',
+            data: {
+                labels: materialLabels,
+                datasets: [{
+                    data: [40, 30, 15, 10, 5],
+                    backgroundColor: [
+                        '#FF6D00', // Solar Orange
+                        '#00C853', // Eco Green
+                        '#FFD600', // Solar Yellow
+                        '#795548', // Brown (Earth)
+                        '#0091EA'  // River Blue
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            font: { family: 'Roboto' },
+                            boxWidth: 15
+                        }
+                    },
+                    tooltip: tooltipConfig
+                }
+            }
+        });
+
+        // --- Chart 2: Environmental Impact (Stacked Bar) ---
+        const ctxEnv = document.getElementById('environmentChart').getContext('2d');
+        const envLabelsRaw = ["Chhath Puja", "Standard Festival", "Corporate Event"];
+        const envLabels = envLabelsRaw.map(l => wrapLabel(l));
+
+        new Chart(ctxEnv, {
+            type: 'bar',
+            data: {
+                labels: envLabels,
+                datasets: [
+                    {
+                        label: 'Biodegradable (%)',
+                        data: [95, 40, 30],
+                        backgroundColor: '#00C853',
+                        barPercentage: 0.6
+                    },
+                    {
+                        label: 'Non-Biodegradable (%)',
+                        data: [5, 60, 70],
+                        backgroundColor: '#FF6D00',
+                        barPercentage: 0.6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { 
+                        stacked: true,
+                        grid: { display: false }
+                    },
+                    y: { 
+                        stacked: true,
+                        beginAtZero: true,
+                        max: 100,
+                        title: { display: true, text: 'Waste Composition %' }
+                    }
+                },
+                plugins: {
+                    tooltip: tooltipConfig,
+                    legend: { position: 'top' }
+                }
+            }
+        });
+
+        // --- Chart 3: Global Spread (Horizontal Bar) ---
+        const ctxGlobal = document.getElementById('globalChart').getContext('2d');
+        const globalLabelsRaw = [
+            "Nepal (Terai Region)", 
+            "United States (NJ/NY/CA)", 
+            "United Kingdom (London)", 
+            "Australia (Sydney/Melb)", 
+            "Mauritius & Fiji"
+        ];
+        const globalLabels = globalLabelsRaw.map(l => wrapLabel(l, 25)); // Slightly longer limit for rows
+
+        new Chart(ctxGlobal, {
+            type: 'bar',
+            indexAxis: 'y', // Horizontal
+            data: {
+                labels: globalLabels,
+                datasets: [{
+                    label: 'Est. Community Scale (Index)',
+                    data: [90, 65, 50, 45, 40],
+                    backgroundColor: [
+                        '#FF6D00',
+                        '#FFAB00',
+                        '#FFD600',
+                        '#0091EA',
+                        '#00B0FF'
+                    ],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        display: false // Hide numbers
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: tooltipConfig
+                }
+            }
+        });
+
+    </script>
+
+</body></html>

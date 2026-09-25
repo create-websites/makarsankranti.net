@@ -1,408 +1,385 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
+  <title>"Diwali: A Luminous Journey through the Festival of Lights"</title>
+  <meta content="&quot;Diwali, or Deepavali, is a significant five-day Hindu festival celebrated worldwide, symbolizing the triumph of light over darkness, good over evil, and knowledge over ignorance. The festival honors the return of Lord Rama, his wife Sita, and devotee Hanuman to Ayodhya after 14 years of exile, invoking the spirit of 'Ram Rajya', an ideal state of governance marked by peace, prosperity, and righteousness.&quot;" name="description"/>
+  <meta content="index, follow" name="robots"/>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en">
-	<head id="ctl00_head1"><title>
-	"Diwali: A Luminous Journey through the Festival of Lights"
-</title><meta http-equiv="content-type" content="text/html; charset=utf-8" /><link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700" rel="stylesheet" />
-		<noscript><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/5grid/core.css" /><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/5grid/core-desktop.css" /><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/5grid/core-1200px.css" /><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/5grid/core-noscript.css" /><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/style.css" /><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/style-desktop.css" /></noscript>
-		<script src="https://pictures.makarsankranti.net/site1/css/5grid/jquery.js"></script>
-		<script src="https://pictures.makarsankranti.net/site1/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none&amp;mobileUI.titleBarHeight=60&amp;mobileUI.openerWidth=52"></script>
-		<!--[if IE 9]><link rel="stylesheet" href="https://pictures.makarsankranti.net/site1/css/style-ie9.css" /><![endif]-->
-	<meta name="description" content="&quot;Diwali, or Deepavali, is a significant five-day Hindu festival celebrated worldwide, symbolizing the triumph of light over darkness, good over evil, and knowledge over ignorance. The festival honors the return of Lord Rama, his wife Sita, and devotee Hanuman to Ayodhya after 14 years of exile, invoking the spirit of &#39;Ram Rajya&#39;, an ideal state of governance marked by peace, prosperity, and righteousness.&quot;" /><meta name="keywords" content="Diwali, Hindu Festivals, Light Over Darkness, Lord Rama, Sita, Hanuman, Ram Rajya, Diwali Wishes, Puja Rituals, Lord Ganesha" /></head>
-	<body>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-	<!-- ********************************************************* -->  
-        <!-- show double header               --#include virtual="header.inc"- -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Tiro+Devanagari+Sanskrit:ital@0;1&amp;display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg:#FDFBF8;
+      --surface:#FFFFFF;
+      --amber-50:#FFFBEB;
+      --amber-100:#FEF3C7;
+      --amber-200:#FDE68A;
+      --amber-600:#D97706;
+      --amber-700:#B45309;
+      --amber-800:#92400E;
+      --amber-900:#78350F;
+      --stone-100:#F5F5F4;
+      --stone-200:#E7E5E4;
+      --stone-500:#78716C;
+      --stone-600:#57534E;
+      --stone-700:#44403C;
+      --shadow:0 10px 30px rgba(120,53,15,.08);
+    }
+
+    * { box-sizing:border-box; }
+
+    html {
+      scroll-behavior:smooth;
+      scroll-padding-top:86px;
+    }
+
+    body {
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(253,230,138,.28), transparent 28%),
+        radial-gradient(circle at 85% 18%, rgba(254,243,199,.45), transparent 28%),
+        var(--bg);
+      color:var(--stone-700);
+      line-height:1.7;
+    }
+
+    .font-sanskrit,
+    h1,
+    h2,
+    h3 {
+      font-family:'Tiro Devanagari Sanskrit',serif;
+    }
+
+    .container-shell {
+      width:min(1180px,calc(100% - 32px));
+      margin-inline:auto;
+    }
+
+    .glass-nav {
+      background:rgba(254,243,199,.58);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(217,119,6,.12);
+    }
+
+    .hero-shell {
+      background:linear-gradient(135deg, rgba(255,251,235,.95), rgba(254,243,199,.72));
+      border:1px solid rgba(217,119,6,.18);
+      border-radius:1.5rem;
+      box-shadow:var(--shadow);
+    }
+
+    .eyebrow {
+      display:inline-block;
+      padding:.45rem .8rem;
+      border-radius:999px;
+      background:var(--amber-50);
+      border:1px solid var(--amber-200);
+      color:var(--amber-800);
+      font-size:.75rem;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .tag-sentence {
+      display:inline-block;
+      margin-top:1rem;
+      padding:.55rem 1rem;
+      border-radius:999px;
+      background:var(--amber-50);
+      border:1px solid var(--amber-200);
+      color:var(--amber-800);
+      font-weight:700;
+    }
+
+    .hero-desc {
+      white-space:pre-line;
+    }
+
+    .section-title {
+      color:var(--amber-800);
+      font-size:clamp(1.9rem,4vw,2.9rem);
+      line-height:1.2;
+    }
+
+    .gallery-grid {
+      display:grid;
+      grid-template-columns:1fr;
+      gap:1.5rem;
+    }
+
+    .gallery-item,
+    .article-card {
+      background:rgba(255,255,255,.96);
+      border:1px solid var(--stone-200);
+      border-radius:1rem;
+      box-shadow:var(--shadow);
+    }
+
+    .gallery-item {
+      overflow:hidden;
+      transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .gallery-item:hover {
+      transform:translateY(-4px);
+      border-color:var(--amber-200);
+      box-shadow:0 16px 38px rgba(120,53,15,.14);
+    }
+
+    .gallery-item a { display:block; }
+
+    .gallery-item img {
+      display:block;
+      width:100%;
+      height:auto;
+      background:#fff;
+    }
+
+    .caption {
+      padding:1rem 1.25rem 1.2rem;
+      color:var(--amber-800);
+      font-size:1rem;
+      font-weight:700;
+      line-height:1.5;
+    }
+
+    .article-wrap {
+      margin-top:3rem;
+    }
+
+    .article-card {
+      padding:1.75rem;
+    }
+
+    .article-content {
+      color:var(--stone-600);
+      font-size:1.05rem;
+      line-height:1.85;
+      overflow-wrap:anywhere;
+    }
+
+    .article-content h2 {
+      color:var(--amber-800);
+      font-size:2rem;
+      line-height:1.2;
+      margin:1.6em 0 .7em;
+    }
+
+    .article-content h3 {
+      color:var(--amber-700);
+      font-size:1.5rem;
+      line-height:1.25;
+      margin:1.5em 0 .6em;
+    }
+
+    .article-content h4 {
+      color:var(--amber-700);
+      font-size:1.2rem;
+      margin:1.4em 0 .5em;
+    }
+
+    .article-content p,
+    .article-content ul,
+    .article-content ol,
+    .article-content table,
+    .article-content blockquote {
+      margin-top:1em;
+      margin-bottom:1em;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      padding-left:1.4rem;
+    }
+
+    .article-content a {
+      color:var(--amber-700);
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
+
+    .article-content blockquote {
+      border-left:4px solid var(--amber-600);
+      background:var(--amber-50);
+      padding:1rem 1.2rem;
+      border-radius:.75rem;
+      color:var(--amber-900);
+    }
+
+    .article-content table {
+      width:100%;
+      border-collapse:collapse;
+      background:#fff;
+    }
+
+    .article-content th,
+    .article-content td {
+      border:1px solid var(--stone-200);
+      padding:.75rem;
+      text-align:left;
+      vertical-align:top;
+    }
+
+    .article-content th {
+      background:var(--amber-50);
+      color:var(--amber-800);
+    }
+
+    .footer-link {
+      color:var(--stone-600);
+      transition:color .2s ease;
+    }
+
+    .footer-link:hover {
+      color:var(--amber-700);
+    }
+
+    @media(min-width:900px) {
+      .gallery-grid {
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:760px) {
+      .desktop-links { display:none; }
+      .container-shell { width:min(100% - 24px,1180px); }
+    }
+  </style>
+<link href="https://storage.googleapis.com/css-designs/purple/kreatewebsites.production.css" rel="stylesheet"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HQVLPEFHL9"></script><script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HQVLPEFHL9');
+</script></head>
+
+<body>
+
+  <header class="glass-nav sticky top-0 z-50">
+    <nav class="container-shell py-4">
+      <div class="flex items-center justify-between gap-4">
+        <a class="font-sanskrit text-2xl font-bold text-amber-800 no-underline" href="/">
+          मकर-सङ्क्रान्ति
+        </a>
+
+        <div class="desktop-links hidden md:flex space-x-8">
+          <a class="text-stone-600 hover:text-amber-700 transition" href="/">Home</a>
+          <a class="text-stone-600 hover:text-amber-700 transition" href="#slides">Slides</a>
+          <a class="text-stone-600 hover:text-amber-700 transition" href="#article">Article</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-shell py-10 md:py-14">
+
+    <section class="hero-shell text-center px-6 py-12 md:px-10 md:py-16">
+      <span class="eyebrow">Festival Guide</span>
+
+      <h1 class="font-sanskrit text-4xl md:text-6xl font-bold text-amber-900 leading-tight mt-5">
+        "Diwali: A Luminous Journey through the Festival of Lights"
+      </h1>
+
+      
+
+      <div class="hero-desc mt-6 max-w-3xl mx-auto text-lg md:text-xl text-stone-600">
+        "Diwali, or Deepavali, is a significant five-day Hindu festival celebrated worldwide, symbolizing the triumph of light over darkness, good over evil, and knowledge over ignorance. The festival honors the return of Lord Rama, his wife Sita, and devotee Hanuman to Ayodhya after 14 years of exile, invoking the spirit of 'Ram Rajya', an ideal state of governance marked by peace, prosperity, and righteousness."
+      </div>
+    </section>
+
+    <section class="my-16 md:my-24" id="slides">
+      <div class="text-center mb-10">
+        <h2 class="section-title">Explore the Visual Guide</h2>
+        <p class="mt-4 text-stone-600 max-w-3xl mx-auto">
+          Browse the slides below to explore the story, traditions, ideas, and highlights.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
         
-
-<div id="header-wrapper">
-				<header class="5grid-layout" id="site-header">
-					<div class="row">
-						<div class="12u">
-							<div id="logo">
-								<h1> <a id="ctl00_header2_myTitle" class="mobileUI-site-name" href="https://www.makarsankranti.net/">Makar Sankranti</a></h1>
-
-							</div>
- 
-        
-          <nav class="mobileUI-site-nav" id="site-nav">  
-<ul>
-    
-
-    
-
-
-    <li>
-			<a id="ctl00_header2_RepLinks_ctl01_Hyperlink2" href="https://www.makarsankranti.net/">Home</a>									
-		
-    </li>
-
-
-
-
-
-             
- 
- 	</ul>
-							</nav>
-						</div>
-					</div>
-				</header>
-			</div>	
-		
-       
-
-		<div id="main-wrapper" class="subpage">
-				<div class="5grid-layout">
-					<div class="row">
-						<div class="9u">
-					
-							<!-- Content -->
-
-								<article class="first">
-									 
-
-    
-
-															
-																<h3><span id="ctl00_ContentPlaceHolder1_title">"Diwali: A Luminous Journey through the Festival of Lights"</span></h3>
-														
-																
-																		 <span> <span id="ctl00_ContentPlaceHolder1_metadesc">"Diwali, or Deepavali, is a significant five-day Hindu festival celebrated worldwide, symbolizing the triumph of light over darkness, good over evil, and knowledge over ignorance. The festival honors the return of Lord Rama, his wife Sita, and devotee Hanuman to Ayodhya after 14 years of exile, invoking the spirit of 'Ram Rajya', an ideal state of governance marked by peace, prosperity, and righteousness."</span></span>				
-                        <br />     
-													
-					   
-
-                                         
-											
-										
-										
-                                           
-
-							
-									
-									<span id="ctl00_ContentPlaceHolder1_labeltext"></span>	
-
-                                    		                       														
-                            <br />
-                                 
-                            <br />
-                            
-                             <div class="fb-activity" data-site="https://www.makarsankranti.net/" data-action="likes, recommends" data-colorscheme="light" data-header="true"></div>
-	
-								
-                                <div class="fb-comments" data-href="https://www.makarsankranti.net/" data-numposts="5" data-colorscheme="light" data-order-by="reverse_time"></div>
-			
-<!--
-                            <div class="fb-post" data-href="https://www.facebook.com/DiwaliCelebrations" data-width="500"></div>		
-                              <div class="fb-recommendations" data-site="https://www.makarsankranti.net/" data-action="likes, recommends" data-colorscheme="light" data-header="true"></div>
-		
-   				-->			
-
-
-
-								</article>							
-
-						</div>
-
-					<div class="3u">
-						
-							<!-- Sidebar -->
-							
-								<section>
-
-									<h3>Topics</h3>
-									<ul class="link-list">
-																				
-
-    
-
-
-
-												
-						
-			<a id="ctl00_articlessub_RepLinks_ctl01_title" class="nav-item nav-link active" href="https://www.makarsankranti.net/"><em><b>Home</b></em></a>
-            
-           
-       
-
-
-
-
-
-
-
-             
- 
- 
- 
-	
-									</ul>
-								</section>
-
-								<section class="last">
-									<h3>Related Links</h3>
-									<p>
-																
-									</p>
-									<ul class="link-list">
-										
-
-    
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl01_title" href="https://www.makarsankranti.net/">Home</a>
-            </li>	
-
-
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl02_title" href="https://www.makarsankranti.net/Holi%20Festival/">Holi Festival</a>
-            </li>	
-
-
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl03_title" href="https://www.makarsankranti.net/holi-festival/">Holi festival</a>
-            </li>	
-
-
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl04_title" href="https://www.makarsankranti.net/kite-festival/">Kite festival</a>
-            </li>	
-
-
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl05_title" href="https://www.makarsankranti.net/Photos/">Photos</a>
-            </li>	
-
-
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl06_title" href="https://www.makarsankranti.net/ramayana-stories/">Ramayana stories</a>
-            </li>	
-
-
-
-
-
-												
-		<li>								
-		<a id="ctl00_articleshome_RepLinks_ctl07_title" href="https://www.makarsankranti.net/sankranti-blog/">Sankranti blog</a>
-            </li>	
-
-
-
-
-
-
-
-             
- 
- 
- 
-
-										
-             
- 
- 
- 
- 
-									</ul>
-								</section>
-						
-						</div>
-					</div>
-				</div>
-		</div>
-			
-        
-
-<div id="footer-wrapper">
-				<footer class="5grid-layout" id="site-footer">
-					<div class="row">
-						<div class="3u">
-							<section class="first">
-								<h2><a id="ctl00_footer_footerhead" title="Makar Sankranti" href="https://www.makarsankranti.net/">Makar Sankranti</a></h2>
-								<ul class="link-list">
-										
-									
-									
-                                    <table id="ctl00_footer_RepLinks" cellspacing="0" border="0">
-	<tr>
-		<td>
-
-    
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl01_title" href="https://www.makarsankranti.net/">Home</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl02_title" href="https://www.makarsankranti.net/Holi%20Festival/">Holi Festival</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl03_title" href="https://www.makarsankranti.net/holi-festival/">Holi festival</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl04_title" href="https://www.makarsankranti.net/kite-festival/">Kite festival</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl05_title" href="https://www.makarsankranti.net/Photos/">Photos</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl06_title" href="https://www.makarsankranti.net/ramayana-stories/">Ramayana stories</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-												
-		<li>								
-		<a id="ctl00_footer_RepLinks_ctl07_title" href="https://www.makarsankranti.net/sankranti-blog/">Sankranti blog</a>
-            </li>	
-
-
-</td>
-	</tr><tr>
-		<td>
-
-
-
-</td>
-	</tr>
-</table>
-                                    
-
-                   </ul>
-							</section>
-						</div>
-
-                        <div class="3u">
-							<section >
-								<h2>Set 2</h2>
-								<ul class="link-list">
-										
-									
-									
-                                    
-                                    
-
-                   </ul>
-							</section>
-						</div>
-                        <div class="3u">
-							<section >
-								<h2>Set 3</h2>
-								<ul class="link-list">
-										
-									
-									
-                                    
-                                    
-
-                   </ul>
-							</section>
-						</div>
-
-                        <div class="3u">
-							<section class="last" >
-								<h2>Set 4</h2>
-								<ul class="link-list">
-										
-									
-									
-                                    
-                                    
-
-                   </ul>
-							</section>
-						</div>
-                        	</div>
-					<div class="row">
-						<div class="12u">
-							<div class="divider"></div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="12u">
-							<div id="copyright">
-								&copy; Copyright.  Design: <a id="ctl00_footer_cright">Makar Sankranti</a> | <a id="ctl00_footer_sitemap"></a>  | <a id="ctl00_footer_privacypolicy" href="Makar%20Sankrantiprivacypolicy.html">Privacy Policy</a> 
-							</div>
-						</div>
-					</div>
-				</footer>
-		<!-- Footer -->
-
-
-
-	</body>
-</html>
+      </div>
+
+      
+    </section>
+
+  </main>
+
+  <footer class="bg-gray-800 text-gray-300">
+<div class="container mx-auto px-6 py-12 lg:px-8">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/3-days-of-sankranti-and-pongal-celebration.html">3-days-of-sankranti-and-pongal-celebration</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/different-names-of-sankranti.html">Different-names-of-sankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/image.html">Image</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/important-sankrantis.html">Important-sankrantis</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/index2.html">Index2</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/information.html">Information</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/khichdi-purv.html">Khichdi-purv</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/lohri.html">Lohri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/magh-bihu.html">Magh-bihu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-information.html">Makarsankranti-information</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/pongal.html">Pongal</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sankranti-vs-makarsankranti.html">Sankranti-vs-makarsankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sitemap.html">Sitemap</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/start-of-spring.html">Start-of-spring</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/what-is-pedda-festival.html">What-is-pedda-festival</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/what-is-uttarayaana.html">What-is-uttarayaana</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Wishes of Makarsankrnti</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/assamese.html">Assamese</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bengali.html">Bengali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bhojpuri.html">Bhojpuri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bihari.html">Bihari</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/english.html">English</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/gujarati.html">Gujarati</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/hindi.html">Hindi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/kannada.html">Kannada</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/kashmiri.html">Kashmiri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-play-script.html">Makarsankranti-play-script</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-bengali.html">Makarsankranti-wishes-in-bengali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-garhwali.html">Makarsankranti-wishes-in-garhwali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-gujrati.html">Makarsankranti-wishes-in-gujrati</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-hindi.html">Makarsankranti-wishes-in-hindi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-marwari-language.html">Makarsankranti-wishes-in-marwari-language</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-rajasthani.html">Makarsankranti-wishes-in-rajasthani</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-sanskrit-language.html">Makarsankranti-wishes-in-sanskrit-language</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-urdu.html">Makarsankranti-wishes-in-urdu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-marathai.html">Makarsankranti-wishes-marathai</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/malyalam.html">Malyalam</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/marathi.html">Marathi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/nepalese.html">Nepalese</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/punjabi.html">Punjabi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sanskrit.html">Sanskrit</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sindhi.html">Sindhi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/tamil.html">Tamil</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/telugu.html">Telugu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/urdu.html">Urdu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/wishes-new-beginning.html">Wishes-new-beginning</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sankranti-wishes-in-hindi.html">Wishes-prosperity</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-8 text-center text-sm text-gray-400">
+<p class="text-sm text-gray-400">Pitru Paksha starts from Sep 26 </p>
+</div>
+<div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+<p class="text-sm text-gray-400">© 2026 Makar Sankranti. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+
+
+</body></html>

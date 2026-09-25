@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>Sankranti Cards</title>
+
+  <style>
+    :root{
+      --bg1:#fff7e6;
+      --bg2:#ffe6b3;
+      --card:#ffffff;
+      --text:#2b2b2b;
+      --muted:#6b6b6b;
+      --accent:#d97706; /* warm saffron */
+      --shadow: 0 10px 25px rgba(0,0,0,.12);
+      --radius: 18px;
+      --gap: 18px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 500px at 10% 0%, var(--bg2), transparent),
+                  radial-gradient(900px 400px at 90% 10%, #ffd08a, transparent),
+                  linear-gradient(180deg, var(--bg1), #fff);
+      min-height:100vh;
+    }
+
+    .wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+
+    header{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .title{
+      line-height:1.05;
+    }
+    .title h1{
+      margin:0;
+      font-size: 34px;
+      letter-spacing: .2px;
+    }
+    .title p{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size: 14px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius: 999px;
+      background: rgba(217,119,6,.12);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--gap);
+      margin-top: 18px;
+    }
+
+    @media (max-width: 900px){
+      .grid{grid-template-columns: repeat(2, minmax(0, 1fr));}
+    }
+    @media (max-width: 560px){
+      header{flex-direction:column; align-items:flex-start;}
+      .grid{grid-template-columns: 1fr;}
+    }
+
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, box-shadow .15s ease;
+      border: 1px solid rgba(0,0,0,.06);
+    }
+    .card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(0,0,0,.16);
+    }
+
+    .card a{
+      color: inherit;
+      text-decoration:none;
+      display:block;
+    }
+
+    .thumb{
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background: #f4f4f4;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+      transform: scale(1.01);
+    }
+
+    .meta{
+      padding: 12px 14px 14px;
+      border-top: 1px solid rgba(0,0,0,.06);
+    }
+    .meta .label{
+      font-weight: 800;
+      letter-spacing: .4px;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin: 0;
+      color: #1f2937;
+    }
+    .meta .hint{
+      margin: 6px 0 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    footer{
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align:center;
+    }
+  </style>
+<!-- Google tag (gtag.js) --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-04RP1MY6ET"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-04RP1MY6ET');
+</script><script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9804321536688475"></script><link href="https://storage.googleapis.com/css-designs/purple/kreatewebsites.production.css" rel="stylesheet"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HQVLPEFHL9"></script><script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HQVLPEFHL9');
+</script></head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>Sankranti</h1>
+        <p>Choose a card below to open the full page.</p>
+      </div>
+      <div class="badge">🪁 Festival Card Collection</div>
+    </header>
+
+    <section class="grid">
+
+      <!-- 1 -->
+      <article class="card">
+        <a href="Good%20Change%20on%20this%20day.html" title="GOOD CHANGE ON THIS DAY">
+          <div class="thumb">
+            <img alt="GOOD CHANGE ON THIS DAY" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/14.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">GOOD CHANGE ON THIS DAY</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 2 -->
+      <article class="card">
+        <a href="Good%20movement%20of%20sun.html" title="GOOD MOVEMENT OF SUN">
+          <div class="thumb">
+            <img alt="GOOD MOVEMENT OF SUN" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/15.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">GOOD MOVEMENT OF SUN</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 3 -->
+      <article class="card">
+        <a href="MakarSankranti%20vs%20Sankranti.html" title="MAKARSANKRANTI VS SANKRANTI">
+          <div class="thumb">
+            <img alt="MAKARSANKRANTI VS SANKRANTI" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/18.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">MAKARSANKRANTI VS SANKRANTI</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 4 -->
+      <article class="card">
+        <a href="Sankranti%20in%20Tamilnadu.html" title="SANKRANTI IN TAMILNADU">
+          <div class="thumb">
+            <img alt="SANKRANTI IN TAMILNADU" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/20.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SANKRANTI IN TAMILNADU</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 5 -->
+      <article class="card">
+        <a href="Sankranti%20wishes%20and%20cards.html" title="SANKRANTI WISHES AND CARDS">
+          <div class="thumb">
+            <img alt="SANKRANTI WISHES AND CARDS" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/1.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SANKRANTI WISHES AND CARDS</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 6 -->
+      <article class="card">
+        <a href="Email%20messages.html" title="EMAIL MESSAGES">
+          <div class="thumb">
+            <img alt="EMAIL MESSAGES" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/10.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">EMAIL MESSAGES</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 7 -->
+      <article class="card">
+        <a href="Father%20bless%20son.html" title="FATHER BLESS SON">
+          <div class="thumb">
+            <img alt="FATHER BLESS SON" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/11.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">FATHER BLESS SON</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 8 -->
+      <article class="card">
+        <a href="Sankranti%20tradition.html" title="SANKRANTI TRADITION">
+          <div class="thumb">
+            <img alt="SANKRANTI TRADITION" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/12.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SANKRANTI TRADITION</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 9 -->
+      <article class="card">
+        <a href="Meaning%20of%20Sankranti.html" title="MEANING OF SANKRANTI">
+          <div class="thumb">
+            <img alt="MEANING OF SANKRANTI" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/13.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">MEANING OF SANKRANTI</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 10 -->
+      <article class="card">
+        <a href="Rangoli%20on%20Sankranti.html" title="RANGOLI ON SANKRANTI">
+          <div class="thumb">
+            <img alt="RANGOLI ON SANKRANTI" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/2.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">RANGOLI ON SANKRANTI</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 11 -->
+      <article class="card">
+        <a href="Sankranti%20and%20prosperity.html" title="SANKRANTI AND PROSPERITY">
+          <div class="thumb">
+            <img alt="SANKRANTI AND PROSPERITY" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/3.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SANKRANTI AND PROSPERITY</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 12 -->
+      <article class="card">
+        <a href="Sankranti%20is%20auspicious%20day.html" title="SANKRANTI IS AUSPICIOUS DAY">
+          <div class="thumb">
+            <img alt="SANKRANTI IS AUSPICIOUS DAY" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/4.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SANKRANTI IS AUSPICIOUS DAY</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 13 -->
+      <article class="card">
+        <a href="Sankranti%20greetings.html" title="SANKRANTI GREETINGS">
+          <div class="thumb">
+            <img alt="SANKRANTI GREETINGS" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/5.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SANKRANTI GREETINGS</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 14 -->
+      <article class="card">
+        <a href="Happy%20Makarsankranti%20Bihu%20Pong.html" title="HAPPY MAKARSANKRANTI BIHU PONG">
+          <div class="thumb">
+            <img alt="HAPPY MAKARSANKRANTI BIHU PONG" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/6.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">HAPPY MAKARSANKRANTI BIHU PONG</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 15 -->
+      <article class="card">
+        <a href="Send%20Sankranti%20SMS.html" title="SEND SANKRANTI SMS">
+          <div class="thumb">
+            <img alt="SEND SANKRANTI SMS" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/7.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SEND SANKRANTI SMS</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 16 -->
+      <article class="card">
+        <a href="Shub%20Muhurat.html" title="SHUB MUHURAT">
+          <div class="thumb">
+            <img alt="SHUB MUHURAT" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/8.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SHUB MUHURAT</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 17 -->
+      <article class="card">
+        <a href="Sankranti%20means%20new%20begining.html" title="SANKRANTI MEANS NEW BEGINING">
+          <div class="thumb">
+            <img alt="SANKRANTI MEANS NEW BEGINING" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/9.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SANKRANTI MEANS NEW BEGINING</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 18 -->
+      <article class="card">
+        <a href="Surya.html" title="SURYA">
+          <div class="thumb">
+            <img alt="SURYA" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/16.JPG"/>
+          </div>
+          <div class="meta">
+            <p class="label">SURYA</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 19 -->
+      <article class="card">
+        <a href="Capricorn%20sign.html" title="CAPRICORN SIGN">
+          <div class="thumb">
+            <img alt="CAPRICORN SIGN" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/17.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">CAPRICORN SIGN</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 20 -->
+      <article class="card">
+        <a href="Pongal%20in%20AndhraPradesh.html" title="PONGAL IN ANDHRAPRADESH">
+          <div class="thumb">
+            <img alt="PONGAL IN ANDHRAPRADESH" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/19.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">PONGAL IN ANDHRAPRADESH</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 21 -->
+      <article class="card">
+        <a href="Khichdi%20food.html" title="KHICHDI FOOD">
+          <div class="thumb">
+            <img alt="KHICHDI FOOD" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/22.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">KHICHDI FOOD</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 22 -->
+      <article class="card">
+        <a href="Kite%20flying.html" title="KITE FLYING">
+          <div class="thumb">
+            <img alt="KITE FLYING" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/21.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">KITE FLYING</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 23 -->
+      <article class="card">
+        <a href="Gangasagar%20mela%20in%20East%20India.html" title="GANGASAGAR MELA IN EAST INDIA">
+          <div class="thumb">
+            <img alt="GANGASAGAR MELA IN EAST INDIA" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/23.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">GANGASAGAR MELA IN EAST INDIA</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 24 -->
+      <article class="card">
+        <a href="Bihu%20in%20Assam.html" title="BIHU IN ASSAM">
+          <div class="thumb">
+            <img alt="BIHU IN ASSAM" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/25.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">BIHU IN ASSAM</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 25 -->
+      <article class="card">
+        <a href="Sankranti%20in%20Thailand.html" title="SANKRANTI IN THAILAND">
+          <div class="thumb">
+            <img alt="SANKRANTI IN THAILAND" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/26.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SANKRANTI IN THAILAND</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 26 -->
+      <article class="card">
+        <a href="Harvesting.html" title="HARVESTING">
+          <div class="thumb">
+            <img alt="HARVESTING" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/27.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">HARVESTING</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 27 -->
+      <article class="card">
+        <a href="Sankranti%20in%20US%20Europe%20Austral.html" title="SANKRANTI IN US EUROPE AUSTRAL">
+          <div class="thumb">
+            <img alt="SANKRANTI IN US EUROPE AUSTRAL" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/24.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SANKRANTI IN US EUROPE AUSTRAL</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 28 -->
+      <article class="card">
+        <a href="Happy%20Makarsankranti%20messages.html" title="HAPPY MAKARSANKRANTI MESSAGES">
+          <div class="thumb">
+            <img alt="HAPPY MAKARSANKRANTI MESSAGES" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/101.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">HAPPY MAKARSANKRANTI MESSAGES</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 29 -->
+      <article class="card">
+        <a href="Greetings%20for%20Sankranti.html" title="GREETINGS FOR SANKRANTI">
+          <div class="thumb">
+            <img alt="GREETINGS FOR SANKRANTI" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/102.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">GREETINGS FOR SANKRANTI</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 30 -->
+      <article class="card">
+        <a href="Sankranti%20and%20harvesting.html" title="SANKRANTI AND HARVESTING">
+          <div class="thumb">
+            <img alt="SANKRANTI AND HARVESTING" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/103.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">SANKRANTI AND HARVESTING</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+      <!-- 31 -->
+      <article class="card">
+        <a href="Harvesting%20and%20prosperity.html" title="HARVESTING AND PROSPERITY">
+          <div class="thumb">
+            <img alt="HARVESTING AND PROSPERITY" src="http://storage.googleapis.com/kreatewebsites/festival/cards/sankranti/photos200/104.jpg"/>
+          </div>
+          <div class="meta">
+            <p class="label">HARVESTING AND PROSPERITY</p>
+            <p class="hint">Open card</p>
+          </div>
+        </a>
+      </article>
+
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300">
+<div class="container mx-auto px-6 py-12 lg:px-8">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/3-days-of-sankranti-and-pongal-celebration.html">3-days-of-sankranti-and-pongal-celebration</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/different-names-of-sankranti.html">Different-names-of-sankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/image.html">Image</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/important-sankrantis.html">Important-sankrantis</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/index2.html">Index2</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/information.html">Information</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/khichdi-purv.html">Khichdi-purv</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/lohri.html">Lohri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/magh-bihu.html">Magh-bihu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-information.html">Makarsankranti-information</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/pongal.html">Pongal</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sankranti-vs-makarsankranti.html">Sankranti-vs-makarsankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sitemap.html">Sitemap</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/start-of-spring.html">Start-of-spring</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/what-is-pedda-festival.html">What-is-pedda-festival</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/what-is-uttarayaana.html">What-is-uttarayaana</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Wishes of Makarsankrnti</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/assamese.html">Assamese</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bengali.html">Bengali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bhojpuri.html">Bhojpuri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bihari.html">Bihari</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/english.html">English</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/gujarati.html">Gujarati</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/hindi.html">Hindi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/kannada.html">Kannada</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/kashmiri.html">Kashmiri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-play-script.html">Makarsankranti-play-script</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-bengali.html">Makarsankranti-wishes-in-bengali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-garhwali.html">Makarsankranti-wishes-in-garhwali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-gujrati.html">Makarsankranti-wishes-in-gujrati</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-hindi.html">Makarsankranti-wishes-in-hindi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-marwari-language.html">Makarsankranti-wishes-in-marwari-language</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-rajasthani.html">Makarsankranti-wishes-in-rajasthani</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-sanskrit-language.html">Makarsankranti-wishes-in-sanskrit-language</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-urdu.html">Makarsankranti-wishes-in-urdu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-marathai.html">Makarsankranti-wishes-marathai</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/malyalam.html">Malyalam</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/marathi.html">Marathi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/nepalese.html">Nepalese</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/punjabi.html">Punjabi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sanskrit.html">Sanskrit</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sindhi.html">Sindhi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/tamil.html">Tamil</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/telugu.html">Telugu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/urdu.html">Urdu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/wishes-new-beginning.html">Wishes-new-beginning</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sankranti-wishes-in-hindi.html">Wishes-prosperity</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Pages</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/cards/greeting-cards-2.html">Greeting Cards 2</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/cards/greeting-cards.html">Greeting Cards</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-8 text-center text-sm text-gray-400">
+<p class="text-sm text-gray-400">Pitru Paksha starts from Sep 26 </p>
+</div>
+<div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+<p class="text-sm text-gray-400">© 2026 Makar Sankranti. All rights reserved.</p>
+</div>
+</div>
+</footer>
+  </div>
+
+
+</body></html>

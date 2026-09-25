@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Pitru Paksha &amp; Shraddha Dates by Year | Annual Calendar</title>
+  <meta content="Check Pitru Paksha, Purnima Shraddha, daily Shraddha tithis and Sarva Pitru Amavasya by year. Dates are location-sensitive and should be verified with a local Panchang." name="description"/>
+  <meta content="Pitru Paksha dates, Shraddha dates, Shradh calendar, Sarva Pitru Amavasya, Mahalaya Amavasya, Purnima Shraddha" name="keywords"/>
+  <meta content="#7b2f1e" name="theme-color"/>
+  <style>
+    :root{
+      --bg:#fbf4e8;
+      --surface:#fffdf8;
+      --surface-2:#f7ead5;
+      --ink:#2f241f;
+      --muted:#6f625a;
+      --accent:#8b321f;
+      --accent-2:#c16c2f;
+      --line:#ead9c2;
+      --ok:#2f6b4f;
+      --warn:#9a6415;
+      --shadow:0 18px 50px rgba(75,44,25,.10);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 8% 0%,rgba(193,108,47,.11),transparent 32rem),
+        linear-gradient(180deg,#fffaf1 0%,var(--bg) 36%,#fffaf1 100%);
+    }
+    a{color:var(--accent)}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+    .topbar{padding:14px 0;border-bottom:1px solid rgba(139,50,31,.10);font-size:.88rem;color:var(--muted)}
+    .hero{padding:56px 0 30px}
+    .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.75rem;font-weight:800;color:var(--accent-2)}
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.4rem,6vw,5.2rem);line-height:.98;margin:14px 0 18px;max-width:850px;font-weight:600}
+    .lead{font-size:1.1rem;line-height:1.75;color:var(--muted);max-width:820px;margin:0}
+    .om{font-family:Georgia,serif;font-size:1.2rem;color:var(--accent);margin-top:24px}
+    .panel{background:rgba(255,253,248,.92);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .picker{margin:26px 0 28px;padding:22px;display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:end}
+    .picker label{display:block;font-size:.82rem;font-weight:800;margin-bottom:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+    select,input{width:100%;padding:14px 15px;border-radius:14px;border:1px solid #dcc7aa;background:white;color:var(--ink);font:inherit}
+    .picker-actions{display:flex;gap:10px}
+    button{border:0;border-radius:14px;padding:14px 18px;font-weight:800;font:inherit;cursor:pointer}
+    .primary{background:var(--accent);color:white;flex:1}
+    .ghost{background:var(--surface-2);color:var(--accent);border:1px solid var(--line)}
+    .status-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
+    .badge{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:999px;font-size:.8rem;font-weight:800;border:1px solid transparent}
+    .badge.verified{color:var(--ok);background:#edf7f0;border-color:#cfe7d7}
+    .badge.review{color:var(--warn);background:#fff7e4;border-color:#efdba9}
+    .badge.location{color:#69432b;background:#f7eadc;border-color:#e7d0b7}
+    .summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+    .summary-card{padding:22px;min-height:175px;position:relative;overflow:hidden}
+    .summary-card:after{content:"";position:absolute;width:96px;height:96px;border:1px solid rgba(139,50,31,.12);border-radius:50%;right:-30px;bottom:-30px}
+    .kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800}
+    .big-date{font-family:Georgia,"Times New Roman",serif;font-size:1.65rem;line-height:1.15;margin:12px 0 7px;color:var(--accent)}
+    .small{color:var(--muted);font-size:.92rem;line-height:1.55}
+    .content-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(270px,.5fr);gap:22px;align-items:start}
+    .section{padding:26px}
+    h2{font-family:Georgia,"Times New Roman",serif;font-size:2rem;margin:0 0 8px;font-weight:600}
+    h3{font-family:Georgia,"Times New Roman",serif;font-size:1.25rem;margin:0 0 8px}
+    .section-intro{color:var(--muted);line-height:1.7;margin:0 0 22px}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:white}
+    table{width:100%;border-collapse:collapse;min-width:620px}
+    th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #f0e4d4;vertical-align:top}
+    th{font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:#fff8ed}
+    tr:last-child td{border-bottom:0}
+    tr.featured{background:#fff6e8}
+    .date-cell{font-weight:800;white-space:nowrap}
+    .side-card{padding:22px;margin-bottom:16px}
+    .side-card p,.side-card li{color:var(--muted);line-height:1.65;font-size:.93rem}
+    .side-card ul{padding-left:19px;margin-bottom:0}
+    .notice{border-left:4px solid var(--accent-2);padding:16px 18px;background:#fff7e8;border-radius:0 14px 14px 0;color:#5f4f43;line-height:1.6}
+    .archive{margin:28px 0;padding:26px}
+    .year-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .year-chip{padding:10px 13px;border-radius:999px;border:1px solid var(--line);background:white;color:var(--accent);font-weight:800;cursor:pointer}
+    .year-chip.active{background:var(--accent);color:white;border-color:var(--accent)}
+    .source-list{margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+    .source-list a{display:block;font-size:.88rem;margin:8px 0;word-break:break-word}
+    .empty{padding:34px;text-align:center;color:var(--muted);border:1px dashed #d9c2a4;border-radius:18px;background:#fffaf1}
+    footer{padding:42px 0 60px;color:var(--muted);font-size:.9rem;line-height:1.65}
+    @media(max-width:820px){
+      .picker,.content-grid{grid-template-columns:1fr}
+      .summary-grid{grid-template-columns:1fr}
+      .hero{padding-top:38px}
+      .picker-actions{flex-direction:column}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Pitru Paksha & Shraddha Dates by Year",
+    "description":"Annual Pitru Paksha and Shraddha planning calendar with location-sensitive verification notes.",
+    "about":["Pitru Paksha","Shraddha","Sarva Pitru Amavasya"]
+  }
+  </script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">Annual planning calendar • Civil dates vary with location, tithi boundaries and tradition</div>
+  </div>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Pitru Paksha Calendar</div>
+      <h1>Pitru Paksha &amp; Shraddha Dates, Year by Year</h1>
+      <p class="lead">Choose a year to see Purnima Shraddha, the main Pratipada-to-Amavasya period, Sarva Pitru Amavasya and the available day-by-day Shraddha calendar.</p>
+      <div class="om">ॐ पितृभ्यो नमः</div>
+    </section>
+
+    <section aria-label="Calendar year selector" class="panel picker">
+      <div>
+        <label for="yearSelect">Choose year</label>
+        <select aria-label="Choose Pitru Paksha calendar year" id="yearSelect"></select>
+      </div>
+      <div class="picker-actions">
+        <button class="ghost" id="prevBtn" type="button">← Previous</button>
+        <button class="primary" id="currentBtn" type="button">Current year</button>
+        <button class="ghost" id="nextBtn" type="button">Next →</button>
+      </div>
+    </section>
+
+    <div class="status-row" id="statusRow"></div>
+    <section aria-live="polite" class="summary-grid" id="summaryGrid"></section>
+
+    <div class="content-grid">
+      <section class="panel section">
+        <h2 id="calendarTitle">Shraddha calendar</h2>
+        <p class="section-intro" id="calendarIntro"></p>
+        <div id="tableMount"></div>
+      </section>
+
+      <aside>
+        <section class="panel side-card">
+          <h3>Why dates can differ</h3>
+          <p>Pitru Paksha follows lunar tithis, not a fixed Gregorian date. The civil date can shift with the city, sunrise, tithi boundaries and the rule used for the observance.</p>
+        </section>
+        <section class="panel side-card">
+          <h3>Purnima vs. Pitru Paksha</h3>
+          <p>Purnima Shraddha is commonly listed with the annual Shraddha calendar. The main Pitru Paksha sequence is shown separately here from Pratipada through Amavasya.</p>
+        </section>
+        <section class="panel side-card">
+          <h3>Before fixing a ritual time</h3>
+          <ul>
+            <li>Confirm the city where the observance will occur.</li>
+            <li>Use the ancestor's death tithi when known.</li>
+            <li>Check a location-specific Panchang for timings.</li>
+            <li>Follow family or sampradaya practice where applicable.</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <section class="panel archive">
+      <h2>Year archive</h2>
+      <p class="section-intro">The interface is data-driven. Add another verified year record and it automatically appears here.</p>
+      <div class="year-chips" id="yearChips"></div>
+    </section>
+
+    <section class="notice">
+      <strong>Important:</strong> This is a planning calendar, not a universal muhurat calculator. Exact Shraddha timing should be checked for the place where the observance is performed.
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-gray-300">
+<div class="container mx-auto px-6 py-12 lg:px-8">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/Auspicious%20looking%20design.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Auspicious looking design</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Bihu%20in%20Assam.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Bihu in Assam</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/bihu-assam-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Bihu-assam-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/bihu-assam.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">Bihu-assam</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Blessing.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Blessing</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Capricorn.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Capricorn</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Colorful%20greeting%20for%20Sankrant.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl07_title">Colorful greeting for Sankrant</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Email%20greetings.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl08_title">Email greetings</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/ganga-sagar-mela.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl09_title">Ganga-sagar-mela</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Gangasagar%20mela.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl10_title">Gangasagar mela</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/General%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl11_title">General card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Good%20Change.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl12_title">Good Change</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Good%20movement.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl13_title">Good movement</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Greetings.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl14_title">Greetings</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Happy%20Makarsankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl15_title">Happy Makarsankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Harvesting.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl16_title">Harvesting</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/image.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl17_title">Image</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Impactful%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl18_title">Impactful card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/index2.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl19_title">Index2</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Khichdi.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl20_title">Khichdi</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Kite%20festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl21_title">Kite festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/MakarSankranti%20wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl22_title">MakarSankranti wishes</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-blog.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl23_title">Makarsankranti-blog</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-celebrations.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl24_title">Makarsankranti-celebrations</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl25_title">Makarsankranti-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-page.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl26_title">Makarsankranti-page</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-pongal-bihu-uttarayan.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl27_title">Makarsankranti-pongal-bihu-uttarayan</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-pongal-celebration.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl28_title">Makarsankranti-pongal-celebration</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-significance.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl29_title">Makarsankranti-significance</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-taste.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl30_title">Makarsankranti-taste</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Meaning%20of%20MakarSankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl31_title">Meaning of MakarSankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/messages.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl32_title">Messages</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/New%20Begining%20on%20Makarsankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl33_title">New Begining on Makarsankranti</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Pongal%20in%20AP.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl34_title">Pongal in AP</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pongal-festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl35_title">Pongal-festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Rangoli%20style%20card.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl36_title">Rangoli style card</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-celebration-and-wishes-in-indian-languages.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl40_title">Sankranti-celebration-and-wishes-in-indian-languages</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-harvest-festival.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl41_title">Sankranti-harvest-festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-wishes-info.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl42_title">Sankranti-wishes-info</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Send%20Sankranti%20wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl43_title">Send Sankranti wishes</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Shub.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl44_title">Shub</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sitemap.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl45_title">Sitemap</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Tamilnadu.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl49_title">Tamilnadu</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/US.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl50_title">US</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Festivals and Celebration</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/makarsankranti-wallpapers.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Wallpapers</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pongal/pongal-cards.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">Pongal Cards</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Holi%20Festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Holi Festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/kite-festival/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Kite festival</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Photos/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">Photos</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/ramayana-stories/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Ramayana stories</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sankranti-blog/" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Sankranti blog</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/pictures.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">MakarSankranti Pictures</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Stories of Makarsankrnti</h5>
+<ul class="space-y-2">
+<li>
+<a href="https://www.makarsankranti.net/stories.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl46_title">Stories</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/sun-joyful-story.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl47_title">Sun-joyful-story</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sun.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl48_title">Sun</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20and%20Agriculture.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl37_title">Sankranti and Agriculture</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20in%20Thailand.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl38_title">Sankranti in Thailand</a>
+</li>
+<li>
+<a href="https://www.makarsankranti.net/Sankranti%20vs%20MakarSankranti.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl39_title">Sankranti vs MakarSankranti</a>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Contact Us</h5>
+<div class="space-y-2">
+<p>Redmond<br/>WA, USA</p>
+<p>
+<a class="hover:text-white hover:underline transition-colors duration-200" href="mailto:contact@dataknobs.com">contact@kreatewebsites.com</a>
+</p>
+<p>
+</p>
+<h5 class="text-lg font-semibold text-white mb-4">Celebrate Lohri</h5>
+<ul>
+<li><a href="https://www.makarsankranti.net/lohri-festival/26-unique-lohri-wishes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl01_title">26-unique-lohri-wishes</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/agriculture.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl02_title">Agriculture</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/dulla-bhatti-story.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl03_title">Dulla-bhatti-story</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/first-lohri-special.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl04_title">First-lohri-special</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/food-ideas-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl05_title">Food-ideas-lohri</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/ideas-to-celebrate-lohri-in-office.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl06_title">Ideas-to-celebrate-lohri-in-office</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/kids-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl07_title">Kids-lohri</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/list-of-food-items.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl08_title">List-of-food-items</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-bonefire.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl09_title">Lohri-bonefire</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-cards.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl10_title">Lohri-cards</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-essay.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl11_title">Lohri-essay</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-importnce-with-each-generation.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl12_title">Lohri-importnce-with-each-generation</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/lohri-recipes.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl13_title">Lohri-recipes</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/music-and-dance.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl14_title">Music-and-dance</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/popular-lohri-songs.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl15_title">Popular-lohri-songs</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/rituals-with-song.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl16_title">Rituals-with-song</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/songs-meaning.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl17_title">Songs-meaning</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/special-lohri-foods.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl18_title">Special-lohri-foods</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/tradition.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl19_title">Tradition</a></li>
+<li><a href="https://www.makarsankranti.net/lohri-festival/what-to-eat-on-lohri.html" id="ctl00_ContentPlaceHolder1_RepLinks_ctl20_title">What-to-eat-on-lohri</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+<p class="text-sm text-gray-400">© 2025 Dataknobs, Inc. All rights reserved.</p>
+<div class="flex gap-4 mt-4 sm:mt-0">
+<a class="text-stone-400 hover:text-white" href="https://www.makarsankranti.net/privacypolicy,html">Privacy Policy</a> <!-- 13 -->
+<a class="text-stone-400 hover:text-white" href="https://www.makarsankranti.net/sitemap.html">Sitemap</a> <!-- 14 -->
+</div>
+<div class="flex space-x-4 mt-4 sm:mt-0">
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.facebook.com/kreatewebsites/">
+<span class="sr-only">Facebook</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.twitter.com/kreatewebsites/">
+<span class="sr-only">Twitter</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-200" href="https://www.linkedin.com/company/kreatewebsites/">
+<span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+const calendarData = {
+  2025: {
+    year: 2025,
+    status: 'verified',
+    locationLabel: 'India planning dates',
+    purnima: 'September 7, 2025',
+    mainStart: 'September 8, 2025',
+    mainEnd: 'September 21, 2025',
+    sarva: 'September 21, 2025',
+    lastReviewed: 'Cross-checked from published 2025 calendars',
+    days: [
+      ['Sep 7','Sunday','Purnima Shraddha','Bhadrapada Shukla Purnima'],
+      ['Sep 8','Monday','Pratipada Shraddha','Main sequence begins'],
+      ['Sep 9','Tuesday','Dwitiya Shraddha',''],
+      ['Sep 10','Wednesday','Tritiya & Chaturthi Shraddha','Two observances share the civil date'],
+      ['Sep 11','Thursday','Panchami Shraddha / Maha Bharani',''],
+      ['Sep 12','Friday','Shashthi Shraddha',''],
+      ['Sep 13','Saturday','Saptami Shraddha',''],
+      ['Sep 14','Sunday','Ashtami Shraddha',''],
+      ['Sep 15','Monday','Navami Shraddha',''],
+      ['Sep 16','Tuesday','Dashami Shraddha',''],
+      ['Sep 17','Wednesday','Ekadashi Shraddha',''],
+      ['Sep 18','Thursday','Dwadashi Shraddha',''],
+      ['Sep 19','Friday','Trayodashi Shraddha / Magha',''],
+      ['Sep 20','Saturday','Chaturdashi Shraddha',''],
+      ['Sep 21','Sunday','Sarva Pitru Amavasya','Mahalaya Amavasya']
+    ],
+    sources: [
+      ['Drik Panchang 2025 Shraddha calendar','https://www.drikpanchang.com/shraddha/pitru-paksha-shraddha-dates.html?year=2025'],
+      ['India Today 2025 Pitru Paksha overview','https://www.indiatoday.in/information/story/pitru-paksha-2025-dates-rituals-mahalaya-amavasya-hindu-ancestor-worship-2778563-2025-08-29']
+    ]
+  },
+  2026: {
+    year: 2026,
+    status: 'verified',
+    locationLabel: 'Northern India planning dates',
+    purnima: 'September 26, 2026',
+    mainStart: 'September 27, 2026',
+    mainEnd: 'October 10, 2026',
+    sarva: 'October 10, 2026',
+    lastReviewed: 'Reviewed August 25, 2026',
+    days: [
+      ['Sep 26','Saturday','Purnima Shraddha','Listed alongside the annual Shraddha calendar'],
+      ['Sep 27','Sunday','Pratipada Shraddha','Main Krishna Paksha sequence begins'],
+      ['Sep 28','Monday','Dwitiya Shraddha','Confirm local tithi boundary'],
+      ['Sep 29','Tuesday','Tritiya Shraddha / Maha Bharani','Maha Bharani is nakshatra-based'],
+      ['Sep 30','Wednesday','Chaturthi & Panchami Shraddha','Two listed observances share the civil date'],
+      ['Oct 1','Thursday','Shashthi Shraddha',''],
+      ['Oct 2','Friday','Saptami Shraddha',''],
+      ['Oct 3','Saturday','Ashtami Shraddha',''],
+      ['Oct 4','Sunday','Navami Shraddha',''],
+      ['Oct 5','Monday','Dashami Shraddha',''],
+      ['Oct 6','Tuesday','Ekadashi Shraddha',''],
+      ['Oct 7','Wednesday','Dwadashi Shraddha / Magha','Magha is a separate nakshatra-based observance'],
+      ['Oct 8','Thursday','Trayodashi Shraddha',''],
+      ['Oct 9','Friday','Chaturdashi Shraddha',''],
+      ['Oct 10','Saturday','Sarva Pitru Amavasya','Mahalaya Amavasya']
+    ],
+    sources: [
+      ['PitruPaksha.org 2026 planning calendar','https://pitrupaksha.org/pitru-paksha-dates/'],
+      ['Drik Panchang Shraddha calendar','https://www.drikpanchang.com/shraddha/pitru-paksha-shraddha-dates.html?year=2026']
+    ]
+  },
+  2027: {
+    year: 2027,
+    status: 'review',
+    locationLabel: 'Location review required',
+    purnima: 'September 15, 2027',
+    mainStart: 'September 16, 2027',
+    mainEnd: 'Verify for selected city',
+    sarva: 'Verify for selected city',
+    lastReviewed: 'Source comparison shows a location/date-boundary discrepancy',
+    days: [],
+    reviewNote: 'Published calendars do not all assign the final civil date identically. Keep 2027 visibly under review until the site chooses an exact city/tradition and verifies the local Panchang.',
+    sources: [
+      ['Drik Panchang 2027 Shraddha calendar','https://www.drikpanchang.com/shraddha/pitru-paksha-shraddha-dates.html?lang=en&year=2027'],
+      ['PanchangTime 2027 New Delhi page','https://panchangtime.com/festivals/pitru-paksha/yearly/2027']
+    ]
+  },
+  2028: {
+    year: 2028,
+    status: 'verified',
+    locationLabel: 'India planning dates',
+    purnima: 'September 3, 2028',
+    mainStart: 'September 4, 2028',
+    mainEnd: 'September 18, 2028',
+    sarva: 'September 18, 2028',
+    lastReviewed: 'Cross-checked from published 2028 calendars',
+    days: [
+      ['Sep 3','Sunday','Purnima Shraddha','Listed alongside the annual Shraddha calendar'],
+      ['Sep 4','Monday','Pratipada Shraddha','Main sequence begins'],
+      ['Sep 5','Tuesday','Dwitiya Shraddha',''],
+      ['Sep 6','Wednesday','Tritiya Shraddha',''],
+      ['Sep 7','Thursday','Chaturthi Shraddha',''],
+      ['Sep 9','Saturday','Panchami Shraddha / Maha Bharani',''],
+      ['Sep 10','Sunday','Shashthi Shraddha',''],
+      ['Sep 11','Monday','Saptami Shraddha',''],
+      ['Sep 12','Tuesday','Ashtami Shraddha',''],
+      ['Sep 13','Wednesday','Navami Shraddha',''],
+      ['Sep 14','Thursday','Dashami Shraddha',''],
+      ['Sep 15','Friday','Ekadashi & Dwadashi Shraddha','Two listed observances share the civil date'],
+      ['Sep 16','Saturday','Trayodashi Shraddha',''],
+      ['Sep 17','Sunday','Chaturdashi Shraddha / Magha',''],
+      ['Sep 18','Monday','Sarva Pitru Amavasya','Mahalaya Amavasya']
+    ],
+    sources: [
+      ['Drik Panchang 2028 Shraddha calendar','https://www.drikpanchang.com/shraddha/pitru-paksha-shraddha-dates.html?year=2028'],
+      ['PanchangTime 2028 New Delhi page','https://panchangtime.com/festivals/pitru-paksha/yearly/2028']
+    ]
+  }
+};
+
+const years = Object.keys(calendarData).map(Number).sort((a,b)=>a-b);
+const select = document.getElementById('yearSelect');
+const statusRow = document.getElementById('statusRow');
+const summaryGrid = document.getElementById('summaryGrid');
+const tableMount = document.getElementById('tableMount');
+const calendarTitle = document.getElementById('calendarTitle');
+const calendarIntro = document.getElementById('calendarIntro');
+const yearChips = document.getElementById('yearChips');
+const sourceFooter = document.getElementById('sourceFooter');
+
+function getRequestedYear(){
+  const y = Number(new URLSearchParams(location.search).get('year'));
+  if (calendarData[y]) return y;
+  const now = new Date().getFullYear();
+  if (calendarData[now]) return now;
+  return years[0];
+}
+
+function setUrl(year){
+  const u = new URL(location.href);
+  u.searchParams.set('year',year);
+  history.replaceState({},'',u);
+}
+
+function statusBadge(d){
+  if(d.status==='verified') return '<span class="badge verified">● Verified planning dates</span>';
+  return '<span class="badge review">● Needs location verification</span>';
+}
+
+function render(year){
+  const d = calendarData[year];
+  if(!d) return;
+  select.value = String(year);
+  setUrl(year);
+  document.title = `Pitru Paksha ${year} & Shraddha Dates | Annual Calendar`;
+
+  statusRow.innerHTML = `${statusBadge(d)}<span class="badge location">${d.locationLabel}</span><span class="small">${d.lastReviewed}</span>`;
+
+  summaryGrid.innerHTML = `
+    <article class="panel summary-card">
+      <div class="kicker">Purnima Shraddha</div>
+      <div class="big-date">${d.purnima}</div>
+      <div class="small">Shown separately because Purnima Shraddha is commonly listed alongside the fortnight.</div>
+    </article>
+    <article class="panel summary-card">
+      <div class="kicker">Main Pitru Paksha sequence</div>
+      <div class="big-date">${d.mainStart}<br>to ${d.mainEnd}</div>
+      <div class="small">Pratipada through Amavasya, subject to local tithi rules.</div>
+    </article>
+    <article class="panel summary-card">
+      <div class="kicker">Sarva Pitru Amavasya</div>
+      <div class="big-date">${d.sarva}</div>
+      <div class="small">Final Shraddha observance in the annual sequence.</div>
+    </article>`;
+
+  calendarTitle.textContent = `${year} Shraddha calendar`;
+  calendarIntro.textContent = d.status === 'verified'
+    ? 'These are date-only planning entries. Exact ritual timings are intentionally not made city-neutral.'
+    : d.reviewNote;
+
+  if(d.days.length){
+    const rows = d.days.map(r => {
+      const featured = /Sarva Pitru Amavasya/.test(r[2]) ? ' class="featured"' : '';
+      return `<tr${featured}><td class="date-cell">${r[0]}</td><td>${r[1]}</td><td><strong>${r[2]}</strong></td><td>${r[3] || '—'}</td></tr>`;
+    }).join('');
+    tableMount.innerHTML = `<div class="table-wrap"><table>
+      <thead><tr><th>Date</th><th>Day</th><th>Shraddha observance</th><th>Planning note</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>`;
+  } else {
+    tableMount.innerHTML = `<div class="empty"><strong>${year} is intentionally not published as a full daily table yet.</strong><br><br>${d.reviewNote}</div>`;
+  }
+
+  sourceFooter.innerHTML = `<strong>Calendar sources for ${year}</strong><div class="source-list">${d.sources.map(s=>`<a href="${s[1]}" target="_blank" rel="noopener noreferrer">${s[0]}</a>`).join('')}</div>`;
+  renderChips(year);
+}
+
+function renderChips(active){
+  yearChips.innerHTML = years.map(y=>`<button type="button" class="year-chip ${y===active?'active':''}" data-year="${y}">${y}</button>`).join('');
+  yearChips.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>render(Number(btn.dataset.year))));
+}
+
+years.forEach(y=>{
+  const o=document.createElement('option');o.value=y;o.textContent=y;select.appendChild(o);
+});
+select.addEventListener('change',()=>render(Number(select.value)));
+
+document.getElementById('prevBtn').addEventListener('click',()=>{
+  const i=years.indexOf(Number(select.value)); if(i>0) render(years[i-1]);
+});
+document.getElementById('nextBtn').addEventListener('click',()=>{
+  const i=years.indexOf(Number(select.value)); if(i<years.length-1) render(years[i+1]);
+});
+document.getElementById('currentBtn').addEventListener('click',()=>{
+  const now=new Date().getFullYear(); render(calendarData[now]?now:years.reduce((a,b)=>Math.abs(b-now)<Math.abs(a-now)?b:a));
+});
+
+render(getRequestedYear());
+</script>
+
+
+</body></html>
