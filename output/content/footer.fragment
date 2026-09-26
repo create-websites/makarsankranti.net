@@ -67,6 +67,7 @@
           <li><a href="https://www.makarsankranti.net/2026/" class="hover:text-white hover:underline transition-colors duration-200">2026</a></li>
           <li><a href="https://www.makarsankranti.net/cards/" class="hover:text-white hover:underline transition-colors duration-200">Cards</a></li>
           <li><a href="https://www.makarsankranti.net/cosmic-wisdom/" class="hover:text-white hover:underline transition-colors duration-200">Cosmic Wisdom</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/" class="hover:text-white hover:underline transition-colors duration-200">Hindu Festivals</a></li>
           <li><a href="https://www.makarsankranti.net/holi-festival/" class="hover:text-white hover:underline transition-colors duration-200">Holi Festival</a></li>
           <li><a href="https://www.makarsankranti.net/kite-festival/" class="hover:text-white hover:underline transition-colors duration-200">Kite Festival</a></li>
           <li><a href="https://www.makarsankranti.net/lohri-festival/" class="hover:text-white hover:underline transition-colors duration-200">Lohri Festival</a></li>
@@ -139,11 +140,11 @@
     </div>
 
     <div class="mt-8 text-center text-sm text-gray-400">
-      <p class="text-sm text-gray-400">Pitru Paksha starts from Sep 26 </p>
+      <p class="text-sm text-gray-400">Makarsankranti for new beginning - wishes, cards, slides</p>
     </div>
 
     <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
-      <p class="text-sm text-gray-400">&copy; 2026 Makar Sankranti. All rights reserved.</p>
+      <p class="text-sm text-gray-400">&copy; 2026 Makarsankranti. All rights reserved.</p>
       
     </div>
 

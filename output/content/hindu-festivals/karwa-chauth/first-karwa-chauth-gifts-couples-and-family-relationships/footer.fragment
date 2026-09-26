@@ -1,0 +1,101 @@
+<footer class="bg-gray-800 text-gray-300">
+  <div class="container mx-auto px-6 py-12 lg:px-8">
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/3-days-of-sankranti-and-pongal-celebration.html" class="hover:text-white hover:underline transition-colors duration-200">3-days-of-sankranti-and-pongal-celebration</a></li>
+          <li><a href="https://www.makarsankranti.net/different-names-of-sankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Different-names-of-sankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/image.html" class="hover:text-white hover:underline transition-colors duration-200">Image</a></li>
+          <li><a href="https://www.makarsankranti.net/important-sankrantis.html" class="hover:text-white hover:underline transition-colors duration-200">Important-sankrantis</a></li>
+          <li><a href="https://www.makarsankranti.net/index2.html" class="hover:text-white hover:underline transition-colors duration-200">Index2</a></li>
+          <li><a href="https://www.makarsankranti.net/information.html" class="hover:text-white hover:underline transition-colors duration-200">Information</a></li>
+          <li><a href="https://www.makarsankranti.net/khichdi-purv.html" class="hover:text-white hover:underline transition-colors duration-200">Khichdi-purv</a></li>
+          <li><a href="https://www.makarsankranti.net/lohri.html" class="hover:text-white hover:underline transition-colors duration-200">Lohri</a></li>
+          <li><a href="https://www.makarsankranti.net/magh-bihu.html" class="hover:text-white hover:underline transition-colors duration-200">Magh-bihu</a></li>
+          <li><a href="https://www.makarsankranti.net/makarsankranti-information.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-information</a></li>
+          <li><a href="https://www.makarsankranti.net/pongal.html" class="hover:text-white hover:underline transition-colors duration-200">Pongal</a></li>
+          <li><a href="https://www.makarsankranti.net/sankranti-vs-makarsankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Sankranti-vs-makarsankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/sitemap.html" class="hover:text-white hover:underline transition-colors duration-200">Sitemap</a></li>
+          <li><a href="https://www.makarsankranti.net/start-of-spring.html" class="hover:text-white hover:underline transition-colors duration-200">Start-of-spring</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-pedda-festival.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-pedda-festival</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-uttarayaana.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-uttarayaana</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Wishes of Makarsankrnti</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/wishes/assamese.html" class="hover:text-white hover:underline transition-colors duration-200">Assamese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bhojpuri.html" class="hover:text-white hover:underline transition-colors duration-200">Bhojpuri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bihari.html" class="hover:text-white hover:underline transition-colors duration-200">Bihari</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/english.html" class="hover:text-white hover:underline transition-colors duration-200">English</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/gujarati.html" class="hover:text-white hover:underline transition-colors duration-200">Gujarati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kannada.html" class="hover:text-white hover:underline transition-colors duration-200">Kannada</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kashmiri.html" class="hover:text-white hover:underline transition-colors duration-200">Kashmiri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-play-script.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-play-script</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-garhwali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-garhwali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-gujrati.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-gujrati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-marwari-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-marwari-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-rajasthani.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-rajasthani</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-sanskrit-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-sanskrit-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-marathai.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-marathai</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/malyalam.html" class="hover:text-white hover:underline transition-colors duration-200">Malyalam</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/marathi.html" class="hover:text-white hover:underline transition-colors duration-200">Marathi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/nepalese.html" class="hover:text-white hover:underline transition-colors duration-200">Nepalese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/punjabi.html" class="hover:text-white hover:underline transition-colors duration-200">Punjabi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sanskrit.html" class="hover:text-white hover:underline transition-colors duration-200">Sanskrit</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sindhi.html" class="hover:text-white hover:underline transition-colors duration-200">Sindhi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/tamil.html" class="hover:text-white hover:underline transition-colors duration-200">Tamil</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/telugu.html" class="hover:text-white hover:underline transition-colors duration-200">Telugu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/wishes-new-beginning.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-new-beginning</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-prosperity</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Pages</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/budget-friendly-karwa-chauth-gift-ideas.html" class="hover:text-white hover:underline transition-colors duration-200">Budget Friendly Karwa Chauth Gift Ideas</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/first-karwa-chauth-celebration-ideas.html" class="hover:text-white hover:underline transition-colors duration-200">First Karwa Chauth Celebration Ideas</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/first-karwa-chauth-complete-guide-for-newlyweds.html" class="hover:text-white hover:underline transition-colors duration-200">First Karwa Chauth Complete Guide For Newlyweds</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/first-karwa-chauth-gift-ideas-for-husband.html" class="hover:text-white hover:underline transition-colors duration-200">First Karwa Chauth Gift Ideas For Husband</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/first-karwa-chauth-gift-ideas-for-wife.html" class="hover:text-white hover:underline transition-colors duration-200">First Karwa Chauth Gift Ideas For Wife</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/how-families-can-support-someone-observing-karwa-chauth.html" class="hover:text-white hover:underline transition-colors duration-200">How Families Can Support Someone Observing Karwa Chauth</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/karwa-chauth-at-home-romantic-celebration-ideas-for-couples.html" class="hover:text-white hover:underline transition-colors duration-200">Karwa Chauth At Home Romantic Celebration Ideas For Couples</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/karwa-chauth-baya-gift-ideas.html" class="hover:text-white hover:underline transition-colors duration-200">Karwa Chauth Baya Gift Ideas</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/karwa-chauth-date-night-ideas-after-moonrise.html" class="hover:text-white hover:underline transition-colors duration-200">Karwa Chauth Date Night Ideas After Moonrise</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/karwa-chauth-experience-gift-ideas-for-couples.html" class="hover:text-white hover:underline transition-colors duration-200">Karwa Chauth Experience Gift Ideas For Couples</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/karwa-chauth-for-long-distance-couples.html" class="hover:text-white hover:underline transition-colors duration-200">Karwa Chauth For Long Distance Couples</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/karwa-chauth-gift-and-relationship-faq.html" class="hover:text-white hover:underline transition-colors duration-200">Karwa Chauth Gift And Relationship Faq</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/karwa-chauth-gift-ideas-for-husband.html" class="hover:text-white hover:underline transition-colors duration-200">Karwa Chauth Gift Ideas For Husband</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/karwa-chauth-gift-ideas-for-wife.html" class="hover:text-white hover:underline transition-colors duration-200">Karwa Chauth Gift Ideas For Wife</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/karwa-chauth-gifts-from-in-laws-and-family.html" class="hover:text-white hover:underline transition-colors duration-200">Karwa Chauth Gifts From In Laws And Family</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/karwa-chauth-in-modern-marriages-tradition-choice-and-partnership.html" class="hover:text-white hover:underline transition-colors duration-200">Karwa Chauth In Modern Marriages Tradition Choice And Partnership</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/last-minute-karwa-chauth-gift-ideas.html" class="hover:text-white hover:underline transition-colors duration-200">Last Minute Karwa Chauth Gift Ideas</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/luxury-karwa-chauth-gift-ideas.html" class="hover:text-white hover:underline transition-colors duration-200">Luxury Karwa Chauth Gift Ideas</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/mutual-karwa-chauth-how-couples-can-celebrate-together.html" class="hover:text-white hover:underline transition-colors duration-200">Mutual Karwa Chauth How Couples Can Celebrate Together</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/karwa-chauth/first-karwa-chauth-gifts-couples-and-family-relationships/personalized-karwa-chauth-gift-ideas.html" class="hover:text-white hover:underline transition-colors duration-200">Personalized Karwa Chauth Gift Ideas</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center text-sm text-gray-400">
+      <p class="text-sm text-gray-400">Makarsankranti for new beginning - wishes, cards, slides</p>
+    </div>
+
+    <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+      <p class="text-sm text-gray-400">&copy; 2026 Makarsankranti. All rights reserved.</p>
+      
+    </div>
+
+  </div>
+</footer>
