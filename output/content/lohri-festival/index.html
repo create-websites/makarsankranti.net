@@ -118,10 +118,10 @@ gtag('config', 'G-HQVLPEFHL9');
 </div>
 </div>
 <div class="mt-8 text-center text-sm text-gray-400">
-<p class="text-sm text-gray-400">Makarsankranti for new beginning - wishes, cards, slides</p>
+<p class="text-sm text-gray-400">Golu Starts on Oct 11</p>
 </div>
 <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
-<p class="text-sm text-gray-400">© 2026 Makarsankranti. All rights reserved.</p>
+<p class="text-sm text-gray-400">© 2026 Makar Sankranti. All rights reserved.</p>
 </div>
 </div>
 </footer><script>const cards=[...document.querySelectorAll('.card')],search=document.querySelector('#search'),buttons=[...document.querySelectorAll('[data-filter]')];let category='All';document.querySelector('#search-control').hidden=false;document.querySelector('#filters').hidden=false;function filter(){const terms=search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);let count=0;cards.forEach(card=>{const text=card.textContent.toLowerCase()+' '+card.dataset.category.toLowerCase();const visible=(category==='All'||card.dataset.category===category)&&terms.every(term=>text.includes(term));card.hidden=!visible;if(visible)count++});document.querySelector('#count').textContent=count===12?'Showing all 12 guides':`Showing ${count} of 12 guides`;document.querySelector('#empty').hidden=count!==0}search.addEventListener('input',filter);buttons.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.filter;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));filter()}));</script></body></html>
