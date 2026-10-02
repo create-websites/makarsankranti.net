@@ -1,0 +1,101 @@
+<footer class="bg-gray-800 text-gray-300">
+  <div class="container mx-auto px-6 py-12 lg:px-8">
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/3-days-of-sankranti-and-pongal-celebration.html" class="hover:text-white hover:underline transition-colors duration-200">3-days-of-sankranti-and-pongal-celebration</a></li>
+          <li><a href="https://www.makarsankranti.net/different-names-of-sankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Different-names-of-sankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/image.html" class="hover:text-white hover:underline transition-colors duration-200">Image</a></li>
+          <li><a href="https://www.makarsankranti.net/important-sankrantis.html" class="hover:text-white hover:underline transition-colors duration-200">Important-sankrantis</a></li>
+          <li><a href="https://www.makarsankranti.net/index2.html" class="hover:text-white hover:underline transition-colors duration-200">Index2</a></li>
+          <li><a href="https://www.makarsankranti.net/information.html" class="hover:text-white hover:underline transition-colors duration-200">Information</a></li>
+          <li><a href="https://www.makarsankranti.net/khichdi-purv.html" class="hover:text-white hover:underline transition-colors duration-200">Khichdi-purv</a></li>
+          <li><a href="https://www.makarsankranti.net/lohri.html" class="hover:text-white hover:underline transition-colors duration-200">Lohri</a></li>
+          <li><a href="https://www.makarsankranti.net/magh-bihu.html" class="hover:text-white hover:underline transition-colors duration-200">Magh-bihu</a></li>
+          <li><a href="https://www.makarsankranti.net/makarsankranti-information.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-information</a></li>
+          <li><a href="https://www.makarsankranti.net/pongal.html" class="hover:text-white hover:underline transition-colors duration-200">Pongal</a></li>
+          <li><a href="https://www.makarsankranti.net/sankranti-vs-makarsankranti.html" class="hover:text-white hover:underline transition-colors duration-200">Sankranti-vs-makarsankranti</a></li>
+          <li><a href="https://www.makarsankranti.net/sitemap.html" class="hover:text-white hover:underline transition-colors duration-200">Sitemap</a></li>
+          <li><a href="https://www.makarsankranti.net/start-of-spring.html" class="hover:text-white hover:underline transition-colors duration-200">Start-of-spring</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-pedda-festival.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-pedda-festival</a></li>
+          <li><a href="https://www.makarsankranti.net/what-is-uttarayaana.html" class="hover:text-white hover:underline transition-colors duration-200">What-is-uttarayaana</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Wishes of Makarsankrnti</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/wishes/assamese.html" class="hover:text-white hover:underline transition-colors duration-200">Assamese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bhojpuri.html" class="hover:text-white hover:underline transition-colors duration-200">Bhojpuri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/bihari.html" class="hover:text-white hover:underline transition-colors duration-200">Bihari</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/english.html" class="hover:text-white hover:underline transition-colors duration-200">English</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/gujarati.html" class="hover:text-white hover:underline transition-colors duration-200">Gujarati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kannada.html" class="hover:text-white hover:underline transition-colors duration-200">Kannada</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/kashmiri.html" class="hover:text-white hover:underline transition-colors duration-200">Kashmiri</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-play-script.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-play-script</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-bengali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-bengali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-garhwali.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-garhwali</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-gujrati.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-gujrati</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-hindi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-marwari-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-marwari-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-rajasthani.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-rajasthani</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-sanskrit-language.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-sanskrit-language</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-in-urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-marathai.html" class="hover:text-white hover:underline transition-colors duration-200">Makarsankranti-wishes-marathai</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/malyalam.html" class="hover:text-white hover:underline transition-colors duration-200">Malyalam</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/marathi.html" class="hover:text-white hover:underline transition-colors duration-200">Marathi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/nepalese.html" class="hover:text-white hover:underline transition-colors duration-200">Nepalese</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/punjabi.html" class="hover:text-white hover:underline transition-colors duration-200">Punjabi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sanskrit.html" class="hover:text-white hover:underline transition-colors duration-200">Sanskrit</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sindhi.html" class="hover:text-white hover:underline transition-colors duration-200">Sindhi</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/tamil.html" class="hover:text-white hover:underline transition-colors duration-200">Tamil</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/telugu.html" class="hover:text-white hover:underline transition-colors duration-200">Telugu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/urdu.html" class="hover:text-white hover:underline transition-colors duration-200">Urdu</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/wishes-new-beginning.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-new-beginning</a></li>
+          <li><a href="https://www.makarsankranti.net/wishes/sankranti-wishes-in-hindi.html" class="hover:text-white hover:underline transition-colors duration-200">Wishes-prosperity</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-lg font-semibold text-white mb-4">Pages</h5>
+        <ul class="space-y-2">
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/budget-friendly-golu-return-gifts.html" class="hover:text-white hover:underline transition-colors duration-200">Budget Friendly Golu Return Gifts</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/eco-friendly-return-gifts-for-golu.html" class="hover:text-white hover:underline transition-colors duration-200">Eco Friendly Return Gifts For Golu</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/golu-host-checklist-invitations-food-gifts-and-puja.html" class="hover:text-white hover:underline transition-colors duration-200">Golu Host Checklist Invitations Food Gifts And Puja</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/golu-invitation-ideas-for-families-living-abroad.html" class="hover:text-white hover:underline transition-colors duration-200">Golu Invitation Ideas For Families Living Abroad</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/golu-invitation-wording-in-english.html" class="hover:text-white hover:underline transition-colors duration-200">Golu Invitation Wording In English</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/golu-return-gift-ideas-for-children.html" class="hover:text-white hover:underline transition-colors duration-200">Golu Return Gift Ideas For Children</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/golu-visiting-etiquette-for-guests.html" class="hover:text-white hover:underline transition-colors duration-200">Golu Visiting Etiquette For Guests</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/haldi-kumkum-during-golu-meaning-and-tradition.html" class="hover:text-white hover:underline transition-colors duration-200">Haldi Kumkum During Golu Meaning And Tradition</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/handmade-golu-return-gift-ideas.html" class="hover:text-white hover:underline transition-colors duration-200">Handmade Golu Return Gift Ideas</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/how-children-can-participate-in-golu-visits.html" class="hover:text-white hover:underline transition-colors duration-200">How Children Can Participate In Golu Visits</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/how-many-guests-should-you-invite-for-golu.html" class="hover:text-white hover:underline transition-colors duration-200">How Many Guests Should You Invite For Golu</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/how-to-invite-friends-and-family-for-golu.html" class="hover:text-white hover:underline transition-colors duration-200">How To Invite Friends And Family For Golu</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/how-to-organize-a-golu-gathering-at-home.html" class="hover:text-white hover:underline transition-colors duration-200">How To Organize A Golu Gathering At Home</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/modern-whatsapp-golu-invitation-messages.html" class="hover:text-white hover:underline transition-colors duration-200">Modern Whatsapp Golu Invitation Messages</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/traditional-golu-invitation-message-ideas.html" class="hover:text-white hover:underline transition-colors duration-200">Traditional Golu Invitation Message Ideas</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/traditional-golu-return-gift-ideas.html" class="hover:text-white hover:underline transition-colors duration-200">Traditional Golu Return Gift Ideas</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/useful-return-gifts-for-women-during-navaratri.html" class="hover:text-white hover:underline transition-colors duration-200">Useful Return Gifts For Women During Navaratri</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/virtual-golu-ideas-for-friends-and-family-abroad.html" class="hover:text-white hover:underline transition-colors duration-200">Virtual Golu Ideas For Friends And Family Abroad</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/what-happens-during-a-traditional-golu-visit.html" class="hover:text-white hover:underline transition-colors duration-200">What Happens During A Traditional Golu Visit</a></li>
+          <li><a href="https://www.makarsankranti.net/hindu-festivals/golu/invitations-gifts/what-should-you-take-when-visiting-a-golu.html" class="hover:text-white hover:underline transition-colors duration-200">What Should You Take When Visiting A Golu</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center text-sm text-gray-400">
+      <p class="text-sm text-gray-400">New Beginning with laddo and kites</p>
+    </div>
+
+    <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+      <p class="text-sm text-gray-400">&copy; 2026 Makar Sankranti. All rights reserved.</p>
+      
+    </div>
+
+  </div>
+</footer>

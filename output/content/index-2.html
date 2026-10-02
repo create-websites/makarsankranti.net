@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO Meta Tags -->
+<title>Makar Sankranti 2026 | Pongal, Bihu &amp; Uttarayan Festival Guide</title>
+<meta content="Celebrate Makar Sankranti 2026. Explore the story of the Sun God Surya, traditions of Pongal, Magh Bihu, and Uttarayan, and find festive wishes. A complete guide to India's harvest festivals." name="description"/>
+<meta content="Makar Sankranti 2026, Pongal Festival, Magh Bihu, Uttarayan, Kite Festival India, Harvest Festival, Surya God, Hindu Festivals, Winter Solstice, Sankranti Wishes" name="keywords"/>
+<meta content="Festival Guide" name="author"/>
+<!-- Open Graph / Facebook -->
+<meta content="website" property="og:type"/>
+<meta content="Makar Sankranti 2026 - The Festival of Sun &amp; Harvest" property="og:title"/>
+<meta content="Discover the traditions of Makar Sankranti, Pongal, Bihu, and Uttarayan. One story, many festivals." property="og:description"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Custom Styles for Animations -->
+<style>
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes drift {
+            0% { transform: translateX(-10vw) translateY(10vh) rotate(-10deg); }
+            100% { transform: translateX(110vw) translateY(-20vh) rotate(10deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+        .kite {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 30px solid currentColor;
+            opacity: 0.8;
+            filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
+        }
+        .kite:after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: -20px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 30px solid currentColor;
+        }
+        .kite-tail {
+            width: 4px;
+            height: 50px;
+            background: rgba(255,255,255,0.6);
+            position: absolute;
+            top: 40px;
+            left: -2px;
+            transform: rotate(15deg);
+            transform-origin: top;
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<link href="https://storage.googleapis.com/css-designs/purple/kreatewebsites.production.css" rel="stylesheet"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HQVLPEFHL9"></script><script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HQVLPEFHL9');
+</script></head>
+<body class="min-h-screen bg-orange-50 font-sans text-stone-800">
+<!-- Navigation -->
+<nav class="bg-orange-600 text-white sticky top-0 z-50 shadow-lg">
+<div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center space-x-2 font-bold text-xl">
+<i class="h-6 w-6 animate-pulse" data-lucide="sun"></i>
+<span>Sankranti Festival</span>
+</div>
+<div class="hidden md:flex space-x-6">
+<button class="tab-btn text-yellow-300 font-bold hover:text-yellow-200 transition" id="btn-story" onclick="switchTab('story')">The Story</button>
+<button class="tab-btn hover:text-yellow-200 transition" id="btn-traditions" onclick="switchTab('traditions')">Traditions</button>
+<button class="tab-btn hover:text-yellow-200 transition" id="btn-wishes" onclick="switchTab('wishes')">Wishes</button>
+</div>
+<!-- Mobile Menu Button (Simple) -->
+<div class="md:hidden flex space-x-4 text-sm">
+<button class="hover:text-yellow-200" onclick="switchTab('story')">Story</button>
+<button class="hover:text-yellow-200" onclick="switchTab('traditions')">Traditions</button>
+<button class="hover:text-yellow-200" onclick="switchTab('wishes')">Wishes</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative bg-gradient-to-b from-amber-400 to-orange-500 text-white overflow-hidden h-96 flex items-center justify-center">
+<!-- Animated Sun Background -->
+<div class="absolute top-10 right-10 md:right-20 opacity-30 pointer-events-none">
+<i class="h-64 w-64 text-yellow-300 animate-spin-slow" data-lucide="sun" style="width: 256px; height: 256px;"></i>
+</div>
+<!-- Kite Container (Populated by JS) -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden" id="kite-container"></div>
+<div class="relative z-20 text-center px-4 max-w-4xl">
+<h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-md">
+                Makar Sankranti
+            </h1>
+<p classname="text-xl md:text-2xl font-light mb-6 text-yellow-100">
+                The Festival of Sun, Harvest, and Hope
+            </p>
+<div class="flex flex-wrap justify-center gap-4 text-sm md:text-base mt-6">
+<span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🌞 Uttarayan</span>
+<span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🪁 Kites</span>
+<span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🔥 Bonfires</span>
+<span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full border border-white/30">🌾 Harvest</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-5xl mx-auto px-4 py-12">
+<!-- Intro -->
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-orange-800 mb-6">Celebrating the Sun's Journey</h2>
+<p class="text-lg text-stone-600 max-w-3xl mx-auto leading-relaxed">
+                Makar Sankranti marks the sun's transition into Capricorn (Makara), signaling the end of winter and the beginning of longer days. 
+                It is a unique festival celebrated across India under different names Pongal, Bihu, Lohri, and <a href="https://www.makarsankranti.org/uttarayan.html">Uttarayan</a> united by the spirit of gratitude to nature.
+            </p>
+</div>
+<!-- Tab 1: The Story -->
+<div class="tab-content active" id="story">
+<div class="bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 border-orange-500">
+<div class="p-8 md:p-12">
+<h3 class="text-2xl font-bold text-orange-700 mb-8 flex items-center">
+<i class="mr-3" data-lucide="book-open"></i> The Journey of the Sun: One Story, Many Festivals
+                    </h3>
+<div class="prose prose-orange max-w-none text-stone-700 space-y-6 text-lg leading-relaxed">
+<p>
+                            Long ago, when the world moved in rhythm with nature, the <strong>Sun God, Surya</strong>, was not just a celestial body but a living force. For many months, Surya traveled southward, and the Earth felt the chill of winter. Farmers waited patiently, trusting that the Sun would return with warmth.
+                        </p>
+<div class="my-8 p-6 bg-yellow-50 rounded-xl border-l-4 border-yellow-400">
+<h4 class="font-bold text-yellow-800 mb-2 flex items-center"><i class="w-5 h-5 mr-2" data-lucide="sun"></i> Makar Sankranti: The Sacred Turning</h4>
+<p>
+                                One auspicious morning, Surya reached the boundary of Capricorn. At that moment, the world felt a shift. The Sun changed direction, beginning his northward journey (Uttarayan). Sages declared this the victory of light over darkness. On this day, Surya visited his son Shani (Saturn), healing their relationship and teaching humanity the power of forgiveness.
+                            </p>
+</div>
+<p>
+                            As Surya continued north, hope filled the air. In <strong>Gujarat</strong>, the skies filled with colorful kites, each carrying a prayer for the new year. High above, Surya smiled, seeing humans look up in celebration.
+                        </p>
+<p>
+                            The Sun then traveled east to <strong>Assam</strong>. Barns overflowed with grain. Villagers built <em>Meji</em> bonfires and offered the first harvest to the flames. The fire crackled, burning away hardship and signaling the start of <strong>Magh Bihu</strong> a festival of fire, food, and fellowship.
+                        </p>
+<p>
+                            Finally, Surya bathed <strong>Tamil Nadu</strong> in golden light. Farmers boiled rice and milk in earthen pots until they overflowed, shouting <em>"Pongalo Pongal!"</em> to welcome abundance. They honored their cattle and thanked the land, celebrating <strong>Pongal</strong> with humility and gratitude.
+                        </p>
+<div class="mt-8 text-center italic text-orange-800 font-medium text-xl">
+                            "Though the rituals differ kites, bonfires, or boiling pots they tell one story: Nature provides, and humanity learns to live in balance."
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tab 2: Traditions -->
+<div class="tab-content" id="traditions">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Pongal -->
+<div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+<div class="h-32 bg-gradient-to-r from-yellow-400 to-orange-400 flex items-center justify-center">
+<i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="wheat" style="width: 64px; height: 64px;"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Pongal</h3>
+<p class="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-4">Tamil Nadu</p>
+<p class="text-gray-600 mb-4 text-sm">
+                            A four-day harvest festival. The main ritual involves boiling fresh rice with milk and jaggery in a new clay pot until it overflows, symbolizing prosperity.
+                        </p>
+<ul class="text-sm text-gray-500 space-y-2">
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Bhogi: Burning old items</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Thai Pongal: Solar worship</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Mattu Pongal: Cattle worship</li>
+</ul>
+</div>
+</div>
+<!-- Magh Bihu -->
+<div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+<div class="h-32 bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center">
+<i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="flame" style="width: 64px; height: 64px;"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Magh Bihu</h3>
+<p class="text-xs font-semibold text-red-600 uppercase tracking-wide mb-4">Assam</p>
+<p class="text-gray-600 mb-4 text-sm">
+                            Also known as Bhogali Bihu (festival of eating). It marks the end of the harvest season with community feasts and bonfires.
+                        </p>
+<ul class="text-sm text-gray-500 space-y-2">
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Uruka: Community feast night</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Meji: Lighting tall bonfires</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Pitha: Rice cakes &amp; sesame sweets</li>
+</ul>
+</div>
+</div>
+<!-- Gangasagar -->
+<div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+<div class="h-32 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+<i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="droplets" style="width: 64px; height: 64px;"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Gangasagar Mela</h3>
+<p class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-4">West Bengal</p>
+<p class="text-gray-600 mb-4 text-sm">
+                            The second largest human congregation after Kumbh Mela. Devotees gather at Sagar Island where the Ganga meets the Bay of Bengal.
+                        </p>
+<ul class="text-sm text-gray-500 space-y-2">
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Holy Dip: Washing away sins</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Kapil Muni Temple: Worship</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Ancestral Rites: Tarpan</li>
+</ul>
+</div>
+</div>
+<!-- Uttarayan -->
+<div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+<div class="h-32 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+<i class="w-16 h-16 text-white opacity-90 group-hover:scale-110 transition duration-500" data-lucide="wind" style="width: 64px; height: 64px;"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Uttarayan</h3>
+<p class="text-xs font-semibold text-purple-600 uppercase tracking-wide mb-4">Gujarat &amp; Rajasthan</p>
+<p class="text-gray-600 mb-4 text-sm">
+                            Famous for the International Kite Festival. The sky becomes a mosaic of colorful kites, symbolizing high aspirations.
+                        </p>
+<ul class="text-sm text-gray-500 space-y-2">
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Patang: Kite flying battles</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Undhiyu: Mixed vegetable curry</li>
+<li class="flex items-center"><i class="w-4 h-4 mr-2 text-green-500" data-lucide="check"></i> Chikki: Peanut brittle sweets</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Tab 3: Wishes -->
+<div class="tab-content" id="wishes">
+<div class="max-w-3xl mx-auto">
+<h3 class="text-center text-2xl font-bold text-orange-800 mb-8">Share the Joy</h3>
+<div class="space-y-4" id="wishes-container">
+<!-- Wishes injected via JS -->
+</div>
+</div>
+</div>
+<!-- Life Lessons (Always Visible) -->
+<div class="mt-20 bg-stone-900 text-stone-300 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 via-yellow-500 to-red-500"></div>
+<h3 class="text-2xl font-bold text-white mb-6">Life Lessons from Sankranti</h3>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
+<div class="p-4 bg-stone-800 rounded-xl">
+<i class="w-8 h-8 mx-auto text-pink-500 mb-3" data-lucide="heart"></i>
+<h4 class="font-bold text-white mb-2">Sweetness Heals</h4>
+<p>Just like Til-Gul (sesame &amp; jaggery), speak sweetly to heal old relationships.</p>
+</div>
+<div class="p-4 bg-stone-800 rounded-xl">
+<i class="w-8 h-8 mx-auto text-yellow-500 mb-3" data-lucide="sun"></i>
+<h4 class="font-bold text-white mb-2">Change is Good</h4>
+<p>Like the sun changing course, embrace change as a sign of new beginnings.</p>
+</div>
+<div class="p-4 bg-stone-800 rounded-xl">
+<i class="w-8 h-8 mx-auto text-green-500 mb-3" data-lucide="wheat"></i>
+<h4 class="font-bold text-white mb-2">Gratitude</h4>
+<p>Always thank nature, the land, and the invisible hands that feed us.</p>
+</div>
+</div>
+</div>
+<!-- Festive Gallery Section -->
+<div class="mt-20">
+<h3 class="text-center text-2xl font-bold text-orange-800 mb-8">Festive Moments &amp; Greetings</h3>
+<p class="text-center text-stone-600 mb-8 max-w-2xl mx-auto">
+                Capture the spirit of the season with these beautiful glimpses of Sankranti celebrations. Share these greetings with your loved ones to spread warmth and joy.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<!-- Image 1 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Happy Pongal and Sankranti" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy Pongal and Sankranti.jpg"/>
+</div>
+<!-- Image 2 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Happy Sankranti" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy Sankranti.jpg"/>
+</div>
+<!-- Image 3 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Happy and Prosperous" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Happy and Prosperous.jpg"/>
+</div>
+<!-- Image 4 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Love and Affection" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Love and Affection.jpg"/>
+</div>
+<!-- Image 5 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Sankranti Prasad" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti Prasad.jpg"/>
+</div>
+<!-- Image 6 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Sankranti Wishes" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti Wishes.jpg"/>
+</div>
+<!-- Image 7 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Sankranti Prosperity" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti prosperity.jpg"/>
+</div>
+<!-- Image 8 -->
+<div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<img alt="Sankranti Celebration" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/kreatewebsite/festival/Sankranti/Cards/Sankranti.jpg"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-300">
+<div class="container mx-auto px-6 py-12 lg:px-8">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Makarsankranti Uttarayan</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/3-days-of-sankranti-and-pongal-celebration.html">3-days-of-sankranti-and-pongal-celebration</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/different-names-of-sankranti.html">Different-names-of-sankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/image.html">Image</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/important-sankrantis.html">Important-sankrantis</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/index2.html">Index2</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/information.html">Information</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/khichdi-purv.html">Khichdi-purv</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/lohri.html">Lohri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/magh-bihu.html">Magh-bihu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-information.html">Makarsankranti-information</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/pongal.html">Pongal</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sankranti-vs-makarsankranti.html">Sankranti-vs-makarsankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sitemap.html">Sitemap</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/start-of-spring.html">Start-of-spring</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/what-is-pedda-festival.html">What-is-pedda-festival</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/what-is-uttarayaana.html">What-is-uttarayaana</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Wishes of Makarsankrnti</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/assamese.html">Assamese</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bengali.html">Bengali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bhojpuri.html">Bhojpuri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/bihari.html">Bihari</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/english.html">English</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/gujarati.html">Gujarati</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/hindi.html">Hindi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/kannada.html">Kannada</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/kashmiri.html">Kashmiri</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-play-script.html">Makarsankranti-play-script</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-bengali.html">Makarsankranti-wishes-in-bengali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-garhwali.html">Makarsankranti-wishes-in-garhwali</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-gujrati.html">Makarsankranti-wishes-in-gujrati</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-hindi.html">Makarsankranti-wishes-in-hindi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-marwari-language.html">Makarsankranti-wishes-in-marwari-language</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-rajasthani.html">Makarsankranti-wishes-in-rajasthani</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-sanskrit-language.html">Makarsankranti-wishes-in-sanskrit-language</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-in-urdu.html">Makarsankranti-wishes-in-urdu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/makarsankranti-wishes-marathai.html">Makarsankranti-wishes-marathai</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/malyalam.html">Malyalam</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/marathi.html">Marathi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/nepalese.html">Nepalese</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/punjabi.html">Punjabi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sanskrit.html">Sanskrit</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sindhi.html">Sindhi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/tamil.html">Tamil</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/telugu.html">Telugu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/urdu.html">Urdu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/wishes-new-beginning.html">Wishes-new-beginning</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/wishes/sankranti-wishes-in-hindi.html">Wishes-prosperity</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Folders</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/2026/">2026</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/cards/">Cards</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/cosmic-wisdom/">Cosmic Wisdom</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/hindu-festivals/">Hindu Festivals</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/holi-festival/">Holi Festival</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/kite-festival/">Kite Festival</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/lohri-festival/">Lohri Festival</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Photos/">Photos</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/pitru-paksha-shraddh/">Pitru Paksha Shraddh</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/pongal/">Pongal</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/ramayana-stories/">Ramayana Stories</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sankranti-blog/">Sankranti Blog</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-4">Pages</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Auspicious looking design.html">Auspicious Looking Design</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Bihu in Assam.html">Bihu In Assam</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/bihu-assam-info.html">Bihu Assam Info</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/bihu-assam.html">Bihu Assam</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Blessing.html">Blessing</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Capricorn.html">Capricorn</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Colorful greeting for Sankrant.html">Colorful Greeting For Sankrant</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Email greetings.html">Email Greetings</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/ganga-sagar-mela.html">Ganga Sagar Mela</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Gangasagar mela.html">Gangasagar Mela</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/General card.html">General Card</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Good Change.html">Good Change</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Good movement.html">Good Movement</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Greetings.html">Greetings</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Happy Makarsankranti.html">Happy Makarsankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Harvesting.html">Harvesting</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/image.html">Image</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Impactful card.html">Impactful Card</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/index-2.html">Index 2</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/index2.html">Index2</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Khichdi.html">Khichdi</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Kite festival.html">Kite Festival</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/MakarSankranti wishes.html">Makarsankranti Wishes</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-blog.html">Makarsankranti Blog</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-cards.html">Makarsankranti Cards</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-celebrations.html">Makarsankranti Celebrations</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-info.html">Makarsankranti Info</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-page.html">Makarsankranti Page</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-pongal-bihu-uttarayan.html">Makarsankranti Pongal Bihu Uttarayan</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-pongal-celebration.html">Makarsankranti Pongal Celebration</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-significance.html">Makarsankranti Significance</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-taste.html">Makarsankranti Taste</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/makarsankranti-wallpapers.html">Makarsankranti Wallpapers</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Meaning of MakarSankranti.html">Meaning Of Makarsankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/messages.html">Messages</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/New Begining on Makarsankranti.html">New Begining On Makarsankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/pictures.html">Pictures</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Pongal in AP.html">Pongal In Ap</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/pongal-festival.html">Pongal Festival</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Rangoli style card.html">Rangoli Style Card</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Sankranti and Agriculture.html">Sankranti And Agriculture</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Sankranti in Thailand.html">Sankranti In Thailand</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Sankranti vs MakarSankranti.html">Sankranti Vs Makarsankranti</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sankranti-celebration-and-wishes-in-indian-languages.html">Sankranti Celebration And Wishes In Indian Languages</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sankranti-harvest-festival.html">Sankranti Harvest Festival</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sankranti-wishes-info.html">Sankranti Wishes Info</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Send Sankranti wishes.html">Send Sankranti Wishes</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Shub.html">Shub</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sitemap.html">Sitemap</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/stories.html">Stories</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/sun-joyful-story.html">Sun Joyful Story</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Sun.html">Sun</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/Tamilnadu.html">Tamilnadu</a></li>
+<li><a class="hover:text-white hover:underline transition-colors duration-200" href="https://www.makarsankranti.net/US.html">Us</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-8 text-center text-sm text-gray-400">
+<p class="text-sm text-gray-400">New Beginning with laddo and kites</p>
+</div>
+<div class="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between sm:flex-row">
+<p class="text-sm text-gray-400">© 2026 Makar Sankranti. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Data
+        const wishesData = [
+            { title: "Makar Sankranti", text: "May the Sun bless your life with new energy, good health, and success. Happy Makar Sankranti!" },
+            { title: "Uttarayan", text: "May your dreams soar as high as colorful kites in the sky. Wishing you health, warmth, and endless optimism." },
+            { title: "Pongal", text: "May your life overflow with happiness and prosperity, just like the Pongal pot. Pongalo Pongal!" },
+            { title: "Magh Bihu", text: "May the sacred fire burn away worries and light your path forward. Wishing you abundance and contentment." },
+        ];
+
+        // Render Wishes
+        const wishesContainer = document.getElementById('wishes-container');
+        wishesData.forEach((wish, index) => {
+            const div = document.createElement('div');
+            div.className = "bg-white p-6 rounded-lg shadow border-l-4 border-orange-400 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4";
+            div.innerHTML = `
+                <div class="flex-1">
+                    <h4 class="font-bold text-orange-900 mb-1">${wish.title}</h4>
+                    <p class="text-stone-600 italic">"${wish.text}"</p>
+                </div>
+                <button onclick="copyToClipboard('${wish.text}', this)" 
+                    class="flex items-center px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 transition text-sm font-medium whitespace-nowrap">
+                    <i data-lucide="copy" class="w-4 h-4 mr-2"></i> Copy
+                </button>
+            `;
+            wishesContainer.appendChild(div);
+        });
+        lucide.createIcons(); // Re-run for dynamic content
+
+        // Tabs Logic
+        function switchTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+            
+            // Update buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('text-yellow-300', 'font-bold');
+            });
+            document.getElementById(`btn-${tabId}`).classList.add('text-yellow-300', 'font-bold');
+        }
+
+        // Copy Function
+        function copyToClipboard(text, btnElement) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            const originalHTML = btnElement.innerHTML;
+            btnElement.innerHTML = `<i data-lucide="check" class="w-4 h-4 mr-2"></i> Copied`;
+            lucide.createIcons();
+            
+            setTimeout(() => {
+                btnElement.innerHTML = originalHTML;
+                lucide.createIcons();
+            }, 2000);
+        }
+
+        // Kite Animation Generator
+        const kiteContainer = document.getElementById('kite-container');
+        const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33F3'];
+
+        for (let i = 0; i < 8; i++) {
+            const kite = document.createElement('div');
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const left = Math.random() * 100;
+            const delay = Math.random() * 5;
+            const duration = 15 + Math.random() * 10;
+            
+            kite.className = 'kite';
+            kite.style.color = color;
+            kite.style.left = `${left}%`;
+            kite.style.top = '100%';
+            kite.style.animation = `drift ${duration}s linear infinite`;
+            kite.style.animationDelay = `-${delay}s`;
+
+            const tail = document.createElement('div');
+            tail.className = 'kite-tail';
+            
+            kite.appendChild(tail);
+            kiteContainer.appendChild(kite);
+        }
+    </script>
+</body></html>
